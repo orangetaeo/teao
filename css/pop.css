@@ -1,0 +1,80 @@
+/* [팝업] 템플릿선택 */
+.pop_temp .search {margin-bottom:10px;}
+.pop_temp .search:after {content:""; display:block; clear:both;}
+.pop_temp .search ul {float:left;}
+.pop_temp .search ul:after {content:""; display:block; clear:both;}
+.pop_temp .search ul li {float:left;}
+.pop_temp .search ul li select {width:100px; height:26px; margin-right:3px; border:1px solid #92a9d4; box-sizing:border-box;}
+.pop_temp .search ul li input {width:267px; height:26px; padding:0 5px; border:1px solid #92a9d4; box-sizing:border-box;}
+.pop_temp .search ul li button {width:60px; height:26px; margin:1px 0; color:#fff; border-radius:0; background:#283c7d;}
+
+.pop_temp {width:1000px; padding:20px 20px 30px; box-sizing:border-box;}
+.pop_temp .temp_kind ul {width:100%;}
+.pop_temp .temp_kind ul:after {content:""; display:block; clear:both;}
+.pop_temp .temp_kind ul li {float:left; width:20%;}
+.pop_temp .temp_kind ul li a {display:block; width:100%; height:30px; font-weight:bold; line-height:28px; text-align:center; color:#456ab1; border-top:1px solid #92a9d4; border-right:1px solid #92a9d4; border-radius:5px 5px 0 0; background:#e7eaf2; box-sizing:border-box;}
+.pop_temp .temp_kind ul li:first-child a {border-left:1px solid #92a9d4;}
+.pop_temp .temp_kind ul li:hover a {color:#fff; background:#81a2e1;}
+.pop_temp .temp_kind ul li.on a {color:#fff; background:#456ab1;}
+
+.pop_temp .temp_list {margin-bottom:10px; padding:7px; border:1px solid #92a9d4; background:#fff; box-sizing:border-box;}
+.pop_temp .temp_list ul {display:none;}
+.pop_temp .temp_list ul.on {display:block;}
+.pop_temp .temp_list ul:after {content:""; display:block; clear:both;}
+.pop_temp .temp_list ul li {position:relative; float:left; width:228px; margin:3px; border:1px solid #92a9d4; cursor:pointer;}
+.pop_temp .temp_list ul li:hover {margin:2px; border:2px solid #ff6a12;}
+.pop_temp .temp_list ul li .tit {width:100%; height:26px; padding:0 10px; line-height:25px; color:#456ab1; background:#f0f5fb; box-sizing:border-box;}
+.pop_temp .temp_list ul li .tit i {font-size:16px; line-height:25px;}
+.pop_temp .temp_list ul li .tit .name {float:left; overflow:hidden; width:185px; height:25px; text-overflow:ellipsis; white-space:pre;}
+.pop_temp .temp_list ul li .tit .name i {color:#456ab1;}
+.pop_temp .temp_list ul li .tit .star {float:right;}
+.pop_temp .temp_list ul li .tit .star i {color:#e7eaf2;}
+.pop_temp .temp_list ul li .tit .star.on i {color:#ffcc00;}
+.pop_temp .temp_list ul li .view {width:100%; padding:5px 0; border-bottom:1px dashed #81a2e1;}
+.pop_temp .temp_list ul li .view:after {content:""; display:block; clear:both;}
+.pop_temp .temp_list ul li .view a {float:left; display:block; width:50%; color:#4285f4; text-align:center;}
+.pop_temp .temp_list ul li .view a:hover {color:#ff6a12;}
+.pop_temp .temp_list ul li .txt_top {height:26px; padding:0 10px; line-height:27px; border-bottom:1px dashed #81a2e1;}
+.pop_temp .temp_list ul li .txt {overflow-y:auto; height:170px; line-height:17px; padding:10px;}
+.pop_temp .temp_list ul li .btn {padding:10px; width:100%; box-sizing:border-box;}
+.pop_temp .temp_list ul li .btn p {width:100%; height:22px; margin-bottom:2px; line-height:22px; text-align:center; color:#456ab1; border:1px solid #92a9d4;}
+.pop_temp .temp_list ul li .btn p:last-child {margin-bottom:0;}
+.pop_temp .temp_list ul li .vid {position:absolute; left:0; top:0; width:100%; height:100%; padding:10px; background:rgba(0,0,0,0.05); box-sizing:border-box;}
+.pop_temp .temp_list ul li .vid p {position:absolute; left:50%; top:50%; transform:translateX(-50%) translateY(-50%); width:92%; padding:10px 20px; line-height:18px; text-align:center; color:#fff; background:#ff6a12; box-sizing:border-box;}
+.pop_temp .temp_list ul li .vid p i {position:absolute; right:0; top:-15px; color:#999;}
+
+
+/* [레이어팝업] */
+.layer_pop {z-index:100; display:none; position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,.5); box-sizing:border-box;}
+.layer_pop .layer_pop_inn {position:absolute; left:50%; top:30%; transform:translate(-50%,-50%); width:480px; padding:10px; border:2px solid #57607d; background:#fff;}
+.layer_pop .layer_pop_inn .tit {margin-bottom:7px; font-size:15px; color:#283c7d;}
+.layer_pop .layer_pop_inn .btn {margin-top:10px; text-align:center;}
+.layer_pop .layer_pop_inn .btn button {width:70px; height:26px; margin-left:5px;}
+.layer_pop .layer_pop_inn .close {position:absolute; right:9px; top:9px; cursor:pointer;}
+
+/* [새창팝업] */
+.popup_pop {width:100%; padding:20px; box-sizing:border-box;}
+
+/* [새창팝업] 추가상품 선택 */
+.pop_item_list:after {content:""; display:block; clear:both;}
+.pop_item_list .conbox {overflow:auto; width:800px; height:800px; padding:0 10px 10px; border:1px solid #92a9d4; box-sizing:border-box;}
+.pop_item_list .conbox .mark {margin:0 0 5px;}
+.pop_item_list .conbox_cntr {width:100px; height:630px; padding-top:215px; box-sizing:border-box;}
+.pop_item_list .conbox_cntr p {text-align:center;}
+.pop_item_list .conbox_cntr p i {transform:rotate(90deg); font-size:50px; color:#92a9d4; cursor:pointer;}
+
+/* [새창팝업] 자동발송 */
+.automatic_setup_popup:after {content:""; display:block; clear:both;}
+.automatic_setup_popup .conbox {overflow:auto; width:880px; height:700px; padding:0 10px 10px; border:1px solid #92a9d4; box-sizing:border-box;}
+.automatic_setup_popup .conbox .mark {margin:0 0 5px;}
+.automatic_setup_popup .conbox_cntr {width:100px; height:630px; padding-top:215px; box-sizing:border-box;}
+.automatic_setup_popup .conbox_cntr p {text-align:center;}
+.automatic_setup_popup .conbox_cntr p i {transform:rotate(90deg); font-size:50px; color:#92a9d4; cursor:pointer;}
+
+/* [새창팝업] 일정 선택 */
+.pop_schedule_list:after {content:""; display:block; clear:both;}
+.pop_schedule_list .conbox {overflow:auto; width:1000px; height:630px; padding:0 10px 10px; border:1px solid #92a9d4; box-sizing:border-box;}
+.pop_schedule_list .conbox .mark {margin:0 0 5px;}
+.pop_schedule_list .conbox_cntr {width:100px; height:630px; padding-top:215px; box-sizing:border-box;}
+.pop_schedule_list .conbox_cntr p {text-align:center;}
+.pop_schedule_list .conbox_cntr p i {transform:rotate(90deg); font-size:50px; color:#92a9d4; cursor:pointer;}

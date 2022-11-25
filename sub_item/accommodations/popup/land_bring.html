@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 랜드사 숙소 선택</h2>
+		</div>
+		<div class="conbox position_w">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select class="w-E">
+											<option value="등록일">등록일</option>
+											<option value="수정일">수정일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2022-09-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-09-30"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">전체</button>
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>카테고리</th>
+								<td class="td_category">
+									<select>
+										<option value="대륙 선택">대륙 선택</option>
+										<option value="AC 아시아">AC 아시아</option>
+									</select>
+									<select>
+										<option value="국가 선택">국가 선택</option>
+										<option value="KOR 코리아">KO 코리아</option>
+									</select>
+									<select>
+										<option value="지역 선택">지역 선택</option>
+										<option value="다낭">다낭</option>
+									</select>
+									<select>
+										<option value="숙소유형 선택">숙소유형 선택</option>
+										<option value="호텔">호텔</option>
+										<option value="리조트">리조트</option>
+										<option value="풀빌라">풀빌라</option>
+										<option value="게스트하우스">게스트하우스</option>
+									</select>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>검색어</th>
+								<td>
+									<div class="sel">
+										<select class="w-E">
+											<option value="숙소명">숙소명</option>
+											<option value="숙소코드">숙소코드</option>
+										</select>
+										<input type="search" class="w-S" placeholder="숙소명, 숙소코드 선택 후 검색 하세요.">	
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>성급</th>
+								<td>
+									<div class="sel">
+										<select class="w-E">
+											<option value="성급 선택">성급 선택</option>
+											<option value="2성급">2성급</option>
+											<option value="3성급">3성급</option>
+											<option value="4성급">4성급</option>
+											<option value="5성급">5성급</option>
+											<option value="6성급">6성급</option>
+											<option value="7성급">7성급</option>
+											<option value="8성급">8성급</option>
+										</select>	
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>흡연룸 선택 </th>
+								<td colspan="3">
+									<div class="c_box m-A">
+										<select class="w-E">
+											<option value="흡연룸 선택">흡연룸 선택</option>
+											<option value="비흡연">비흡연룸</option>
+											<option value="흡연">흡연룸</option>
+										</select>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>랜드사명</th>
+								<td>
+									<div class="sel">
+										<select class="w-E">
+											<option value="랜드사">랜드사 선택</option>
+											<option value="A랜드사">A랜드사</option>
+											<option value="B랜드사">B랜드사</option>
+										</select>	
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>셔틀운영</th>
+								<td>
+									<div class="r_circle m-A">
+									<p><input type="radio" name="shuttle" id="shuttle0" checked/><label for="shuttle0"><span></span>전체</label></p>
+									<p><input type="radio" name="shuttle" id="shuttle1"/><label for="shuttle1"><span></span>비운영</label></p>
+									<p><input type="radio" name="shuttle" id="shuttle2"/><label for="shuttle2"><span></span>운영</label></p>
+								</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>수상 엑티비티</th>
+								<td colspan="3" class="td_w">
+									<div class="c_box m-A">
+										<p>
+											<input type="checkbox" name="water_activities" id="water_activities1" checked required /><label for="water_activities1"><span></span>전체</label>
+											<input type="checkbox" name="water_activities" id="water_activities2" checked required /><label for="water_activities2"><span></span>워터파크</label>
+											<input type="checkbox" name="water_activities" id="water_activities3" checked required /><label for="water_activities3"><span></span>수영장</label>
+											<input type="checkbox" name="water_activities" id="water_activities4" checked required /><label for="water_activities4"><span></span>제트스키</label>
+											<input type="checkbox" name="water_activities" id="water_activities5" checked required /><label for="water_activities5"><span></span>카누</label>
+											<input type="checkbox" name="water_activities" id="water_activities6" checked required /><label for="water_activities6"><span></span>카약</label>
+											<input type="checkbox" name="water_activities" id="water_activities7" checked required /><label for="water_activities7"><span></span>서핑</label>
+											<input type="checkbox" name="water_activities" id="water_activities8" checked required /><label for="water_activities8"><span></span>스노클링</label>
+											<input type="checkbox" name="water_activities" id="water_activities9" checked required /><label for="water_activities9"><span></span>스킨스쿠버</label>
+											<input type="checkbox" name="water_activities" id="water_activities10" checked required /><label for="water_activities10"><span></span>래프팅</label>
+											<input type="checkbox" name="water_activities" id="water_activities11" checked required /><label for="water_activities11"><span></span>바나나보트</label>
+											<input type="checkbox" name="water_activities" id="water_activities12" checked required /><label for="water_activities12"><span></span>패들보트</label>
+										</p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>이용권</th>
+								<td colspan="3" class="td_w">
+									<div class="c_box m-A">
+										<p>
+											<input type="checkbox" name="facilities" id="facilities1" checked required /><label for="facilities1"><span></span>전체</label>
+											<input type="checkbox" name="facilities" id="facilities2" checked required /><label for="facilities2"><span></span>사파리</label>
+											<input type="checkbox" name="facilities" id="facilities3" checked required /><label for="facilities3"><span></span>아쿠아리움</label>
+											<input type="checkbox" name="facilities" id="facilities4" checked required /><label for="facilities4"><span></span>놀이공원</label>
+											<input type="checkbox" name="facilities" id="facilities5" checked required /><label for="facilities5"><span></span>서바이벌</label>
+											<input type="checkbox" name="facilities" id="facilities6" checked required /><label for="facilities6"><span></span>요트크루즈</label>
+											<input type="checkbox" name="facilities" id="facilities7" checked required /><label for="facilities7"><span></span>짚와이어</label>
+											<input type="checkbox" name="facilities" id="facilities8" checked required /><label for="facilities8"><span></span>보트투어</label>
+										</p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>테라피</th>
+								<td colspan="3" class="td_w">
+									<div class="c_box m-A">
+										<p>
+											<input type="checkbox" name="therapy" id="therapy1" checked required /><label for="therapy1"><span></span>전체</label>
+											<input type="checkbox" name="therapy" id="therapy2" checked required /><label for="therapy2"><span></span>온천</label>
+											<input type="checkbox" name="therapy" id="therapy3" checked required /><label for="therapy3"><span></span>마사지</label>
+											<input type="checkbox" name="therapy" id="therapy4" checked required /><label for="therapy4"><span></span>스파</label>
+											<input type="checkbox" name="therapy" id="therapy5" checked required /><label for="therapy5"><span></span>에스테틱</label>
+										</p>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		<!-- 리스트 상단영역 -->
+		<div class="list_top">
+			<p class="p_total">총 조회수 : <span class="color-A">000건</span> (선택 : <span class="color-B">000건</span>)</p>
+		</div>
+		<!-- 리스트 -->
+		<div class="list">
+			<table>
+				<thead>
+					<tr>
+						<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+						<th>No.</th>
+						<th>랜드사명 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+						<th>숙소코드 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+						<th>숙소로고 </span></th>
+						<th>숙소명 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+						<th>성급 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+						<th>셔틀운영 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+						<th>등록자</th>
+						<th>등록/수정일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+						<td class="td_num">2</td>
+						<td class="name"><a href="/design/travel/manager/sub_item/accommodations/modify.html" target="_blank">A랜드사</td>
+						<td><a href="/design/travel/manager/sub_item/accommodations/modify.html" target="_blank">0000000000</a></td>
+						<td class="td_img"><a href="/design/travel/manager/sub_item/accommodations/modify.html"><img src="/design/travel/manager/images/100x100.png" target="_blank" alt=""></a></td>
+						<td class="td_tit"><p class="part">AC 아시아 > VN 베트남 > 다낭 > 호텔</p><a href="/design/travel/manager/sub_item/accommodations/modify.html" target="_blank">인터컨티넨탈 하노이 웨스트레이크</a></td>
+						<td class="td_center"><a href="/design/travel/manager/sub_item/accommodations/modify.html" target="_blank">5성급</a></td>
+						<td class="td_center"><a href="/design/travel/manager/sub_item/accommodations/modify.html" target="_blank">운영</a></td>
+						<td class="name"><a href="/design/travel/manager/sub_item/accommodations/modify.html" target="_blank">홍길동</a></td>
+						<td class="td_day"><a href="/design/travel/manager/sub_item/accommodations/modify.html" target="_blank">2022-09-02</a></td>
+					</tr>
+					<tr>
+						<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+						<td class="td_num">1</td>
+						<td class="name"><a href="/design/travel/manager/sub_item/accommodations/modify.html" target="_blank">B랜드사</td>
+						<td><a href="/design/travel/manager/sub_item/accommodations/modify.html" target="_blank">0000000000</a></td>
+						<td class="td_img"><a href="/design/travel/manager/sub_item/accommodations/modify.html"><img src="/design/travel/manager/images/100x100.png" target="_blank" alt=""></a></td>
+						<td class="td_tit"><p class="part">AC 아시아 > VN 베트남 > 다낭 > 호텔</p><a href="/design/travel/manager/sub_item/accommodations/modify.html" target="_blank">나만 리트리트</a></td>
+						<td class="td_center"><a href="/design/travel/manager/sub_item/accommodations/modify.html" target="_blank">5성급</a></td>
+						<td class="td_center"><a href="/design/travel/manager/sub_item/accommodations/modify.html" target="_blank">비운영</a></td>
+						<td class="name"><a href="/design/travel/manager/sub_item/accommodations/modify.html" target="_blank">홍길동</a></td>
+						<td class="td_day"><a href="/design/travel/manager/sub_item/accommodations/modify.html" target="_blank">2022-09-02</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- 리스트 하단영역 -->
+		<div class="list_bottom">
+			<p class="p_packview">
+				<select>
+					<option value="10개씩 보기">10개씩 보기</option>
+					<option value="30개씩 보기">30개씩 보기</option>
+					<option value="50개씩 보기">50개씩 보기</option>
+					<option value="100개씩 보기">100개씩 보기</option>
+				</select>
+			</p>
+		</div>
+		<!-- 페이지넘버 -->
+		<div class="page_num">
+			<p>
+				<span class="arr"><i class="xi-caret-down"></i></span>
+				<span class="nmb on">1</span>
+				<span class="nmb">2</span>
+				<span class="nmb">3</span>
+				<span class="arr"><i class="xi-caret-up"></i></span>
+			</p>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">취소</button><button type="button" onclick="window.close();">선택완료</button></p>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

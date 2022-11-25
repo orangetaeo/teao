@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+
+<!-- [팝업] 템플릿선택 -->
+<script>
+function myPopup() {
+	window.open("/design/travel/manager/sub_customer/kakao/pop_temp.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=996, height=910");
+}
+</script>
+
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_customer.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">회원관리</a> &gt; <a href="#">알림톡 관리</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 알림톡 관리</h2>
+		</div>
+		<div class="conbox">
+			<!-- 카카오알림톡리스트 -->
+			<div class="kakao_list">
+				<table>
+					<thead>
+						<tr>
+							<th>No.</th>
+							<th>발송구분</th>
+							<th class="bin"></th>
+							<th class="th_cus">알림톡발송(고객)</th>
+							<th class="th_cus">템플릿선택(고객)</th>
+							<th class="bin"></th>
+							<th>알림톡발송(관리자)</th>
+							<th>템플릿선택(관리자)</th>
+							<th>관리자번호입력</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td_num">18</td>
+							<td class="td_tit">리프레시 소멸안내</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">17</td>
+							<td class="td_tit">회원등급변경</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">16</td>
+							<td class="td_tit">휴면회원</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">15</td>
+							<td class="td_tit">환불완료</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">14</td>
+							<td class="td_tit">환불보류</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">13</td>
+							<td class="td_tit">환불접수</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">12</td>
+							<td class="td_tit">주문취소</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">11</td>
+							<td class="td_tit">미입금 주문자동취소</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">10</td>
+							<td class="td_tit">예약완료</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">9</td>
+							<td class="td_tit">여행상품 미확정/확정</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">8</td>
+							<td class="td_tit">결제완료(관리자)</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">7</td>
+							<td class="td_tit">결제완료(고객)</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">6</td>
+							<td class="td_tit">잔금대기</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">5</td>
+							<td class="td_tit">예약금완료</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">4</td>
+							<td class="td_tit">입금대기</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">3</td>
+							<td class="td_tit">비밀번호 찾기</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">2</td>
+							<td class="td_tit">아이디 찾기</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+						<tr>
+							<td class="td_num">1</td>
+							<td class="td_tit">회원가입</td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off on">OFF</span><span class="btn_on on">ON</span><span class="dong on"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="bin"></td>
+							<td class="td_onf"><p class="btn_onoff"><span class="btn_off">OFF</span><span class="btn_on">ON</span><span class="dong"></span></p></td>
+							<td><button type="button" class="button-B" onClick="myPopup()">템플릿</button></td>
+							<td class="td_kakao"><button type="button" class="button-B btn_phoneup">받는사람 0명</button><div class="add"><i class="xi-plus-circle" type="button"></i><i class="xi-minus-circle" type="button"></i></div></td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- 카카오관리자번호입력 -->
+				<div class="phoneup">
+					<div class="phoneup_inn">
+						<p class="tit"><i class="xi-lightbulb-o"></i> 받는 관리자 휴대폰번호 입력</p>
+						<div class="phone">
+							<div class="inp"><input type="text"></div>
+							<div class="add">
+								<p class="plus"><i class="xi-plus-circle"></i></p>
+								<p class="minu"><i class="xi-minus-circle"></i></p>
+							</div>
+						</div>
+						<div class="phone">
+							<div class="inp"><input type="text"></div>
+							<div class="add">
+								<p class="plus"><i class="xi-plus-circle"></i></p>
+								<p class="minu"><i class="xi-minus-circle"></i></p>
+							</div>
+						</div>
+						<p class="btn"><button type="button">저장</button></p>
+						<p class="close"><i class="xi-close"></i></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

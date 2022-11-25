@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 회원관리</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>회원명</th>
+							<td colspan="3">홍길동</td>
+						</tr>
+						<tr>
+							<th>리프레시 포인트</th>
+							<td class="td_w">2,150원</td>
+							<th>쿠폰</th>
+							<td>0개</td>
+						</tr>
+						<tr>
+							<th>총 구매금액</th>
+							<td colspan="3">268,000원 | 총 구매건수 7 | 총 상담건수 0 | 1:1 문의건수 0/0</td>
+						</tr>
+						<tr>
+							<th>회원구분</th>
+							<td>개인회원</td>
+							<th>최종로그인일</th>
+							<td>0000-00-00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tab_area">
+				<button type="button" class="button-B" onclick="location.href='crm.html'">요약보기</button>
+				<button type="button" class="button-B" onclick="location.href='detail.html'">회원정보</button>
+				<button type="button" class="button-B" onclick="location.href='order.html'">주문내역</button>
+				<button type="button" class="button-B" onclick="location.href='mileage.html'">리프레시 포인트내역</button>
+				<button type="button" class="button-B" onclick="location.href='coupon.html'">쿠폰내역</button>
+				<button type="button" class="button-B" onclick="location.href='atalk.html'">문자/알림톡 발송내역</button>
+				<button type="button" class="button-B" onclick="location.href='counsel.html'">상담내역</button>
+				<button type="button" class="button-B on" onclick="location.href='qa.html'">문의내역</button>
+				<button type="button" class="button-B" onclick="location.href='board.html'">게시글내역</button>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 1:1문의내역 <span class="comment"></h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select class="w-F">
+											<option value="등록일">등록일</option>
+											<option value="수정일">수정일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2022-09-28"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-09-28"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button" class="on">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+										<button type="button">1년</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>검색어</th>
+								<td>
+									<div>
+										<select class="w-F">
+											<option value="전체">전체</option>
+											<option value="제목">제목</option>
+											<option value="내용">내용</option>
+										</select>
+										<input type="search" class="input_search" placeholder="검색어">
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>답변상태</th>
+								<td>
+									<div>
+										<select class="w-F">
+										<option value="전체">전체</option>
+										<option value="접수">접수</option>
+										<option value="답변대기">답변대기</option>
+										<option value="답변완료">답변완료</option>
+									</select>
+									</div>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area_one">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+									</div>
+								</td>								
+							</tr>
+							<tr>
+								<th>말머리</th>
+								<td>
+									<div>
+										<select class="w-F">
+										<option value="문의내용">문의내용</option>
+										<option value="회원/정보관리">회원/정보관리</option>
+										<option value="주문/결제">주문/결제</option>
+										<option value="환불">환불</option>
+										<option value="영수증/증빙서류">영수증/증빙서류</option>
+										<option value="상품/이벤트">상품/이벤트</option>
+										<option value="기타">기타</option>
+									</select>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span></p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th>No.</th>
+							<th>제목</th>
+							<th>등록/수정일 <span class="array1"><img src="/design/wave/manager/images/array_o.png" title="정렬"></th>
+							<th>조회</th>
+							<th>답변상태</span></th>
+							<th>답변</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td_num">2</td>
+							<td>관리자(master)</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td>10</td>
+							<td>접수</td>
+							<td>블라블라</td>
+						</tr>
+						<tr>
+							<td class="td_num">2</td>
+							<td>관리자(master)</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td>땡땡</td>
+							<td>답변완료</td>
+							<td>블라블라</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

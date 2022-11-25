@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+<? include "../../../head_editor.html"; ?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 이용시설 이미지 등록</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>이용시설 선택 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<select class="w-G">
+									<option value="이용시설 선택">이용시설 선택</option>
+									<option value="워터파크">워터파크</option>
+									<option value="카누">카누</option>
+									<option value="제트스키">제트스키</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>썸네일 이미지 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<div class="stit"><span></span>메인 썸네일</div>
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 520 x 520 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+								<div class="stit"><span></span>상세 썸네일</div>
+								<!-- 상세 썸네일 드래그&드롭 -->
+								<div class="client_list">
+									<ul id="sortable">
+										<li>
+											<img src="/design/travel/manager/images/client_01.png" alt="">
+											<div class="mod">
+												<button type="button" class="btn_imgup">수정</button>
+												<button type="button">삭제</button>
+											</div>
+										</li>
+									<ul>
+									<ul id="sortable">
+										<li>
+											<img src="/design/travel/manager/images/client_02.png" alt="">
+											<div class="mod">
+												<button type="button" class="btn_imgup">수정</button>
+												<button type="button">삭제</button>
+											</div>
+										</li>
+									<ul>
+										<li class="bin">
+											<img src="/design/travel/manager/images/client_00.png" alt="">
+											<div class="btn">
+												<button type="button" class="btn_imgup">추가등록</button>
+											</div>
+										</li>
+									</ul>
+									<!-- 이미지등록 -->
+									<div class="imgup">
+										<div class="imgup_inn">
+											<p class="tit"><i class="xi-lightbulb-o"></i> 이미지파일 등록</p>
+											<div class="input_file">
+												<p class="hidden_file">
+													<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+												</p>
+												<p class="show_file">
+													<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+												</p>
+											</div>
+											<span class="comment"><i class="xi-error-o"></i> 권장사이즈 520 x 520 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+											<div class="img_view">
+												<img src="" alt="">
+												<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+											</div>
+											<p class="btn"><button type="button">등록</button></p>
+											<p class="close"><i class="xi-close"></i></p>
+										</div>
+									</div>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 드래그 & 드롭 방식으로 노출순서 지정 가능</span>
+								<div class="stit"><span></span>리스트 썸네일</div>
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 260 x 260 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>상품 상세설명 <span class="color-A">*</span><br /> 이미지</th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 980 x n 픽셀이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>상세이미지 편집기</th>
+							<td colspan="3">
+								<textarea class="summernote"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<th>한줄메모 </th>
+							<td colspan="3" class="td_w">
+									<input type="text" class="w-100" required/>
+								</div>
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="mark"><i class="xi-error-o"></i> 추가 이용시설을 개별 등록 하세요. </div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">취소</button><button type="button" onclick="window.close();">입력완료</button></p>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

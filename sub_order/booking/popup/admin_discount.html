@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 운영자 추가할인</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>사용설정 </th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="aa" id="pc_1" checked /><label for="pc_1"><span></span> 지급(+)</label></p>
+									<p><input type="radio" name="aa" id="pc_2" /><label for="pc_2"><span></span> 차감(-)</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>금액설정</th>
+							<td><input type="text" required /> 원</td>
+						</tr>
+						<tr>
+							<th>지급/차감사유 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-100" required /></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">저장</button><button type="button" onclick="window.close();">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</script> 
+</body>
+</html>

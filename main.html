@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? include "head_common.html"; ?>
+<script type="text/Javascript" src="/design/travel/manager/js/pie_chart/jquery.min.js"></script>
+<script type="text/Javascript" src="/design/travel/manager/js/pie_chart/exporting.js"></script>
+<script type="text/Javascript" src="/design/travel/manager/js/pie_chart/highcharts.js"></script>
+<script type="text/Javascript" src="/design/travel/manager/js/pie_chart/pie_chart1.js"></script>
+<script type="text/Javascript" src="/design/travel/manager/js/pie_chart/pie_chart2.js"></script>
+<script type="text/Javascript" src="/design/travel/manager/js/pie_chart/pie_chart3.js"></script>
+</head>
+<body>
+<div id="wrap">
+<? include "header.html"; ?>
+<!-- container -->
+<div id="container">
+<!-- 포인트 -->
+	<div class="point">
+		<ul>
+			<li class="liCompany"><span>오렌지투어</span> (orangetour.io)</li>
+			<li class="liPoint">오렌지 <span>00,000개</span></li>
+			<li class="liCharge"><a href="#">충전</a></li>
+			<li class="liManager">
+				<span class="spanPerson"><i class="xi-user"></i>컴호미 관리자님</span>&nbsp;
+				<a href="#">[로그아웃]</a>
+			</li>
+		</ul>
+	</div>
+	<!-- main_content -->
+	<div class="main_content">
+		<!-- 메인통계1 -->
+		<div class="pie_chart">
+			<h3><i class="fas fa-bookmark"></i>TODAY STATISTICS</h3>
+			<div class="pie_chart_in">
+				<div class="pie_box">
+					<div id="js-container1" style="min-width:310px; height:360px; max-width:600px; margin:0 auto;"></div>
+				</div>
+				<div class="pie_box">
+					<div id="js-container2" style="min-width:310px; height:360px; max-width:600px; margin:0 auto;"></div>
+				</div>
+				<div class="pie_box">
+					<div id="js-container3" style="min-width:310px; height:360px; max-width:600px; margin:0 auto;"></div>
+				</div>
+			</div>
+		</div>
+		<!-- 사내 공지사항 -->
+		<section class="notice">
+			<h3><i class="xi-pen"></i>사내 공지사항</h3>
+			<ul>
+				<li><a href="#"><span class="spanTit">기업은행 서비스 일시중단 안내</span><span class="spanDay">2017-12-21</span></a></li>
+				<li><a href="#"><span class="spanTit">오렌지 통합관리 서비스 안내</span><span class="spanDay">2017-12-21</span></a></li>
+				<li><a href="#"><span class="spanTit">한국전력 전원공사 어쩌고 저쩌고 안내 사항 한국전력 전원공사 어쩌고 저쩌고 안내 사항 한국전력 전원공사 어쩌고 저쩌고 안내 사항</span><span class="spanDay">2017-12-21</span></a></li>
+				<li><a href="#"><span class="spanTit">서버시스템 정기점검 안내</span><span class="spanDay">2017-12-21</span></a></li>
+				<li><a href="#"><span class="spanTit">오렌지메시지 이용 안내</span><span class="spanDay">2017-12-21</span></a></li>
+			</ul>
+			<p class="pMore"><i class="xi-plus"></i></p>
+		</section>
+		<!-- 이벤트 -->
+		<section class="event">
+			<a href="#"><img src="/design/travel/manager/images/event_01.png" alt="이벤트"></a>
+		</section>
+		<!-- 오렌지투어 공지사항 -->
+		<section class="notice">
+			<h3><i class="xi-pen"></i>오렌지투어 공지사항</h3>
+			<ul>
+				<li><a href="#"><span class="spanTit">기업은행 서비스 일시중단 안내</span><span class="spanDay">2017-12-21</span></a></li>
+				<li><a href="#"><span class="spanTit">오렌지 통합관리 서비스 안내</span><span class="spanDay">2017-12-21</span></a></li>
+				<li><a href="#"><span class="spanTit">한국전력 전원공사 어쩌고 저쩌고 안내 사항 한국전력 전원공사 어쩌고 저쩌고 안내 사항 한국전력 전원공사 어쩌고 저쩌고 안내 사항</span><span class="spanDay">2017-12-21</span></a></li>
+				<li><a href="#"><span class="spanTit">서버시스템 정기점검 안내</span><span class="spanDay">2017-12-21</span></a></li>
+				<li><a href="#"><span class="spanTit">오렌지메시지 이용 안내</span><span class="spanDay">2017-12-21</span></a></li>
+			</ul>
+			<p class="pMore"><i class="xi-plus"></i></p>
+		</section>
+		<!-- 패치 & 업그레이드 -->
+		<section class="upgrade">
+			<h3><i class="xi-pen"></i>패치 & 업그레이드</h3>
+			<ul>
+				<li><a href="#"><span class="spanTit">서비 이전 업그레이드</span><span class="spanDay">2017-12-21</span></a></li>
+				<li><a href="#"><span class="spanTit">오렌지투어 정기 패치 및 업그레이드</span><span class="spanDay">2017-12-21</span></a></li>
+				<li><a href="#"><span class="spanTit">오렌지투어 정기 패치 및 업그레이드</span><span class="spanDay">2017-12-21</span></a></li>
+				<li><a href="#"><span class="spanTit">오렌지투어 정기 및 업그레이드</span><span class="spanDay">2017-12-21</span></a></li>
+				<li><a href="#"><span class="spanTit">패치 및 업그레이드</span><span class="spanDay">2017-12-21</span></a></li>
+			</ul>
+			<p class="pMore"><i class="xi-plus"></i></p>
+		</section>
+	</div>
+	<!-- //main_content -->
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

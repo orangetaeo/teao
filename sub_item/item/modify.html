@@ -1,0 +1,1627 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+<? include "../../head_editor.html"; ?>
+</head>
+
+<!-- [새창팝업] -->
+<script>
+
+//일정표 선택
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/schedule/popup/bring.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1205, height=970");
+}
+
+//단독상품 선택
+function myPopup2() {
+	window.open("/design/travel/manager/sub_item/schedule/popup/flight.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=970");
+}
+
+//선택관광 선택
+function myPopup3() {
+	window.open("/design/travel/manager/sub_item/schedule/popup/tourist.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1205, height=970");
+}
+
+//일정 가져오기
+function myPopup4() {
+	window.open("/design/travel/manager/sub_item/schedule/popup/bring.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1205, height=970");
+}
+</script>
+
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_item.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">상품관리</a> &gt; <a href="#">상품 설정</a> &gt; <a href="#">상품 수정</a></p>
+			<?
+			include "../../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 상품 카테고리</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 카테고리 -->
+			<div class="category">
+				<div class="group">
+					<h3>대분류 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on">
+							<li><a href="#">해외여행</a></li>
+							<li><a href="#">항공</a></li>
+							<li><a href="#">호텔/펜션</a></li>
+							<li><a href="#">투어/입장권</a></li>
+							<li><a href="#">허니문</a></li>
+							<li><a href="#">골프</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>중분류 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on2">
+							<li><a href="#">동남아/대만/서남아</a></li>
+							<li><a href="#">괌/사이판/호주/뉴질랜드</a></li>
+							<li><a href="#">유럽/아프리카</a></li>
+							<li><a href="#">미주/중남미/하와이</a></li>
+							<li><a href="#">일본</a></li>
+							<li><a href="#">중국/홍콩/몽골/중앙아시아</a></li>
+							<li><a href="#">지방출발</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>소분류 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on3">
+							<li><a href="#">태국</a></li>
+							<li><a href="#">필리핀</a></li>
+							<li><a href="#">베트남</a></li>
+							<li><a href="#">캄보디아</a></li>
+							<li><a href="#">말레이시아</a></li>
+							<li><a href="#">인도네시아</a></li>
+							<li><a href="#">라오스</a></li>
+							<li><a href="#">대만</a></li>
+							<li><a href="#">인도</a></li>
+							<li><a href="#">싱가포르</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>상세분류 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div id="step4" class="class_on4">
+							<li><a href="#">다낭</a></li>
+							<li><a href="#">나트랑</a></li>
+							<li><a href="#">푸꾸옥</a></li>
+							<li><a href="#">하롱베이</a></li>
+							<li><a href="#">하노이</a></li>
+							<li><a href="#">사파</a></li>
+							<li><a href="#">호치민</a></li>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 노출 및 판매상태 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>일정 가져오기</th>
+							<td colspan="3">
+								<button type="button" class="button-A" onclick="myPopup4()">일정 가져오기</button>
+								<span class="comment"><i class="xi-error-o"></i> 일정 데이터를 가져 옵니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>상품 노출</th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="pc_exposure" id="pc_1" checked /><label for="pc_1"><span></span>노출함</label></p>
+									<p><input type="radio" name="pc_exposure" id="pc_2" /><label for="pc_2"><span></span>노출안함</label></p>
+								</div>
+							</td>
+						</tr>					
+						<tr>
+							<th>구매가능 회원등급</th>
+							<td colspan="3">
+							<div class="r_circle m-A">
+									<p><input type="radio" name="member_class" id="mb_cl_1" value="1" checked /><label for="mb_cl_1"><span></span>전체(회원+비회원)</label></p>
+									<p><input type="radio" name="member_class" id="mb_cl_2" value="2" /><label for="mb_cl_2"><span></span>회원전용(비회원제외)</label></p>
+									<p><input type="radio" name="member_class" id="mb_cl_3" value="3" /><label for="mb_cl_3"><span></span>특정회원등급</label></p>
+									<button type="button" class="button-A btn_member_level">회원등급 선택</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>접근권한 회원등급</th>
+							<td colspan="3">
+							<div class="r_circle m-A">
+									<p><input type="radio" name="access_class" id="mb_cl_1" value="1" checked /><label for="mb_cl_1"><span></span>전체(회원+비회원)</label></p>
+									<p><input type="radio" name="access_class" id="mb_cl_2" value="2" /><label for="mb_cl_2"><span></span>회원전용(비회원제외)</label></p>
+									<p><input type="radio" name="access_class" id="mb_cl_3" value="3" /><label for="mb_cl_3"><span></span>특정회원등급</label></p>
+									<button type="button" class="button-A btn_member_level">회원등급 선택</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 상품기본 정보</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>상품상태 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="decided" id="decided1" checked><label for="decided1"><span></span></p>
+										<div class="txt">확정 : 단, <input type="text" class="w-A ta-r" placeholder="2"/> 개 부터 확정</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="decided" id="decided2"><label for="decided2"><span></span></p>
+										<div class="txt">미확정 : 단, <input type="text" class="w-A ta-r" placeholder="6"/> 개 되면 확정으로 변경</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>상품가져오기</th>
+							<td colspan="3">
+								<button type="button" class="button-A" onclick="myPopup1()">일정표 가져오기</button>
+								<button type="button" class="button-A" onclick="myPopup2()">단독상품 가져오기</button>
+							</td>
+						</tr>
+						<tr>
+							<th>상품명 (내부용)</th>
+							<td>
+								<a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">베트남 다낭으로 떠나는 3박4일 초저가 패키지</a>
+							</td>
+							<th>여행일정</th>
+							<td>3박 4일</td>
+						</tr>
+						<tr>
+							<th>포함된 여행상품</th>
+							<td colspan="3">
+								<button type="button" class="button-A" onclick="window.open('/design/travel/manager/sub_item/flight/modify.html')">항공</button>
+								<button type="button" class="button-A" onclick="window.open('/design/travel/manager/sub_item/accommodations/modify.html')">숙소</button>
+								<button type="button" class="button-A" onclick="window.open('/design/travel/manager/sub_item/golf/modify.html')">골프</button>
+								<button type="button" class="button-A" onclick="window.open('/design/travel/manager/sub_item/food/modify.html')">음식점</button>
+								<button type="button" class="button-A" onclick="window.open('/design/travel/manager/sub_item/tourist/modify.html')">관광</button>
+								<button type="button" class="button-A" onclick="window.open('/design/travel/manager/sub_item/tourist/modify.html')">쇼핑</button>
+								<button type="button" class="button-A" onclick="window.open('/design/travel/manager/sub_item/tourist/modify.html')">엑티비티</button>
+								<button type="button" class="button-A" onclick="window.open('/design/travel/manager/sub_item/transportation/modify.html')">교통수단</button>
+								<button type="button" class="button-A" onclick="window.open('/design/travel/manager/sub_item/transportation/modify.html')">가이드</button>
+								<span class="comment"><i class="xi-error-o"></i> 가져온 상품의 포함된 여행상품을 보여줍니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>상품명(고객노출용) <span class="color-A">*</span></th>
+							<td colspan="3"><input type="text" class="w-H" placeholder="베트남 다낭 어디까지 가봤니?"></td>
+						</tr>
+						<tr>
+							<th>상품영문명</th>
+							<td colspan="3"><input type="text" class="w-H" placeholder="How far have you been to Da Nang, Vietnam?"/></td>
+						</tr>
+						<tr>
+							<th>한줄상품평 <span class="color-A">*</span></th>
+							<td colspan="3"><input type="text" class="w-H" placeholder="베트남 다낭 구석구석 여행"/></td>
+						</tr>
+						<tr>
+							<th>해시테그 # <span class="color-A">*</span></th>
+								<td colspan="3">
+									<input type="text" class="w-F" placeholder="#"/>
+									<input type="text" class="w-F" placeholder="#"/>
+									<input type="text" class="w-F" placeholder="#"/>
+									<input type="text" class="w-F" placeholder="#"/>
+									<input type="text" class="w-F" placeholder="#"/>
+									<input type="text" class="w-F" placeholder="#"/>
+									<input type="text" class="w-F" placeholder="#"/>
+									<input type="text" class="w-F" placeholder="#"/>
+									<input type="text" class="w-F" placeholder="#"/>
+									<input type="text" class="w-F" placeholder="#"/>
+								</td>
+						</tr>
+						<tr>
+						<tr>
+							<th>상품코드 <span class="color-A">*</span></th>
+							<td class="td_w">
+								<div class="c_box">
+									<p><input type="checkbox" id="chch" checked /><label for="chch"><span></span>상품 등록시 자동 생성됩니다.</label></p>
+								</div>
+							</td>
+							<th>자체 상품코드 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-G" /><button type="button" class="button-A" onclick="location.href='#'">중복확인</button></td>
+						</tr>
+						<tr>
+						<th>바코드</th>
+							<td colspan="3"><input type="text" class="w-G" /></td>
+						</tr>					
+						<tr>
+							<th>QR코드 </th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 300 x 300 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 판매 정보<span class="dragdrop">(판매기간 내용 입력 후 '판매정보 입력' 버튼 필수)</span></h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>				
+						<tr>
+							<th>과세/면세</th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="tax_ok" id="tax_y" value="Y" checked/><label for="tax_y"><span></span>과세</label></p>
+									<p><input type="radio" name="tax_ok" id="tax_n" value="N" /><label for="tax_n"><span></span>면세</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>판매 재고</th>
+							<td class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="stock_ok" id="stock_y" value="Y" checked /><label for="stock_y"><span></span>무한정 판매</label></p>
+									<p><input type="radio" name="stock_ok" id="stock_n" value="N" /><label for="stock_n"><span></span>재고량에 따름</label></p>
+								</div>
+							</td>
+							<th>상품 재고</th>
+							<td><input type="text" class="w-E ta-r" required/> 개</td>
+						</tr>
+						<tr>
+							<th>구매수량 설정</th>
+							<td colspan="3">
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="purchase" id="purchase1" checked><label for="purchase1"><span></span></label></p>
+										<div class="txt">제한없음</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="purchase" id="purchase2"><label for="purchase2"><span></span></label></p>
+										<div class="txt">최소 구매수량 : <input type="text" class="w-C" />개 /최대 구매수량 : <input type="text" class="w-C" />개</div>
+									</li>
+								</ul>
+							</td>
+						<tr>
+						<tr>
+							<th>판매기간</th>
+							<td colspan="3">
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="period" id="period1" checked><label for="period1"><span></span></label></p>
+										<div class="txt">제한없음</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="period" id="period2" checked><label for="period2"><span></span></label></p>
+										<div class="txt">
+											<div class="nal">시작일</div>
+											<div class="day"><span><input type="text" class="w-D ta-c" placeholder="2022-09-11"><i class="xi-calendar"></i></span></div>
+											<div class="sel">
+												<select>
+													<option value="">시간</option>
+													<option value="">1시</option>
+													<option value="">2시</option>
+													<option value="">3시</option>
+													<option value="">4시</option>
+													<option value="">5시</option>
+													<option value="">6시</option>
+													<option value="">7시</option>
+													<option value="">8시</option>
+													<option value="">9시</option>
+													<option value="">10시</option>
+													<option value="">11시</option>
+													<option value="">12시</option>
+												</select>
+											</div>
+											<div class="sel">
+												<select>
+													<option value="">분</option>
+													<option value="">1분</option>
+													<option value="">2분</option>
+													<option value="">3분</option>
+													<option value="">4분</option>
+													<option value="">5분</option>
+													<option value="">6분</option>
+													<option value="">7분</option>
+													<option value="">8분</option>
+												</select>
+											</div>
+											<div class="nal">~</div>
+											<div class="nal">종료일</div>
+											<div class="day"><span><input type="text" class="w-D ta-c" placeholder="2022-09-30"><i class="xi-calendar"></i></span></div>
+											<div class="sel">
+												<select>
+													<option value="">시간</option>
+													<option value="">1시</option>
+													<option value="">2시</option>
+													<option value="">3시</option>
+													<option value="">4시</option>
+													<option value="">5시</option>
+													<option value="">6시</option>
+													<option value="">7시</option>
+													<option value="">8시</option>
+													<option value="">9시</option>
+													<option value="">10시</option>
+													<option value="">11시</option>
+													<option value="">12시</option>
+												</select>
+											</div>
+											<div class="sel">
+												<select>
+													<option value="">분</option>
+													<option value="">1분</option>
+													<option value="">2분</option>
+													<option value="">3분</option>
+													<option value="">4분</option>
+													<option value="">5분</option>
+													<option value="">6분</option>
+													<option value="">7분</option>
+													<option value="">8분</option>
+												</select>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="mark"><i class="xi-error-o"></i> '판매정보 입력' 버튼을 클릭 하면, 가격설정 금액이 시즌별 합산되어 보여집니다.</div>
+				<!-- 최종버튼 -->
+				<div class="complete">
+					<p><button type="button">판매정보 입력</button></p>
+				</div>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 가격 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>결제 선택</th>
+							<td colspan="3">
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="prepaid" id="prepaid1" checked/><label for="prepaid1"><span></span></label></p>
+										<div class="txt">선결제</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="prepaid" id="prepaid2" /><label for="prepaid2"><span></span></label></p>
+										<div class="txt">후결제</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="prepaid" id="prepaid3" /><label for="prepaid3"><span></span></label></p>
+										<div class="txt">선결제(예약금) <input type="number" class="w-A ta-r" />%</div>
+									</li>
+								</ul>
+									<span class="comment"><i class="xi-error-o"></i> 예약금을 받고 싶을 경우 '선결제(예약금)'을 선택 후 % 를 입력하세요.</span>
+							</td>
+						<tr>
+						<tr>
+							<th>기준 판매가 노출</th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="price_ok" id="price_y" value="Y" checked/><label for="price_y"><span></span>노출함</label></p>
+									<p><input type="radio" name="price_ok" id="price_n" value="N" /><label for="price_n"><span></span>노출안함</label></p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 소비자페이지 정가('기준판매가')의 노출을 선택.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>기준 판매가 합계 </th>
+							<td colspan="3">
+								<button type="button" class="button-A">극성수기 : \ 800,000 ~ 900,000</button>
+								<button type="button" class="button-A">준성수기 : \ 750,000 ~ 850,000</button>
+								<button type="button" class="button-A">성수기 : \ 700,000 ~ 800,000</button>
+								<button type="button" class="button-A">비수기 : \ 650,000 ~ 750,000</button>
+								<span class="comment"><i class="xi-error-o"></i> 일정 or 단독상품별 설정된 가격의 판매가 합계.(시즌, 옵션에 따른 최소, 최대 판매가 입니다.)</span>
+							</td>
+						</tr>
+						<tr>
+							<th>매입가 합계 </th>
+							<td colspan="3" class="td_w">
+								<button type="button" class="button-A">극성수기 : \ 600,000 ~ 700,000</button>
+								<button type="button" class="button-A">준성수기 : \ 550,000 ~ 650,000</button>
+								<button type="button" class="button-A">성수기 : \ 500,000 ~ 600,000</button>
+								<button type="button" class="button-A">비수기 : \ 450,000 ~ 550,000</button>
+								<span class="comment"><i class="xi-error-o"></i> 일정 or 단독상품별 설정된 가격의 매입가 합계.(시즌, 옵션에 따른 최소, 최대 매입가 입니다.)</span>
+							</td>
+						</tr>
+						<tr>
+							<th>할인가 합계 </span></th>
+							<td class="td_w">
+								<div class="sel">
+									<select>
+										<option value="대한민국 KRM">대한민국 KRM</option>
+										<option value="남아프리카 공화국 ZAR">남아프리카 공화국 ZAR</option>
+										<option value="네발 NPR">네발 NPR</option>
+										<option value="노르웨이 NOK">노르웨이 NOK</option>
+										<option value="뉴질랜드 NZD">뉴질랜드 NZD</option>
+										<option value="대만 TWD">대만 TWD</option>
+										<option value="덴마크 DKK">덴마크 DKK</option>
+										<option value="러시아 RUB">러시아 RUB</option>
+										<option value="마카오 MOP">마카오 MOP#</option>
+										<option value="말레이시아 MYR">말레이시아 MYR</option>
+										<option value="멕시코 MXN">멕시코 MXN</option>
+										<option value="몽골 MNT">몽골 MNT</option>
+										<option value="미국 USD">미국 USD</option>
+										<option value="바레인 BHD">바레인 BHD</option>
+										<option value="방글라데시 BDT">방글라데시 BDT</option>
+										<option value="베트남 VND">베트남 VND</option>
+										<option value="브라질 BRL">브라질 BRL</option>
+										<option value="브루나이 BND">브루나이 BND</option>
+										<option value="사우디아라비아 SAR">사우디아라비아 SAR</option>
+										<option value="스웨덴 SEK">스웨덴 SEK</option>
+										<option value="스위스 CHF">스위스 CHF</option>
+										<option value="싱가포르 SGD">싱가포르 SGD</option>
+										<option value="아랍에미리트 AED">아랍에미리트 AED</option>
+										<option value="영국 GBP">영국 GBP</option>
+										<option value="오만 OMG">오만 OMG</option>
+										<option value="요르단 JOD">요르단 JOD</option>
+										<option value="유럽연합 EUR">유럽연합 EUR</option>
+										<option value="이스라엘 ILS">이스라엘 ILS</option>
+										<option value="이집트 EGP">이집트 EGP</option>
+										<option value="인도 INR">인도 INR</option>
+										<option value="인도네시아 IDR">인도네시아 IDR</option>
+										<option value="일본 JPY">일본 JPY</option>
+										<option value="중국 CNY">중국 CNY</option>
+										<option value="체코 CZK">체코 CZK</option>
+										<option value="칠레 CLP">칠레 CLP</option>
+										<option value="카자흐스탄 KZT">카자흐스탄 KZT</option>
+										<option value="카타르 QAR">카타르 QAR</option>
+										<option value="캐나다 CAD">캐나다 CAD</option>
+										<option value="쿠웨이트 KWD">쿠웨이트 KWD</option>
+										<option value="태국 THB">태국 THB</option>
+										<option value="터키 TRY">터키 TRY</option>
+										<option value="파키스탄 PKR">파키스탄 PKR</option>
+										<option value="폴란드 PLN">폴란드 PLN</option>
+										<option value="필리핀 html">필리핀 html</option>
+										<option value="헝가리 HUF">헝가리 HUF</option>
+										<option value="호주 AUD">호주 AUD</option>
+										<option value="홍콩 HKD">홍콩 HKDN</option>
+									</select>
+									<input type="text" class="w-E ta-r" required placeholder="30,000"/>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 할인 할 금액입력.</span>
+							</td>
+							<th>할인가 노출상태</th>
+							<td>
+								<div class="r_circle m-A">
+									<p><input type="radio" name="selling_price_ok" id="selling_price_y" value="Y" checked/><label for="selling_price_y"><span></span>노출함</label></p>
+									<p><input type="radio" name="selling_price_ok" id="selling_price_n" value="N" /><label for="selling_price_n"><span></span>노출안함</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 소비자페이지 할인가 노출을 선택.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 이미지 등록</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>썸네일 이미지 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<div class="stit"><span></span>메인 썸네일</div>
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 520 x 520 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+								<div class="stit"><span></span>상세 썸네일</div>
+								<!-- 상세 썸네일 드래그&드롭 -->
+								<div class="client_list">
+									<ul id="sortable">
+										<li>
+											<img src="/design/travel/manager/images/client_01.png" alt="">
+											<div class="mod">
+												<button type="button" class="btn_imgup">수정</button>
+												<button type="button">삭제</button>
+											</div>
+										</li>
+									<ul>
+									<ul id="sortable">
+										<li>
+											<img src="/design/travel/manager/images/client_02.png" alt="">
+											<div class="mod">
+												<button type="button" class="btn_imgup">수정</button>
+												<button type="button">삭제</button>
+											</div>
+										</li>
+									<ul>
+										<li class="bin">
+											<img src="/design/travel/manager/images/client_00.png" alt="">
+											<div class="btn">
+												<button type="button" class="btn_imgup">추가등록</button>
+											</div>
+										</li>
+									</ul>
+									<!-- 이미지등록 -->
+									<div class="imgup">
+										<div class="imgup_inn">
+											<p class="tit"><i class="xi-lightbulb-o"></i> 이미지파일 등록</p>
+											<div class="input_file">
+												<p class="hidden_file">
+													<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+												</p>
+												<p class="show_file">
+													<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+												</p>
+											</div>
+											<span class="comment"><i class="xi-error-o"></i> 권장사이즈 520 x 520 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+											<div class="img_view">
+												<img src="" alt="">
+												<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+											</div>
+											<p class="btn"><button type="button">등록</button></p>
+											<p class="close"><i class="xi-close"></i></p>
+										</div>
+									</div>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 드래그 & 드롭 방식으로 노출순서 지정 가능</span>
+								<div class="stit"><span></span>리스트 썸네일</div>
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 260 x 260 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+							</td>
+						</tr>
+						<th>상품 아이콘</th>
+							<td colspan="3">
+								<div class="stit"><span></span>기간제한용</div>
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="icon" id="icon1" checked><label for="icon1"><span></span></p>
+										<div class="txt">
+											<div class="nal">시작일</div>
+											<div class="day"><span><input type="text" class="w-D ta-c" placeholder="2022-09-09"><i class="xi-calendar"></i></span></div>
+											<div class="nal">~</div>
+											<div class="nal">종료일</div>
+											<div class="day"><span><input type="text" class="w-D ta-c" placeholder="2022-09-09"><i class="xi-calendar"></i></span></div>
+											<div class="sel">
+												<select>
+													<option value="상품아이콘 선택">상품아이콘 선택</option>
+													<option value="베스트상품_아이콘">베스트상품_아이콘</option>
+													<option value="추천상품_아이콘">추천상품_아이콘</option>
+													<option value="신상품_아이콘">신상품_아이콘</option>
+													<option value="인기상품_아이콘">인기상품_아이콘</option>
+													<option value="이벤트상품_아이콘">이벤트상품_아이콘</option>
+												</select>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div class="stit"><span></span>무제한용</div>
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="icon" id="icon2" checked><label for="icon2"><span></span></p>
+										<div class="txt">
+											<div class="sel">
+												<select>
+													<option value="상품아이콘 선택">상품아이콘 선택</option>
+													<option value="베스트상품_아이콘">베스트상품_아이콘</option>
+													<option value="추천상품_아이콘">추천상품_아이콘</option>
+													<option value="신상품_아이콘">신상품_아이콘</option>
+													<option value="인기상품_아이콘">인기상품_아이콘</option>
+													<option value="이벤트상품_아이콘">이벤트상품_아이콘</option>
+												</select>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>배경 이미지</th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 1100 x ? 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>배경컬러</th>
+							<td colspan="3">
+								<input type="color" class="w-C ta-c" />
+								<input type="text" class="w-C" />
+								<span class="comment"><i class="xi-error-o"></i> 배경컬러 설정은 Chrome에서 최적화되어 있습니다.</span>
+							</td>
+						</tr>
+						<tr>
+						<th>상품상세 상단</th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+								<p><input type="radio" name="basic_item_info_top" id="basic_item_info_top_y" value="Y" checked /><label for="basic_item_info_top_y"><span></span>사용함</p>
+								<p><input type="radio" name="basic_item_info_top" id="basic_item_info_top_n" value="N" /><label for="basic_item_info_top_n"><span></span>사용안함</p>
+							</div>
+							<span class="comment"><i class="xi-error-o"></i> 기본정보 > 상품정책 > 상품상세 상단안내 관리에서 관리할 수 있습니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>상품 상세설명 <span class="color-A">*</span><br /> 이미지</th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 980 x n 픽셀이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>상세이미지<br />
+							HTML편집기</th>
+							<td colspan="3">
+								<textarea class="summernote"></textarea>
+							</td>
+						</tr>
+						<tr>
+						<th>상품상세 하단</th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+								<p><input type="radio" name="basic_item_info_bottom" id="basic_item_info_bottom_y" value="Y" checked /><label for="basic_item_info_bottom_y"><span></span>사용함</p>
+								<p><input type="radio" name="basic_item_info_bottom" id="basic_item_info_bottom_n" value="N" /><label for="basic_item_info_bottom_n"><span></span>사용안함</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 기본정보 > 상품정책 > 상품상세 하단안내 관리에서 관리할 수 있습니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 옵션상품 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>옵션 판매</th>
+							<td>
+								<div class="r_circle m-A">
+									<p><input type="radio" name="option_ok" id="option_y" value="Y" checked/><label for="option_y"><span></span>판매안함</p>
+									<p><input type="radio" name="option_ok" id="option_n" value="N" /><label for="option_n"><span></span>판매함</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>옵션등록</th>
+							<td colspan="3">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<div style="float:left" class="col-md-12">
+											<div class="">
+												<div id="switcher" class="btn-group">
+													<button style="width:110px" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span data-bind="label">상품 선택</span>&nbsp;<span class="caret"></span></button>
+													<ul class="dropdown-menu" role="menu">
+														<li><a href="#숙소">숙소</a>
+														</li>
+														<li><a href="#골프">골프</a>
+														</li>
+														<li><a href="#항공">항공</a>
+														</li>
+														<li><a href="#음식점">음식점</a>
+														</li>
+														<li><a href="#관광">관광</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div style="float:left" class="col-md-12">
+											<div class="col-lg-12">
+												<div class="filter" id="숙소">
+													<div class="dein_table mt15 mb10">
+														<table>
+															<thead>
+																<tr>
+																	<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+																	<th>번호</th>
+																	<th>시즌</th>
+																	<th>룸명</th>
+																	<th>베드타입</th>
+																	<th>엑스트라베드</th>
+																	<th>기본인원수</th>
+																	<th>최대인원수</th>
+																	<th>흡연여부</th>
+																	<th>제공식사</th>
+																	<th>룸판매가</th>
+																	<th>룸코드</th>
+																	<th>메모</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>3</td>
+																	<td>성수기</td>
+																	<td>디럭스룸</td>
+																	<td>더블베드</td>
+																	<td>O</td>
+																	<td>성인 2 아동2</td>
+																	<td>4</td>
+																	<td>X</td>
+																	<td>조식</td>
+																	<td>&#x20A9 150,000</td>
+																	<td>000000000</td>
+																	<td>가나다라..</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>2</td>
+																	<td>성수기</td>
+																	<td>스텐다드룸</td>
+																	<td>더블베드</td>
+																	<td>X</td>
+																	<td>성인2 아동2</td>
+																	<td>4</td>
+																	<td>O</td>
+																	<td>X</td>
+																	<td>&#x20A9 150,000</td>
+																	<td>000000000</td>
+																	<td>가나다라..</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>1</td>
+																	<td>비수기</td>
+																	<td>스위트룸</td>
+																	<td>킹베드</td>
+																	<td>O</td>
+																	<td>성인4</td>
+																	<td>6</td>
+																	<td>X</td>
+																	<td>조식, 중식, 석식</td>
+																	<td>&#x20A9 150,000</td>
+																	<td>000000000</td>
+																	<td>가나다라..</td>
+																</tr>
+															</tbody>
+														</table>
+														<div class="mt10">
+															<button type="button" class="button-A" onclick="location.href='#'">선택 삭제</button>
+														</div>
+													</div>
+												</div>
+												<div class="filter" id="골프">
+													<div class="dein_table mt15 mb10">
+														<table>
+															<thead>
+																<tr>
+																	<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+																	<th>번호</th>
+																	<th>시즌</th>
+																	<th>이용코스</th>
+																	<th>그린피</th>
+																	<th>캐디피</th>
+																	<th>카트비</th>
+																	<th>캐디팁</th>
+																	<th>판매가합계</th>
+																	<th>가격코드</th>
+																	<th>메모</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>3</td>
+																	<td>성수기</td>
+																	<td>레이크코스 18H</td>
+																	<td>1인
+																	<br />
+																	&#36; 30</td>
+																	<td>노케디 가능
+																	<br />
+																	</td>
+																	<td>2인1카트
+																	<br />
+																	&#36; 38</td>
+																	<td>
+																	<br />
+																	</td>
+																	<td>&#x20A9 180,000</td>
+																	<td>000000000</td>
+																	<td>가나다라..</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>2</td>
+																	<td>성수기</td>
+																	<td>레이크코스 18H</td>
+																	<td>1인
+																	<br />
+																	&#36; 30</td>
+																	<td>2인1캐디
+																	<br />
+																	&#x20A9 50,000</td>
+																	<td>2인1카트
+																	<br />
+																	&#36; 38</td>
+																	<td>1인
+																	<br />
+																	&#36; 30</td>
+																	<td>&#x20A9 180,000</td>
+																	<td>000000000</td>
+																	<td>가나다라..</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>1</td>
+																	<td>비수기</td>
+																	<td>레이크코스 18H</td>
+																	<td>1인
+																	<br />
+																	&#x20AB 300</td>
+																	<td>2인1캐디
+																	<br />
+																	&#x20A9 50,000</td>
+																	<td>2인1카트
+																	<br />
+																	&#x20AB 380</td>
+																	<td>1인
+																	<br />
+																	&#x20AB 300</td>
+																	<td>&#x20A9 180,000</td>
+																	<td>000000000</td>
+																	<td>가나다라..</td>
+																</tr>
+															</tbody>
+														</table>
+														<div class="mt10">
+															<button type="button" class="button-A" onclick="location.href='#'">선택 삭제</button>
+														</div>
+													</div>
+												</div>
+												<div class="filter" id="항공">
+													<div class="dein_table mt15 mb10">
+														<table>
+															<thead>
+																<tr>
+																	<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+																	<th>번호</th>
+																	<th>시즌</th>
+																	<th>좌석등급</th>
+																	<th>연령</th>
+																	<th>판매가</th>
+																	<th>좌석코드</th>
+																	<th>메모</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>6</td>
+																	<td>성수기</td>
+																	<td>비즈니스</td>
+																	<td>성인</td>
+																	<td>&#x20A9 700,000</td>
+																	<td>000000000</td>
+																	<td>가나다라..</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>5</td>
+																	<td>성수기</td>
+																	<td>비즈니스</td>
+																	<td>아동</td>
+																	<td>&#x20A9 600,000</td>
+																	<td>000000000</td>
+																	<td>가나다라..</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>4</td>
+																	<td>성수기</td>
+																	<td>비즈니스</td>
+																	<td>유아</td>
+																	<td>&#x20A9 500,000</td>
+																	<td>000000000</td>
+																	<td>가나다라..</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>3</td>
+																	<td>성수기</td>
+																	<td>이코노미</td>
+																	<td>성인</td>
+																	<td>&#x20A9 180,000</td>
+																	<td>000000000</td>
+																	<td>가나다라..</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>2</td>
+																	<td>성수기</td>
+																	<td>이코노미</td>
+																	<td>아동</td>
+																	<td>&#x20A9 180,000</td>
+																	<td>000000000</td>
+																	<td>가나다라..</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>1</td>
+																	<td>성수기</td>
+																	<td>이코노미</td>
+																	<td>유아</td>
+																	<td>&#x20A9 180,000</td>
+																	<td>000000000</td>
+																	<td>가나다라..</td>
+																</tr>
+															</tbody>
+														</table>
+														<div class="mt10">
+															<button type="button" class="button-A" onclick="location.href='#'">선택 삭제</button>
+														</div>
+													</div>
+												</div>
+												<div class="filter" id="음식점">
+													<div class="dein_table mt15 mb10">
+														<table>
+															<thead>
+																<tr>
+																	<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+																	<th>번호</th>
+																	<th>옵션1</th>
+																	<th>연령기준</th>
+																	<th>옵션속성</th>
+																	<th>판매가</th>
+																	<th>옵션코드</th>
+																	<th>노출상태</th>
+																	<th>메모</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>4</td>
+																	<td>디너 이용권</td>
+																	<td>성인</td>
+																	<td>4인 이용권</td>
+																	<td>&#x20A9 50,000</td>
+																	<td>000000000</td>
+																	<td>가나다..</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>3</td>
+																	<td>디너 이용권</td>
+																	<td>성인</td>
+																	<td>2인 이용권</td>
+																	<td>&#x20A9 50,000</td>
+																	<td>000000000</td>
+																	<td>가나다..</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>1</td>
+																	<td>디너 이용권</td>
+																	<td>아동</td>
+																	<td>2인 이용권</td>
+																	<td>&#x20A9 50,000</td>
+																	<td>000000000</td>
+																	<td>가나다..</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>1</td>
+																	<td>디너 이용권</td>
+																	<td>성인</td>
+																	<td>커피 이용권</td>
+																	<td>&#x20A9 50,000</td>
+																	<td>000000000</td>
+																	<td>가나다..</td>
+																</tr>
+															</tbody>
+														</table>
+														<div class="mt10">
+															<button type="button" class="button-A" onclick="location.href='#'">선택 삭제</button>
+														</div>
+													</div>
+												</div>
+												<div class="filter" id="관광">
+													<div class="dein_table mt15 mb10">
+														<table>
+															<thead>
+																<tr>
+																	<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+																	<th>번호</th>
+																	<th>시즌</th>
+																	<th>옵션1</th>
+																	<th>연령기준</th>
+																	<th>옵션속성</th>
+																	<th>판매가</th>
+																	<th>옵션코드</th>
+																	<th>노출상태</th>
+																	<th>메모</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>5</td>
+																	<td>성수기</td>
+																	<td>이용권</td>
+																	<td>성인</td>
+																	<td>오전 이용권</td>
+																	<td>&#x20A9 50,000</td>
+																	<td>000000000</td>
+																	<td>가나다...</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>4</td>
+																	<td>성수기</td>
+																	<td>이용권</td>
+																	<td>아동</td>
+																	<td>오전 이용권</td>
+																	<td>&#x20A9 50,000</td>
+																	<td>000000000</td>
+																	<td>가나다...</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>3</td>
+																	<td>성수기</td>
+																	<td>이용권</td>
+																	<td>유아</td>
+																	<td>오전 이용권</td>
+																	<td>&#x20A9 50,000</td>
+																	<td>000000000</td>
+																	<td>가나다...</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>1</td>
+																	<td>시즌 없음</td>
+																	<td>이용권</td>
+																	<td>성인</td>
+																	<td>1인 오전 이용권</td>
+																	<td>&#x20A9 50,000</td>
+																	<td>000000000</td>
+																	<td>가나다...</td>
+																</tr>
+																<tr>
+																	<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+																	<td>1</td>
+																	<td>시즌 없음</td>
+																	<td>이용권</td>
+																	<td>유아</td>
+																	<td>2인 종일 이용권</td>
+																	<td>&#x20A9 50,000</td>
+																	<td>000000000</td>
+																	<td>가나다...</td>
+																</tr>
+															</tbody>
+														</table>
+														<div class="mt10">
+															<button type="button" class="button-A" onclick="location.href='#'">선택 삭제</button>
+														</div>
+													</div>
+												</div>
+												<span class="comment"><i class="xi-error-o"></i> 시즌이 있는 옵션일 경우 선택하면 설정된 시즌에 맞는 옵션이 노출 됩니다.</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 선택관광/ 관련상품 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>선택관광 설정</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle fl">
+									<p><input type="radio" name="optional_tour" id="optional_tour1" value="1" /><label for="optional_tour1"><span></span>사용안함</label></p>
+									<p><input type="radio" name="optional_tour" id="optional_tour2" value="2" checked/><label for="optional_tour2"><span></span>자동(같은 카테고리 상품이 무작위로 보여짐)</label></p>
+									<p><input type="radio" name="optional_tour" id="optional_tour3" value="3" /><label for="optional_tour3"><span></span>수동</label></p>
+									<button type="button" class="button-A" onClick="myPopup3()">선택관광 선택</button>
+								<span class="comment"><i class="xi-error-o"></i> 소비자페이지 옵션판매의 선택관광 영역에 노출.</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>일정표 관련상품 선택</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle fl">
+									<p><input type="radio" name="schedule_related_product" id="schedule_related_product_1" value="1" /><label for="schedule_related_product_1"><span></span>사용안함</label></p>
+									<p><input type="radio" name="schedule_related_product" id="schedule_related_product_2" value="2" checked/><label for="schedule_related_product_2"><span></span>자동(같은 카테고리 상품이 무작위로 보여짐)</label></p>
+									<p><input type="radio" name="schedule_related_product" id="schedule_related_product_3" value="3" /><label for="schedule_related_product_3"><span></span>수동</label></p>
+									<button type="button" class="button-A" onClick="myPopup1()">일정표 관련상품 선택</button>
+								<span class="comment"><i class="xi-error-o"></i> 상품상세설명 하단의 관련상품 영역에 노출.</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>단독 관련상품 선택</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle fl">
+									<p><input type="radio" name="related_product_ok" id="related_product_1" value="1" /><label for="related_product_1"><span></span>사용안함</label></p>
+									<p><input type="radio" name="related_product_ok" id="related_product_2" value="2" checked/><label for="related_product_2"><span></span>자동(같은 카테고리 상품이 무작위로 보여짐)</label></p>
+									<p><input type="radio" name="related_product_ok" id="related_product_3" value="3" /><label for="related_product_3"><span></span>수동</label></p>
+									<button type="button" class="button-A" onClick="myPopup2()">단독 관련상품 선택</button>
+								<span class="comment"><i class="xi-error-o"></i> 상품상세설명 하단의 관련상품 영역에 노출.</span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 포함/불포함/선택경비 정보</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>포함 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<table>
+									<tr style="border-top:1px solid #92a9d4;">
+										<th><input type="text" class="w-E" required value="교통"/></th>
+										<td colspan="3">
+											<textarea class="w-100 h-H"/>왕복항공권, 전용 차량비, 공항 미팅 & 샌딩</textarea>
+										</td>
+										<th><input type="text" class="w-E" required value="제세공과금"/></th>
+										<td colspan="3">
+											<textarea class="w-100 h-H"/>국내공항세, 현지공항세, 관광진흥개발기금, 전쟁보험료, 유류할증료</textarea>
+										</td>
+									</tr>
+									<tr>
+										<th><input type="text" class="w-E" required value="숙박"/></th>
+										<td colspan="3">
+											<textarea class="w-100 h-H"/>전일정 숙박비</textarea>
+										</td>
+										<th><input type="text" class="w-E" required value="식사"/></th>
+										<td colspan="3">
+											<textarea class="w-100 h-H"/>전일정 식사비</textarea>
+										</td>
+									</tr>
+									<tr>
+										<th><input type="text" class="w-E" required value="관광"/></th>
+										<td colspan="3">
+											<textarea class="w-100 h-H"/>관광지 입장료</textarea>
+										</td>
+										<th><input type="text" class="w-E" required value="여행자보험"/></th>
+										<td colspan="3">
+											<textarea class="w-100 h-H"/>1억 여행자보험</textarea>
+										</td>
+									</tr>
+									<tr>
+										<th><input type="text" class="w-E" required value="가이드/기사"/></th>
+										<td colspan="3">
+											<textarea class="w-100 h-G"/>가이드/기사 경비</textarea>
+										</td>
+										<th><input type="text" class="w-E" required value="기타"/></th>
+										<td colspan="3">
+											<textarea class="w-100 h-G"/></textarea>
+										</td>
+									</tr>
+								</table>
+								<button type="button" class="button-A" style="margin-top:10px" onclick="location.href='#'">항목추가</button>
+								<span class="comment"><i class="xi-error-o"></i> 항목추가 시 소비자페이지에 노출 됩니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>불포함 <span class="color-A">*</span></th>
+							<td colspan="3" class="td_w">
+								<table>
+									<tr style="border-top:1px solid #92a9d4;">
+										<th><input type="text" class="w-E" required value="가이드/기사"/></th>
+										<td colspan="3">
+											<textarea class="w-100 h-G"/>가이드/기사 경비 : 인당 USD 40 (아동 USD 30)</textarea>
+										</td>
+										<th><input type="text" class="w-E" required value="기타"/></th>
+										<td colspan="3">
+											<textarea class="w-100 h-G"/>
+개인 여행경비(물값, 자유시간시 개인비용 등) 
+각종 매너팁(테이블팁, 객실팁, 포터비, 마사지팁 등) 
+* 매너팁은 소비자의 자율적 선택으로 지불여부에 따른 불이익은 없습니다.</textarea>
+										</td>
+									</tr>
+								</table>
+								<button type="button" class="button-A" style="margin-top:10px" onclick="location.href='#'">항목추가</button>	
+								<span class="comment"><i class="xi-error-o"></i> 항목추가 시 소비자페이지에 노출 됩니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>선택경비 </th>
+							<td colspan="3" class="td_w">
+								<table>
+									<tr style="border-top:1px solid #92a9d4;">
+										<th><input type="text" class="w-E" required value="교통"/></th>
+										<td colspan="3">
+											<textarea class="w-100 h-H"/>항공리턴변경(문의)</textarea>
+										</td>
+										<th><input type="text" class="w-E" required value="숙박"/></th>
+										<td colspan="3">
+											<textarea class="w-100 h-H"/>객실 1인 사용료(문의)</textarea>
+										</td>
+									</tr>
+									<tr>
+										<th><input type="text" class="w-E" required value="관광"/></th>
+										<td colspan="3">
+											<textarea class="w-100 h-G"/>현지합류(불가) 선택관광/기항지관광/현지투어에 관한 상세 내역은 패키지 상품상세를 참고바랍니다.</textarea>
+										</td>
+										<th><input type="text" class="w-E" required value="기타"/></th>
+										<td colspan="3">
+											<textarea class="w-100 h-G"/></textarea>
+										</td>
+									</tr>
+								</table>
+								<button type="button" class="button-A" style="margin-top:10px" onclick="location.href='#'">항목추가</button>
+								<span class="comment"><i class="xi-error-o"></i> 항목추가 시 소비자페이지에 노출 됩니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 상품상세 정보고시/ 이용안내</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+						<th>상품상세 정보고시</th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+								<p><input type="radio" name="basic_item_info" id="basic_item_info_y" value="Y" checked /><label for="basic_item_info_y"><span></span>사용함</label></p>
+								<p><input type="radio" name="basic_item_info" id="basic_item_info_n" value="N" /><label for="basic_item_info_n"><span></span>사용안함 (선택 시 상세페이지에 해당내용이 존재 해야 합니다.)</label></p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 기본정보 > 상품정책 > 상품상세 정보고시 관리가능.</span>
+							</td>
+						</tr>
+						<tr>
+						<th>취소/환불안내</th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="delivery_info_ok" id="delivery_info_y" value="Y" checked /><label for="delivery_info_y"><span></span>노출함</label></p>
+									<p><input type="radio" name="delivery_info_ok" id="delivery_info_n" value="N" /><label for="delivery_info_n"><span></span>노출안함</label></p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 기본정보 > 이용안내 정책 > 취소안내에서 관리가능.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 리프레시 포인트/ 적립금 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>				
+						<tr>
+							<th>지급방법 선택</th>
+							<td colspan="3">
+								<select class="w-G">
+									<option value="리프레시 포인트 선택">리프레시 포인트 선택</option>
+									<option value="리프레시 포인트 기본">리프레시 포인트 기본</option>
+									<option value="1% 리프레시 포인트">1% 리프레시 포인트</option>
+									<option value="2% 리프레시 포인트">2% 리프레시 포인트</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>대상 선택</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle fl">
+									<p><input type="radio" name="mileage" id="mileage1" value="Y" checked/><label for="mileage1"><span></span>전체회원</label></p>
+									<p><input type="radio" name="mileage" id="mileage2" value="N" /><label for="mileage2"><span></span>특정회원등급</label></p>
+									<button type="button" class="button-A btn_member_level">회원등급 선택</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 쿠폰 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>				
+						<tr>
+							<th>쿠폰 선택</th>
+							<td colspan="3">
+								<select class="w-G">
+									<option value="쿠폰 선택">쿠폰 선택</option>
+									<option value="신년 쿠폰">신년 쿠폰</option>
+									<option value="크리스마스 쿠폰">크리스마스 쿠폰</option>
+									<option value="추석 쿠폰">추석 쿠폰</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>대상 선택</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle fl">
+									<p><input type="radio" name="coupon" id="coupon1" value="Y" checked/><label for="coupon1"><span></span>전체회원</label></p>
+									<p><input type="radio" name="coupon" id="coupon2" value="N" /><label for="coupon2"><span></span>특정회원등급</label></p>
+									<button type="button" class="button-A btn_member_level">회원등급 선택</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> SNS 공유 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>				
+						<tr>
+							<th>페이스북</th>
+							<td class="td_w">
+							<div class="r_circle m-A">
+								<p><input type="radio" name="facebook_ok" id="facebook_y" value="Y" /><label for="facebook_y"><span></span>노출함</label></p>
+								<p><input type="radio" name="facebook_ok" id="facebook_n" value="N" checked /><label for="facebook_n"><span></span>노출안함</label></p>
+							</div>
+							</td>
+							<th>인스타그램</th>
+							<td>
+							<div class="r_circle m-A">
+								<p><input type="radio" name="instagram_ok" id="instagram_y" value="Y" /><label for="instagram_y"><span></span>노출함</label></p>
+								<p><input type="radio" name="instagram_ok" id="instagram_n" value="N" checked /><label for="instagram_n"><span></span>노출안함</label></p>
+							</div>
+							</td>
+						</tr>
+						<tr>
+							<th>카카오톡</th>
+							<td class="td_w">
+							<div class="r_circle m-A">
+								<p><input type="radio" name="kakao_ok" id="kakao_y" value="Y" /><label for="kakao_y"><span></span>노출함</label></p>
+								<p><input type="radio" name="kakao_ok" id="kakao_n" value="N" checked /><label for="kakao_n"><span></span>노출안함</label></p>
+							</div>
+							</td>
+							<th>기타</th>
+							<td>
+							<div class="r_circle m-A">
+								<p><input type="radio" name="etc_ok" id="etc_y" value="Y" /><label for="etc_y"><span></span>노출함</label></p>
+								<p><input type="radio" name="etc_ok" id="etc_n" value="N" checked /><label for="etc_n"><span></span>노출안함</label></p>
+							</div>
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 검색엔진 최적화 SEO설정 (개별상품 설정)</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>개별설정 여부 </th>
+							<td>
+								<div class="r_circle m-A">
+									<p><input type="radio" name="seo_ok" id="seo_y" value="Y" /><label for="seo_y"><span></span>사용함</label></p>
+									<p><input type="radio" name="seo_ok" id="seo_n" value="N" checked /><label for="seo_n"><span></span>사용안함</label></p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> '사용함' 선택 시 기본설정> 회사정보> 검색엔진 최적화 SEO설정 (홈페이지 메인) 설정보다 개별 설정이 우선적으로 적용됩니다.<br />
+								설정 결과는 검색 엔진에 따라 평균 2주 ~ 3주 후에 반영될 수 있습니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>타이틀 (Title) </th>
+							<td><input type="text" class="w-H" required /><span class="txt_nmb">00/40</span></td>
+						</tr>
+						<tr>
+							<th>메타태그 작성자 (Author) </th>
+							<td><input type="text" class="w-H" required /></td>
+						</tr>					
+						<tr>
+							<th>메타태그 설명 (Desription) </th>
+							<td><input type="text" class="w-H" required /><span class="txt_nmb">00/80</span></td>
+						</tr>
+						<tr>
+							<th>메타태그 키워드 (Keywords) </th>
+							<td>
+								<input type="text" class="w-H" required />
+								<span class="comment"><i class="xi-error-o"></i> 컴마기준으로 입력해주세요 ex)쇼핑몰, 여성의류, 남성복</span>
+							</td>
+						</tr>
+						<tr>
+							<th>SNS 제목 (og:title) </th>
+							<td>
+								<input type="text" class="w-H" required /><span class="txt_nmb">00/40</span>
+								<span class="comment"><i class="xi-error-o"></i> 쇼핑몰 URL을 카카오톡등의 SNS로 전송시 쇼핑몰 타이틀이 출력됩니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>SNS 설명 (og:desription) </th>
+							<td>
+								<input type="text" class="w-H" required /><span class="txt_nmb">00/80</span>
+								<span class="comment"><i class="xi-error-o"></i> 쇼핑몰 URL을 카카오톡등의 SNS로 전송시 쇼핑몰 소개 내용이 출력됩니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 메모</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write gro">
+				<table>
+					<tbody>				
+						<tr>
+							<th>메모</th>
+							<td>
+								<textarea class="w-100 h-C"/></textarea>
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+	<!-- 레이어팝업 회원등급 선택 -->
+	<div class="member_level">
+		<div class="member_level_inn">
+			<p class="tit"><i class="xi-lightbulb-o"></i> 회원등급 선택</p>
+			<!-- 카테고리 -->
+			<div class="level">
+				<div class="group">
+					<ul>
+						<div class="c_box">
+							<p><input type="checkbox" name="member_level" id="member_level1" /><label for="member_level1"><span></span><button type="button" class="button-A">비회원</button></label></p>
+							<p><input type="checkbox" name="member_level" id="member_level2" /><label for="member_level2"><span></span><button type="button" class="button-A">VIP</button></label></p>
+							<p><input type="checkbox" name="member_level" id="member_level3" /><label for="member_level3"><span></span><button type="button" class="button-A">SILVER</button></label></p>
+							<p><input type="checkbox" name="member_level" id="member_level4" checked /><label for="member_level4"><span></span><button type="button" class="button-A">GOLD</button></label></p>
+							<p><input type="checkbox" name="member_level" id="member_level5" checked /><label for="member_level5"><span></span><button type="button" class="button-A">ROYAL</button></label></p>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<p class="btn"><button type="button">선택완료</button></p>
+			<p class="close"><i class="xi-close"></i></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

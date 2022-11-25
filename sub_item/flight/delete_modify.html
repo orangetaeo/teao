@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+
+<!-- [새창팝업] -->
+<script>
+
+//랜드사 항공 불러오기
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/flight/popup/land_bring.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1350, height=750");
+}
+
+//시즌 기간 및 가격설정
+function myPopup2() {
+	window.open("/design/travel/manager/sub_item/flight/popup/peak_season.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=700");
+}
+
+//항공편별 가격설정
+function myPopup3() {
+	window.open("/design/travel/manager/sub_item/flight/popup/price.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1725, height=1200");
+}
+</script>
+
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+<!-- snb -->
+	<?
+	include "../../snb_item.html";
+	?>
+	<div class="content">
+	<div class="navi">
+		<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">상품관리</a> &gt; <a href="#">항공 설정</a> &gt; <a href="#">삭제 항공 복원</a></p>
+		<div class="btn">
+			<p class="logout">[로그아웃]</p>
+		</div>
+	</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 항공 카테고리</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 카테고리 -->
+			<div class="category">
+				<div class="group">
+					<h3>대륙 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on">
+							<li><a href="#">AC 아시아</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>국가 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on2">
+							<li><a href="#">VN 베트남</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>항공사 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on3">
+							<li><a href="#">VJ 비엣젯</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>공항 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div id="step4" class="class_on4">
+							<li><a href="#항공편별 가격 설정">가격설정에서 공항선택 가능</a></li>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 토파스 정보</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>숙소 복원</th>
+							<td colspan="3"class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="restoration" id="restoration1" /><label for="restoration1"><span></span>복원함</label></p>
+									<p><input type="radio" name="restoration" id="restoration2" checked/><label for="restoration2"><span></span>복원안함</label></p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 복원함을 선택하면 숙소 리스트에서 확인 가능합니다. </span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 항공기본 정보</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>항공사 로고</th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 * x * 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>랜드사명 <span class="color-A">*</span></th>
+							<td>
+								<div class="sel">
+									<select class="w-G">
+										<option value="랜드사 선택">랜드사 선택</option>
+										<option value="A랜드사">A랜드사</option>
+										<option value="B랜드사">B랜드사</option>
+									</select>
+								</div>
+							</td>
+							<th>랜드사 연락처</th>
+							<td>02-0000-0000</td>
+						</tr>
+						<tr>
+							<th>항공사 한글명 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-G" placeholder="비엣젯"></td>
+							<th>항공사 코드 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-G" placeholder="VJ"></td>
+						</tr>
+						<tr>
+							<th>항공사 영문명</th>
+							<td colspan="3"><input type="text" class="w-H" placeholder="vietjet"/></td>
+						</tr>
+						<tr>
+							<th>항공사 주소 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<input type="text" class="w-C" placeholder="560000"/><button type="button" class="button-A">주소검색</button><br />
+								<input type="text" class="w-H" placeholder="Bình Minh, Thăng Bình District, Quảng Nam 560000 베트남"/>
+								<input type="text" class="w-H" placeholder="Bình Minh, Thăng Bình, Quảng Nam 560000"/>
+							</td>
+						</tr>
+						<tr>
+							<th>위도</th>
+							<td>
+								<input type="text" class="w-G" placeholder="15.794854233954853" required/>
+							</td>
+							<th>경도	</th>
+							<td>
+								<input type="text" class="w-G" placeholder="108.42019459644911" required/>
+							</td>
+						</tr>
+						<tr>
+							<th>웹사이트 </th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder="https://www.ihg.com/intercontinental" required/>
+							</td>
+						</tr>
+						<tr>
+							<th>연락처 </th>
+							<td>
+								<input type="text" class="w-G" placeholder="+84 235 367 6888" required/>
+							</td>
+							<th>담당자 이메일</th>
+							<td>
+								<input type="email" class="w-G" placeholder="abc@abc.co.kr" required/>
+							</td>
+						</tr>
+						<tr>
+							<th>항공사코드 <span class="color-A">*</span></th>
+							<td class="td_w">
+								<div class="c_box">
+									<p><input type="checkbox" id="chch" checked /><label for="chch"><span></span>항공사 등록 시 자동 생성됩니다.</label></p>
+								</div>
+							</td>
+							<th>자체 항공사코드 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-G" /><button type="button" class="button-A" onclick="location.href='#'">중복확인</button></td>
+						</tr>
+						<tr>
+						<th>바코드</th>
+							<td colspan="3"><input type="text" class="w-G" /></td>
+						</tr>					
+						<tr>
+							<th>QR코드 </th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 300 x 300 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- 중간 저장버튼 -->
+				<div class="op_complete">
+					<p><button type="button">저장</button></p>
+				</div>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2 id="항공편별 가격 설정"><i class="xi-lightbulb-o"></i> 항공편별 가격 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>노출 환율 <span class="color-A">*</span></th>
+							<td class="td_w">
+								<div class="sel">
+									<select class="w-G">
+										<option value="대한민국 KRM">대한민국 KRM</option>
+										<option value="남아프리카 공화국 ZAR">남아프리카 공화국 ZAR</option>
+										<option value="네발 NPR">네발 NPR</option>
+										<option value="노르웨이 NOK">노르웨이 NOK</option>
+										<option value="뉴질랜드 NZD">뉴질랜드 NZD</option>
+										<option value="대만 TWD">대만 TWD</option>
+										<option value="덴마크 DKK">덴마크 DKK</option>
+										<option value="러시아 RUB">러시아 RUB</option>
+										<option value="마카오 MOP">마카오 MOP#</option>
+										<option value="말레이시아 MYR">말레이시아 MYR</option>
+										<option value="멕시코 MXN">멕시코 MXN</option>
+										<option value="몽골 MNT">몽골 MNT</option>
+										<option value="미국 USD">미국 USD</option>
+										<option value="바레인 BHD">바레인 BHD</option>
+										<option value="방글라데시 BDT">방글라데시 BDT</option>
+										<option value="베트남 VND">베트남 VND</option>
+										<option value="브라질 BRL">브라질 BRL</option>
+										<option value="브루나이 BND">브루나이 BND</option>
+										<option value="사우디아라비아 SAR">사우디아라비아 SAR</option>
+										<option value="스웨덴 SEK">스웨덴 SEK</option>
+										<option value="스위스 CHF">스위스 CHF</option>
+										<option value="싱가포르 SGD">싱가포르 SGD</option>
+										<option value="아랍에미리트 AED">아랍에미리트 AED</option>
+										<option value="영국 GBP">영국 GBP</option>
+										<option value="오만 OMG">오만 OMG</option>
+										<option value="요르단 JOD">요르단 JOD</option>
+										<option value="유럽연합 EUR">유럽연합 EUR</option>
+										<option value="이스라엘 ILS">이스라엘 ILS</option>
+										<option value="이집트 EGP">이집트 EGP</option>
+										<option value="인도 INR">인도 INR</option>
+										<option value="인도네시아 IDR">인도네시아 IDR</option>
+										<option value="일본 JPY">일본 JPY</option>
+										<option value="중국 CNY">중국 CNY</option>
+										<option value="체코 CZK">체코 CZK</option>
+										<option value="칠레 CLP">칠레 CLP</option>
+										<option value="카자흐스탄 KZT">카자흐스탄 KZT</option>
+										<option value="카타르 QAR">카타르 QAR</option>
+										<option value="캐나다 CAD">캐나다 CAD</option>
+										<option value="쿠웨이트 KWD">쿠웨이트 KWD</option>
+										<option value="태국 THB">태국 THB</option>
+										<option value="터키 TRY">터키 TRY</option>
+										<option value="파키스탄 PKR">파키스탄 PKR</option>
+										<option value="폴란드 PLN">폴란드 PLN</option>
+										<option value="필리핀 html">필리핀 html</option>
+										<option value="헝가리 HUF">헝가리 HUF</option>
+										<option value="호주 AUD">호주 AUD</option>
+										<option value="홍콩 HKD">홍콩 HKDN</option>
+									</select>
+								</div>
+							</td>
+							<th>연령기준 <span class="color-A">*</span></th>
+							<td>
+								<div>
+									*성인 만 <input type="text" class="w-A ta-r" placeholder="12"/> 세 이상,
+									*아동 만 <input type="text" class="w-A ta-r" placeholder="2"/> 세 ~ <input type="text" class="w-A ta-r" placeholder="12"/> 세 미만,
+									*유아 만 <input type="text" class="w-A ta-r" placeholder="2"/> 세 미만
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>시즌 기간 및 가격설정 <span class="color-A">*</span></th>
+							<td class="td_w">
+							<button type="button" class="button-A" onclick="myPopup2()">기간 및 가격설정</button>
+							</td>
+							<th>항공편별 가격설정 <span class="color-A">*</span></th>
+							<td>
+							<button type="button" class="button-A" onclick="myPopup3()">가격설정</button>
+							</td>
+						</tr>
+						<tr>
+							<th>항공편별 가격 리스트</th>
+							<td colspan="3">
+								<div class="dein_table mt15 mb10">
+									<table>
+										<thead>
+											<tr>
+												<th rowspan="2" class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+												<th rowspan="2">번호</th>
+												<th rowspan="2">구분</th>
+												<th rowspan="2">시즌</th>
+												<th rowspan="2">요일</th>
+												<th colspan="5" style="border-right:1px solid #fff;">출발편</th>
+												<th colspan="5">귀국편</th>
+												<th rowspan="2">항공편코드</th>
+												<th rowspan="2">노출상태</th>
+												<th rowspan="2">메모</th>
+											</tr>
+											<tr>
+												<th>공항</th>
+												<th>편명</th>
+												<th>시간</th>
+												<th>기내식</th>
+												<th style="border-right:1px solid #fff;">좌석등급</th>
+												<th>공항</th>
+												<th>편명</th>
+												<th>시간</th>
+												<th>기내식</th>
+												<th>좌석등급</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>4</td>
+												<td>왕복</td>
+												<td>성수기</td>
+												<td>전체요일</td>
+												<td>ICN 인천공항</td>
+												<td>VJ3333</td>
+												<td>09:35</td>
+												<td>중식</td>
+												<td>이코노미</td>
+												<td>PQC 푸꾸옥</td>
+												<td>VJ3333</td>
+												<td>09:35</td>
+												<td>중식</td>
+												<td>이코노미</td>
+												<td>000000000</td>
+												<td>
+													<select>
+														<option value="노출함">노출함</option>
+														<option value="노출안함">노출안함</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>3</td>
+												<td>편도</td>
+												<td>성수기</td>
+												<td>월,화,수,목,금</td>
+												<td>ICN 인천공항</td>
+												<td>VJ3333</td>
+												<td>09:35</td>
+												<td>중식</td>
+												<td>이코노미</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>000000000</td>
+												<td>
+													<select>
+														<option value="노출함">노출함</option>
+														<option value="노출안함">노출안함</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>2</td>
+												<td>왕복</td>
+												<td>성수기</td>
+												<td>화,목,토</td>
+												<td>ICN 인천공항</td>
+												<td>VJ3333</td>
+												<td>09:35</td>
+												<td>중식</td>
+												<td>이코노미</td>
+												<td>HAN 하노이</td>
+												<td>VJ3333</td>
+												<td>09:35</td>
+												<td>중식</td>
+												<td>이코노미</td>
+												<td>000000000</td>
+												<td>
+													<select>
+														<option value="노출함">노출함</option>
+														<option value="노출안함">노출안함</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>1</td>
+												<td>편도</td>
+												<td>성수기</td>
+												<td>월,수,금</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>CXR 나트랑</td>
+												<td>VJ3333</td>
+												<td>09:35</td>
+												<td>중식</td>
+												<td>이코노미</td>
+												<td>000000000</td>
+												<td>
+													<select>
+														<option value="노출함">노출함</option>
+														<option value="노출안함">노출안함</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="mt10">
+										<button type="button" class="button-A" onclick="location.href='#'">선택 삭제</button>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+		<!-- 레이어팝업 가격입력 입력 -->
+		<div class="flight_price">
+			<div class="flight_price_inn">
+				<p class="tit"><i class="xi-lightbulb-o"></i> 항공 가격입력</p>
+				<!-- 상품유형 -->
+			<div class="conbox">
+				<!-- 테이블(인풋) -->
+				<div class="write">
+					<table>
+						<tbody>
+							<tr>
+								<th>매입가 환율 <span class="color-A">*</span></th>
+								<td>
+									<div>
+										<select class="w-F">
+											<option value="미국 USD">미국 USD</option>
+											<option value="대한민국 KRM">대한민국 KRM</option>
+											<option value="남아프리카 공화국 ZAR">남아프리카 공화국 ZAR</option>
+											<option value="네발 NPR">네발 NPR</option>
+											<option value="노르웨이 NOK">노르웨이 NOK</option>
+											<option value="뉴질랜드 NZD">뉴질랜드 NZD</option>
+											<option value="대만 TWD">대만 TWD</option>
+											<option value="덴마크 DKK">덴마크 DKK</option>
+											<option value="러시아 RUB">러시아 RUB</option>
+											<option value="마카오 MOP">마카오 MOP#</option>
+											<option value="말레이시아 MYR">말레이시아 MYR</option>
+											<option value="멕시코 MXN">멕시코 MXN</option>
+											<option value="몽골 MNT">몽골 MNT</option>
+											<option value="바레인 BHD">바레인 BHD</option>
+											<option value="방글라데시 BDT">방글라데시 BDT</option>
+											<option value="베트남 VND">베트남 VND</option>
+											<option value="브라질 BRL">브라질 BRL</option>
+											<option value="브루나이 BND">브루나이 BND</option>
+											<option value="사우디아라비아 SAR">사우디아라비아 SAR</option>
+											<option value="스웨덴 SEK">스웨덴 SEK</option>
+											<option value="스위스 CHF">스위스 CHF</option>
+											<option value="싱가포르 SGD">싱가포르 SGD</option>
+											<option value="아랍에미리트 AED">아랍에미리트 AED</option>
+											<option value="영국 GBP">영국 GBP</option>
+											<option value="오만 OMG">오만 OMG</option>
+											<option value="요르단 JOD">요르단 JOD</option>
+											<option value="유럽연합 EUR">유럽연합 EUR</option>
+											<option value="이스라엘 ILS">이스라엘 ILS</option>
+											<option value="이집트 EGP">이집트 EGP</option>
+											<option value="인도 INR">인도 INR</option>
+											<option value="인도네시아 IDR">인도네시아 IDR</option>
+											<option value="일본 JPY">일본 JPY</option>
+											<option value="중국 CNY">중국 CNY</option>
+											<option value="체코 CZK">체코 CZK</option>
+											<option value="칠레 CLP">칠레 CLP</option>
+											<option value="카자흐스탄 KZT">카자흐스탄 KZT</option>
+											<option value="카타르 QAR">카타르 QAR</option>
+											<option value="캐나다 CAD">캐나다 CAD</option>
+											<option value="쿠웨이트 KWD">쿠웨이트 KWD</option>
+											<option value="태국 THB">태국 THB</option>
+											<option value="터키 TRY">터키 TRY</option>
+											<option value="파키스탄 PKR">파키스탄 PKR</option>
+											<option value="폴란드 PLN">폴란드 PLN</option>
+											<option value="필리핀 html">필리핀 html</option>
+											<option value="헝가리 HUF">헝가리 HUF</option>
+											<option value="호주 AUD">호주 AUD</option>
+											<option value="홍콩 HKD">홍콩 HKDN</option>
+										</select>
+									</div>
+								</td>
+								<th>판매가 환율 <span class="color-A">*</span></th>
+								<td>
+									<div>
+										<select class="w-F">
+											<option value="대한민국 KRM">대한민국 KRM</option>
+											<option value="남아프리카 공화국 ZAR">남아프리카 공화국 ZAR</option>
+											<option value="네발 NPR">네발 NPR</option>
+											<option value="노르웨이 NOK">노르웨이 NOK</option>
+											<option value="뉴질랜드 NZD">뉴질랜드 NZD</option>
+											<option value="대만 TWD">대만 TWD</option>
+											<option value="덴마크 DKK">덴마크 DKK</option>
+											<option value="러시아 RUB">러시아 RUB</option>
+											<option value="마카오 MOP">마카오 MOP#</option>
+											<option value="말레이시아 MYR">말레이시아 MYR</option>
+											<option value="멕시코 MXN">멕시코 MXN</option>
+											<option value="몽골 MNT">몽골 MNT</option>
+											<option value="미국 USD">미국 USD</option>
+											<option value="바레인 BHD">바레인 BHD</option>
+											<option value="방글라데시 BDT">방글라데시 BDT</option>
+											<option value="베트남 VND">베트남 VND</option>
+											<option value="브라질 BRL">브라질 BRL</option>
+											<option value="브루나이 BND">브루나이 BND</option>
+											<option value="사우디아라비아 SAR">사우디아라비아 SAR</option>
+											<option value="스웨덴 SEK">스웨덴 SEK</option>
+											<option value="스위스 CHF">스위스 CHF</option>
+											<option value="싱가포르 SGD">싱가포르 SGD</option>
+											<option value="아랍에미리트 AED">아랍에미리트 AED</option>
+											<option value="영국 GBP">영국 GBP</option>
+											<option value="오만 OMG">오만 OMG</option>
+											<option value="요르단 JOD">요르단 JOD</option>
+											<option value="유럽연합 EUR">유럽연합 EUR</option>
+											<option value="이스라엘 ILS">이스라엘 ILS</option>
+											<option value="이집트 EGP">이집트 EGP</option>
+											<option value="인도 INR">인도 INR</option>
+											<option value="인도네시아 IDR">인도네시아 IDR</option>
+											<option value="일본 JPY">일본 JPY</option>
+											<option value="중국 CNY">중국 CNY</option>
+											<option value="체코 CZK">체코 CZK</option>
+											<option value="칠레 CLP">칠레 CLP</option>
+											<option value="카자흐스탄 KZT">카자흐스탄 KZT</option>
+											<option value="카타르 QAR">카타르 QAR</option>
+											<option value="캐나다 CAD">캐나다 CAD</option>
+											<option value="쿠웨이트 KWD">쿠웨이트 KWD</option>
+											<option value="태국 THB">태국 THB</option>
+											<option value="터키 TRY">터키 TRY</option>
+											<option value="파키스탄 PKR">파키스탄 PKR</option>
+											<option value="폴란드 PLN">폴란드 PLN</option>
+											<option value="필리핀 html">필리핀 html</option>
+											<option value="헝가리 HUF">헝가리 HUF</option>
+											<option value="호주 AUD">호주 AUD</option>
+											<option value="홍콩 HKD">홍콩 HKDN</option>
+										</select>
+									</div>
+								</td>
+								<th>공급가 환율 <span class="color-A">*</span></th>
+								<td>
+									<div>
+										<select class="w-F">
+											<option value="베트남 VND">베트남 VND</option>
+											<option value="대한민국 KRM">대한민국 KRM</option>
+											<option value="남아프리카 공화국 ZAR">남아프리카 공화국 ZAR</option>
+											<option value="네발 NPR">네발 NPR</option>
+											<option value="노르웨이 NOK">노르웨이 NOK</option>
+											<option value="뉴질랜드 NZD">뉴질랜드 NZD</option>
+											<option value="대만 TWD">대만 TWD</option>
+											<option value="덴마크 DKK">덴마크 DKK</option>
+											<option value="러시아 RUB">러시아 RUB</option>
+											<option value="마카오 MOP">마카오 MOP#</option>
+											<option value="미국 USD">미국 USD</option>
+											<option value="말레이시아 MYR">말레이시아 MYR</option>
+											<option value="멕시코 MXN">멕시코 MXN</option>
+											<option value="몽골 MNT">몽골 MNT</option>
+											<option value="바레인 BHD">바레인 BHD</option>
+											<option value="방글라데시 BDT">방글라데시 BDT</option>
+											<option value="브라질 BRL">브라질 BRL</option>
+											<option value="브루나이 BND">브루나이 BND</option>
+											<option value="사우디아라비아 SAR">사우디아라비아 SAR</option>
+											<option value="스웨덴 SEK">스웨덴 SEK</option>
+											<option value="스위스 CHF">스위스 CHF</option>
+											<option value="싱가포르 SGD">싱가포르 SGD</option>
+											<option value="아랍에미리트 AED">아랍에미리트 AED</option>
+											<option value="영국 GBP">영국 GBP</option>
+											<option value="오만 OMG">오만 OMG</option>
+											<option value="요르단 JOD">요르단 JOD</option>
+											<option value="유럽연합 EUR">유럽연합 EUR</option>
+											<option value="이스라엘 ILS">이스라엘 ILS</option>
+											<option value="이집트 EGP">이집트 EGP</option>
+											<option value="인도 INR">인도 INR</option>
+											<option value="인도네시아 IDR">인도네시아 IDR</option>
+											<option value="일본 JPY">일본 JPY</option>
+											<option value="중국 CNY">중국 CNY</option>
+											<option value="체코 CZK">체코 CZK</option>
+											<option value="칠레 CLP">칠레 CLP</option>
+											<option value="카자흐스탄 KZT">카자흐스탄 KZT</option>
+											<option value="카타르 QAR">카타르 QAR</option>
+											<option value="캐나다 CAD">캐나다 CAD</option>
+											<option value="쿠웨이트 KWD">쿠웨이트 KWD</option>
+											<option value="태국 THB">태국 THB</option>
+											<option value="터키 TRY">터키 TRY</option>
+											<option value="파키스탄 PKR">파키스탄 PKR</option>
+											<option value="폴란드 PLN">폴란드 PLN</option>
+											<option value="필리핀 html">필리핀 html</option>
+											<option value="헝가리 HUF">헝가리 HUF</option>
+											<option value="호주 AUD">호주 AUD</option>
+											<option value="홍콩 HKD">홍콩 HKDN</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>성인 매입가 <span class="color-A">*</span></th>
+								<td class="td_b"><input type="text" class="w-F ta-r" placeholder="200,000"/></td>
+								<th>성인 판매가 <span class="color-A">*</span></th>
+								<td class="td_b"><input type="text" class="w-F ta-r" placeholder="200,000"/></td>
+								<th>성인 공급가 <span class="color-A">*</span></th>
+								<td class="td_b"><input type="text" class="w-F ta-r" placeholder="200,000"/></td>
+							</tr>
+							<tr>
+								<th>아동 매입가 <span class="color-A">*</span></th>
+								<td class="td_b"><input type="text" class="w-F ta-r" placeholder="200,000"/></td>
+								<th>아동 판매가 <span class="color-A">*</span></th>
+								<td class="td_b"><input type="text" class="w-F ta-r" placeholder="200,000"/></td>
+								<th>아동 공급가 <span class="color-A">*</span></th>
+								<td class="td_b"><input type="text" class="w-F ta-r" placeholder="200,000"/></td>
+							</tr>
+							<tr>
+								<th>유아 매입가 <span class="color-A">*</span></th>
+								<td class="td_b"><input type="text" class="w-F ta-r" placeholder="200,000"/></td>
+								<th>유아 판매가 <span class="color-A">*</span></th>
+								<td class="td_b"><input type="text" class="w-F ta-r" placeholder="200,000"/></td>
+								<th>유아 공급가 <span class="color-A">*</span></th>
+								<td class="td_b"><input type="text" class="w-F ta-r" placeholder="200,000"/></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="c_box">
+						<input type="checkbox" id="same" checked /><label for="same"><span></span>다른 옵션가격에도 '환율' 단위를 동일하게 적용시킵니다.</label>
+					</div>
+				</div>
+					<!-- 레이어팝업 최종 저장 버튼 -->
+					<div class="ly_complete">
+						<p><button type="button">입력완료</button></p>
+					</div>
+				<p class="close"><i class="xi-close"></i></p>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

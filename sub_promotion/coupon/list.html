@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_promotion.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">프로모션</a> &gt; <a href="#">쿠폰관리</a> &gt; <a href="#">쿠폰 리스트</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 쿠폰 리스트</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>날짜검색</th>
+								<td class="td_day">
+									<div>
+										<select class="w-F">
+											<option value="등록일">등록일</option>
+											<option value="가입일">가입일</option>
+											<option value="최종로그인">최종로그인</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2022-09-18"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-09-18"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">오늘</button>
+										<button type="button">어제</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>검색어</th>
+								<td class="search">
+									<div>
+										<select class="w-F">
+											<option value="쿠폰명">쿠폰명</option>
+											<option value="쿠폰설명">쿠폰설명</option>
+										</select>
+										<input type="search" class="input_search" placeholder="쿠폰명,쿠폰설명 선택 후 검색하세요.">
+									</div>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>쿠폰유형</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="aa" id="aa0" checked><label for="aa0"><span></span> 전체</label></p>
+										<p><input type="radio" name="aa" id="aa1"><label for="aa1"><span></span> 상품적용쿠폰</label></p>
+										<p><input type="radio" name="aa" id="aa1"><label for="aa1"><span></span> 주문적용쿠폰</label></p>
+										<p><input type="radio" name="aa" id="aa2"><label for="aa2"><span></span> 배송비적용쿠폰</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>발급방식</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ab" id="aa0" checked><label for="aa0"><span></span> 전체</label></p>
+										<p><input type="radio" name="ab" id="aa1"><label for="aa1"><span></span> 회원다운로드</label></p>
+										<p><input type="radio" name="ab" id="aa1"><label for="aa1"><span></span> 자동발급</label></p>
+										<p><input type="radio" name="ab" id="aa2"><label for="aa2"><span></span> 수동발급</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>사용범위</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ac" id="aa0" checked><label for="aa0"><span></span> 전체</label></p>
+										<p><input type="radio" name="ac" id="aa1"><label for="aa1"><span></span> PC+모바일</label></p>
+										<p><input type="radio" name="ac" id="aa1"><label for="aa1"><span></span> PC</label></p>
+										<p><input type="radio" name="ac" id="aa2"><label for="aa2"><span></span> 모바일</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>해택구분</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ad" id="aa0" checked><label for="aa0"><span></span> 전체</label></p>
+										<p><input type="radio" name="ad" id="aa1"><label for="aa1"><span></span> 상품할인</label></p>
+										<p><input type="radio" name="ad" id="aa1"><label for="aa1"><span></span> 마일리지적립</label></p>
+										<p><input type="radio" name="ad" id="aa2"><label for="aa2"><span></span> 배송비할인</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span></p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>쿠폰명</th>
+							<th>등록일</th>
+							<th>등록자</th>
+							<th>사용기간 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>쿠폰유형</th>
+							<th>사용범위</th>
+							<th>혜택구분</th>
+							<th>발급방식</th>
+							<th>발급수</th>
+							<th>고객보유수량</th>
+							<th>고객사용수량</th>
+							<th>잔여수량</th>
+							<th>발급상태</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">추석 쿠폰</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">0000-00-00</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">관리자(master)</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">0000-00-00 ~ 0000-00-00</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">상품적용쿠폰</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">PC+모바일</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">상품할인</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">자동발급</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">100개</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">50개</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">50개</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">0개</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">발급완료</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">크리스마스 쿠폰</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">0000-00-00</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">관리자(master)</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">0000-00-00 ~ 0000-00-00</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">배송비적용쿠폰</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">PC+모바일</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">배송비할인</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">수동발급</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">100개</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">20개</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">50개</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">30개</a></td>
+							<td><a href="/design/travel/manager/sub_promotion/coupon/modify.html">발급완료</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove">
+					<button type="button">선택 삭제</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 주석마크 -->
+			<div class="mark"><i class="xi-error-o"></i> 발급되어 '사용된' 쿠폰은 삭제 불가능합니다.</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

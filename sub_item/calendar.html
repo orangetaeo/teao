@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../snb_item.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">상품관리</a> &gt; <a href="#">상품출시 캘린더</a></p>
+			<?
+			include "../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 상품출시 캘린더</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 달력 -->
+			<div class="calendar_tit">
+				<div class="tit">
+					<p><i class="xi-angle-left" onclick="p_month()"></i></p>
+					<p class="this_month">
+						<select name="year_select" id="year_select">
+							<option value='2022'selected>2022</option>
+							<option value='2023'>2023</option>
+							<option value='2024'>2024</option>
+							<option value='2025'>2025</option>
+							<option value='2026'>2026</option>
+							<option value='2027'>2027</option>
+							<option value='2028'>2028</option>
+							<option value='2029'>2029</option>
+							<option value='2030'>2030</option>
+							<option value='2031'>2031</option>
+							<option value='2032'>2032</option>
+							<option value='2033'>2033</option>
+							<option value='2034'>2034</option>
+							<option value='2035'>2035</option>
+							<option value='2036'>2036</option>
+							<option value='2037'>2037</option>
+							<option value='2038'>2038</option>
+						</select>
+						.
+						<select name="month_select" id="month_select">
+							<option value='01'>01</option>
+							<option value='02'>02</option>
+							<option value='03'>03</option>
+							<option value='04'>04</option>
+							<option value='05'>05</option>
+							<option value='06'>06</option>
+							<option value='07'>07</option>
+							<option value='08'>08</option>
+							<option value='09' selected>09</option>
+							<option value='10'>10</option>
+							<option value='11'>11</option>
+							<option value='12'>12</option>
+						</select>
+					</p>
+					<p><i class="xi-angle-right" onclick="n_month()"></i></p>
+				</div>
+				<div class="btn"><button type="button" onclick="now_month('2022-09-01','2022-09-30')">이번달</button></div>
+			</div>
+			<div class="calendar">
+				<table>
+					<thead>
+						<tr>
+							<th class="th_sun">SUN</th>
+							<th>MON</th>
+							<th>TUE</th>
+							<th>WED</th>
+							<th>THU</th>
+							<th>FRI</th>
+							<th class="th_sat">SAT</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td_sun">
+								<div></div>
+							</td>
+							<td>
+								<div></div>
+							</td>
+							<td>
+								<div></div>
+							</td>
+							<td>
+								<div></div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">1</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">2</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_sat">
+								<div>
+									<p class="day"><span class="day_num co_sat">3</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_sun">
+								<div>
+									<p class="day"><span class="day_num co_sun">4</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : 0</p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">5</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">6</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">7</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">8</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_off">
+								<div>
+									<p class="day"><span class="day_num co_spe">9</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : 0</p>
+									</div>
+								</div>
+							</td>
+							<td class="td_off">
+								<div>
+									<p class="day"><span class="day_num co_spe">10</span><span class="day_name">추석연휴</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_off">
+								<div>
+									<p class="day"><span class="day_num co_spe">11</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : 0</p>
+									</div>
+								</div>
+							</td>
+							<td class="td_off">
+								<div>
+									<p class="day"><span class="day_num co_spe">12</span><span class="day_name">대체휴일</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">13</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">14</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">15</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">16</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_sat">
+								<div>
+									<p class="day"><span class="day_num co_sat">17</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_sun">
+								<div>
+									<p class="day"><span class="day_num co_sun">18</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : 0</p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">19</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">20</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : 0</p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">21</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">22</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">23</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_sat">
+								<div>
+									<p class="day"><span class="day_num co_sat">24</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_sun">
+								<div>
+									<p class="day"><span class="day_num co_sun">25</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : 0</p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">26</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">27</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">28</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">29</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">30</span></p>
+									<div class="info">
+										<p class="info_ok">출시상품 : <span class="co_che">12</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_sat">
+								<div></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 상품출시 리스트</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select>
+											<option value="출시일">출시일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2022-08-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-08-31"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">오늘</button>
+										<button type="button">어제</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+										<button type="button">전체</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>검색어</th>
+								<td>
+									<input type="search" class="input_search" placeholder="상품명">	
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area_one">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_bottom">
+					<table>
+						<tbody>
+							<tr>
+								<th>카테고리</th>
+								<td class="td_category">
+									<select>
+										<option value="대분류선택">대분류선택</option>
+									</select>
+									<select>
+										<option value="중분류선택">중분류선택</option>
+									</select>
+									<select>
+										<option value="소분류선택">소분류선택</option>
+									</select>
+									<select>
+										<option value="상세분류선택">상세분류선택</option>
+									</select>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span></p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+					<table>
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>상품코드 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+								<th>이미지</th>
+								<th>상품명 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+								<th>소비자가 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+								<th>제품노출</th>
+								<th>메인노출</th>
+								<th>출시일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="td_num">2</td>
+								<td><a href="#">0000000000</td>
+								<td class="td_img"><a href="#"><img src="/design/travel/manager/images/100x100.png" alt=""></td>
+								<td class="td_tit"><p class="part">대분류 > 중분류 > 소분류 > 상세분류</p><a href="#">상품명상품명상품명</a></td>
+								<td class="td_pri"><a href="#">000,000원</td>
+								<td class="td_see"><i class="xi-radiobox-blank"></i></td>
+								<td class="td_see"><i class="xi-radiobox-blank"></i></td>
+								<td class="td_day"><a href="#">2022-08-31</td>
+							</tr>
+							<tr>
+								<td class="td_num">1</td>
+								<td><a href="#">0000000000</td>
+								<td class="td_img"><a href="#"><img src="/design/travel/manager/images/100x100.png" alt=""></td>
+								<td class="td_tit"><p class="part">대분류 > 중분류 > 소분류 > 상세분류</p><a href="#">상품명상품명상품명</a></td>
+								<td class="td_pri"><a href="#">000,000원</td>
+								<td class="td_see"><i class="xi-ban"></i></td>
+								<td class="td_see"><i class="xi-ban"></i></td>
+								<td class="td_day"><a href="#">2022-08-31</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- //content -->
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

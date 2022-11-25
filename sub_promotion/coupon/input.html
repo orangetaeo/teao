@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_promotion.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">프로모션</a> &gt; <a href="#">쿠폰관리</a> &gt; 쿠폰 등록</p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 쿠폰 등록</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>쿠폰유형 </th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="type" id="type1" checked /><label for="type1"><span></span> 상품적용 쿠폰</label></p>
+									<p><input type="radio" name="type" id="type2" /><label for="type2"><span></span> 주문적용 쿠폰</label></p>
+									<p><input type="radio" name="type" id="type3" /><label for="type"><span></span> 배송비할인 쿠폰</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>발급방식 </th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="method" id="method1" checked /><label for="method1"><span></span> 수동발급</label></p>
+									<p><input type="radio" name="method" id="method2" /><label for="method2"><span></span> 자동발급</label></p>
+									<p><input type="radio" name="method" id="method3" /><label for="method3"><span></span> 회원다운로드</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>쿠폰명 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-H" required /></td>
+						</tr>
+						<tr>
+							<th>쿠폰 설명</th>
+							<td><input type="text" class="w-H" required /></td>
+						</tr>
+						<tr>
+							<th>사용기간 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<ul class="raul block">
+									<li>
+										<p class="r_circle"><input type="radio" name="service_life" id="service_life1" checked><label for="service_life1"><span></span></label></p>
+										<div class="day ml20">
+											<input type="text" class="w-D ta-c" ><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" ><i class="xi-calendar"></i>
+										</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="service_life" id="service_life2" checked><label for="service_life2"><span></span></label></p>
+										<div class="txt fl mr10">쿠폰 발급일로 부터 <input type="text" class="w-C ta-r" placeholder="3"/>일까지 사용가능하며,</div>
+										<div class="day fl">사용가능일을 <input type="text" class="w-D ta-r" placeholder="2022-09-20"/><i class="xi-calendar"></i>로 제한합니다.</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>해택구분 </th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="benefit" id="benefit1" checked /><label for="benefit1"><span></span> 상품할인</label></p>
+									<p><input type="radio" name="benefit" id="benefit2" /><label for="benefit2"><span></span> 마일리지적립</label></p>
+									<p><input type="radio" name="benefit" id="benefit3" /><label for="benefit3"><span></span> 배송비할인</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>사용범위 </th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="range" id="range1" checked /><label for="range1"><span></span> PC+모바일</label></p>
+									<p><input type="radio" name="range" id="range2" /><label for="range2"><span></span> PC</label></p>
+									<p><input type="radio" name="range" id="range3" /><label for="range3"><span></span> 모바일</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>혜택금액설정 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<ul class="raul">
+									<li>
+										<div>
+											<input type="text" class="w-B ta-r" required/>
+											<select class="w-D">
+												<option value="%">%</option>
+												<option value="원">원</option>
+											</select>
+											할인 (구매금액 기준)
+										</div>
+									</li>
+									<li>
+										<p class="c_box"><input type="checkbox" id="chch" checked><label for="chch"><span></span></label></p>
+										<div class="txt">
+											<input type="text" class="w-B ta-r" required/>
+											원 까지 할인가능
+										</div>
+									</li>
+								</ul>
+								<span class="comment"><i class="xi-error-o"></i> 주문적용 쿠폰은 %(정률) / 배송비할인 쿠폰은 원(정액)으로만 설정이 가능합니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>쿠폰노출이미지</th>
+							<td colspan="3">
+								<ul class="img_group">
+									<li class="base">
+										<div class="img_view">
+											<img src="../images/client_01.png" alt="">
+										</div>
+										<div class="r_circle">
+											<p><input type="radio" name="ba" id="ba2" /><label for="ba2"><span></span>기본이미지</label></p>
+										</div>
+									</li>
+									<li class="base">
+										<div class="img_view">
+											<img src="" alt="">
+											<div class="updel"><i class="xi-upload" title="등록"></i><i class="xi-eraser" title="삭제"></i></div>
+										</div>
+										<div class="r_circle">
+											<p><input type="radio" name="ba" id="ba3" /><label for="ba3"><span></span>쿠폰이미지 직접등록</label></p>
+										</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>사용기간만료시 <br /> SMS/알림톡발송 </th>
+							<td>
+								<div class="c_box">
+									<p><input type="checkbox" id="chch" /><label for="chch"><span></span>쿠폰 사용 가능일 만료 전에 회원들에게 안내 SMS/알림톡을 발송합니다.</label></p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 제한조건 설정</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>결제수단 사용제한</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="payment" id="payment1" checked /><label for="payment1"><span></span> 제한없음</label></p>
+									<p><input type="radio" name="payment" id="payment2" /><label for="payment2"><span></span> 무통장입금만 사용가능</label></p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 무통장입금시에만 쿠폰을 사용할 수 있도록 제한하는 것은 여신전문금융법에 저촉될 수 있습니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>쿠폰발급/사용<br />가능 범위 설정 </th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="possibility" id="possibility1" checked /><label for="possibility1"><span></span> 전체상품</label></p>
+									<p><input type="radio" name="possibility" id="possibility2" /><label for="possibility2"><span></span> 특정 카테고리</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>카테고리</th>
+							<td class="td_category">
+								<select class="w-O">
+									<option value="대분류선택">대분류선택</option>
+								</select>
+								<select class="w-O">
+									<option value="중분류선택">중분류선택</option>
+								</select>
+								<select class="w-O">
+									<option value="소분류선택">소분류선택</option>
+								</select>
+								<select class="w-O">
+									<option value="상세분류선택">상세분류선택</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>최소 상품구매금액 제한</th>
+							<td colspan="3" class="td_w">
+								구매금액이 <input type="text" class="w-E ta-r" required/> 원 이상인 경우 결제 시 사용 가능
+								<div class="r_circle m-A">
+									<p>구매금액 기준옵션: <input type="radio" name="limit" id="limit1" checked /><label for="limit1"><span></span> 해당 상품 금액</label></p>
+									<p><input type="radio" name="limit" id="limit2" /><label for="limit2"><span></span> 해당 상품이 포함된 주문 전체상품금액</label></p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> "주문 전체상품금액" 기준 처리 시, 해당 쿠폰의 사용 가능한 범위 내 상품에 대해서만 금액을 산정합니다.</span>
+								<span class="comment"><i class="xi-error-o"></i> "주문 전체상품금액" 기준은 상품쿠폰을 주문서페이지에서 사용 "제한안함"으로 한 경우에만 적용됩니다.<br />
+								"제한함"일 경우 해당 설정을 하더라고 "해당 상품 금액" 기준으로 처리되므로 유의하시기 바랍니다.</span>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<th>같은 유형의 쿠폰과<br /> 중복사용여부 </th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="overlap" id="overlap1" value="Y" checked/><label for="overlap1"><span></span> 중복사용 가능</label></p>
+									<p><input type="radio" name="overlap" id="overlap2" value="N" /><label for="overlap2"><span></span> 중복사용 불가</label></p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

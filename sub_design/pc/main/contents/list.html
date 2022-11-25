@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../../../snb_design.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">디자인관리</a> &gt; <a href="#">PC 메인디자인</a> &gt; <a href="#">메인컨텐츠</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 메인컨텐츠 디자인</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 (검색과버튼) -->
+			<div class="search">
+				<ul class="sel">
+					<li><input type="text"></li>
+					<li><button type="button">검색</button></li>
+				</ul>
+				<p class="btn">
+					<button type="button" onclick="location.href='input.html'">메인컨텐츠 등록</button>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>출력순서</th>
+							<th>제목</th>
+							<th>노출</th>
+							<th>등록일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td class="td_lst"><input type="text" class="w-B ta-r" value="200"></td>
+							<td class="td_tit"><a href="/design/travel/manager/sub_design/pc/main/contents/modify.html">메인컨텐츠 제목</a></td>
+							<td class="td_see"><i class="xi-radiobox-blank"></i></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_design/pc/main/contents/modify.html">2019-00-00</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td class="td_lst"><input type="text" class="w-B ta-r" value="100"></td>
+							<td class="td_tit"><a href="/design/travel/manager/sub_design/pc/main/contents/modify.html">메인컨텐츠 제목</a></td>
+							<td class="td_see"><i class="xi-ban"></i></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_design/pc/main/contents/modify.html">2019-00-00</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove">
+					<button type="button">출력순서저장</button>
+					<button type="button">삭제</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_design.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">디자인관리</a> &gt; <a href="#">메인 노출 상품</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 메인 노출 상품 <span class="dragdrop">(홈페이지 메인 노출 상품 리스트)</span></h2>
+		</div>
+		<div class="conbox position_w">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select class="w-E">
+											<option value="등록/수정일">등록/수정일</option>
+											<option value="판매 마감일">판매 마감일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2022-08-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-08-31"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">전체</button>
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>카테고리</th>
+								<td class="td_category">
+									<select>
+										<option value="대분류">대분류</option>
+										<option value="해외여행">해외여행</option>
+										<option value="항공">항공</option>
+										<option value="호텔/펜션">호텔/펜션</option>
+										<option value="투어/입장권">투어/입장권</option>
+										<option value="허니문">허니문</option>
+										<option value="골프">골프</option>
+									</select>
+									<select>
+										<option value="중분류">중분류</option>
+										<option value="동남아/대만/서남아">동남아/대만/서남아</option>
+										<option value="괌/사이판/호주/뉴질랜드">괌/사이판/호주/뉴질랜드</option>
+										<option value="유럽/아프리카">유럽/아프리카</option>
+										<option value="미주/중남미/하와이">미주/중남미/하와이</option>
+										<option value="일본">일본</option>
+										<option value="중국/홍콩/몽골/중앙아시아">중국/홍콩/몽골/중앙아시아</option>
+										<option value="지방출발">지방출발</option>
+									</select>
+									<select>
+										<option value="수분류">소분류</option>
+										<option value="태국">태국</option>
+										<option value="필리핀">필리핀</option>
+										<option value="베트남">베트남</option>
+										<option value="캄보디아">캄보디아</option>
+										<option value="말레이시아">말레이시아</option>
+										<option value="인도네시아">인도네시아</option>
+										<option value="라오스">라오스</option>
+										<option value="대만">대만</option>
+										<option value="인도">인도</option>
+										<option value="싱가포르">싱가포르</option>
+									</select>
+									<select>
+										<option value="상세분류">상세분류</option>
+										<option value="다낭">다낭</option>
+										<option value="나트랑">나트랑</option>
+										<option value="푸꾸옥">푸꾸옥</option>
+										<option value="하롱베이">하롱베이</option>
+										<option value="하노이">하노이</option>
+										<option value="사파">사파</option>
+										<option value="호치민">호치민</option>
+									</select>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>검색어</th>
+								<td>
+									<select class="w-E">
+										<option value="상품명">상품명</option>
+										<option value="상품코드">상품코드</option>
+									</select>
+									<input type="search" class="input_search" placeholder="상품명">	
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>제품노출</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ra" id="ra0"><label for="ra0"><span></span>전체</label></p>
+										<p><input type="radio" name="ra" id="ra1" checked><label for="ra1"><span></span>노출</label></p>
+										<p><input type="radio" name="ra" id="ra2"><label for="ra2"><span></span>미노출</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>메인노출</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="rb" id="rb0"><label for="rb0"><span></span>전체</label></p>
+										<p><input type="radio" name="rb" id="rb1" checked><label for="rb1"><span></span>노출</label></p>
+										<p><input type="radio" name="rb" id="rb2"><label for="rb2"><span></span>미노출</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>쿠폰</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="coupon" id="coupon0" checked><label for="coupon0"><span></span>전체</label></p>
+										<p><input type="radio" name="coupon" id="coupon1"><label for="coupon1"><span></span>있음</label></p>
+										<p><input type="radio" name="coupon" id="coupon2"><label for="coupon2"><span></span>없음</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>상품유형</th>
+								<td colspan="3" class="td_w">
+									<div class="c_box m-A">
+										<p>
+											<input type="checkbox" name="product_type" id="product_type1" checked required /><label for="product_type1"><span></span>전체</label>
+											<input type="checkbox" name="product_type" id="product_type2" checked required /><label for="product_type2"><span></span>항공</label>
+											<input type="checkbox" name="product_type" id="product_type3" checked required /><label for="product_type3"><span></span>숙소</label>
+											<input type="checkbox" name="product_type" id="product_type4" checked required /><label for="product_type4"><span></span>골프</label>
+											<input type="checkbox" name="product_type" id="product_type5" checked required /><label for="product_type5"><span></span>음식점</label>
+											<input type="checkbox" name="product_type" id="product_type6" checked required /><label for="product_type6"><span></span>관광</label>
+											<input type="checkbox" name="product_type" id="product_type7" checked required /><label for="product_type7"><span></span>쇼핑</label>
+											<input type="checkbox" name="product_type" id="product_type8" checked required /><label for="product_type8"><span></span>마사지</label>
+											<input type="checkbox" name="product_type" id="product_type9" checked required /><label for="product_type9"><span></span>스키장</label>
+											<input type="checkbox" name="product_type" id="product_type10" checked required /><label for="product_type10"><span></span>트래킹</label>
+											<input type="checkbox" name="product_type" id="product_type11" checked required /><label for="product_type11"><span></span>투어</label>
+											<input type="checkbox" name="product_type" id="product_type12" checked required /><label for="product_type12"><span></span>엑티비티</label>
+											<input type="checkbox" name="product_type" id="product_type13" checked required /><label for="product_type13"><span></span>교통수단</label>
+											<input type="checkbox" name="product_type" id="product_type14" checked required /><label for="product_type14"><span></span>가이드</label>
+										</p>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span></p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>출력순서</th>
+							<th>상품유형</th>
+							<th>상품코드 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>썸네일 </span></th>
+							<th>상품명 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>소비자가 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>제품노출</th>
+							<th>메인노출</th>
+							<th>쿠폰</th>
+							<th>등록자</th>
+							<th>등록/수정일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>판매 마감일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">5</td>
+							<td class="td_lst"><input type="text" class="w-B ta-r" value="500"></td>
+							<td class="btn_product_type_vew"><button type="button" class="button-D">보기</button></td>
+							<td><a href="/design/travel/manager/sub_item/item/modify.html">0000000000</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_item/item/modify.html"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_tit"><p class="part">해외여행 > 동남아/대만/서남아 > 베트남 > 다낭</p><a href="/design/travel/manager/sub_item/item/modify.html">베트남 다낭 어디까지 가봤니?</a></td>
+							<td class="td_pri"><a href="/design/travel/manager/sub_item/item/modify.html">최소: \ 800,000<br/>최대: \ 900,000</a></td>
+							<td class="td_see"><i class="xi-radiobox-blank"></i></td>
+							<td class="td_see"><i class="xi-radiobox-blank"></i></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/item/modify.html">2022 크리스마스 쿠폰</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/item/modify.html">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/item/modify.html">2022-09-15</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/item/modify.html">2022-12-31</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">4</td>
+							<td class="td_lst"><input type="text" class="w-B ta-r" value="400"></td>
+							<td class="btn_product_type_vew"><button type="button" class="button-D">보기</button></td>
+							<td><a href="/design/travel/manager/sub_item/item/modify.html">0000000000</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_item/item/modify.html"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_tit"><p class="part">대분류 > 중분류 > 소분류 > 상세분류</p><a href="/design/travel/manager/sub_item/item/modify.html">상품명상품명상품명</a></td>
+							<td class="td_pri"><a href="/design/travel/manager/sub_item/item/modify.html">최소: \ 800,000<br/>최대: \ 900,000</a></td>
+							<td class="td_see"><i class="xi-radiobox-blank"></i></td>
+							<td class="td_see"><i class="xi-radiobox-blank"></i></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/item/modify.html">2022 추석 쿠폰</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/item/modify.html">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/item/modify.html">2022-09-15</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/item/modify.html">2022-12-31</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">3</td>
+							<td class="td_lst"><input type="text" class="w-B ta-r" value="300"></td>
+							<td class="btn_product_type_vew"><button type="button" class="button-D">보기</button></td>
+							<td><a href="/design/travel/manager/sub_item/item/modify.html">0000000000</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_item/item/modify.html"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_tit"><p class="part">대분류 > 중분류 > 소분류 > 상세분류</p><a href="/design/travel/manager/sub_item/item/modify.html">상품명상품명상품명</a></td>
+							<td class="td_pri"><a href="/design/travel/manager/sub_item/item/modify.html">최소: \ 800,000<br/>최대: \ 900,000</a></td>
+							<td class="td_see"><i class="xi-radiobox-blank"></i></td>
+							<td class="td_see"><i class="xi-radiobox-blank"></i></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/item/modify.html">2022 신년쿠폰</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/item/modify.html">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/item/modify.html">2022-09-15</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/item/modify.html">2022-12-31</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td class="td_lst"><input type="text" class="w-B ta-r" value="200"></td>
+							<td class="btn_product_type_vew"><button type="button" class="button-D">보기</button></td>
+							<td><a href="/design/travel/manager/sub_item/item/modify.html">0000000000</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_item/item/modify.html"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_tit"><p class="part">대분류 > 중분류 > 소분류 > 상세분류</p><a href="/design/travel/manager/sub_item/item/modify.html">상품명상품명상품명</a></td>
+							<td class="td_pri"><a href="/design/travel/manager/sub_item/item/modify.html">최소: \ 800,000<br/>최대: \ 900,000</a></td>
+							<td class="td_see"><i class="xi-radiobox-blank"></i></td>
+							<td class="td_see"><i class="xi-radiobox-blank"></i></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/item/modify.html">2022 크리스마스 쿠폰</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/item/modify.html">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/item/modify.html">2022-09-15</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/item/modify.html">2022-12-31</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td class="td_lst"><input type="text" class="w-B ta-r" value="100"></td>
+							<td class="btn_product_type_vew"><button type="button" class="button-D">보기</button></td>
+							<td><a href="/design/travel/manager/sub_item/item/modify.html">0000000000</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_item/item/modify.html"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_tit"><p class="part">대분류 > 중분류 > 소분류 > 상세분류</p><a href="/design/travel/manager/sub_item/item/modify.html">상품명상품명상품명</a></td>
+							<td class="td_pri"><a href="/design/travel/manager/sub_item/item/modify.html">최소: \ 800,000<br/>최대: \ 900,000</a></td>
+							<td class="td_see"><i class="xi-radiobox-blank"></i></td>
+							<td class="td_see"><i class="xi-radiobox-blank"></i></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/item/modify.html">2022 크리스마스 쿠폰</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/item/modify.html">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/item/modify.html">2022-09-15</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/item/modify.html">2022-12-31</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove">
+					<button type="button">메인상품 추가</button>
+					<button type="button">출력순서저장</button>
+					<button type="button">삭제</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<div class="mark"><i class="xi-error-o"></i> 홈페이지 메인(PC,모바일포함) 상품이 노출 됩니다.</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+			<!-- 레이어팝업 상품유형 보기 -->
+			<div class="product_type_vew">
+				<div class="product_type_vew_inn">
+					<p class="tit"><i class="xi-lightbulb-o"></i> 상품유형 보기</p>
+					<!-- 상품유형 -->
+					<div class="level">
+						<div class="group">
+							<ul>
+								<div class="c_box">
+									<p><input type="checkbox" name="product_type_vew" id="product_type_vew1" checked /><label for="product_type_vew1"><span></span><button type="button" class="button-C">항공</i></button></label></p>
+									<p><input type="checkbox" name="product_type_vew" id="product_type_vew1" /><label for="product_type_vew1"><span></span><button type="button" class="button-C">숙소</i></button></label></p>
+									<p><input type="checkbox" name="product_type_vew" id="product_type_vew2" /><label for="product_type_vew2"><span></span><button type="button" class="button-C">골프</i></button></label></p>
+									<p><input type="checkbox" name="product_type_vew" id="product_type_vew3" /><label for="product_type_vew3"><span></span><button type="button" class="button-C">음식점</i></button></label></p>
+									<p><input type="checkbox" name="product_type_vew" id="product_type_vew4" checked /><label for="product_type_vew4"><span></span><button type="button" class="button-C">관광</i></button></label></p>
+									<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">쇼핑</i></button></label></p>
+									<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">마사지</i></button></label></p>
+									<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">스키장</i></button></label></p>
+									<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">트래킹</i></button></label></p>
+									<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">투어</button></label></p>
+									<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">엑티비티</i></button></label></p>
+									<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">교통수단</i></button></label></p>
+									<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">가이드</i></button></label></p>
+								</div>
+							</ul>
+						</div>
+					</div>
+					<p class="close"><i class="xi-close"></i></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

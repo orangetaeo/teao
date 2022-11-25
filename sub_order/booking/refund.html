@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+
+<!-- [새창팝업] -->
+<script>
+//관리자메모 보기
+function myPopup() {
+	window.open("/design/travel/manager/sub_order/booking/popup/admin_memo.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1215, height=950");
+}
+
+//회원관리
+function myPopup1() {
+	window.open("/design/travel/manager/sub_order/booking/popup/crm/crm.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1400, height=900");
+}
+
+//카카오톡/문자
+function myPopup3() {
+	window.open("/design/travel/manager/sub_customer/kakao/pop_temp.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1005, height=865");
+}
+</script>
+
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_order.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">예약/취소</a> &gt; <a href="#">취소/환불 관리</a> &gt; <a href="#">환불 리스트</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 환불 리스트</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select class="w-F">
+											<option value="주문일">주문일</option>
+											<option value="환불요청일">환불요청일</option>
+											<option value="환불완료일">환불완료일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2022-10-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-10-31"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button" class="on">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+										<button type="button">1년</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>개인정보</th>
+								<td>
+									<div>
+										<select class="w-F">
+											<option value="주문번호">주문번호</option>
+											<option value="상품명">상품명</option>
+											<option value="상품코드">상품코드</option>
+											<option value="자체 상품코드">자체 상품코드</option>
+											<option value="========">========</option>
+											<option value="주문자명">주문자명</option>
+											<option value="주문자 전화번호">주문자 전화번호</option>
+											<option value="주문자 이메일">주문자 이메일</option>
+											<option value="입금자명">입금자명</option>
+											<option value="========">========</option>
+											<option value="아이디">아이디</option>
+											<option value="닉네임">닉네임</option>
+										</select>
+										<input type="search" class="input_search" placeholder="검색어">
+									</div>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>접속유형</th>
+								<td>
+									<div class="c_box m-A">
+										<p><input type="checkbox" name="access" id="access0" checked/><label for="access0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="access" id="access1" checked/><label for="access1"><span></span>PC</label></p>
+										<p><input type="checkbox" name="access" id="access2" checked/><label for="access2"><span></span>모바일</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>결제수단</th>
+								<td>
+									<div class="c_box m-A">
+										<p><input type="checkbox" name="payment" id="payment0" checked/><label for="payment0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="payment" id="payment1" checked/><label for="payment1"><span></span>무통장 입금</label></p>
+										<p><input type="checkbox" name="payment" id="payment2" checked/><label for="payment2"><span></span>카드결제</label></p>
+										<p><input type="checkbox" name="payment" id="payment3" checked/><label for="payment3"><span></span>가상계좌 입금</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>처리상태</th>
+								<td>
+									<div class="c_box m-A">
+										<p><input type="checkbox" name="cancel" id="cancel0" checked/><label for="cancel0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="cancel" id="cancel1" checked/><label for="cancel1"><span></span>취소요청</label></p>
+										<p><input type="checkbox" name="cancel" id="cancel2" checked/><label for="cancel2"><span></span>자동취소</label></p>
+										<p><input type="checkbox" name="cancel" id="cancel3" checked/><label for="cancel3"><span></span>품절취소</label></p>
+										<p><input type="checkbox" name="cancel" id="cancel4" checked/><label for="cancel4"><span></span>관리자취소</label></p>
+										<p><input type="checkbox" name="cancel" id="cancel5" checked/><label for="cancel5"><span></span>고객취소요청</label></p>
+										<p><input type="checkbox" name="cancel" id="cancel6" checked/><label for="cancel6"><span></span>취소완료</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>환불처리</th>
+								<td>
+									<div class="c_box m-A">
+										<p><input type="checkbox" name="refund" id="refund0" checked/><label for="refund0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="refund" id="refund1" checked/><label for="refund1"><span></span>환불접수</label></p>
+										<p><input type="checkbox" name="refund" id="refund2" checked/><label for="refund2"><span></span>환불보류</label></p>
+										<p><input type="checkbox" name="refund" id="refund3" checked/><label for="refund3"><span></span>환불완료</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>회원검색</th>
+								<td>
+									<div class="r_circle fl">
+										<p><input type="radio" name="member" id="member0" checked><label for="member0"><span></span>전체</label></p>
+										<p><input type="radio" name="member" id="member1"><label for="member1"><span></span>비회원</label></p>
+										<p><input type="radio" name="member" id="member2"><label for="member2"><span></span>회원</label></p>
+									</div>
+									<div class="fl ml15">
+										<button type="button" class="button-A btn_member_level">회원등급 선택</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>결제금액</th>
+								<td>
+									<div>
+										<input type="number" class="w-D ta-r" /> 원 ~ <input type="number" class="w-D ta-r" /> 원
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>영수증 신청</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="rc" id="ra0" checked><label for="ra0"><span></span>전체</label></p>
+										<p><input type="radio" name="rc" id="ra1"><label for="ra1"><span></span>현금영수증</label></p>
+										<p><input type="radio" name="rc" id="ra2"><label for="ra2"><span></span>세금계산서</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>프로모션 정보</th>
+								<td>
+									<div class="fl mr15">
+										<button type="button" class="button-B" onclick="myPopup2()">쿠폰선택</button>
+									</div>
+									<div class="c_box fl">
+										<p><input type="checkbox" name="coupon" id="coupon0" checked/><label for="coupon0"><span></span> 쿠폰사용 주문 전체 검색</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">주문번호별 총 조회수 : <span class="color-A">000건</span> ( 검색된 주문 총 결제금액 : <span class="color-A">384,000원 )</span></p>
+				<p class="kakao">
+					<a onclick="myPopup3()"><i class="xi-kakaotalk"></i> 카카오톡/문자</a>
+				</p>
+				<p class="excel">
+					<a href="#"><i class="xi-download"></i> 엑셀 다운로드</a>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>주문일시 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></th>
+							<th>환불요청일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></th>
+							<th>환불완료일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></th>
+							<th>주문번호</th>
+							<th>주문자</th>
+							<th>주문상품</th>
+							<th>총 인원</th>
+							<th>예약금</th>
+							<th>상품금액</th>
+							<th>총 상품금액</th>
+							<th>결제방법</th>
+							<th>처리상태</th>
+							<th>사유</th>
+							<th>환불수단</th>
+							<th>환불처리</th>
+							<th>관리자메모</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td><a href="/design/travel/manager/sub_order/booking/view.html">0000-00-00 00:00</a></td>
+							<td><a href="/design/travel/manager/sub_order/booking/view.html">0000-00-00 00:00</a></td>
+							<td><a href="/design/travel/manager/sub_order/booking/view.html">0000-00-00 00:00</a></td>
+							<td><a href="/design/travel/manager/sub_order/booking/view.html">00000000000000</a></td>
+							<td><a href="#" onclick="myPopup1()">홍길동</a></td>
+							<td><a href="/design/travel/manager/sub_order/booking/view.html">베트남 다낭 어디까지 가봤니? 외2건</a></td>
+							<td><a href="/design/travel/manager/sub_order/booking/view.html">4인</a></td>
+							<td><a href="/design/travel/manager/sub_order/booking/view.html">384,000원</a></td>
+							<td><a href="/design/travel/manager/sub_order/booking/view.html">384,000원</a></td>
+							<td><a href="/design/travel/manager/sub_order/booking/view.html">3,019,354원</a></td>
+							<td><a href="/design/travel/manager/sub_order/booking/view.html">카드결제</a></td>
+							<td><a href="/design/travel/manager/sub_order/booking/view.html">취소요청</a></td>
+							<td><a href="/design/travel/manager/sub_order/booking/view.html">블라블라</a></td>
+							<td><a href="/design/travel/manager/sub_order/booking/view.html">카드취소</a></td>
+							<td><a href="/design/travel/manager/sub_order/booking/view.html">환불완료</a></td>
+							<td><a href="#"><button type="button" class="button-B" onclick="myPopup()">보기</button></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove"> 선택한 주문을
+					<select>
+						<option value="선택">선택</option>
+						<option value="환불접수">환불접수</option>
+						<option value="환불보류">환불보류</option>
+						<option value="환불완료">환불완료</option>
+					</select>
+					<button type="button">일괄처리</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../snb_basic.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">기본정보관리</a> &gt; <a href="#">로고 설정</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 로고 설정</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>로고</th>
+							<td>
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt1').value=this.value;" accept="image/jpg, image/jpeg, image/png, image/x-png" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt1" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 200 x 100 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>로고 (카피라이트용)</th>
+							<td>
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt2').value=this.value;" accept="image/jpg, image/jpeg, image/png, image/x-png" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt2" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 200 x 100 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>파비콘</th>
+							<td>
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt3').value=this.value;" accept="image/x-icon" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt3" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 64 x 64 픽셀의 500KB이하 ico 파일만 등록 가능합니다. 파비콘은 인터넷 브라우저 탭의 아이콘입니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>SNS 이미지</th>
+							<td>
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt4').value=this.value;" accept="image/jpg, image/jpeg, image/png, image/x-png" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt4" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 800 x 400 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다. SNS로 홈페이지 링크를 전송시 보여지는 이미지입니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete mt30">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

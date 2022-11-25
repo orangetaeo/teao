@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../orange_header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../orange_snb_item.html";
+	?>
+	<div class="content">
+		<!-- navi -->
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="/design/wave/manager/orangemsg/roas/dashboard.html">ROAS</a> &gt; <a href="/design/wave/manager/orangemsg/roas/dashboard.html">데쉬보드</a> &gt; <a href="/design/wave/manager/orangemsg/roas/customer_week_alimtalk_member.html">요일별분석</a></p>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="fas fa-bookmark"></i> 알림톡 요일별분석</h2>
+		</div>
+			<!-- 리스트 탭영역 -->
+			<div class="tab_area">
+				<button type="button" class="button-B on" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_alimtalk_member.html'"><i class="xi-lightbulb"></i> 알림톡</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_friendtalk_member.html'"><i class="xi-lightbulb"></i> 친구톡</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_dm.html_member'"><i class="xi-lightbulb"></i> 문자</button></label>
+			</div>
+			<!-- 리스트 탭영역 -->
+			<div class="tab_area">
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_alimtalk_member.html'"> 회원</button></label>
+				<button type="button" class="button-B on" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_alimtalk_order.html'"> 제품 및 카테고리별 주문</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_alimtalk_cart.html'"> 장바구니 & 위시리스트</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_alimtalk_coupon.html'"> 쿠폰 & 적립금</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_alimtalk_notice.html'"> 공지사항</button></label>
+			</div>
+		<div class="conbox position_w">
+			<!-- 리스트 검색영역 -->
+			<div class="list_top">
+				<div class="search_area">
+					<div class="area_nomal">
+						<table>
+							<tbody>
+								<tr>
+									<th>쇼핑몰명</th>
+									<td>
+										<div class="c_box m-A">
+										<p><input type="checkbox" name="shopname" id="shopname0" checked><label for="shopname0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="shopname" id="shopname1" ><label for="shopname1"><span></span>쇼핑몰명1</label></p>
+										<p><input type="checkbox" name="shopname" id="shopname2" ><label for="shopname2"><span></span>쇼핑몰명2</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>기간검색</th>
+									<td class="td_day">
+										<div>
+											<select>
+												<option value="전체">전체</option>
+												<option value="가입일">가입일</option>
+												<option value="로그인일">로그인일</option>
+											</select>
+											<input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i>
+										</div>
+										<div class="day_day">
+											<button type="button">오늘</button>
+											<button type="button">어제</button>
+											<button type="button" class="on">일주일</button>
+											<button type="button">이번달</button>
+											<button type="button">1개월</button>
+											<button type="button">3개월</button>
+											<button type="button">1년</button>
+										</div>
+									</td>
+									<td class="td_btn">
+										<div class="td_btn_area">
+											<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+											<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="area_detail">
+						<table>
+							<tbody>
+								<tr>
+									<th>카테고리</th>
+									<td class="td_category">
+										<select>
+											<option value="대분류선택">대분류선택</option>
+										</select>
+										<select>
+											<option value="중분류선택">중분류선택</option>
+										</select>
+										<select>
+											<option value="소분류선택">소분류선택</option>
+										</select>
+										<select>
+											<option value="상세분류선택">상세분류선택</option>
+										</select>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>검색어</th>
+									<td>
+										<select>
+											<option value="상품명">상품명</option>
+											<option value="상품코드">상품코드</option>
+											<option value="자체상품코드">자체상품코드</option>
+											<option value="공급사">공급사</option>
+										</select>
+										<input type="search" class="input_search" placeholder="상품명, 상품코드, 자체상품코드, 공급사">	
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>템플릿명</th>
+									<td>
+										<input type="search" class="input_search" placeholder="템플릿명">	
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>최초주문</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice0" checked><label for="choice0"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="begin" id="begin0" checked><label for="begin0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="begin" id="begin1"><label for="begin1"><span></span>최초</label></p>
+											<p><input type="checkbox" name="begin" id="begin2"><label for="begin2"><span></span>최초주문아님</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>결제수단</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice1"><label for="choice1"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="Payment" id="Payment0" checked><label for="Payment0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment1"><label for="Payment1"><span></span>무통장</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment2"><label for="Payment2"><span></span>신용카드</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment3"><label for="Payment3"><span></span>휴대폰</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment4"><label for="Payment4"><span></span>계좌이체</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment5"><label for="Payment5"><span></span>선불금</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment6"><label for="Payment6"><span></span>예치금</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment7"><label for="Payment7"><span></span>적립금</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment8"><label for="Payment8"><span></span>통합포인트</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>주문</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice2"><label for="choice2"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="order" id="order0" checked><label for="order0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="order" id="order1"><label for="order1"><span></span>1일</label></p>
+											<p><input type="checkbox" name="order" id="order2"><label for="order2"><span></span>3일</label></p>
+											<p><input type="checkbox" name="order" id="order3"><label for="order3"><span></span>5일</label></p>
+											<p><input type="checkbox" name="order" id="order4"><label for="order4"><span></span>10일</label></p>
+											<p><input type="checkbox" name="order" id="order5"><label for="order5"><span></span>15일</label></p>
+											<p><input type="checkbox" name="order" id="order6"><label for="order6"><span></span>20일</label></p>
+											<p><input type="checkbox" name="order" id="order7"><label for="order7"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>배송</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice3"><label for="choice3"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="delivery" id="delivery0" checked><label for="delivery0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="delivery" id="delivery1"><label for="delivery1"><span></span>1일</label></p>
+											<p><input type="checkbox" name="delivery" id="delivery2"><label for="delivery2"><span></span>3일</label></p>
+											<p><input type="checkbox" name="delivery" id="delivery3"><label for="delivery3"><span></span>5일</label></p>
+											<p><input type="checkbox" name="delivery" id="delivery4"><label for="delivery4"><span></span>10일</label></p>
+											<p><input type="checkbox" name="delivery" id="delivery5"><label for="delivery5"><span></span>15일</label></p>
+											<p><input type="checkbox" name="delivery" id="delivery6"><label for="delivery6"><span></span>20일</label></p>
+											<p><input type="checkbox" name="delivery" id="delivery7"><label for="delivery7"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+									<th>취소</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice4"><label for="choice4"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="cancel" id="cancel0" checked><label for="cancel0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="cancel" id="cancel1"><label for="cancel1"><span></span>1일</label></p>
+											<p><input type="checkbox" name="cancel" id="cancel2"><label for="cancel2"><span></span>3일</label></p>
+											<p><input type="checkbox" name="cancel" id="cancel3"><label for="cancel3"><span></span>5일</label></p>
+											<p><input type="checkbox" name="cancel" id="cancel4"><label for="cancel4"><span></span>10일</label></p>
+											<p><input type="checkbox" name="cancel" id="cancel5"><label for="cancel5"><span></span>15일</label></p>
+											<p><input type="checkbox" name="cancel" id="cancel6"><label for="cancel6"><span></span>20일</label></p>
+											<p><input type="checkbox" name="cancel" id="cancel7"><label for="cancel7"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>교환</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice5"><label for="choice5"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="exchange" id="exchange0" checked><label for="exchange0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="exchange" id="exchange1"><label for="exchange1"><span></span>1일</label></p>
+											<p><input type="checkbox" name="exchange" id="exchange2"><label for="exchange2"><span></span>3일</label></p>
+											<p><input type="checkbox" name="exchange" id="exchange3"><label for="exchange3"><span></span>5일</label></p>
+											<p><input type="checkbox" name="exchange" id="exchange4"><label for="exchange4"><span></span>10일</label></p>
+											<p><input type="checkbox" name="exchange" id="exchange5"><label for="exchange5"><span></span>15일</label></p>
+											<p><input type="checkbox" name="exchange" id="exchange6"><label for="exchange6"><span></span>20일</label></p>
+											<p><input type="checkbox" name="exchange" id="exchange7"><label for="exchange7"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>반품</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice6"><label for="choice6"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="return" id="return0" checked><label for="return0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="return" id="return1"><label for="return1"><span></span>1일</label></p>
+											<p><input type="checkbox" name="return" id="return2"><label for="return2"><span></span>3일</label></p>
+											<p><input type="checkbox" name="return" id="return3"><label for="return3"><span></span>5일</label></p>
+											<p><input type="checkbox" name="return" id="return4"><label for="return4"><span></span>10일</label></p>
+											<p><input type="checkbox" name="return" id="return5"><label for="return5"><span></span>15일</label></p>
+											<p><input type="checkbox" name="return" id="return6"><label for="return6"><span></span>20일</label></p>
+											<p><input type="checkbox" name="return" id="return7"><label for="return7"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>리뷰</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice7"><label for="choice7"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="review" id="review0" checked><label for="review0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="review" id="review1"><label for="review1"><span></span>3일</label></p>
+											<p><input type="checkbox" name="review" id="review2"><label for="review2"><span></span>5일</label></p>
+											<p><input type="checkbox" name="review" id="review3"><label for="review3"><span></span>7일</label></p>
+											<p><input type="checkbox" name="review" id="review4"><label for="review4"><span></span>14일</label></p>
+											<p><input type="checkbox" name="review" id="review5"><label for="review5"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>입고예정일, 재입고</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice8"><label for="choice8"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="stock" id="stock0" checked><label for="stock0"><span></span>입고예정일</label></p>
+											<p><input type="checkbox" name="stock" id="stock1"><label for="stock1"><span></span>재입고안내</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- 타이틀 -->
+				<div class="title">
+					<h2><i class="xi-lightbulb-o"></i> 알림톡 제품 및 카테고리별 주문 요일별 분석내역</h2>
+				</div>
+				<div class="conbox">
+					<!-- 리스트 상단영역 -->
+					<div class="list_top">
+						<p class="p_total">업데이트 : <span class="color-A">0000-00-00 00:00</span></p>
+						<p class="excel">
+							<a href="#"><i class="xi-download"></i> 엑셀 다운로드</a>
+						</p>
+					</div>
+					<!-- 리스트 -->
+					<div class="list">
+						<table>
+							<thead>
+								<tr>
+									<th rowspan="2">발송요일</th>
+									<th colspan="2">발송</th>
+									<th rowspan="2">총발송건수</th>
+									<th rowspan="2">로그인 횟수</th>
+									<th rowspan="2">신규가입자</th>
+									<th rowspan="2">방문율</th>
+									<th rowspan="2">클릭율</th>
+									<th rowspan="2">결제완료 상품수</th>
+									<th rowspan="2">결제상품 판매금액</th>
+									<th rowspan="2">발송비용</th>
+									<th rowspan="2">ROAS</th>
+								</tr>
+								<tr>
+									<th>알림톡</th>
+									<th>문자</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>월요일</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>화요일</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>수요일</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>목요일</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>금요일</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>토요일</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>일요일</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

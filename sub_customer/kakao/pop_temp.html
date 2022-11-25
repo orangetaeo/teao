@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<!-- 알림톡발송 (팝업) -->
+<script>
+$(function(){
+	$('.pop_temp_send_open').click(function(){
+		myFunction();
+		return false;
+	});
+
+	function myFunction() {
+		window.open("/design/travel/manager/sub_customer/kakao/pop_temp_send.html", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=0,left=0,width=796,height=596");
+	}
+});
+</script>
+<!-- 친구톡발송 (팝업) -->
+<script>
+$(function(){
+	$('.pop_temp_send_f_open').click(function(){
+		myFunction();
+		return false;
+	});
+
+	function myFunction() {
+		window.open("/design/travel/manager/sub_customer/kakao/pop_temp_send_f.html", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=0,left=0,width=796,height=596");
+	}
+});
+</script>
+<!-- 친구톡직접입력 (팝업) -->
+<script>
+$(function(){
+	$('.pop_talk_write_open').click(function(){
+		myFunction();
+		return false;
+	});
+
+	function myFunction() {
+		window.open("/design/travel/manager/sub_customer/kakao/pop_talk_write.html", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=0,left=0,width=796,height=620");
+	}
+});
+</script>
+<!-- 문자발송 (팝업) -->
+<script>
+$(function(){
+	$('.pop_temp_send_s_open').click(function(){
+		myFunction();
+		return false;
+	});
+
+	function myFunction() {
+		window.open("/design/travel/manager/sub_customer/kakao/pop_temp_send_s.html", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=0,left=0,width=796,height=480");
+	}
+});
+</script>
+<!-- 문자직접입력 (팝업) -->
+<script>
+$(function(){
+	$('.pop_sms_write_open').click(function(){
+		myFunction();
+		return false;
+	});
+
+	function myFunction() {
+		window.open("/design/travel/manager/sub_customer/kakao/pop_sms_write.html", "_blank", "toolbar=no,scrollbars=yes,resizable=yes,top=0,left=0,width=796,height=480");
+	}
+});
+</script>
+<body>
+<div id="wrap">
+	<!-- 템플릿선택 (팝업) -->
+	<div class="pop_temp">
+		<!-- 검색과버튼 -->
+		<div class="search">
+			<ul>
+				<li>
+					<select>
+						<option value="통합검색">통합검색</option>
+						<option value="템플릿명">템플릿명</option>
+						<option value="템플릿내용">템플릿내용</option>
+					</select>
+				</li>
+				<li><input type="text" placeholder="템플릿명, 템플릿내용"></li>
+				<li><button type="button">검색</button></li>
+			</ul>
+			<p class="talk_write"><a href="#" target="_blank" class="pop_talk_write_open">친구톡직접입력</a></p>
+			<p class="sms_write"><a href="#" target="_blank" class="pop_sms_write_open">문자직접입력</a></p>
+		</div>
+		<!-- 템플릿종류 -->
+		<div class="temp_kind">
+			<ul>
+				<li class="arlim_temp_btn on"><a href="#">알림톡 템플릿</a></li>
+				<li class="talk_temp_btn"><a href="#">친구톡 템플릿</a></li>
+				<li class="sms_temp_btn"><a href="#">문자 템플릿</a></li>
+			</ul>
+		</div>
+		<!-- 템플릿리스트 -->
+		<div class="temp_list">
+			<!-- 탭(알림톡) -->
+			<ul class="on arlim">
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 비밀번호 초기화</p>
+						<p class="star on"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					요청하신 비밀번호를 초기화 하였습니다.<br />
+					<br />
+					초기화 비밀번호: {초기화비밀번호}<br />
+					<br />
+					'초기화 비밀번호'로 로그인 후 마이페이지 비밀번호 변경에서 즉시 변경하여 사용하시기 바랍니다.<br />
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>로그인하기</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+						<p>버튼추가</p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 회원가입</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세요. {이름} 고객님!!<br />
+					{사이트명}에 회원가입해주셔서 감사합니다.<br />
+					<br />
+					가입일: {가입일} <br />
+					ID: {이메일형식 아이디}<br />
+					휴대폰: {휴대폰번호}<br />
+					이용약관: 동의<br />
+					개인정보 처리방침: 동의<br />
+					개인정보 제3자 제공: 동의<br />
+					이메일 수신: 동의<br />
+					SMS/알림톡 수신: 동의<br />
+					<br />
+					나와 우리를 위해 떠나는 여행 {사이트명}에서 행복을 책임쳐 드리겠습니다.<br />
+					<br />
+					고객님의 소중한 개인정보는 암호화 하여 잘 관리 하겠습니다.
+					</div>
+					<div class="btn">
+						<p>홈페이지 가기</p>
+						<p>추천여행지 보기</p>
+						<p>이벤트 보기</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>회원가입<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 아이디 찾기</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">아이디 찾기 입니다.<br />
+					가입하신 핸드폰 번호를 입력해주세요.</div>
+					<div class="btn">
+						<p>홈페이지 가기</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>아이디 찾기<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 비밀번호 찾기</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">비밀번호 찾기 입니다.<br />
+					가입하신 핸드폰 번호를 입력해주세요.</div>
+					<div class="btn">
+						<p>홈페이지 가기</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>비밀번호 찾기<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 입금대기</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 여행상품을 예약하신것을 확인하였습니다.<br />
+					입금대기 상태임으로 예약을 잡아 드릴 수 없습니다.<br />
+					<br />
+					주문일: {주문일}<br />
+					상품주문번호: {상품주문번호}<br />
+					예약 상품명: {예약상품명}<br />
+					인원: {인원}<br />
+					총 주문금액: {총 주문금액}<br />
+					입금대기 시한일: {입금대기 시한일}<br />
+					예약상태: {예약접수}<br />
+					<br />
+					입금대기 시한일까지 입금되지 않으면 예약접수된 여행일정은 자동 취소 됩니다.
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>취소규정 보기</p>
+						<p>계약해제 보기</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>입금대기<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 예약금완료</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					여행상품에 대해 예약금완료 하신것을 확인하였습니다.<br />
+					<br />
+					주문일: {주문일}<br />
+					상품주문번호: {상품주문번호}<br />
+					예약 상품명: {예약상품명}<br />
+					총 주문금액: {총 주문금액}<br />
+					예약금완료일: {예약금완료일}<br />
+					예약금: {예약금}<br />
+					잔금대기: {잔금액}<br />
+					잔금대기 시한일: {잔금액 시한일}<br />
+					상태: {잔금대기}<br />
+					<br />
+					잔금대기 시한일까지 입금되지 않으면 예약접수된 여행일정은 자동 취소 됩니다.
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>취소규정 보기</p>
+						<p>계약해제 보기</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>예약금완료<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 잔금대기</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					여행상품에 대해 잔금대기 시한일이 얼마남지 않아 알림톡보내드립니다.<br />
+					<br />
+					상품주문번호: {상품주문번호}<br />
+					예약 상품명: {예약상품명}<br />
+					총 주문금액: {총 주문금액}<br />
+					예약금완료일: {예약금완료일}<br />
+					예약금: {예약금}<br />
+					잔금대기: {잔금액}<br />
+					잔금대기 시한일: {잔금액 시한일}<br />
+					상태: {잔금대기}<br />
+					<br />
+					잔금대기 시한일까지 입금되지 않으면 예약접수된 여행일정은 자동 취소 됩니다.
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>취소규정 보기</p>
+						<p>계약해제 보기</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>잔금대기<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 결제완료(고객)</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 결제 하신 내역을 보내드립니다.<br />
+					<br />
+					결제완료일: {결제완료일}<br />
+					상품주문번호: {상품주문번호}<br />
+					예약 상품명: {예약상품명}<br />
+					인원: {인원}<br />
+					총 주문금액: {총 주문금액}<br />
+					예약금 결제방법: {카드결제}<br />
+					잔금 결제방법: {카드결제}<br />
+					예약상태: {예약접수}<br />
+					<br />
+					소중한 고객님의 여행정보와 결제하신 내용은 확인 되었습니다.
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>결제완료(고객)<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 결제완료(관리자)</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">결제완료된 고객이 있습니다.<br />
+					상품주문번호: {상품주문번호}<br />
+					예약 상품명: {예약상품명}<br />
+					인원: {인원}<br />
+					총 주문금액: {총 주문금액}<br />
+					<br />
+					여행상품에 문제 없는지 체크 바랍니다.
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>결제완료(관리자)<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 여행상품 미확정/확정</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 여행상품 진행현황을 보내드립니다.<br />
+					<br />
+					단계는 예약가능>예약접수>예약확정 or 미확정> 예약완료 순서입니다.<br />
+					<br />
+					예약단계: {미확정}<br />
+					<br />
+					단계가 '미확정'의 경우에는 최저 출발인원 미 충족 또는 여행상품에 대해서 관리자가 확인 중일 수 있습니다.<br />
+					<br />
+					'확정'으로 변경이 되었을 때 다시 DM을 보내 드리도록 하겠습니다.<br />
+					<br />
+					단, '확정' 단계일 경우에는 '예약완료' DM을 다시 받아 보실 수 있습니다.
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>버튼 신청</p>
+						<p>문의하기</p>
+						<p>땡땡</p>
+						<p>버튼임</p>
+					</div>
+					<div class="vid">
+						<p>여행상품 미확정/확정<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 예약완료</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 여행상품 예약완료 안내드립니다.<br />
+					<br />
+					상품주문번호: {상품주문번호}<br />
+					예약일: {예약일}<br />
+					예약 상품명: {예약상품명}<br />
+					인원: {인원}<br />
+					<br />
+					상품의 자세한 정보는 아래의 '바우처 보기'버튼을 클릭 해주시기 바랍니다.
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>바우처 보기</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+						<p>버튼 추가</p>
+					</div>
+					<div class="vid">
+						<p>예약완료<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 미입금 주문자동취소</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 예약하신 상품이 미입금되어 '주문자동취소' 될 예정입니다.<br />
+					<br />
+					상품예약번호: {상품예약번호}<br />
+					예약상품명: {예약상품명}<br />
+					입금마감일: {입금 마감일}<br />
+					미입금액: {미입금액}<br />
+					<br />
+					'입금마감일'이 지나면 "주문자동취소" 
+					됩니다.<br />
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+						<p>추가버튼</p>
+						<p>추가버튼</p>
+					</div>
+					<div class="vid">
+						<p>미입금 주문자동취소<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 주문취소</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 주문하신 상품이 취소되었습니다.<br />
+					<br />
+					상품예약번호: {상품예약번호}<br />
+					예약상품명: {예약상품명}<br />
+					취소처리상태: {자동취소,품절취소,관리자취소,고객취소요청}<br />
+					<br />
+					다른 여행계획이 생기시면 다시 저희 {사이트명} 찾아주세요.
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>이벤트 보기</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+						<p>추가버튼</p>
+					</div>
+					<div class="vid">
+						<p>주문취소<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 환불접수</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 주문하신 상품이 환불접수 되었습니다.<br />
+					<br />
+					주문번호: {주문번호}<br />
+					주문상품명: {주문상품명}<br />
+					환불접수: {환불접수}<br />
+					환불요청일: {환불요청일}<br />
+					환불요청금: {환불요청금}<br />
+					<br />
+					혹시 저희 {사이트명}에서 불편을 해드리게 했다면 죄송합니다. 추후 고객님에게 더 좋은 서비스로 보답드리겠습니다.<br />
+					<br />
+					'환불규정'에 의해 환불확정이 되면 환불 될 예정입니다.
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>환불규정 보기</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+						<p>추가버튼</p>
+					</div>
+					<div class="vid">
+						<p>환불접수<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 환불보류</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 환불접수된 내용이 '환불보류' 되었습니다.<br />
+					<br />
+					주문번호: {주문번호}<br />
+					주문상품명: {주문상품명}<br />
+					환불보류: {환불보류}<br />
+					환불요청일: {환불요청일}<br />
+					환불요청금: {환불요청금}<br />
+					<br />
+					환불보류 사유를 알고 싶으실 경우 아래의 버튼을 클릭 해주세요.<br />
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>환불규정 보기</p>
+						<p>환불보류 사유</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+					</div>
+					<div class="vid">
+						<p>환불보류<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 환불완료</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 환불접수된 내용이 '환불완료' 되었습니다.<br />
+					<br />
+					주문번호: {주문번호}<br />
+					주문상품명: {주문상품명}<br />
+					환불확정금: {환불확정금}<br />
+					<br />
+					'환불확정금'에 대해서 궁금하신게 있으시다면 아래의 버튼을 클릭 해주세요.<br />
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>환불규정 보기</p>
+						<p>환불확정금 보기</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+					</div>
+					<div class="vid">
+						<p>환불완료<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 휴면회원</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">[{사이트명} 휴면회원 전환 안내]<br />
+					{이름}님, 안녕하세요.<br />
+					<br />
+					고객님께서는 1년간 {사이트명} 서비스를 이용하지 않아 휴면회원으로 전환될 예정입니다.<br />
+					<br />
+					휴면 전환 후 고객님의 정보는 분리보관되어, 별도의 휴면해지 요청 전까지는 서비스 이용이 불가합니다.<br />
+					- 별도 분리보관되는 개인정보 항목: 이름, 전화번호, 휴대폰번호, 생년월일, 이메일, 주소등<br />
+					<br />
+					{사이트명} 서비스를 계속 이용하시려면 {휴면회원 최종변경일}까지 로그인하시면 됩니다.<br />
+					<br />
+					본 메시지는 개인정보 유효기간제 시행에 따라 수신동의 여부에 관계없이 발송하였습니다.<br />
+					<br />
+					기준일자: {최종로그인일}<br />
+					{사이트명} 고객센터: {고객센터전화번호}<br />
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>로그인 하기</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+						<p>MY포인트 확인</p>
+					</div>
+					<div class="vid">
+						<p>휴면회원<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 회원등급변경</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 회원등급변경되어 안내 드립니다.<br />
+					<br />
+					기존: {회원등급}<br />
+					변경: {회원등급}<br />
+					<br />
+					각 회원등급에 대해서 자세한 해택은 아래의 버튼을 클릭하시면 확인 가능합니다.
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>회원등급별 해택</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>회원등급변경<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 리프레시 소멸안내</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">[{사이트명} 소멸 예정 리플레시 포인트 안내]<br />
+					{이름}님, 현재 {포인트} 리프레시 포인트를 보유 중입니다.<br />
+					<br />
+					이 중 {포인트} 리프레시 포인트가 {소멸예정일} 이내 소멸 될 예정이며 포인트 적립일에 따라 소멸일이 상이하오니 확인하시기 바랍니다.<br />
+					<br />
+					{리프레시포인트 소멸일 알림톡 자동발송일 기준일} 기준 조회포인트로 금액이 상이 할 수 있습니다.
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>소멸 예정 포인트 확인</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>리프레시 소멸안내<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 리마인드 안내</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 예약하신 {주문상품명}이 이제 3일 뒤 출발입니다.<br />
+					<br />
+					해외여행 준비물 체크리스트를 보내드립니다.<br />
+					<br />
+					기본 준비물
+					1. 여권
+					2. 여권사본
+					3. 항공권
+					4. 현지 화폐 및 달러
+					5. 호텔 및 이용시설 바우처
+					6. 마스크
+					7. 신용카드
+					8. 핸드폰충전기
+					9. 유심(USIM) or 핸드폰 로밍
+					<br />
+					추가 준비물
+					1. 보조배터리
+					2. 상비약
+					3. 멀티어댑터
+					4. 세면도구
+					</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>리마인드 안내<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 여행당일 숙소바우처</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 예약하신 {주문상품명}이 오늘 출발입니다.<br />
+					<br />
+					숙소 도착 후 아래 '숙소 바우처'를 클릭하여 프론트에 보여주시면 여권 확인 후 숙소를 안내 해드립니다.<br />
+					<br />
+					숙소명: {숙소명}<br />
+					룸타입: {룸타입}<br />
+					엑스트라베드: {사용유무}<br />
+					이용기간: <br />
+					{체크인 이용일, 체크인시간}<br />
+					{체크아웃 이용마감일, 체크아웃시간}<br />
+					<br />
+					구매한 부대시설:<br />
+					{1. 디너BBQ이용권<br />
+					2. 원터파크 종일권}<br />
+					<br />
+					구매하신 부대시설 이용 시 부대시설 바우처를 클릭하여 보여주시면 담당자가 확인 후 사용가능합니다.
+					</div>
+					<div class="btn">
+						<p>숙소 바우처</p>
+						<p>부대시설 바우처</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>여행당일 숙소바우처<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 여행당일 골프장바우처</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 예약하신 {주문상품명}이 오늘 사용일입니다.<br />
+					<br />
+					티업시간까지 늦지 않도록 준비해주세요!<br />
+					<br />
+					골프장 도착 후 아래 '골프장 바우처'를 클릭하여 프론트에 보여주시면 여권 확인 후 안내 해드립니다.<br />
+					<br />
+					골프장명: {골프장명}<br />
+					이용일: {이용일}<br />
+					이용코스: {이용코스}<br />
+					이용홀수: {이용홀수}<br />
+					캐디: {캐디}<br />
+					카트: {카트}<br />
+					티업: {예약된 티업시작시간}<br />
+					<br />
+					구매한 부대시설:<br />
+					{1. 디너BBQ이용권<br />
+					2. 원터파크 종일권}<br />
+					<br />
+					라베가 나올 수 있게 즐거운 라운딩 되세요~
+					</div>
+					<div class="btn">
+						<p>골프장 바우처</p>
+						<p>부대시설 바우처</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>여행당일 숙소바우처<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 여행당일 음식점바우처</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 예약하신 {주문상품명}이 오늘 사용일입니다.<br />
+					<br />
+					식시시간까지 늦지 않도록 준비해주세요!<br />
+					<br />
+					음식점에 도착 후 아래 '음식점 바우처'를 클릭하여 프론트에 보여주시면 여권 확인 후 안내 해드립니다.<br />
+					<br />
+					음식점명: {음식점명}<br />
+					음식점영문: {음식점영문명}<br />
+					이용일: {이용일}<br />
+					이용이름: {이용이름}<br />
+					이용옵션: {옵션속성}<br />
+					</div>
+					<div class="btn">
+						<p>음식장 바우처</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>여행당일 음식점바우처<i class="xi-close"></i></p>
+					</div>
+				</li>
+				<li class="pop_temp_send_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 여행당일 관광바우처</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">안녕하세여. {이름} 고객님!!<br />
+					{사이트명}에서 예약하신 {주문상품명}이 오늘 사용일입니다.<br />
+					<br />
+					관광명: {관광명}<br />
+					관광영문: {관광영문명}<br />
+					이용일: {이용일}<br />
+					이용이름: {이용이름}<br />
+					이용옵션: {옵션속성}<br />
+					</div>
+					<div class="btn">
+						<p>관광 바우처</p>
+						<p>전화 고객센터</p>
+						<p>채팅 고객센터</p>
+						<p>버튼추가</p>
+						<p>버튼추가</p>
+					</div>
+					<div class="vid">
+						<p>여행당일 음식점바우처<i class="xi-close"></i></p>
+					</div>
+				</li>
+			</ul>
+			<!-- 탭(친구톡) -->
+			<ul class="friend">
+				<li class="pop_temp_send_f_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">친구톡도 보낼수 있나요?</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>버튼 신청</p>
+						<p>문의하기</p>
+						<p>땡땡</p>
+						<p>버튼임</p>
+					</div>
+				</li>
+				<li class="pop_temp_send_f_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">템플릿 내용 템플릿 내용 템플릿 내용</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>버튼 신청</p>
+						<p>문의하기</p>
+						<p>땡땡</p>
+						<p>버튼임</p>
+					</div>
+				</li>
+				<li class="pop_temp_send_f_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">템플릿 내용 템플릿 내용 템플릿 내용</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>버튼 신청</p>
+						<p>문의하기</p>
+						<p>땡땡</p>
+						<p>버튼임</p>
+					</div>
+				</li>
+				<li class="pop_temp_send_f_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">템플릿 내용 템플릿 내용 템플릿 내용</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>버튼 신청</p>
+						<p>문의하기</p>
+						<p>땡땡</p>
+						<p>버튼임</p>
+					</div>
+				</li>
+				<li class="pop_temp_send_f_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">템플릿 내용 템플릿 내용 템플릿 내용</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>버튼 신청</p>
+						<p>문의하기</p>
+						<p>땡땡</p>
+						<p>버튼임</p>
+					</div>
+				</li>
+				<li class="pop_temp_send_f_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">템플릿 내용 템플릿 내용 템플릿 내용</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>버튼 신청</p>
+						<p>문의하기</p>
+						<p>땡땡</p>
+						<p>버튼임</p>
+					</div>
+				</li>
+				<li class="pop_temp_send_f_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">템플릿 내용 템플릿 내용 템플릿 내용</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>버튼 신청</p>
+						<p>문의하기</p>
+						<p>땡땡</p>
+						<p>버튼임</p>
+					</div>
+				</li>
+				<li class="pop_temp_send_f_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt">템플릿 내용 템플릿 내용 템플릿 내용</div>
+					<div class="btn">
+						<p>홈페이지로 가기</p>
+						<p>버튼 신청</p>
+						<p>문의하기</p>
+						<p>땡땡</p>
+						<p>버튼임</p>
+					</div>
+				</li>
+			</ul>
+			<!-- 탭(문자) -->
+			<ul class="sms">
+				<li class="pop_temp_send_s_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt_top">템플릿 제목</div>
+					<div class="txt">긴내용 문자 길다길어 긴내용 문자 길다길어 긴내용 문자 길다길어 긴내용 문자 길다길어 긴내용 문자 길다길어 긴내용 문자 길다길어</div>
+				</li>
+				<li class="pop_temp_send_s_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt_top">템플릿 제목</div>
+					<div class="txt">템플릿 내용 템플릿 내용 템플릿 내용</div>
+				</li>
+				<li class="pop_temp_send_s_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt_top">템플릿 제목</div>
+					<div class="txt">템플릿 내용 템플릿 내용 템플릿 내용</div>
+				</li>
+				<li class="pop_temp_send_s_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt_top">템플릿 제목</div>
+					<div class="txt">템플릿 내용 템플릿 내용 템플릿 내용</div>
+				</li>
+				<li class="pop_temp_send_s_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt_top">템플릿 제목</div>
+					<div class="txt">템플릿 내용 템플릿 내용 템플릿 내용</div>
+				</li>
+				<li class="pop_temp_send_s_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt_top">템플릿 제목</div>
+					<div class="txt">템플릿 내용 템플릿 내용 템플릿 내용</div>
+				</li>
+				<li class="pop_temp_send_s_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt_top">템플릿 제목</div>
+					<div class="txt">템플릿 내용 템플릿 내용 템플릿 내용</div>
+				</li>
+				<li class="pop_temp_send_s_open">
+					<div class="tit">
+						<p class="name"><i class="xi-message"></i> 템플릿 명</p>
+						<p class="star"><i class="xi-star"></i></p>
+					</div>
+					<div class="txt_top">템플릿 제목</div>
+					<div class="txt">템플릿 내용 템플릿 내용 템플릿 내용</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 페이지넘버 -->
+		<div class="page_num">
+			<p>
+				<span class="arr"><i class="xi-caret-down"></i></span>
+				<span class="nmb on">1</span>
+				<span class="nmb">2</span>
+				<span class="nmb">3</span>
+				<span class="arr"><i class="xi-caret-up"></i></span>
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

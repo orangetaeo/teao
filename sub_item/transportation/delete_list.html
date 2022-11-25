@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+
+<!-- [새창팝업] -->
+<script>
+
+//교통수단 달력
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/transportation/popup/booking_day.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1205, height=970");
+}
+
+</script>
+
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_item.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">상품관리</a> &gt; <a href="#">교통수단 설정</a> &gt; <a href="#">삭제 교통수단관리</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 교통수단 리스트</h2>
+		</div>
+		<div class="conbox position_w">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select class="w-E">
+											<option value="삭제일">삭제일</option>
+										</select>
+										<input type="date" class="w-E ta-c" placeholder="2022-09-01"> ~ <input type="date" class="w-E ta-c" placeholder="2022-09-30">
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">전체</button>
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>카테고리</th>
+								<td class="td_category">
+									<select>
+										<option value="대륙 선택">대륙 선택</option>
+										<option value="AC 아시아">AC 아시아</option>
+									</select>
+									<select>
+										<option value="국가 선택">국가 선택</option>
+										<option value="KOR 코리아">KO 코리아</option>
+									</select>
+									<select>
+										<option value="지역 선택">지역 선택</option>
+										<option value="다낭">다낭</option>
+									</select>
+									<select>
+										<option value="교통수단 유형선택">교통수단 유형선택</option>
+										<option value="레스토랑">버스</option>
+										<option value="현지식당">승합차</option>
+										<option value="카페">승용차</option>
+										<option value="한식당">택시</option>
+										<option value="디저트">오토바이</option>
+										<option value="뚝뚝이">뚝뚝이</option>
+									</select>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>검색어</th>
+								<td>
+									<div class="sel">
+										<select class="w-E">
+											<option value="교통수단 상품명">교통수단 상품명</option>
+											<option value="코드">코드</option>
+											<option value="출발지">출발지</option>
+											<option value="도착지">도착지</option>
+											<option value="옵션속성">옵션속성</option>
+										</select>
+										<input type="search" class="w-Q" placeholder="출발지, 도착지, 교통수단 상품명, 코드, 옵션속성을 입력 후 검색.">	
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>랜드사명</th>
+								<td>
+									<div class="sel">
+										<select class="w-E">
+											<option value="랜드사">랜드사 선택</option>
+											<option value="A랜드사">A랜드사</option>
+											<option value="B랜드사">B랜드사</option>
+										</select>	
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>가이드</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="guide" id="guide0" checked><label for="guide0"><span></span>전체</label></p>
+										<p><input type="radio" name="guide" id="guide1"><label for="guide1"><span></span>가이드 포함</label></p>
+										<p><input type="radio" name="guide" id="guide2"><label for="guide2"><span></span>가이드 불포함</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span> (선택 : <span class="color-B">000건</span>)</p>
+				<p class="excel">
+					<a href="#"><i class="xi-download"></i> 엑셀 다운로드</a>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>랜드사명 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>교통수단코드 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>교통수단로고 </span></th>
+							<th>교통수단 상품명 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>출발지</th>
+							<th>도착지</th>
+							<th>가이드</th>
+							<th>옵션속성</th>
+							<th>삭제자</th>
+							<th>삭제일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td class="name"><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">A랜드사</td>
+							<td><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">0000000000</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_item/transportation/delete_modify.html"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_tit"><p class="part">AC 아시아 > VN 베트남 > 다낭 > 승용차</p><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">하노이 공항에서 숙소까지</a></td>
+							<td class="td_center"><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">하노이 공항</a></td>
+							<td class="td_center"><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">인터콘티넨탈 하노이</a></td>
+							<td class="td_center"><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">불포함</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/transportation/modify.html">4인 공항픽업 이용권</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">2022-09-12</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td class="name"><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">B랜드사</td>
+							<td><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">0000000000</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_item/transportation/delete_modify.html"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_tit"><p class="part">AC 아시아 > VN 베트남 > 다낭 > 승합차</p><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">종일 관광일정 가이드포함</a></td>
+							<td class="td_center"><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">인터콘티넨탈 하노이</a></td>
+							<td class="td_center"><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">인터콘티넨탈 하노이</a></td>
+							<td class="td_center"><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">포함</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/transportation/modify.html">4인 종일 관광일정 이용권</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/transportation/delete_modify.html">2022-09-12</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove">
+					<button type="button">교통수단복원</button>
+					<button type="button">선택삭제</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<span class="comment"><i class="xi-error-o"></i> 완전삭제된 교통수단 정보는 복구가 불가능하므로 삭제 시 유의하시기 바랍니다.</span>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

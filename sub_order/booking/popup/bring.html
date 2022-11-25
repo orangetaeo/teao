@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">		
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 일정 리스트</h2>
+		</div>
+		<div class="conbox position_w">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select class="w-E">
+											<option value="등록일">등록일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2022-08-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-08-31"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">전체</button>
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>카테고리</th>
+								<td class="td_category">
+									<select>
+										<option value="대륙">대륙</option>
+										<option value="AC 아시아">AC 아시아</option>
+									</select>
+									<select>
+										<option value="국가">국가</option>
+										<option value="VN 베트남">VN 베트남</option>
+									</select>
+									<select>
+										<option value="지역">지역</option>
+										<option value="다낭">다낭</option>
+									</select>
+									<select>
+										<option value="상품유형">상품유형</option>
+										<option value="패키지">패키지</option>
+										<option value="항공">항공</option>
+										<option value="숙소">숙소</option>
+										<option value="음식점">음식점</option>
+										<option value="골프">골프</option>
+										<option value="관광">관광</option>
+										<option value="교통">교통</option>
+									</select>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>검색어</th>
+								<td>
+									<div>
+										<select class="w-E">
+											<option value="일정코드">일정코드</option>
+											<option value="일정명">일정명</option>
+										</select>
+										<input type="search" class="w-R" placeholder="일정코드, 일정명 선택 후 검색">	
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>상품유형</th>
+								<td colspan="3" class="td_w">
+									<div class="c_box m-A">
+										<p>
+											<input type="checkbox" name="product_type" id="product_type1" checked required /><label for="product_type1"><span></span>전체</label>
+											<input type="checkbox" name="product_type" id="product_type2" checked required /><label for="product_type2"><span></span>항공</label>
+											<input type="checkbox" name="product_type" id="product_type3" checked required /><label for="product_type3"><span></span>숙소</label>
+											<input type="checkbox" name="product_type" id="product_type4" checked required /><label for="product_type4"><span></span>골프</label>
+											<input type="checkbox" name="product_type" id="product_type5" checked required /><label for="product_type5"><span></span>음식점</label>
+											<input type="checkbox" name="product_type" id="product_type6" checked required /><label for="product_type6"><span></span>관광</label>
+											<input type="checkbox" name="product_type" id="product_type7" checked required /><label for="product_type7"><span></span>쇼핑</label>
+											<input type="checkbox" name="product_type" id="product_type8" checked required /><label for="product_type8"><span></span>마사지</label>
+											<input type="checkbox" name="product_type" id="product_type9" checked required /><label for="product_type9"><span></span>스키장</label>
+											<input type="checkbox" name="product_type" id="product_type10" checked required /><label for="product_type10"><span></span>트래킹</label>
+											<input type="checkbox" name="product_type" id="product_type11" checked required /><label for="product_type11"><span></span>투어</label>
+											<input type="checkbox" name="product_type" id="product_type12" checked required /><label for="product_type12"><span></span>엑티비티</label>
+											<input type="checkbox" name="product_type" id="product_type13" checked required /><label for="product_type13"><span></span>교통수단</label>
+											<input type="checkbox" name="product_type" id="product_type14" checked required /><label for="product_type14"><span></span>가이드</label>
+										</p>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span> (선택 : <span class="color-B">000건</span>)</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>일정코드 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>일정명 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>일정 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>상품유형</th>
+							<th>소비자가 합계 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>등록자</th>
+							<th>등록/수정일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">0000000000</a></td>
+							<td class="td_tit"><p class="part">AC 아시아 > VN 베트남 > 다낭 > 패키지</p><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">일정명일정명일정명일정명</a></td>
+							<td><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">3박4일</a></td>
+							<td class="btn_product_type_vew"><button type="button" class="button-D">보기</button></td>
+							<td class="td_pri"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">800,000 ~ 900,000</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">2022-09-01</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">0000000000</a></td>
+							<td class="td_tit"><p class="part">AC 동남아 > VN 베트남 > 다낭 > 항공</p><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">일정명일정명일정명일정명</a></td>
+							<td><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">3박5일</a></td>
+							<td class="btn_product_type_vew"><button type="button" class="button-D">보기</button></td>
+							<td class="td_pri"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">500,000 ~ 600,000</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">2022-09-01</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">0000000000</a></td>
+							<td class="td_tit"><p class="part">AC 동남아 > VN 베트남 > 다낭 > 항공</p><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">일정명일정명일정명일정명</a></td>
+							<td><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">3박5일</a></td>
+							<td class="btn_product_type_vew"><button type="button" class="button-D">보기</button></td>
+							<td class="td_pri"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">500,000 ~ 600,000</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">2022-09-01</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">0000000000</a></td>
+							<td class="td_tit"><p class="part">AC 동남아 > VN 베트남 > 다낭 > 항공</p><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">일정명일정명일정명일정명</a></td>
+							<td><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">3박5일</a></td>
+							<td class="btn_product_type_vew"><button type="button" class="button-D">보기</button></td>
+							<td class="td_pri"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">500,000 ~ 600,000</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">2022-09-01</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">0000000000</a></td>
+							<td class="td_tit"><p class="part">AC 동남아 > VN 베트남 > 다낭 > 항공</p><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">일정명일정명일정명일정명</a></td>
+							<td><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">3박5일</a></td>
+							<td class="btn_product_type_vew"><button type="button" class="button-D">보기</button></td>
+							<td class="td_pri"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">500,000 ~ 600,000</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">2022-09-01</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">0000000000</a></td>
+							<td class="td_tit"><p class="part">AC 동남아 > VN 베트남 > 다낭 > 항공</p><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">일정명일정명일정명일정명</a></td>
+							<td><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">3박5일</a></td>
+							<td class="btn_product_type_vew"><button type="button" class="button-D">보기</button></td>
+							<td class="td_pri"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">500,000 ~ 600,000</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/schedule/modlfy.html" target="_blank">2022-09-01</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">선택완료</button></p>
+		</div>
+		<!-- 레이어팝업 상품유형 보기 -->
+		<div class="product_type_vew">
+			<div class="product_type_vew_inn">
+				<p class="tit"><i class="xi-lightbulb-o"></i> 상품유형 보기</p>
+				<!-- 상품유형 -->
+				<div class="level">
+					<div class="group">
+						<ul>
+							<div class="c_box">
+								<p><input type="checkbox" name="product_type_vew" id="product_type_vew1" checked /><label for="product_type_vew1"><span></span><button type="button" class="button-C">항공</i></button></label></p>
+								<p><input type="checkbox" name="product_type_vew" id="product_type_vew1" /><label for="product_type_vew1"><span></span><button type="button" class="button-C">숙소</i></button></label></p>
+								<p><input type="checkbox" name="product_type_vew" id="product_type_vew2" /><label for="product_type_vew2"><span></span><button type="button" class="button-C">골프</i></button></label></p>
+								<p><input type="checkbox" name="product_type_vew" id="product_type_vew3" /><label for="product_type_vew3"><span></span><button type="button" class="button-C">음식점</i></button></label></p>
+								<p><input type="checkbox" name="product_type_vew" id="product_type_vew4" checked /><label for="product_type_vew4"><span></span><button type="button" class="button-C">관광</i></button></label></p>
+								<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">쇼핑</i></button></label></p>
+								<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">마사지</i></button></label></p>
+								<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">스키장</i></button></label></p>
+								<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">트래킹</i></button></label></p>
+								<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">투어</button></label></p>
+								<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">엑티비티</i></button></label></p>
+								<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">교통수단</i></button></label></p>
+								<p><input type="checkbox" name="product_type_vew" id="product_type_vew5" checked /><label for="product_type_vew5"><span></span><button type="button" class="button-C">가이드</i></button></label></p>
+							</div>
+						</ul>
+					</div>
+				</div>
+				<p class="close"><i class="xi-close"></i></p>
+			</div>
+		</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

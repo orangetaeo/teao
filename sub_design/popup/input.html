@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_design.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">디자인관리</a> &gt; <a href="#">팝업 디자인</a> &gt; <a href="#">팝업 등록</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 팝업 등록</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>팝업제목</th>
+							<td colspan="3"><input type="url" class="w-H" placeholder="팝업 제목"></td>
+						</tr>
+						<tr>
+							<th>팝업내용</th>
+							<td colspan="3"><textarea class="w-H h-K"></textarea></td>
+						</tr>
+						<tr>
+							<th>텍스트색상</th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="color" id="c1" checked /><label for="c1"><span></span>Black</label></p>
+									<p><input type="radio" name="color" id="c2" /><label for="c2"><span></span>White</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>노출상태</th>
+							<td class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="noch" id="v1" checked /><label for="v1"><span></span>노출함</label></p>
+									<p><input type="radio" name="noch" id="v2" /><label for="v2"><span></span>노출안함</label></p>
+								</div>
+							</td>
+							<th>노출기간</th>
+							<td>
+								<div class="day">
+									<input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>팝업배경이미지</th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 430 x 550 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>배경 이미지<br />템플릿 선택</th>
+							<td colspan="3">
+								<div class="r_circle bg_popup h-J">
+									<p><input type="radio" name="bg" id="bg01" checked /><label for="bg01"><span></span><img src="../../images/popup_template/bg_popup_01.png" alt="" /></label></p>
+									<p><input type="radio" name="bg" id="bg02"><label for="bg02"><span></span><img src="../../images/popup_template/bg_popup_02.png" alt="" /></label></p>
+									<p><input type="radio" name="bg" id="bg03"><label for="bg03"><span></span><img src="../../images/popup_template/bg_popup_03.png" alt="" /></label></p>
+									<p><input type="radio" name="bg" id="bg04"><label for="bg04"><span></span><img src="../../images/popup_template/bg_popup_04.png" alt="" /></label></p>
+									<p><input type="radio" name="bg" id="bg05"><label for="bg05"><span></span><img src="../../images/popup_template/bg_popup_05.png" alt="" /></label></p>
+									<p><input type="radio" name="bg" id="bg06"><label for="bg06"><span></span><img src="../../images/popup_template/bg_popup_06.png" alt="" /></label></p>
+									<p><input type="radio" name="bg" id="bg07"><label for="bg07"><span></span><img src="../../images/popup_template/bg_popup_07.png" alt="" /></label></p>
+									<p><input type="radio" name="bg" id="bg08"><label for="bg08"><span></span><img src="../../images/popup_template/bg_popup_08.png" alt="" /></label></p>
+									<p><input type="radio" name="bg" id="bg09"><label for="bg09"><span></span><img src="../../images/popup_template/bg_popup_09.png" alt="" /></label></p>
+									<p><input type="radio" name="bg" id="bg10"><label for="bg10"><span></span><img src="../../images/popup_template/bg_popup_10.png" alt="" /></label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>팝업사이즈</th>
+							<td class="td_w">
+								<input type="text" class="w-D" placeholder="가로값" /> X <input type="text" class="w-D" placeholder="세로값" /> 픽셀
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 430 x 550 픽셀</span>
+							</td>
+							<th>팝업위치</th>
+							<td>
+								<input type="text" class="w-D" placeholder="가로 위치값" /> X <input type="text" class="w-D" placeholder="세로 위치값" /> 픽셀
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 50 x 50 픽셀</span>
+							</td>
+						</tr>
+						<tr>
+							<th>팝업링크</th>
+							<td colspan="3"><input type="url" class="w-H" placeholder="http://"></td>
+						</tr>
+						<tr>
+							<th>링크방식</th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="link" id="l1" checked /><label for="l1"><span></span>현재창으로 링크</label></p>
+									<p><input type="radio" name="link" id="l2" /><label for="l2"><span></span>새창으로 링크</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>닫힘구분</th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="clos" id="c1" checked /><label for="c1"><span></span>오늘하루 열지않음</label></p>
+									<p><input type="radio" name="clos" id="c2" /><label for="c2"><span></span>24시간동안 열지않음</label></p>
+									<p><input type="radio" name="clos" id="c3" /><label for="c3"><span></span>다시는 열지않음</label></p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

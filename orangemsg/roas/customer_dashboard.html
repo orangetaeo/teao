@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../orange_header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../orange_snb_item.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">SHOP</a> &gt; <a href="/design/wave/manager/orangemsg/shop/roas.html">ROAS</a></p>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="fas fa-bookmark"></i> ROAS</h2>
+		</div>
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>쇼핑몰명</th>
+								<td>
+									<div class="c_box m-A">
+									<p><input type="checkbox" name="shopname" id="shopname0" checked><label for="shopname0"><span></span>전체</label></p>
+									<p><input type="checkbox" name="shopname" id="shopname1" ><label for="shopname1"><span></span>쇼핑몰명1</label></p>
+									<p><input type="checkbox" name="shopname" id="shopname2" ><label for="shopname2"><span></span>쇼핑몰명2</label></p>
+									</div>
+								</td>
+								<td></td>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button"class="on">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+									</div>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area_one">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th rowspan="2">쇼핑몰명</th>
+							<th rowspan="2">총 문자비용</th>
+							<th rowspan="2">총 매출금액</th>
+							<th rowspan="2">항목</th>
+							<th colspan="2">알림톡</th>
+							<th colspan="2">친구톡</th>
+							<th colspan="3">문자</th>
+							<th rowspan="2">ROAS</th>
+						</tr>
+						<tr>
+							<th rowspan="2">알림톡</th>
+							<th rowspan="2">대체문자</th>
+							<th rowspan="2">친구톡</th>
+							<th rowspan="2">대체문자</th>
+							<th rowspan="2">SMS</th>
+							<th rowspan="2">LMS</th>
+							<th rowspan="2">MMS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="2">쇼핑몰명2</td>
+							<td rowspan="2">0원</td>
+							<td rowspan="2">0원</td>
+							<td>문자비용</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0%</td>
+						</tr>
+						<tr>
+							<td>매출금액</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0%</td>
+						</tr>
+						<tr>
+							<td rowspan="2">쇼핑몰명1</td>
+							<td rowspan="2">0원</td>
+							<td rowspan="2">0원</td>
+							<td>문자비용</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0%</td>
+						</tr>
+						<tr>
+							<td>매출금액</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		<div class="conbox">
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> ROAS 전체</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 탭영역 -->
+			<div class="tab_area">
+				<button type="button" class="button-B on" onclick="location.href=''"><i class="xi-lightbulb"></i> 전체</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_time_alimtalk_member.html'"><i class="xi-lightbulb"></i> 시간대별</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_day_alimtalk_member.html'"><i class="xi-lightbulb"></i> 일별</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_alimtalk_member.html'"><i class="xi-lightbulb"></i> 요일별</button></label>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">ROAS = <span class="color-A">매출액 / 문자비용 * 100</span></p>
+				<p class="excel">
+					<a href="#"><i class="xi-download"></i> 엑셀 다운로드</a>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th rowspan="2">NO.1</th>
+							<th rowspan="2">발송시간</th>
+							<th rowspan="2">템플릿명</th>
+							<th rowspan="2">대상자</th>
+							<th rowspan="2">매출금액</th>
+							<th colspan="3">문자비용</th>
+							<th rowspan="2">ROAS</th>
+						</tr>
+						<tr>
+							<th rowspan="2">발송구분</th>
+							<th rowspan="2">발송금액</th>
+							<th rowspan="2">대체문자</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>7</td>
+							<td>0000-00-00 00:00:00</td>
+							<td>회원가입</td>
+							<td>0명</td>
+							<td>0명</td>
+							<td>알림톡</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0%</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>0000-00-00 00:00:00</td>
+							<td>회원가입</td>
+							<td>0명</td>
+							<td>0명</td>
+							<td>알림톡</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0%</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>0000-00-00 00:00:00</td>
+							<td>회원가입</td>
+							<td>0명</td>
+							<td>0명</td>
+							<td>알림톡</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0%</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>0000-00-00 00:00:00</td>
+							<td>회원가입</td>
+							<td>0명</td>
+							<td>0명</td>
+							<td>친구톡</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0%</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>0000-00-00 00:00:00</td>
+							<td>회원가입</td>
+							<td>0명</td>
+							<td>0명</td>
+							<td>문자</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0%</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>0000-00-00 00:00:00</td>
+							<td>회원가입</td>
+							<td>0명</td>
+							<td>0명</td>
+							<td>문자</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0%</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>0000-00-00 00:00:00</td>
+							<td>회원가입</td>
+							<td>0명</td>
+							<td>0명</td>
+							<td>알림톡</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

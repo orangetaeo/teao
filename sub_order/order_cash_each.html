@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../snb_order.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">주문/배송</a> &gt; <a href="#">현금영수증관리</a> &gt; <a href="#">현금영수증 개별발급</a></p>
+			<?
+			include "../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 현금영수증 개별발급</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>PG 업체</th>
+							<td class="td_w">전자결제 서비스 업체와 계약이 필요합니다.</td>
+							<th>신청 가능 여부</th>
+							<td>신청 가능</td>
+						</tr>
+						<tr>
+							<th>주문번호</th>
+							<td colspan="3"><input type="text" class="w-G" required /><button type="button" class="button-A">유효성 검사</button></td>
+						</tr>
+						<tr>
+							<th>신청자명 <span class="color-A">*</span></th>
+							<td class="td_w"><input type="text" class="w-G" required /></td>
+							<th>상품명 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-G" required /></td>
+						</tr>
+						<tr>
+							<th>휴대폰 번호 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-C" maxlength="3" placeholder="010"required /> - <input type="text" class="w-C" maxlength="4" placeholder="0000"required /> - <input type="text" class="w-C" maxlength="4" placeholder="0000"required /></td>
+							<th>이메일 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-G" required /></td>
+						</tr>
+						<tr>
+							<th>과세/면세 여부 <span class="color-A">*</span></th>
+							<td class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="aa" id="pc_1" checked /><label for="pc_1"><span></span>과세</label></p>
+									<p><input type="radio" name="aa" id="pc_2" /><label for="pc_2"><span></span>면세</label></p>
+									<p><input type="radio" name="aa" id="pc_2" /><label for="pc_2"><span></span>복합과세</label></p>
+								</div>
+							</td>
+							</td>
+							<th>신청금액 <span class="color-A">*</span></th>
+							<td>
+								발행액 : <input type="text" class="w-F" required /><br />
+								공급액 : <input type="text" class="w-F" required /><br />
+								부가세 : <input type="text" class="w-F" required /><br />
+								면세액 : <input type="text" class="w-F" required /><br />
+							</td>
+						</tr>
+						<tr>
+							<th>발행 용도 <span class="color-A">*</span></th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="ab" id="pc_1" checked /><label for="pc_1"><span></span>소득공제용</label></p>
+									<p><input type="radio" name="ab" id="pc_2" /><label for="pc_2"><span></span>지출증빙용</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>인증 종류 <span class="color-A">*</span></th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="ac" id="pc_1" checked /><label for="pc_1"><span></span>휴대폰번호</label></p>
+									<p><input type="radio" name="ac" id="pc_2" /><label for="pc_2"><span></span>사업자번호</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>휴대폰 번호 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-C" maxlength="3" placeholder="010"required /> - <input type="text" class="w-C" maxlength="4" placeholder="0000"required /> - <input type="text" class="w-C" maxlength="4" placeholder="0000"required /></td>
+							<th>사업자 번호 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-C" maxlength="3" placeholder="000"required /> - <input type="text" class="w-C" maxlength="2" placeholder="00"required /> - <input type="text" class="w-C" maxlength="5" placeholder="00000"required /></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 관리자 메모</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>관리자 메모</th>
+							<td>
+								<textarea class="w-100 h-A"/>
+								</textarea>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

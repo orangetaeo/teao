@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? include "../head_common.html"; ?>
+</head>
+<body>
+<div id="wrap">
+<? include "../header.html"; ?>
+<!-- container -->
+<div id="container">
+<!-- snb -->
+<? include "../snb_msg.html"; ?>
+<!-- content -->
+<div id="content">
+	<!-- navi -->
+	<div class="navi">
+		<ul class="inn">
+			<li><a href=""><i class="fas fa-home"></i></a></li>
+			<li>&gt;</li>
+			<li><a href="">MSG</a></li>
+			<li>&gt;</li>
+			<li><a href="">템플릿 관리</a></li>
+		</ul>
+		<? include "../include_manager.html"; ?>
+	</div>
+	<!-- 타이틀 -->
+	<div class="title">
+		<h2><i class="fas fa-bookmark"></i>템플릿 관리</h2>
+	</div>
+	<!-- 템플릿 (탭) -->
+	<div class="template_tab on">
+		<ul>
+			<li class="on">알림톡</li>
+			<li>친구톡</li>
+			<li>문자</li>
+		</ul>
+		<div class="door">
+			<p class="close"><i class="xi-close"></i></p>
+			<p class="open">템플릿 만들기 <i class="xi-caret-down"></i></p>
+		</div>
+	</div>
+	<!-- 템플릿 (만들기) -->
+	<div class="template_make_box" id="make_sms_sub">
+		<div class="make_box make_atalk on">
+			<? include "include_make_atalk.html"; ?>
+		</div>
+		<div class="make_box make_ftalk">
+			<? include "include_make_ftalk.html"; ?>
+		</div>
+		<div class="make_box make_sms">
+			<? include "include_make_sms.html"; ?>
+		</div>
+	</div>
+	<!-- 템플릿 (리스트) -->
+	<div class="template_list_box">
+		<div class="list_box on">
+			<!-- 리스트상단영역 -->
+			<div class="list_top">
+				<ul class="total">
+					<li>총 조회수 : <span class="colA">000건</span></li>
+					<li>(선택 : <span class="colB">000건</span>)</li>
+				</ul>
+				<ul class="search">
+					<li>
+						<select>
+							<option value="">전체</option>
+							<option value="" selected>승인</option>
+							<option value="">심사요청</option>
+							<option value="">등록거절</option>
+							<option value="">승인반려</option>
+							<option value="">삭제</option>
+						</select>
+					</li>
+					<li>
+						<select>
+							<option value="">템플릿명</option>
+							<option value="">내용</option>
+						</select>
+					</li>
+					<li><input type="text" /></li>
+					<li><button type="button"><i class="xi-search"></i></button></li>
+				</ul>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="chcbox"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th class="th_num">No.</th>
+							<th class="th_order">순서</th>
+							<th>구분 <span class="array"></span></th>
+							<th>알림톡 템플릿명</th>
+							<th>상태</th>
+							<th class="th_view">보기</th>
+							<th class="th_close">삭제</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="chcbox"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">3</td>
+							<td class="td_order"><input type="text" value="100" /></td>
+							<td>네이버톡톡</td>
+							<td>템플릿 오류 테스트</td>
+							<td>승인</td>
+							<td class="td_view"><button type="button" class="layer_popup_view_atalk_open"><i class="xi-eye-o"></i></button></td>
+							<td class="td_close"><button type="button"><i class="xi-close"></i></button></td>
+						</tr>
+						<tr>
+							<td class="chcbox"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td class="td_order"><input type="text" value="100" /></td>
+							<td>카카오톡</td>
+							<td>템플릿 오류 테스트</td>
+							<td>승인</td>
+							<td class="td_view"><button type="button" class="layer_popup_view_atalk_open"><i class="xi-eye-o"></i></button></td>
+							<td class="td_close"><button type="button"><i class="xi-close"></i></button></td>
+						</tr>
+						<tr>
+							<td class="chcbox"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td class="td_order"><input type="text" value="100" /></td>
+							<td>카카오톡</td>
+							<td>템플릿 오류 테스트</td>
+							<td><button type="button" class="layer_popup_return_open">반려사유</button></td>
+							<td class="td_view"><button type="button" class="layer_popup_view_atalk_open"><i class="xi-eye-o"></i></button></td>
+							<td class="td_close"><button type="button"><i class="xi-close"></i></button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트하단영역 -->
+			<div class="list_bottom">
+				<ul class="down">
+					<li><button type="button">순서저장</button></li>
+					<li class="del"><button type="button">선택삭제</button></li>
+				</ul>
+				<div class="view_num">
+					<select>
+						<option value="">10개씩 보기</option>
+						<option value="">30개씩 보기</option>
+						<option value="">50개씩 보기</option>
+						<option value="">100개씩 보기</option>
+					</select>
+				</div>
+			</div>
+			<!-- 페이징 -->
+			<div class="paging">
+				<ul>
+					<li class="arr prev"><i class="fas fa-caret-left"></i></li>
+					<li class="page on">1</li>
+					<li class="page">2</li>
+					<li class="page">3</li>
+					<li class="arr next"><i class="fas fa-caret-right"></i></li>
+				</ul>
+			</div>
+		</div>
+		<div class="list_box">
+			<!-- 리스트상단영역 -->
+			<div class="list_top">
+				<ul class="total">
+					<li>총 조회수 : <span class="colA">000건</span></li>
+					<li>(선택 : <span class="colB">000건</span>)</li>
+				</ul>
+				<ul class="search">
+					<li>
+						<select>
+							<option value="">템플릿명</option>
+							<option value="">내용</option>
+						</select>
+					</li>
+					<li><input type="text" /></li>
+					<li><button type="button"><i class="xi-search"></i></button></li>
+				</ul>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="chcbox"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th class="th_num">No.</th>
+							<th class="th_order">순서</th>
+							<th>친구톡 템플릿명</th>
+							<th class="th_view">보기</th>
+							<th class="th_close">삭제</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="chcbox"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">3</td>
+							<td class="td_order"><input type="text" value="100" /></td>
+							<td>템플릿 오류 테스트</td>
+							<td class="td_view"><button type="button" class="layer_popup_view_ftalk_open"><i class="xi-eye-o"></i></button></td>
+							<td class="td_close"><button type="button"><i class="xi-close"></i></button></td>
+						</tr>
+						<tr>
+							<td class="chcbox"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td class="td_order"><input type="text" value="100" /></td>
+							<td>템플릿 오류 테스트</td>
+							<td class="td_view"><button type="button" class="layer_popup_view_ftalk_open"><i class="xi-eye-o"></i></button></td>
+							<td class="td_close"><button type="button"><i class="xi-close"></i></button></td>
+						</tr>
+						<tr>
+							<td class="chcbox"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td class="td_order"><input type="text" value="100" /></td>
+							<td>템플릿 오류 테스트</td>
+							<td class="td_view"><button type="button" class="layer_popup_view_ftalk_open"><i class="xi-eye-o"></i></button></td>
+							<td class="td_close"><button type="button"><i class="xi-close"></i></button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트하단영역 -->
+			<div class="list_bottom">
+				<ul class="down">
+					<li><button type="button">순서저장</button></li>
+				</ul>
+				<div class="view_num">
+					<select>
+						<option value="">10개씩 보기</option>
+						<option value="">30개씩 보기</option>
+						<option value="">50개씩 보기</option>
+						<option value="">100개씩 보기</option>
+					</select>
+				</div>
+			</div>
+			<!-- 페이징 -->
+			<div class="paging">
+				<ul>
+					<li class="arr prev"><i class="fas fa-caret-left"></i></li>
+					<li class="page on">1</li>
+					<li class="page">2</li>
+					<li class="page">3</li>
+					<li class="arr next"><i class="fas fa-caret-right"></i></li>
+				</ul>
+			</div>
+		</div>
+		<div class="list_box">
+			<!-- 리스트상단영역 -->
+			<div class="list_top">
+				<ul class="total">
+					<li>총 조회수 : <span class="colA">000건</span></li>
+					<li>(선택 : <span class="colB">000건</span>)</li>
+				</ul>
+				<ul class="search">
+					<li>
+						<select>
+							<option value="">템플릿명</option>
+							<option value="">내용</option>
+						</select>
+					</li>
+					<li><input type="text" /></li>
+					<li><button type="button"><i class="xi-search"></i></button></li>
+				</ul>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="chcbox"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th class="th_num">No.</th>
+							<th class="th_order">순서</th>
+							<th>구분 <span class="array"></span></th>
+							<th>문자 템플릿명</th>
+							<th class="th_view">보기</th>
+							<th class="th_close">삭제</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="chcbox"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">3</td>
+							<td class="td_order"><input type="text" value="100" /></td>
+							<td>단문문자(SMS)</td>
+							<td>템플릿 오류 테스트</td>
+							<td class="td_view"><button type="button" class="layer_popup_view_sms_open"><i class="xi-eye-o"></i></button></td>
+							<td class="td_close"><button type="button"><i class="xi-close"></i></button></td>
+						</tr>
+						<tr>
+							<td class="chcbox"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td class="td_order"><input type="text" value="100" /></td>
+							<td>장문문자(LMS)</td>
+							<td>템플릿 오류 테스트</td>
+							<td class="td_view"><button type="button" class="layer_popup_view_sms_open"><i class="xi-eye-o"></i></button></td>
+							<td class="td_close"><button type="button"><i class="xi-close"></i></button></td>
+						</tr>
+						<tr>
+							<td class="chcbox"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td class="td_order"><input type="text" value="100" /></td>
+							<td>그림문자(MMS)</td>
+							<td>템플릿 오류 테스트</td>
+							<td class="td_view"><button type="button" class="layer_popup_view_sms_open"><i class="xi-eye-o"></i></button></td>
+							<td class="td_close"><button type="button"><i class="xi-close"></i></button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트하단영역 -->
+			<div class="list_bottom">
+				<ul class="down">
+					<li><button type="button">순서저장</button></li>
+				</ul>
+				<div class="view_num">
+					<select>
+						<option value="">10개씩 보기</option>
+						<option value="">30개씩 보기</option>
+						<option value="">50개씩 보기</option>
+						<option value="">100개씩 보기</option>
+					</select>
+				</div>
+			</div>
+			<!-- 페이징 -->
+			<div class="paging">
+				<ul>
+					<li class="arr prev"><i class="fas fa-caret-left"></i></li>
+					<li class="page on">1</li>
+					<li class="page">2</li>
+					<li class="page">3</li>
+					<li class="arr next"><i class="fas fa-caret-right"></i></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 레이어팝업 (미리보기) -->
+	<div class="layer_popup layer_popup_view layer_popup_view_atalk">
+		<div class="layer_box">
+			<div class="make_box"><? include "include_view_atalk.html"; ?></div>
+		</div>
+	</div>
+	<div class="layer_popup layer_popup_view layer_popup_view_ftalk">
+		<div class="layer_box">
+			<div class="make_box"><? include "include_view_ftalk.html"; ?></div>
+		</div>
+	</div>
+	<div class="layer_popup layer_popup_view layer_popup_view_sms">
+		<div class="layer_box">
+			<div class="make_box"><? include "include_view_sms.html"; ?></div>
+		</div>
+	</div>
+	<!-- 레이어팝업 (반려사유) -->
+	<div class="layer_popup layer_popup_return">
+		<div class="layer_box">
+			<div class="tit"><i class="fas fa-bookmark"></i>반려사유</div>
+			<!-- 타이틀안내 -->
+			<div class="title_info">
+				<dl>
+					<dt>&lt; 발려사유 안내사항 &gt;</dt>
+					<dd>· 다음 내용은 신청하신 템플릿에 대한 <span>카카오본사 담당자의 반려사유</span>입니다.</dd>
+					<dd>· 해당 내용을 참고하셔서 기존 신청 내용을 수정하여 재신청하시거나 내용을 변경하여 신규등록으로 진행하실 수 있습니다.</dd>
+					<dd>· 내용에 기재된 담당자의 질문에 대한 답변을 기재 후 등록 버튼을 누르시면 재심사가 진행됩니다.</dd>
+				</dl>
+			</div>
+			<div class="return">
+				<dl>
+					<dt>
+						<div class="who">
+							<p class="wtit">카카오</p>
+							<p class="wday">2020-02-05 (12:00:00)</p>
+							<p class="wmark">반려</p>
+						</div>
+						<div class="txt">안녕하세요. 카카오톡 알림톡 검수 담당자입니다. 알림톡은 수신자의 액션을 기반한 정보성 메시지에 한하여 발송 가능합니다. 해당 메시지는 특정 발송일에 모든 고객에게 일괄 발송되는 서비스 오픈 메시지로 판단되며 수신자액션이 명확하지 않은 단순 공지성 및 광고성 메시지에 해당함에 따라 알림톡 발송이 불가합니다. 더 자세한 알림톡 검수 가이드는 딜러사를 통해 확인 부탁드립니다. 감사합니다.</div>
+					</dt>
+					<dd>
+						<div class="who">
+							<p class="wic"><i class="xi-subdirectory-arrow"></i></p>
+							<p class="wtit">오렌지</p>
+							<p class="wday">2020-02-05 (12:00:00)</p>
+							<p class="wmark">문의</p>
+						</div>
+						<div class="txt">반려사유 테스트입니다. 승인 안해주셔도 됩니다. 반려사유 테스트입니다. 반려사유 승인 안해주셔도 됩니다. 반려사유 테스트입니다. 승인 안해주셔도 됩니다. 승인 안해주셔도 됩니다. 반려사유 테스트입니다. 반려사유 승인 안해주셔도 됩니다. 반려사유 테스트입니다. 승인 안해주셔도 됩니다. </div>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="area"><textarea>다시 작성한 템플릿이나 문의사항을 남겨주세요.</textarea></div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<button type="button" >등록</button>
+			<button type="button" >취소</button>
+		</div>
+	</div>
+</div>
+<!-- //content -->
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

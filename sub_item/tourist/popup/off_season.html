@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 비수기 기간 및 가격설정</h2>
+		</div>
+		<div class="conbox">
+			<div class="tab_area">
+				<button type="button" class="button-B" onclick="location.href='peak_season.html'">성수기</button>
+				<button type="button" class="button-B" onclick="location.href='toppeak_season.html'">극성수기</button>
+				<button type="button" class="button-B" onclick="location.href='shoulder_season.html'">준성수기</button>
+				<button type="button" class="button-B on" onclick="location.href='off_season.html'">비수기</button>
+			</div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>비수기 기간</th>
+							<td colspan="3">
+								<div class="day">
+									<span><input type="text" class="w-D ta-c" placeholder="2022-07-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-08-31"><i class="xi-calendar"></i></span>
+									<div class="prod_color">
+										<p class="plus"><i class="xi-plus-circle"></i></p>
+										<p class="minu"><i class="xi-minus-circle"></i></p>
+									</div>
+									<br />
+									<span><input type="text" class="w-D ta-c" placeholder="2022-07-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-08-31"><i class="xi-calendar"></i></span>
+									<div class="prod_color">
+										<p class="plus"><i class="xi-plus-circle"></i></p>
+										<p class="minu"><i class="xi-minus-circle"></i></p>
+									</div>
+									<br />
+									<span><input type="text" class="w-D ta-c" placeholder="2022-07-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-08-31"><i class="xi-calendar"></i></span>
+									<div class="prod_color">
+										<p class="plus"><i class="xi-plus-circle"></i></p>
+										<p class="minu"><i class="xi-minus-circle"></i></p>
+									</div>
+									<br />
+									<span><input type="text" class="w-D ta-c" placeholder="2022-07-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-08-31"><i class="xi-calendar"></i></span>
+									<div class="prod_color">
+										<p class="plus"><i class="xi-plus-circle"></i></p>
+										<p class="minu"><i class="xi-minus-circle"></i></p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>한줄메모 </th>
+							<td colspan="3" class="td_w">
+									<input type="text" class="w-100" required/>
+								</div>
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="mark"><i class="xi-error-o"></i> 각 탭의 기간이 겹칠 수 없습니다. </div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">취소</button><button type="button" onclick="window.close();">입력완료</button></p>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

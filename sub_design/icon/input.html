@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_design.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">디자인관리</a> &gt; <a href="#">아이콘 디자인</a> &gt; <a href="#">상품 아이콘</a> &gt; <a href="#">상품 아이콘 등록</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 상품 아이콘 등록</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>아이콘 이름<span class="color-A">*</span></th>
+							<td><input type="text" class="w-H" required /></td>
+						</tr>
+						<tr>
+							<th>아이콘 코드</th>
+							<td>
+							<div><p>아이콘 등록시 자동 생성됩니다.</p></div>
+						</tr>
+						<tr>
+							<th>사용상태</th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="color" id="c1" checked /><label for="c1"><span></span> 사용함</label></p>
+									<p><input type="radio" name="color" id="c2" /><label for="c2"><span></span> 사용안함</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>아이콘 이미지<span class="color-A">*</span></th>
+							<td>
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장 사이즈 + 용량 정해서 알려줘~.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>저장경로</th>
+							<td><div><p>/images/icon/goods_icon</p></div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

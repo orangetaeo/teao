@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+
+<!-- [새창팝업] -->
+<script>
+//관리자메모 보기
+function myPopup() {
+	window.open("/design/travel/manager/sub_order/booking/popup/admin_memo.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1215, height=950");
+}
+
+//CRM 보기
+function myPopup1() {
+	window.open("/design/travel/manager/sub_order/booking/popup/crm/crm.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1400, height=900");
+}
+
+//상품환불
+function myPopup2() {
+	window.open("/design/travel/manager/sub_order/booking/popup/refund.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1410, height=950");
+}
+
+//운영자 추가 할인
+function myPopup3() {
+	window.open("/design/travel/manager/sub_order/booking/popup/admin_discount.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=350, left=370, width=1200, height=300");
+}
+
+//카카오톡/문자 보내기
+function myPopup5() {
+	window.open("/design/travel/manager/sub_customer/kakao/pop_temp.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=996, height=910");
+}
+
+//상품구성 보기
+function myPopup6() {
+	window.open("/design/travel/manager/sub_order/booking/popup/flight/list.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1600, height=970");
+}
+</script>
+
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_order.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">예약/취소</a> &gt; <a href="#">예약 관리</a> &gt; <a href="#">예약 상세정보</a></p>
+			<?
+			include "../../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 예약 상세정보</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>상품코드</th>
+							<td class="td_w">000000000</td>
+							<th>예약코드</th>
+							<td>000000000</td>
+							<th>예약일시</th>
+							<td >000000000</td>
+						</tr>
+						<tr>
+							<th>총 결제 금액</th>
+							<td class="td_w">0 원</td>
+							<th>예약금액</th>
+							<td>380,000 원</td>
+							<th>총 환불금액</th>
+							<td>0 원</td>
+						</tr>
+						<tr>
+							<th>결제 예정금액</th>
+							<td class="td_w">0 원</td>
+							<th>총 취소금액</th>
+							<td>0 원</td>
+							<th>환불 예정금액</th>
+							<td>0 원</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 상품정보</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_up">
+					<button type="button" class="button-A" onclick="myPopup3()">운영자 추가 할인</button>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>상품코드</th>
+							<th>상품명</th>
+							<th>인원</th>
+							<th>룸/박수</th>
+							<th>예약금</th>
+							<th>상품금액(1인)</th>
+							<th>총 할인금액</th>
+							<th>총 결제금액</th>
+							<th>결제상태</th>
+							<th>예약상태</th>
+							<th>관리자메모</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td><a onclick='myPopup6()'>000000000</a></td>
+							<td><a onclick='myPopup6()'>베트남 다낭 어디까지 가봤니?</a></td>
+							<td><a onclick='myPopup6()'>4</a></td>
+							<td><a onclick='myPopup6()'>2R/3N</a></td>
+							<td><a onclick='myPopup6()'>380,000원</a></td>
+							<td><a onclick='myPopup6()'>893,838원</a></td>
+							<td><a onclick='myPopup6()'>10,000원</a></td>
+							<td><a onclick='myPopup6()'>3,575,354원</a></td>
+							<td><a onclick='myPopup6()'>결제완료</a></td>
+							<td><a onclick='myPopup6()'>예약완료</a></td>
+							<td><a href="#"><button type="button" class="button-A" onclick="myPopup()">보기</button></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_packview">
+					<select>
+						<option value="상태 선택">상태 선택</option>
+						<option value="예약접수">예약접수</option>
+						<option value="예약확정">예약확정</option>
+						<option value="예약완료">예약완료</option>
+						<option value="----------">----------취소------------</option>
+						<option value="품절취소">품절취소</option>
+						<option value="관리자취소">관리자취소</option>
+						<option value="고객취소요청">고객취소요청</option>
+						<option value="취소완료">취소완료</option>
+						<option value="----------">----------결제------------</option>
+						<option value="입금대기">입금대기</option>
+						<option value="예약금완료">예약금완료</option>
+						<option value="잔금대기">잔금대기</option>
+						<option value="결제완료">결제완료</option>
+						<option value="----------">----------환불------------</option>
+						<option value="환불접수">환불접수</option>
+						<option value="환불보류">환불보류</option>
+						<option value="환불완료">환불완료</option>
+						<option value="----------">----------결제중단------------</option>
+						<option value="고객결제중단">고객결제중단</option>
+						<option value="결제실패">결제실패</option>
+						<option value="PG확인요망">PG확인요망</option>
+					</select>
+					<button type="button" class="button-B" onclick="location.href='#'">일괄적용</button>					
+					<button type="button" onclick="myPopup2()">상품환불</button>
+				</p>
+			</div>
+			<!-- 타이틀 -->
+			<div class="title">
+				<h2><i class="xi-lightbulb-o"></i> 쿠폰/할인/혜택 정보</h2>
+				<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+			</div>
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>총 상품 할인금액</th>
+							<td class="td_a">(-) 7,000원</td>
+							<th>총 주문 할인금액</th>
+							<td>(-) 0원</td>
+						</tr>
+						<tr>
+							<th>총 적립사용금액</th>
+							<td colspan="3">(-) 3,000원</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 결제정보</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<!-- 테이블(인풋) -->
+		<div class="write gro">
+			<table>
+				<tbody>
+					<tr>
+						<th>상품 판매금액</th>
+						<td>3,175,414원</td>
+						<th>총 할인금액</th>
+						<td>(-) 10,000원</td>
+					</tr>
+					<tr>
+						<th>총 부가결제금액</th>
+						<td class="td_a">(+) 409,940원</td>
+						<th>예약금</th>
+						<td>409,940원</td>
+					</tr>
+					<tr>
+						<th>실 결제금액</th>
+						<td>3,575,354원</td>
+						<th>총 적립금액</th>
+						<td>3,575원</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 결제수단</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>결제방법</th>
+							<td class="td_a">무통장 입금 <button type="button" class="button-A" onclick="location.href='#'">PG 로그</button></td>
+							<th>입금계좌</th>
+							<td>하나은행 / 000000-00-000000 / 오렌지웨이브</td>
+						</tr>
+						<tr>
+							<th>입금자명</th>
+							<td colspan="3">홍길동</td>
+						</tr>
+						<tr>
+							<th>주문확인일</th>
+							<td>0000-00-00 00:00:00</td>
+							<th>결제확인일</th>
+							<td>0000-00-00 00:00:00</td>
+						</tr>
+						<tr>
+							<th>현금영수증 신청여부</th>
+							<td>-</td>
+							<th>세금계산서 신청여부</th>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 주문자 정보</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>구매자 IP</th>
+							<td class="td_a">111.111.111.111</td>
+							<th>주문자명</th>
+							<td>홍길동 / ID:orangetravel / 일반회원 <button type="button" class="button-A" onclick="myPopup1()">CRM보기</button>
+							</td>
+						</tr>
+						<tr>
+							<th>전화번호</th>
+							<td>02-1234-1234</td>
+							<th>휴대폰번호</th>
+							<td>010-1234-1234 <button type="button" class="button-A" onclick="myPopup5()">카카오톡/문자 보내기</button></td>
+						</tr>
+						<tr>
+							<th>이메일</th>
+							<td>orangetravel@orangetravel.co.kr</td>
+							<th>주소</th>
+							<td>[55555]<br />
+							서울 송파구 오금로18길 201호</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

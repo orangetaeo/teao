@@ -1,0 +1,30 @@
+/* 공통 ------------------------------------------------ */
+.email_set {width:650px; margin:50px auto; border:1px solid #ddd;}
+.email_set .logo {width:100%; padding:20px 20px 5px; border-bottom:2px solid #b32d31; box-sizing:border-box;} 
+.email_set .logo h1 {height:50px;}
+.email_set .logo h1 img {height:100%;}
+
+.email_set .foot {width:100%; padding:20px; border-top:1px dashed #ddd; box-sizing:border-box;}
+.email_set .foot .foot_inn .tit {font-size:13.5px; line-height:23px; color:#888;}
+.email_set .foot .foot_inn .txt {font-size:11px; line-height:16px; color:#888;}
+.email_set .foot .foot_inn .txt span {color:#666;}
+.email_set .foot .foot_inn .txt a {font-size:11px; line-height:16px; color:#888;}
+.email_set .foot .foot_inn .txt a:hover {color:#b32d31;}
+
+/* email */
+.email {width:100%; padding:30px 20px; box-sizing:border-box;}
+.email .tit {margin-bottom:25px; font-size:30px; line-height:38px; text-align:center;}
+.email .tit span {color:#b32d31;}
+.email .txt {margin-bottom:25px; line-height:20px; text-align:center; color:#666;}
+.email .txt span {color:#b32d31;}
+.email .ne {padding:30px 20px; background:#f9f9fa; box-sizing:border-box;}
+.email .ne .ne_tit {margin-bottom:5px; font-size:15px; font-weight:bold;}
+.email .ne table {margin:0 auto 20px;}
+.email .ne table tbody tr {height:40px; border-bottom:1px solid #dfd9dc;}
+.email .ne table tbody tr:first-child {border-top:1px solid #b32d31;}
+.email .ne table tbody tr th {width:110px; text-align:center; background:#f5f0f3;}
+.email .ne table tbody tr td {width:175px; padding:0 10px; background:#fff; box-sizing:border-box;}
+.email .ne table tbody tr .bold {font-weight:bold;}
+.email .ne table tbody tr .txt {padding:20px 10px; line-height:20px; text-align:left;}
+.email .ne .btn {text-align:center;}
+.email .ne .btn button {width:150px; height:36px; border:none; color:#fff; border-radius:4px; background:#89919d;}

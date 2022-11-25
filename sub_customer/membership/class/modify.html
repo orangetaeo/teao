@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../../snb_customer.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">회원관리</a> &gt; <a href="#">회원관리 설정</a> &gt; <a href="#">회원등급 관리</a> &gt; <a href="#">회원등급 수정</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 회원등급 수정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>회원등급명 <span class="color-A">*</span></th>
+							<td>일반회원</td>
+						</tr>
+						<tr>
+							<th>회원등급 설명 <span class="color-A">*</span></th>
+							<td>일반회원입니다.</td>
+						</tr>
+						<tr>
+							<th>혜택 결제조건 </th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="standard" id="standard1" checked /><label for="standard1"><span></span> 모든결제</label></p>
+									<p><input type="radio" name="standard" id="standard2" /><label for="standard2"><span></span> 현금 결제(무통장)</label></p>
+									<p><input type="radio" name="standard" id="standard3" /><label for="standard3"><span></span> 현금 결제 외 모든 결제</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>이용결제수단 </th>
+							<td>
+								<div class="c_box m-A">
+									<p><input type="checkbox" name="payment" id="payment0" checked required /><label for="payment0"><span></span>전체</label></p>
+									<p><input type="checkbox" name="payment" id="payment1" checked required /><label for="payment1"><span></span>무통장</label></p>
+									<p><input type="checkbox" name="payment" id="payment2" checked required /><label for="payment2"><span></span>가상계좌 온라인입금</label></p>
+									<p><input type="checkbox" name="payment" id="payment3" checked required /><label for="payment3"><span></span>신용카드결제</label></p>
+									<p><input type="checkbox" name="payment" id="payment4" checked required /><label for="payment4"><span></span>리프레시 포인트 사용</label></p>
+									<p><input type="checkbox" name="payment" id="payment5" checked required /><label for="payment5"><span></span>적립금 사용</label></p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 혜택 설정</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>할인/적립 시 <br />구매금액 기준</th>
+							<td>
+								<div class="c_box">
+									<p>판매가 + ( <input type="checkbox" name="standard_purchasing" id="standard_purchasing1" checked required /><label for="standard_purchasing1"><span></span>옵션가격</label></p>
+									<p><input type="checkbox" name="standard_purchasing" id="standard_purchasing2" checked required /><label for="standard_purchasing2"><span></span>추가 상품가격</label> )</p>
+								</div>
+								</td>
+						</tr>
+						<tr>
+							<th>구매할인</th>
+							<td colspan="3">
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="purchase_discount" id="purchase_discount1" checked><label for="purchase_discount1"><span></span></label></p>
+										<div class="txt">사용안함</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="purchase_discount" id="purchase_discount2"><label for="purchase_discount2"><span></span></label></p>
+										<div class="txt">사용함 구매금액이 <input type="text" class="w-c ta-r" required  placeholder="3,000,000"/>원 이상인 경우 해당 상품 <input type="text" class="w-A ta-r" required  placeholder="1"/>% 구매할인</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>구매건수</th>
+							<td colspan="3">
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="purchase_quantity" id="purchase_quantity1"><label for="purchase_quantity1"><span></span></label></p>
+										<div class="txt">사용안함</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="purchase_quantity" id="purchase_quantity2" checked/><label for="purchase_quantity2"><span></span></label></p>
+										<div class="txt">
+											사용함 
+											<input type="text" class="w-A ta-r" required  placeholder="3"/>
+											건 이상인 경우 
+											<select class="w-F">
+													<option value="VIP">VIP</option>
+													<option value="일반회원">일반회원</option>
+											</select>
+											으로 자동 변경
+										</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>구매금액</th>
+							<td colspan="3">
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="purchase_amount" id="purchase_amount1"><label for="purchase_amount1"><span></span></label></p>
+										<div class="txt">사용안함</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="purchase_amount" id="purchase_amount2" checked/><label for="purchase_amount2"><span></span></label></p>
+										<div class="txt">
+											사용함 
+											<input type="text" class="w-C ta-r" required placeholder="3,000,000"/>
+											원 이상인 경우 
+											<select class="w-F">
+													<option value="VIP">VIP</option>
+													<option value="일반회원">일반회원</option>
+											</select>
+											으로 자동 변경
+										</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>리프레시 포인트 </th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="mileage" id="mileage1" value="Y" checked/><label for="mileage1"><span></span> 사용안함</label></p>
+									<p><input type="radio" name="mileage" id="mileage2" value="N" /><label for="mileage2"><span></span> 사용함</label></p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 주석마크 -->
+		<div class="mark"><i class="xi-error-o"></i> 할인/ 적립금 등은 0.1원 단위로 버림</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">등급 수정</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

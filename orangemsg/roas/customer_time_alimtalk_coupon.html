@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../orange_header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../orange_snb_item.html";
+	?>
+	<div class="content">
+		<!-- navi -->
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="/design/wave/manager/orangemsg/roas/dashboard.html">ROAS</a> &gt; <a href="/design/wave/manager/orangemsg/roas/dashboard.html">데쉬보드</a> &gt; <a href="/design/wave/manager/orangemsg/roas/customer_time_alimtalk_member.html">시간별분석</a></p>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="fas fa-bookmark"></i> 알림톡 시간별분석</h2>
+		</div>
+			<!-- 리스트 탭영역 -->
+			<div class="tab_area">
+				<button type="button" class="button-B on" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_time_alimtalk_member.html'"><i class="xi-lightbulb"></i> 알림톡</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_time_friendtalk_member.html'"><i class="xi-lightbulb"></i> 친구톡</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_time_dm_member.html'"><i class="xi-lightbulb"></i> 문자</button></label>
+			</div>
+			<!-- 리스트 탭영역 -->
+			<div class="tab_area">
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_time_alimtalk_member.html'"> 회원</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_time_alimtalk_order.html'"> 제품 및 카테고리별 주문</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_time_alimtalk_cart.html'"> 장바구니 & 위시리스트</button></label>
+				<button type="button" class="button-B on" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_time_alimtalk_coupon.html'"> 쿠폰 & 적립금</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_time_alimtalk_notice.html'"> 공지사항</button></label>
+			</div>
+		<div class="conbox position_w">
+			<!-- 리스트 검색영역 -->
+			<div class="list_top">
+				<div class="search_area">
+					<div class="area_nomal">
+						<table>
+							<tbody>
+								<tr>
+									<th>쇼핑몰명</th>
+									<td>
+										<div class="c_box m-A">
+										<p><input type="checkbox" name="shopname" id="shopname0" checked><label for="shopname0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="shopname" id="shopname1" ><label for="shopname1"><span></span>쇼핑몰명1</label></p>
+										<p><input type="checkbox" name="shopname" id="shopname2" ><label for="shopname2"><span></span>쇼핑몰명2</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>기간검색</th>
+									<td class="td_day">
+										<div>
+											<select>
+												<option value="전체">전체</option>
+												<option value="가입일">가입일</option>
+												<option value="로그인일">로그인일</option>
+											</select>
+											<input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i>
+										</div>
+										<div class="day_day">
+											<button type="button">오늘</button>
+											<button type="button">어제</button>
+											<button type="button" class="on">일주일</button>
+											<button type="button">이번달</button>
+											<button type="button">1개월</button>
+											<button type="button">3개월</button>
+											<button type="button">1년</button>
+										</div>
+									</td>
+									<td class="td_btn">
+										<div class="td_btn_area">
+											<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+											<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="area_detail">
+						<table>
+							<tbody>
+								<tr>
+									<th>카테고리</th>
+									<td class="td_category">
+										<select>
+											<option value="대분류선택">대분류선택</option>
+										</select>
+										<select>
+											<option value="중분류선택">중분류선택</option>
+										</select>
+										<select>
+											<option value="소분류선택">소분류선택</option>
+										</select>
+										<select>
+											<option value="상세분류선택">상세분류선택</option>
+										</select>
+									</td>
+									<td></td>
+								<tr>
+									<th>검색어</th>
+									<td>
+										<select>
+											<option value="상품명">상품명</option>
+											<option value="상품코드">상품코드</option>
+											<option value="자체상품코드">자체상품코드</option>
+											<option value="공급사">공급사</option>
+										</select>
+										<input type="search" class="input_search" placeholder="상품명, 상품코드, 자체상품코드, 공급사">	
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>템플릿명</th>
+									<td>
+										<input type="search" class="input_search" placeholder="템플릿명">	
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>쿠폰(지급일 기준)</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice0" checked><label for="choice0"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+										<p><input type="checkbox" name="coupon_give" id="coupon_give0" checked><label for="coupon_give0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="coupon_give" id="coupon_give1"><label for="coupon_give1"><span></span>1일</label></p>
+										<p><input type="checkbox" name="coupon_give" id="coupon_give2"><label for="coupon_give2"><span></span>3일</label></p>
+										<p><input type="checkbox" name="coupon_give" id="coupon_give3"><label for="coupon_give3"><span></span>5일</label></p>
+										<p><input type="checkbox" name="coupon_give" id="coupon_give4"><label for="coupon_give4"><span></span>10일</label></p>
+										<p><input type="checkbox" name="coupon_give" id="coupon_give5"><label for="coupon_give5"><span></span>15일</label></p>
+										<p><input type="checkbox" name="coupon_give" id="coupon_give6"><label for="coupon_give6"><span></span>20일</label></p>
+										<p><input type="checkbox" name="coupon_give" id="coupon_give7"><label for="coupon_give7"><span></span>25일</label></p>
+										<p><input type="checkbox" name="coupon_give" id="coupon_give8"><label for="coupon_give8"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>쿠폰(종료일 기준)</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice1"><label for="choice1"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+										<p><input type="checkbox" name="coupon_end" id="coupon_end0" checked><label for="coupon_end0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="coupon_end" id="coupon_end1"><label for="coupon_end1"><span></span>1일</label></p>
+										<p><input type="checkbox" name="coupon_end" id="coupon_end2"><label for="coupon_end2"><span></span>3일</label></p>
+										<p><input type="checkbox" name="coupon_end" id="coupon_end3"><label for="coupon_end3"><span></span>5일</label></p>
+										<p><input type="checkbox" name="coupon_end" id="coupon_end4"><label for="coupon_end4"><span></span>10일</label></p>
+										<p><input type="checkbox" name="coupon_end" id="coupon_end5"><label for="coupon_end5"><span></span>15일</label></p>
+										<p><input type="checkbox" name="coupon_end" id="coupon_end6"><label for="coupon_end6"><span></span>20일</label></p>
+										<p><input type="checkbox" name="coupon_end" id="coupon_end7"><label for="coupon_end7"><span></span>25일</label></p>
+										<p><input type="checkbox" name="coupon_end" id="coupon_end8"><label for="coupon_end8"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>적립금 소멸일</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice2"><label for="choice2"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+										<p><input type="checkbox" name="savedmoney_extinct" id="savedmoney_extinct0" checked><label for="savedmoney_extinct0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="savedmoney_extinct" id="savedmoney_extinct1"><label for="savedmoney_extinct1"><span></span>30일</label></p>
+										<p><input type="checkbox" name="savedmoney_extinct" id="savedmoney_extinct2"><label for="savedmoney_extinct2"><span></span>15일</label></p>
+										<p><input type="checkbox" name="savedmoney_extinct" id="savedmoney_extinct3"><label for="savedmoney_extinct3"><span></span>10일</label></p>
+										<p><input type="checkbox" name="savedmoney_extinct" id="savedmoney_extinct4"><label for="savedmoney_extinct4"><span></span>5일</label></p>
+										<p><input type="checkbox" name="savedmoney_extinct" id="savedmoney_extinct5"><label for="savedmoney_extinct5"><span></span>3일</label></p>
+										<p><input type="checkbox" name="savedmoney_extinct" id="savedmoney_extinct6"><label for="savedmoney_extinct6"><span></span>1일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>이벤트 당첨자 안내</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice3"><label for="choice3"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+										<p><input type="checkbox" name="event_winner" id="event_winner0" checked><label for="event_winner0"><span></span>전체</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- 타이틀 -->
+				<div class="title">
+					<h2><i class="xi-lightbulb-o"></i> 알림톡 쿠폰 & 적립금 시간별 분석내역</h2>
+				</div>
+				<div class="conbox">
+					<!-- 리스트 상단영역 -->
+					<div class="list_top">
+						<p class="p_total">업데이트 : <span class="color-A">0000-00-00 00:00</span></p>
+						<p class="excel">
+							<a href="#"><i class="xi-download"></i> 엑셀 다운로드</a>
+						</p>
+					</div>
+					<!-- 리스트 -->
+					<div class="list">
+						<table>
+							<thead>
+								<tr>
+									<th rowspan="2">발송시간</th>
+									<th colspan="2">발송</th>
+									<th rowspan="2">총발송건수</th>
+									<th rowspan="2">로그인 횟수</th>
+									<th rowspan="2">신규가입자</th>
+									<th rowspan="2">방문율</th>
+									<th rowspan="2">클릭율</th>
+									<th rowspan="2">결제완료 상품수</th>
+									<th rowspan="2">결제상품 판매금액</th>
+									<th rowspan="2">발송비용</th>
+									<th rowspan="2">ROAS</th>
+								</tr>
+								<tr>
+									<th>알림톡</th>
+									<th>문자</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>00:00 ~ 01:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>01:00 ~ 02:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>02:00 ~ 03:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>03:00 ~ 04:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>04:00 ~ 05:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>05:00 ~ 06:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>06:00 ~ 07:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>07:00 ~ 08:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>08:00 ~ 09:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>09:00 ~ 10:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>10:00 ~ 11:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>11:00 ~ 12:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>12:00 ~ 13:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>13:00 ~ 14:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>14:00 ~ 15:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>15:00 ~ 16:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>16:00 ~ 17:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>17:00 ~ 18:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>18:00 ~ 19:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>19:00 ~ 20:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>20:00 ~ 21:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>21:00 ~ 22:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>22:00 ~ 23:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>23:00 ~ 24:00</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

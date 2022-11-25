@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../../snb_design.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">디자인관리</a> &gt; <a href="#">PC 서브디자인</a> &gt; <a href="#">개별페이지</a> &gt; <a href="#">개별페이지 수정</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 개별페이지 수정</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>제목</th>
+							<td colspan="3"><input type="text" class="w-H" /></td>
+						</tr>
+						<tr>
+							<th>내용</th>
+							<td colspan="3"><textarea class="w-H h-B"></textarea></td>
+						</tr>
+						<tr>
+							<th>원본</th>
+							<td colspan="3"><textarea class="w-H h-B"></textarea></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->    
+		<div class="complete">
+			<p><button type="button">미리보기</button><button type="button">수정</button><button type="button">목록</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container" style="background:#fff;">
+	<div id="iframe">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 회원 리스트 검색</h2>
+		</div>
+		<!-- 리스트 검색영역 -->
+		<div class="search_area">
+			<div class="area_nomal">
+				<table>
+					<tbody>
+						<tr>
+							<th>개인정보</th>
+							<td>
+								<div>
+									<select>
+										<option value="아이디">아이디</option>
+										<option value="이름">이름</option>
+										<option value="닉네임">닉네임</option>
+										<option value="이메일">이메일</option>
+										<option value="휴대폰번호">휴대폰번호</option>
+										<option value="전화번호">전화번호</option>
+										<option value="회사명">회사명</option>
+										<option value="사업자등록번호">사업자등록번호</option>
+										<option value="대표자명">대표자명</option>
+										<option value="추천인아이디">추천인아이디</option>
+										<option value="팩스번호">팩스번호</option>
+									</select>
+									<input type="search" class="input_search" placeholder="검색어">
+									<button type="button" class="button-A" >검색</button>
+								</div>
+							</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="conbox">	
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span></p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th>선택</th>
+							<th>No.</th>
+							<th>ID/닉네임</th>
+							<th>이름</th>
+							<th>등급</th>
+							<th>이메일</th>
+							<th>전화번호</th>
+							<th>휴대폰번호</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><p class="r_circle m-A"><input type="radio" name="member" id="member1" value="Y" checked /><label for="member1"><span></span></label></p></td>
+							<td>2</td>
+							<td>test_id_2<br />홍길동</td>
+							<td>홍길동</td>
+							<td>일반등급</td>
+							<td>biz@orangetravel.co.kr</td>
+							<td>02-0000-0000</td>
+							<td>010-0000-0000</td>
+						</tr>
+						<tr>
+							<td><p class="r_circle m-A"><input type="radio" name="member" id="member2" value="N" /><label for="member2"><span></span></label></p></td></div>
+							<td>1</td>
+							<td>test_id_1<br />홍길동</td>
+							<td>홍길동</td>
+							<td>일반등급</td>
+							<td>biz@orangetravel.co.kr</td>
+							<td>02-0000-0000</td>
+							<td>010-0000-0000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">선택완료</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+<script type="text/javascript">
+
+	function init(){
+		var doc = document.getElementById("iframe"); //분리된 iframe 이 파일의 가장상위 태그 id
+		if(doc.offsetHeight == 0){
+		
+		} else {
+			pageheight = doc.offsetHeight ; // +100;
+			parent.document.getElementById("order_customer_list").height = pageheight + 0 + "px"; //iframe꽂힌 본 파일의 iframe태그 id
+		}
+	}
+
+	window.onload = function(){
+		init();
+	}
+	
+</script> 
+</body>
+</html>

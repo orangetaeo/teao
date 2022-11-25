@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 관리자 메모</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>주문번호: <span class="color-A">*</span></th>
+							<td class="td_w">000000000</td>
+							<th>주문일시: <span class="color-A">*</span></th>
+							<td>2022-09-27 11:25:00</td>
+						</tr>
+						<th>메모 유형</th>
+							<td class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="aa" id="pc_1" checked /><label for="pc_1"><span></span> 주문번호별</label></p>
+									<p><input type="radio" name="aa" id="pc_2" /><label for="pc_2"><span></span> 상품 옵션번호</label></p>
+								</div>
+							</td>
+						<th>메모 구분</th>
+							<td>
+								<div>
+									<select class="w-D">
+										<option value="선택">선택</option>
+										<option value="접수">접수</option>
+										<option value="완료">완료</option>
+										<option value="입금">입금</option>
+										<option value="품절">품절</option>
+										<option value="교환">교환</option>
+										<option value="취소">취소</option>
+										<option value="환불">환불</option>
+										<option value="기타">기타</option>
+									</select>
+								</div>
+							</td>
+						<tr>
+							<th>상품선택</th>
+							<td colspan="3">
+								<div class="list">
+									<table>
+										<thead>
+											<tr>
+												<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+												<th>상품 옵션번호</th>
+												<th>이용일</th>
+												<th>구분</th>
+												<th>주문상품명</th>
+												<th>수량</th>
+												<th>단위</th>
+												<th>처리상태</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>000000000</td>
+												<td>2022-09-22</td>
+												<td class="td_w">항공</td>
+												<td class="td_w">VJ 비엣젯</td>
+												<td class="td_w">4</td>
+												<td class="td_w">명</td>
+												<td class="td_w">결제완료</td>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>000000000</td>
+												<td>2022-09-22</td>
+												<td class="td_w">숙소</td>
+												<td class="td_w">인터콘티넨탈 하노이 웨스트레이크</td>
+												<td class="td_w">2</td>
+												<td class="td_w">박</td>
+												<td class="td_w">결제완료</td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>000000000</td>
+												<td>2022-09-24</td>
+												<td class="td_w">숙소</td>
+												<td class="td_w">모벤픽 깜란</td>
+												<td class="td_w">1</td>
+												<td class="td_w">박</td>
+												<td class="td_w">결제완료</td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>000000000</td>
+												<td>2022-09-22</td>
+												<td class="td_w">숙소 부대시설</td>
+												<td class="td_w">워터파크</td>
+												<td class="td_w">2</td>
+												<td class="td_w">성인</td>
+												<td class="td_w">결제완료</td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>000000000</td>
+												<td>2022-09-23</td>
+												<td class="td_w">숙소 부대시설</td>
+												<td class="td_w">워터파크</td>
+												<td class="td_w">2</td>
+												<td class="td_w">아동</td>
+												<td class="td_w">결제완료</td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>000000000</td>
+												<td>2022-09-22</td>
+												<td class="td_w">숙소 부대시설</td>
+												<td class="td_w">카누</td>
+												<td class="td_w">2</td>
+												<td class="td_w">성인</td>
+												<td class="td_w">결제완료</td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>000000000</td>
+												<td>2022-09-23</td>
+												<td class="td_w">골프</td>
+												<td class="td_w">남호이안CC</td>
+												<td class="td_w">4</td>
+												<td class="td_w">성인</td>
+												<td class="td_w">결제완료</td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>000000000</td>
+												<td>2022-09-23</td>
+												<td class="td_w">골프장 부대시설</td>
+												<td class="td_w">식당</td>
+												<td class="td_w">4</td>
+												<td class="td_w">성인</td>
+												<td class="td_w">결제완료</td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>000000000</td>
+												<td>2022-09-22</td>
+												<td class="td_w">음식점</td>
+												<td class="td_w">라 메종 델리</td>
+												<td class="td_w">2</td>
+												<td class="td_w">성인</td>
+												<td class="td_w">결제완료</td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>000000000</td>
+												<td>2022-09-22</td>
+												<td class="td_w">음식점</td>
+												<td class="td_w">라 메종 델리</td>
+												<td class="td_w">2</td>
+												<td class="td_w">아동</td>
+												<td class="td_w">결제완료</td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>000000000</td>
+												<td>2022-09-23</td>
+												<td class="td_w">관광</td>
+												<td class="td_w">썬 월드 바나힐 골든 브릿지</td>
+												<td class="td_w">2</td>
+												<td class="td_w">성인</td>
+												<td class="td_w">결제완료</td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>000000000</td>
+												<td>2022-09-23</td>
+												<td class="td_w">관광</td>
+												<td class="td_w">썬 월드 바나힐 골든 브릿지</td>
+												<td class="td_w">2</td>
+												<td class="td_w">아동</td>
+												<td class="td_w">결제완료</td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>000000000</td>
+												<td>2022-09-22</td>
+												<td class="td_w">교통수단</td>
+												<td class="td_w">하노이공항에서 숙소까지</td>
+												<td class="td_w">4</td>
+												<td class="td_w">성인</td>
+												<td class="td_w">결제완료</td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>000000000</td>
+												<td>2022-09-25</td>
+												<td class="td_w">교통수단</td>
+												<td class="td_w">숙소에서 하노이공항까지</td>
+												<td class="td_w">4</td>
+												<td class="td_w">성인</td>
+												<td class="td_w">결제완료</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>메모 내용</th>
+							<td colspan="3">
+								<textarea class="w-100 h-C"/></textarea>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 중간버튼 -->
+		<div class="op_complete">
+			<p><button type="button">메모 등록</button></p>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 메모 리스트</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th>작성일</th>
+							<th>작성자</th>
+							<th>메모 유형</th>
+							<th>메모 구분</th>
+							<th>상품주문번호</th>
+							<th>메모 내용</th>
+							<th>관리</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2022-09-27 11:46:00</td>
+							<td>관리자(master)</td>
+							<td>주문번호별</td>
+							<td>입금</td>
+							<td>000000000</td>
+							<td>블라 블라블라블라블라블라블라블라블라블라블라블라블라</td>
+							<td><button type="button" class="button-B" onclick="location.href='#'">수정</button> <button type="button" class="button-B" onclick="location.href='#'">삭제</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">저장</button><button type="button" onclick="window.close();">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

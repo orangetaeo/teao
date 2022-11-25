@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+
+<script>
+//골프장 선택
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/tourist/popup/bring.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=930");
+}
+</script>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 1일차</h2>
+		</div>
+		<div class="conbox">
+			<div class="tab_area">
+				<button type="button" class="button-B" onclick="location.href='flight.html'">항공</button>
+				<button type="button" class="button-B" onclick="location.href='accommodations.html'">숙소</button>
+				<button type="button" class="button-B" onclick="location.href='golf.html'">골프</button>
+				<button type="button" class="button-B" onclick="location.href='meal.html'">음식점</button>
+				<button type="button" class="button-B on" onclick="location.href='tourist.html'">관광</button>
+				<button type="button" class="button-B" onclick="location.href='transportation.html'">교통수단</button>
+			</div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>관광 상품명</th>
+							<td colspan="3">썬 월드 바나힐 골든 브릿지</td>
+						</tr>
+						<tr>
+							<th>관광 리스트</th>
+							<td class="td_w">
+								<button type="button" class="button-A" onclick="myPopup1()">가져오기</button>
+							</td>
+							<th>랜드사</th>
+							<td>A랜드사</td>
+						</tr>
+						<tr>
+							<th>카테고리</th>
+							<td class="td_w">AC 아시아 > VN 베트남 > 다낭 > 관광</td>
+							<th>연락처</th>
+							<td>+82 02-0000-0000</td>
+						</tr>
+						<tr>
+							<th>썸네일이미지 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<!-- 관광 썸네일 이미지 호출 -->
+								<div class="img_view"><img src="" alt=""></div>
+								<span class="comment"><i class="xi-error-o"></i> 표기된 이미지를 변경하고 싶을 경우 해당 관광리스트에서만 수정 가능</span>
+							</td>
+						</tr>
+						<tr>
+							<th>관광 한줄평 </th>
+							<td colspan="3">자연의 멋진...</td>
+						</tr>
+						<tr>
+							<th>관광 가격 리스트</th>
+							<td colspan="3">
+								<div class="dein_table mt15 mb10">
+									<table>
+										<thead>
+											<tr>
+												<th>판매기준</th>
+												<th>번호</th>
+												<th>시즌</th>
+												<th>요일</th>
+												<th>이름</th>
+												<th>연령기준</th>
+												<th>옵션속성</th>
+												<th>판매가</th>
+												<th>옵션코드</th>
+												<th>메모</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="r_circle m-A">
+														<input type="radio" name="sales_basis" id="sales_basis1" checked><label for="sales_basis1"><span></span>
+													</div>
+												</td>
+												<td>5</td>
+												<td>성수기</td>
+												<td>천체요일</td>
+												<td>이용권</td>
+												<td>성인</td>
+												<td>오전 이용권</td>
+												<td>&#x20A9 50,000</td>
+												<td>000000000</td>
+												<td>가나다..</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="r_circle m-A">
+														<input type="radio" name="sales_basis" id="sales_basis2"><label for="sales_basis2"><span></span>
+													</div>
+												</td>
+												<td>4</td>
+												<td>성수기</td>
+												<td>목,금,토,일</td>
+												<td>이용권</td>
+												<td>아동</td>
+												<td>오전 이용권</td>
+												<td>&#x20A9 50,000</td>
+												<td>000000000</td>
+												<td>가나다..</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="r_circle m-A">
+														<input type="radio" name="sales_basis" id="sales_basis3"><label for="sales_basis3"><span></span>
+													</div>
+												</td>
+												<td>3</td>
+												<td>성수기</td>
+												<td>천체요일</td>
+												<td>이용권</td>
+												<td>유아</td>
+												<td>오전 이용권</td>
+												<td>&#x20A9 50,000</td>
+												<td>000000000</td>
+												<td>가나다..</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="r_circle m-A">
+														<input type="radio" name="sales_basis" id="sales_basis4"><label for="sales_basis4"><span></span>
+													</div>
+												</td>
+												<td>2</td>
+												<td>시즌 없음</td>
+												<td>목,금,토,일</td>
+												<td>이용권</td>
+												<td>성인</td>
+												<td>1인 오전 이용권</td>
+												<td>&#x20A9 50,000</td>
+												<td>000000000</td>
+												<td>가나다..</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="r_circle m-A">
+														<input type="radio" name="sales_basis" id="sales_basis5"><label for="sales_basis5"><span></span>
+													</div>
+												</td>
+												<td>1</td>
+												<td>시즌 없음</td>
+												<td>목,금,토,일</td>
+												<td>이용권</td>
+												<td>유아</td>
+												<td>2인 종일 이용권</td>
+												<td>&#x20A9 50,000</td>
+												<td>000000000</td>
+												<td>가나다..</td>
+											</tr>
+										</tbody>
+									</table>
+									<span class="comment"><i class="xi-error-o"></i> 판매기준을 선택 하세요. 다른 리스트는 소비자페이지에서 별도의 옵션판매로 노출 됩니다.</span>
+								</div>
+							</td>
+						</tr>			
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="mark"><i class="xi-error-o"></i> 각 일정별 탭항목에서 1개만 입력가능합니다.예) 항공, 숙소, 골프, 스키장, 트래킹, 관광지, 선택관광지, 교통수단, 직접입력 중에서 1개탭 선택 저장.</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">취소</button><button type="button" onclick="window.close();">입력완료</button></p>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

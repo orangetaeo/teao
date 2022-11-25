@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_stats.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">통계</a> &gt; <a href="#">고객분석</a> &gt; <a href="#">연령별분석</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 연령별분석</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr class="h-G">
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button" class="on">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+										<button type="button">6개월</button>
+									</div>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area_one">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 연령별 분석내역</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">업데이트 : <span class="color-A">0000-00-00 00:00</span></p>
+				<p class="excel">
+					<a href="#"><i class="xi-download"></i> 엑셀 다운로드</a>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th>연령별</th>
+							<th>로그인 횟수</th>
+							<th>신규가입자</th>
+							<th>결제완료 상품수</th>
+							<th>결제상품 판매금액</th>
+							<th>환불완료 상품수</th>
+							<th>환불상품 판매금액</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>10대</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>20대</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>30대</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>40대</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>50대</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>60대</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>70대</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>연령미확인</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

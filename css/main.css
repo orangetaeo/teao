@@ -1,0 +1,55 @@
+/* main.css */
+
+/* 포인트 */
+.point {width:100%; padding-top:60px;}
+.point ul {width:100%; height:80px; padding:0 30px; background:#fff url(/design/travel/manager/images/bg_point.png) no-repeat 50% 0; box-sizing:border-box;}
+.point ul:after {content:""; display:block; clear:both;}
+.point ul li {float:left; color:#fff; line-height:80px;}
+.point ul .liCompany {margin-right:50px;}
+.point ul .liCompany span {font-size:18px;}
+.point ul .liPoint {font-size:18px;}
+.point ul .liPoint span {color:#fae100;}
+.point ul .liCharge a {display:inline-block; width:46px; height:22px; margin-left:10px; line-height:20px; text-align:center; color:#283c7d; border-radius:3px; background:#fae100;}
+.point ul .liManager {float:right; margin-right:6px;}
+.point ul .liManager i {margin-right:2px; margin-bottom:1px; font-size:16px; vertical-align:middle;}
+.point ul .liManager a {color:#fae100;}
+
+/* main_content */
+.main_content {width:1200px; padding:30px; box-sizing:border-box;}
+.main_content:after {content:""; display:block; clear:both;}
+.main_content > section {position:relative; float:left; width:560px; margin-bottom:20px; padding-bottom:6px; background:#fff; box-sizing:border-box;}
+.main_content > section:nth-of-type(2n) {float:right;}
+.main_content > section h3 {width:100%; height:38px; padding-left:15px; font-size:15px; line-height:38px; color:#283c7d; border-bottom:1px solid #283c7d; box-sizing:border-box;}
+.main_content > section h3 i {font-size:16px; margin:0 3px 3px 0; vertical-align:middle;}
+.main_content > section .pMore {position:absolute; right:15px; top:11px;}
+.main_content > section .pMore i {font-size:16px; color:#283c7d; cursor:pointer; transition:all 0.2s;}
+.main_content > section .pMore i:hover {transform:rotate(180deg);}
+.main_content > section ul li a {display:block; height:34px; padding:0 15px 0 28px; line-height:32px; border-bottom:1px solid #e9eef9; background:url(/design/travel/manager/images/point_01.png) no-repeat 16px 50%; box-sizing:border-box;}
+.main_content > section ul li a:hover {background-color:#e9eef9;}
+.main_content > section ul li a .spanTit {float:left; overflow:hidden; width:420px; text-overflow:ellipsis; white-space:nowrap;}
+.main_content > section ul li a .spanTit:hover {color:#3f00c0;}
+.main_content > section ul li a .spanDay {float:right;}
+
+/* 이벤트1 */
+.event {width:560px; height:214px;}
+.event a {display:block;}
+
+/* 배너 */
+.banner{height:226px;}
+
+/* 메인통계 */
+.pie_chart {width:1140px; margin-bottom:20px;}
+.pie_chart h3 {width:100%; height:38px; padding-left:15px; font-size:15px; line-height:38px; color:#8895b5; box-sizing:border-box;}
+.pie_chart h3 i {font-size:13px; margin-bottom:2px; vertical-align:middle;}
+.pie_chart .pie_chart_in {box-shadow: 0px 5px 20px rgba(80,180,220,0.1);}
+.pie_chart .pie_chart_in:after {content:""; display:block; clear:both;}
+.pie_chart .pie_chart_in .pie_box {float:left; width:380px; height:360px;}
+.pie_chart .pie_chart_in .pie_box:nth-of-type(1) {background:#fff;}
+.pie_chart .pie_chart_in .pie_box:nth-of-type(2) {background:#fff;}
+.pie_chart .pie_chart_in .pie_box:nth-of-type(3) {background:#fff;}
+
+/* 공지사항 */
+.notice{height:210px;}
+
+/* 패치&업그레이드 */
+.upgrade{height:210px;}

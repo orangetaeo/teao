@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_customer.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">회원관리</a> &gt; <a href="#">휴면회원 설정</a> &gt; <a href="#">휴면회원 정책</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 휴면회원 정책</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>일반회원 전환방법</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="change" id="change1" /><label for="change1"><span></span> 로그인 후 본인인증단계 없이 일반회원으로 전환</label></p>
+								</div>
+								<div class="r_circle m-A">
+									<p><input type="radio" name="change" id="change2" checked /><label for="change2"><span></span> 회원정보에 등록되어있는 정보 입력 후 일반회원으로 전환</label></p>
+								</div>
+								<div class="c_box">
+									<p><input type="checkbox" id="change3" checked /><label for="change3"><span></span> 휴대폰번호</label></p>
+									<p><input type="checkbox" id="change4" checked /><label for="change4"><span></span> 이메일</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>회원등급 초기화 설정</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="initialization" id="initialization1" /><label for="initialization1"><span></span> 사용안함</label></p>
+									<p><input type="radio" name="initialization" id="initialization2" checked/><label for="initialization2"><span></span> 휴면회원 해제 시 일반회원으로 등급변경</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>리프레시 포인트 소멸 설정</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="extinction" id="extinction1" checked /><label for="extinction1"><span></span> 휴면회원 해제 시 유효기간이 지난 리프레시 포인트 소멸</label></p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 리프레시 포인트의 유효기간은 지급 당시의 설정에 따릅니다.</span>
+								<div class="r_circle m-A">
+									<p><input type="radio" name="extinction" id="extinction2" /><label for="extinction2"><span></span> 휴면회원 전환시 보유 리프레시 포인트 초기화</label></p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 해당 설정 시 휴면회원의 리프레시 포인트 처리방침에 대한 별도 안내를 이용약관 및 공지사항 등을 통해 사전에 고지할 것을 권장합니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

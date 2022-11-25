@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_promotion.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">프로모션</a> &gt; <a href="#">쿠폰관리</a> &gt; <a href="#">쿠폰기본설정</p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 쿠폰 기본설정</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>쿠폰사용설정</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="coupon" id="coupon1" value="Y" checked/><label for="coupon1"><span></span> 사용함</label></p>
+									<p><input type="radio" name="coupon" id="coupon2" value="N" /><label for="coupon2"><span></span> 사용안함</label></p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 사용하지 않음으로 설정 시 발급된 쿠폰이 있더라도 쇼핑몰에서 쿠폰사용을 할 수 없으니 유의하시기 바랍니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>쿠폰/회원혜택<br />중복적용 여부</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="benefit" id="benefit1" checked /><label for="benefit1"><span></span> 쿠폰+회원 혜택 동시 사용</label></p>
+									<p><input type="radio" name="benefit" id="benefit2" /><label for="benefit2"><span></span> 쿠폰만 사용</label></p>
+									<p><input type="radio" name="benefit" id="benefit3" /><label for="benefit3"><span></span> 회원혜택만 사용</label></p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 쿠폰(할인/적립)과 회원등급에 따른 혜택(할인/적립) 두 가지를 중복적용 또는 둘중 하나만 적용가능 하도록 설정하는 기능입니다.<br />
+								쿠폰만 사용은 쿠폰 적용시 회원혜택(할인/적립)이 0원처리 되며, 쿠폰을 적용하지 않을 경우 회원혜택이 적용됩니다.<br />
+								회원혜택만 사용은 쿠폰 기능을 사용함으로 하였더라도 쿠폰을 선택할 수 있는 버튼이 나타나지 않습니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>쿠폰가 <br />노출 대상 설정</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="member" id="member1" value="Y" checked/><label for="member1"><span></span> 비회원+회원</label></p>
+									<p><input type="radio" name="member" id="member2" value="N" /><label for="member2"><span></span> 회원만</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>금액 계산시 <br />기준 구매금액</th>
+							<td>
+								<div class="c_box">
+									<p>판매가 + ( <input type="checkbox" id="chch" /><label for="chch"><span></span>옵션가격</label></p>
+									<p><input type="checkbox" id="chch" /><label for="chch"><span></span>추가상품가격</label> )</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>결제완료 전 취소 시 <br />쿠폰복원설정</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="restore" id="restore1" value="Y" checked/><label for="restore1"><span></span> 복원함</label></p>
+									<p><input type="radio" name="restore" id="restore2" value="N" /><label for="restore2"><span></span> 복원안함</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>상품쿠폰 주문서페이지<br />사용 여부 설정</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="order" id="order1" value="Y" checked/><label for="order1"><span></span> 제한함</label></p>
+									<p><input type="radio" name="order" id="order2" value="N" /><label for="order2"><span></span> 제한안함</label></p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 상품쿠폰을 주문서페이지에서 사용하도록 허용시 쇼핑몰 내 쿠폰적용 속도가 느려질 수 있습니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 자동발급 쿠폰 기본설정</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>생일 축하 쿠폰<br />발급시점 설정</th>
+							<td colspan="3">
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="birthday" id="birthday1" checked><label for="birthday1"><span></span></label></p>
+										<div class="txt">
+											생일
+											<select class="w-F">
+												<option value="당일">당일</option>
+												<option value="1일전">1일전</option>
+												<option value="2일전">2일전</option>
+												<option value="3일전">3일전</option>
+												<option value="4일전">4일전</option>
+												<option value="5일전">5일전</option>
+												<option value="6일전">6일전</option>
+												<option value="7일전">7일전</option>
+											</select>
+											발급
+										</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="birthday" id="birthday2" checked><label for="birthday2"><span></span></label></p>
+										<div class="txt">
+											월별 발급 : 생일 
+											<input type="text" class="w-A ta-r" required />
+											<select class="w-F">
+													<option value="당월">당월</option>
+													<option value="전월">전월</option>
+											</select>
+											으로 자동 변경
+											<input type="text" class="w-A ta-r" required/>
+											일 발급
+										</div>
+									</li>
+								</ul>
+								<span class="comment"><i class="xi-error-o"></i> 프로모션>쿠폰관리>쿠폰등록에서 자동발급으로 등록한 "생일 축하 쿠폰"에 적용되는 설정입니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">수정</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

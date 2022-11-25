@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../../snb_basic.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">기본청보관리</a> &gt; <a href="#">상품 정책</a> &gt; <a href="#">상품상세 정보고시 관리</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 상품상세 정보고시 관리</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 (검색과버튼) -->
+			<div class="search">
+				<ul class="sel">
+					<li><input type="text"></li>
+					<li><button type="button">검색</button></li>
+				</ul>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th>No.</th>
+							<th>품목명</th>
+							<th>기본노출</th>
+							<th>수정</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td_num">9</td>
+							<td class="td_tit"><a href="hotel_pension_reservation.html">호텔 / 펜션 예약</a></td>
+							<td><p class="r_circle"><input type="radio" name="best" id="b9" /><label for="b9"><span></span></label></p></td>
+							<td class="td_btn"><button type="button" class="button-B" onclick="location.href='hotel_pension_reservation.html'">수정</button></td>
+						</tr>
+						<tr>
+							<td class="td_num">8</td>
+							<td class="td_tit"><a href="tour_package.html">여행패키지(기본선택됨)</a></td>
+							<td><p class="r_circle"><input type="radio" name="best" id="b8" checked/><label for="b8"><span></span></label></p></td>
+							<td class="td_btn"><button type="button" class="button-B" onclick="location.href='tour_package.html'">수정</button></td>
+						</tr>
+						<tr>
+							<td class="td_num">7</td>
+							<td class="td_tit"><a href="plane_ticket.html">항공권</a></td>
+							<td><p class="r_circle"><input type="radio" name="best" id="b7" /><label for="b7"><span></span></label></p></td>
+							<td class="td_btn"><button type="button" class="button-B" onclick="location.href='plane_ticket.html'">수정</button></td>
+						</tr>
+						<tr>
+							<td class="td_num">6</td>
+							<td class="td_tit"><a href="rental_car.html">자동차 대여 서비스 (렌터카)</a></td>
+							<td><p class="r_circle"><input type="radio" name="best" id="b6" /><label for="b6"><span></span></label></p></td>
+							<td class="td_btn"><button type="button" class="button-B" onclick="location.href='rental_car.html'">수정</button></td>
+						</tr>
+						<tr>
+							<td class="td_num">5</td>
+							<td class="td_tit"><a href="gift_card.html">상품권 / 쿠폰</a></td>
+							<td><p class="r_circle"><input type="radio" name="best" id="b5" /><label for="b5"><span></span></label></p></td>
+							<td class="td_btn"><button type="button" class="button-B" onclick="location.href='gift_card.html'">수정</button></td>
+						</tr>
+						<tr>
+							<td class="td_num">4</td>
+							<td class="td_tit"><a href="mobile_gift_card.html">모바일 쿠폰</a></td>
+							<td><p class="r_circle"><input type="radio" name="best" id="b4" /><label for="b4"><span></span></label></p></td>
+							<td class="td_btn"><button type="button" class="button-B" onclick="location.href='mobile_gift_card.html'">수정</button></td>
+						</tr>
+						<tr>
+							<td class="td_num">3</td>
+							<td class="td_tit"><a href="movie.html">영화·공연</a></td>
+							<td><p class="r_circle"><input type="radio" name="best" id="b3" /><label for="b3"><span></span></label></p></td>
+							<td class="td_btn"><button type="button" class="button-B" onclick="location.href='movie.html'">수정</button></td>
+						</tr>
+						<tr>
+							<td class="td_num">2</td>
+							<td class="td_tit"><a href="etc_service.html">기타 용역</a></td>
+							<td><p class="r_circle"><input type="radio" name="best" id="b2" /><label for="b2"><span></span></label></p></td>
+							<td class="td_btn"><button type="button" class="button-B" onclick="location.href='etc_service.html'">수정</button></td>
+						</tr>
+						<tr>
+							<td class="td_num">1</td>
+							<td class="td_tit"><a href="etc_goods.html">기타 재화</a></td>
+							<td><p class="r_circle"><input type="radio" name="best" id="b1" /><label for="b1"><span></span></label></p></td>
+							<td class="td_btn"><button type="button" class="button-B" onclick="location.href='etc_goods.html'">수정</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 최종버튼 -->
+			<div class="complete">
+				<p><button type="button">저장</button><button type="button">취소</button></p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

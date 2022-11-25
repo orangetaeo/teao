@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 회원관리</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>회원명</th>
+							<td colspan="3">홍길동</td>
+						</tr>
+						<tr>
+							<th>리프레시 포인트</th>
+							<td class="td_w">2,150원</td>
+							<th>쿠폰</th>
+							<td>0개</td>
+						</tr>
+						<tr>
+							<th>총 구매금액</th>
+							<td colspan="3">268,000원 | 총 구매건수 7 | 총 상담건수 0 | 1:1 문의건수 0/0</td>
+						</tr>
+						<tr>
+							<th>회원구분</th>
+							<td>개인회원</td>
+							<th>최종로그인일</th>
+							<td>0000-00-00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tab_area">
+				<button type="button" class="button-B on" onclick="location.href='crm.html'">요약보기</button>
+				<button type="button" class="button-B" onclick="location.href='detail.html'">회원정보</button>
+				<button type="button" class="button-B" onclick="location.href='order.html'">주문내역</button>
+				<button type="button" class="button-B" onclick="location.href='mileage.html'">리프레시 포인트내역</button>
+				<button type="button" class="button-B" onclick="location.href='coupon.html'">쿠폰내역</button>
+				<button type="button" class="button-B" onclick="location.href='atalk.html'">문자/알림톡 발송내역</button>
+				<button type="button" class="button-B" onclick="location.href='counsel.html'">상담내역</button>
+				<button type="button" class="button-B" onclick="location.href='qa.html'">문의내역</button>
+				<button type="button" class="button-B" onclick="location.href='board.html'">게시글내역</button>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 요약보기 <span class="comment"></h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>회원가입일</th>
+							<td class="td_w">0000-00-00 00:00:00</td>
+							<th>전화번호</th>
+							<td>00-0000-000</td>
+						</tr>
+						<tr>
+							<th>휴대폰번호</th>
+							<td>010-0000-0000</td>
+							<th>이메일</th>
+							<td>abc@abc.co.kr</td>
+						</tr>
+						<tr>
+							<th>성별</th>
+							<td>남자</td>
+							<th>나이</th>
+							<td>20</td>
+						</tr>
+						<tr>
+							<th>주소</th>
+							<td colspan="3">서울 송파구 방이동 108-6</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 주석마크 -->
+			<div class="mark"><i class="xi-error-o"></i> 최근 1년 내 생성된 3건의 내역을 확인할 수 있습니다.</span></div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 주문내역 <span class="comment"></h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th>No.</th>
+							<th>주문일시 <span class="array1"><img src="/design/wave/manager/images/array_o.png" title="정렬"></th>
+							<th>주문번호</th>
+							<th>주문상품명</th>
+							<th>총 주문금액</span></th>
+							<th>결제상태</th>
+							<th>완료</th>
+							<th>취소</th>
+							<th>반품</th>
+							<th>환불</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td_num">3</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td><a href="/design/wave/manager/sub_order/order_number_view.html">000000000</a></td>
+							<td><a href="#">베트남 다낭 어디까지 가봤니?</a></td>
+							<td><a href="#">384,000원</a></td>
+							<td><a href="#">결제완료</a></td>
+							<td><a href="#">1</a></td>
+							<td><a href="#">-</a></td>
+							<td><a href="#">-</a></td>
+							<td><a href="#">-</a></td>
+						</tr>
+						<tr>
+							<td class="td_num">2</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td><a href="/design/wave/manager/sub_order/order_number_view.html">000000000</a></td>
+							<td><a href="#">베트남 다낭 어디까지 가봤니?</a></td>
+							<td><a href="#">384,000원</a></td>
+							<td><a href="#">결제완료</a></td>
+							<td><a href="#">1</a></td>
+							<td><a href="#">-</a></td>
+							<td><a href="#">-</a></td>
+							<td><a href="#">-</a></td>
+						</tr>
+						<tr>
+							<td class="td_num">1</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td><a href="/design/wave/manager/sub_order/order_number_view.html">000000000</a></td>
+							<td><a href="#">베트남 다낭 어디까지 가봤니?</a></td>
+							<td><a href="#">384,000원</a></td>
+							<td><a href="#">결제완료</a></td>
+							<td><a href="#">1</a></td>
+							<td><a href="#">-</a></td>
+							<td><a href="#">-</a></td>
+							<td><a href="#">-</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 상담 내역 <span class="comment"></h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th>No.</th>
+							<th>등록일 <span class="array1"><img src="/design/wave/manager/images/array_o.png" title="정렬"></th>
+							<th>등록자</th>
+							<th>상담수단</th>
+							<th>상담구분</span></th>
+							<th>상담내용</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td_num">3</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td>관리자(master)</td>
+							<td>땡땡</td>
+							<td>땡땡</td>
+							<td>블라블라</td>
+						</tr>
+						<tr>
+							<td class="td_num">2</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td>관리자(master)</td>
+							<td>땡땡</td>
+							<td>땡땡</td>
+							<td>블라블라</td>
+						</tr>
+						<tr>
+							<td class="td_num">1</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td>관리자(master)</td>
+							<td>땡땡</td>
+							<td>땡땡</td>
+							<td>블라블라</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 1:1문의내역 <span class="comment"></h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th>No.</th>
+							<th>제목</th>
+							<th>등록일 <span class="array1"><img src="/design/wave/manager/images/array_o.png" title="정렬"></th>
+							<th>조회</th>
+							<th>답변여부</span></th>
+							<th>답변</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td_num">3</td>
+							<td>관리자(master)</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td>10</td>
+							<td>땡땡</td>
+							<td>블라블라</td>
+						</tr>
+						<tr>
+							<td class="td_num">2</td>
+							<td>관리자(master)</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td>10</td>
+							<td>땡땡</td>
+							<td>블라블라</td>
+						</tr>
+						<tr>
+							<td class="td_num">1</td>
+							<td>관리자(master)</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td>땡땡</td>
+							<td>땡땡</td>
+							<td>블라블라</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

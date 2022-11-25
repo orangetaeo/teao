@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../snb_order.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">주문/배송</a> &gt; <a href="#">현금영수증관리</a> &gt; <a href="#">현금영수증발급 / 조회</a></p>
+			<?
+			include "../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 현금영수증발급 / 조회</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select>
+											<option value="신청일">신청일</option>
+											<option value="수정일">수정일</option>
+											<option value="처리일">처리일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">전체</button>
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>검색어</th>
+								<td class="td_day">
+									<div>
+										<select>
+											<option value="전체">전체</option>
+											<option value="주문번호">주문번호</option>
+											<option value="신청자명">신청자명</option>
+										</select>
+										<input type="search" class="w-G" placeholder="검색어">
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>거래번호</th>
+								<td>
+									<input type="search" class="input_search" placeholder="거래번호">	
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>주문상태</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="aa" id="ra0" checked><label for="ra0"><span></span>전체</label></p>
+										<p><input type="radio" name="aa" id="ra1"><label for="ra1"><span></span>미입금</label></p>
+										<p><input type="radio" name="aa" id="ra2"><label for="ra2"><span></span>입금</label></p>
+										<p><input type="radio" name="aa" id="ra3"><label for="ra3"><span></span>미배송</label></p>
+										<p><input type="radio" name="aa" id="ra4"><label for="ra4"><span></span>배송</label></p>
+										<p><input type="radio" name="aa" id="ra5"><label for="ra5"><span></span>취소</label></p>
+										<p><input type="radio" name="aa" id="ra6"><label for="ra6"><span></span>반품</label></p>
+										<p><input type="radio" name="aa" id="ra7"><label for="ra7"><span></span>교환</label></p>
+										<p><input type="radio" name="aa" id="ra8"><label for="ra8"><span></span>환불</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>발행상태</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ab" id="ra0" checked><label for="ra0"><span></span>전체</label></p>
+										<p><input type="radio" name="ab" id="ra1"><label for="ra1"><span></span>발급요청</label></p>
+										<p><input type="radio" name="ab" id="ra2"><label for="ra2"><span></span>발행완료</label></p>
+										<p><input type="radio" name="ab" id="ra3"><label for="ra3"><span></span>발행취소</label></p>
+										<p><input type="radio" name="ab" id="ra4"><label for="ra4"><span></span>발행거절</label></p>
+										<p><input type="radio" name="ab" id="ra5"><label for="ra5"><span></span>발행실패</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>발행용도</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ac" id="ra0" checked><label for="ra0"><span></span>전체</label></p>
+										<p><input type="radio" name="ac" id="ra1"><label for="ra1"><span></span>소득공제용</label></p>
+										<p><input type="radio" name="ac" id="ra2"><label for="ra2"><span></span>지출증빙용</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>인증종류</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ad" id="ra0" checked><label for="ra0"><span></span>전체</label></p>
+										<p><input type="radio" name="ad" id="ra1"><label for="ra1"><span></span>사업자번호</label></p>
+										<p><input type="radio" name="ad" id="ra2"><label for="ra2"><span></span>휴대폰번호</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>과세/면세</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ae" id="ra0" checked><label for="ra0"><span></span>전체</label></p>
+										<p><input type="radio" name="ae" id="ra1"><label for="ra1"><span></span>과세</label></p>
+										<p><input type="radio" name="ae" id="ra2"><label for="ra2"><span></span>면세</label></p>
+										<p><input type="radio" name="ae" id="ra2"><label for="ra2"><span></span>복합과세</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>금액변경확인</th>
+								<td>
+									<div class="c_box m-A">
+										<p><input type="checkbox" name="ch" id="ch0" checked><label for="ch0"><span></span>발급금액 변경건만 보기</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>상품가격</th>
+								<td class="td_day">
+									<div>
+										<input type="search" class="w-D ta-c" /> ~ <input type="search" class="w-D ta-c" />
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span></p>
+				<p class="p_up">
+					<button type="button" onclick="location.href='order_cash_each.html'">현금영수증 개별발급</button>
+				</p>
+				<p class="excel">
+					<a href="#"><i class="xi-download"></i> 엑셀 다운로드</a>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>신청일자 <span class="array1"><img src="/design/wave/manager/images/array_o.png" title="정렬"></span></th>
+							<th>처리일자 <span class="array1"><img src="/design/wave/manager/images/array_o.png" title="정렬"></span></th>
+							<th>주문번호</th>
+							<th>신청자</th>
+							<th>과세/면세</th>
+							<th>발급금액</th>
+							<th>결제방법</th>
+							<th>주문상태</th>
+							<th>발행상태</th>
+							<th>정보</th>
+							<th>영수증</th>
+							<th>처리</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td><a href="#">0000-00-00 00:00:00</a></td>
+							<td><a href="#">0000-00-00 00:00:00</a></td>
+							<td><a href="#">0000000000000000</a></td>
+							<td><a href="#">홍길동</a></td>
+							<td><a href="#">과세</a></td>
+							<td><a href="#">168,000원</a></td>
+							<td><a href="#">가상계좌</a></td>
+							<td><a href="#">주문완료</a></td>
+							<td><a href="#">발행요청</a></td>
+							<td><a href="#">-</a></td>
+							<td><a href="#">보기</a></td>
+							<td><a href="#">-</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td><a href="#">0000-00-00 00:00:00</a></td>
+							<td><a href="#">0000-00-00 00:00:00</a></td>
+							<td><a href="#">0000000000000000</a></td>
+							<td><a href="#">홍길동</a></td>
+							<td><a href="#">과세</a></td>
+							<td><a href="#">168,000원</a></td>
+							<td><a href="#">가상계좌</a></td>
+							<td><a href="#">주문완료</a></td>
+							<td><a href="#">발행요청</a></td>
+							<td><a href="#">-</a></td>
+							<td><a href="#">보기</a></td>
+							<td><a href="#">-</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p>
+					<button type="button" class="button-A">일괄발급</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

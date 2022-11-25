@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../../head_common.html"; 
+?>
+</head>
+<!-- [새창팝업] -->
+<script>
+//템플릿 선택
+function myPopup2() {
+	window.open("/design/wave/manager/orangemsg/alimrtalk_pop_temp.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=996, height=910");
+}
+
+</script>
+<body>
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="fas fa-bookmark"></i> 자동발송 조건관리</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>쇼핑몰명</th>
+								<td>
+									<div class="c_box m-A">
+									<p><input type="checkbox" name="shopname" id="shopname0" checked><label for="shopname0"><span></span>전체</label></p>
+									<p><input type="checkbox" name="shopname" id="shopname1" ><label for="shopname1"><span></span>쇼핑몰명1</label></p>
+									<p><input type="checkbox" name="shopname" id="shopname2" ><label for="shopname2"><span></span>쇼핑몰명2</label></p>
+									</div>
+								</td>
+								<td></td>
+							<tr>
+							<tr>
+								<th>기간설정</th>
+								<td>
+									<div>
+										<input type="text" class="w-D ta-c" placeholder="2018-02-03">
+											<i class="xi-calendar">
+											</i>
+												<select>
+													<option value="">시간</option>
+													<option value="">1시</option>
+													<option value="">2시</option>
+													<option value="">3시</option>
+													<option value="">4시</option>
+													<option value="">5시</option>
+													<option value="">6시</option>
+													<option value="">7시</option>
+													<option value="">8시</option>
+													<option value="">9시</option>
+													<option value="">10시</option>
+													<option value="">11시</option>
+													<option value="">12시</option>
+												</select>
+												<select>
+													<option value="">분</option>
+													<option value="">0분</option>
+													<option value="">1분</option>
+													<option value="">2분</option>
+													<option value="">3분</option>
+													<option value="">4분</option>
+													<option value="">5분</option>
+													<option value="">6분</option>
+													<option value="">7분</option>
+													<option value="">8분</option>
+													<option value="">9분</option>
+													<option value="">10분</option>
+													<option value="">11분</option>
+													<option value="">12분</option>
+													<option value="">13분</option>
+													<option value="">14분</option>
+													<option value="">15분</option>
+													<option value="">16분</option>
+													<option value="">17분</option>
+													<option value="">18분</option>
+													<option value="">19분</option>
+													<option value="">20분</option>
+													<option value="">21분</option>
+													<option value="">22분</option>
+													<option value="">23분</option>
+													<option value="">24분</option>
+													<option value="">25분</option>
+													<option value="">26분</option>
+													<option value="">27분</option>
+													<option value="">28분</option>
+													<option value="">29분</option>
+													<option value="">30분</option>
+													<option value="">31분</option>
+													<option value="">32분</option>
+													<option value="">33분</option>
+													<option value="">34분</option>
+													<option value="">35분</option>
+													<option value="">36분</option>
+													<option value="">37분</option>
+													<option value="">38분</option>
+													<option value="">39분</option>
+													<option value="">40분</option>
+													<option value="">41분</option>
+													<option value="">42분</option>
+													<option value="">43분</option>
+													<option value="">44분</option>
+													<option value="">45분</option>
+													<option value="">46분</option>
+													<option value="">47분</option>
+													<option value="">48분</option>
+													<option value="">49분</option>
+													<option value="">50분</option>
+													<option value="">51분</option>
+													<option value="">52분</option>
+													<option value="">53분</option>
+													<option value="">54분</option>
+													<option value="">55분</option>
+													<option value="">56분</option>
+													<option value="">57분</option>
+													<option value="">58분</option>
+													<option value="">59분</option>
+												</select> ~ 
+										<input type="text" class="w-D ta-c" placeholder="2018-02-03">
+											<i class="xi-calendar">
+											</i>
+												<select>
+													<option value="">시간</option>
+													<option value="">1시</option>
+													<option value="">2시</option>
+													<option value="">3시</option>
+													<option value="">4시</option>
+													<option value="">5시</option>
+													<option value="">6시</option>
+													<option value="">7시</option>
+													<option value="">8시</option>
+													<option value="">9시</option>
+													<option value="">10시</option>
+													<option value="">11시</option>
+													<option value="">12시</option>
+												</select>
+												<select>
+													<option value="">분</option>
+													<option value="">0분</option>
+													<option value="">1분</option>
+													<option value="">2분</option>
+													<option value="">3분</option>
+													<option value="">4분</option>
+													<option value="">5분</option>
+													<option value="">6분</option>
+													<option value="">7분</option>
+													<option value="">8분</option>
+													<option value="">9분</option>
+													<option value="">10분</option>
+													<option value="">11분</option>
+													<option value="">12분</option>
+													<option value="">13분</option>
+													<option value="">14분</option>
+													<option value="">15분</option>
+													<option value="">16분</option>
+													<option value="">17분</option>
+													<option value="">18분</option>
+													<option value="">19분</option>
+													<option value="">20분</option>
+													<option value="">21분</option>
+													<option value="">22분</option>
+													<option value="">23분</option>
+													<option value="">24분</option>
+													<option value="">25분</option>
+													<option value="">26분</option>
+													<option value="">27분</option>
+													<option value="">28분</option>
+													<option value="">29분</option>
+													<option value="">30분</option>
+													<option value="">31분</option>
+													<option value="">32분</option>
+													<option value="">33분</option>
+													<option value="">34분</option>
+													<option value="">35분</option>
+													<option value="">36분</option>
+													<option value="">37분</option>
+													<option value="">38분</option>
+													<option value="">39분</option>
+													<option value="">40분</option>
+													<option value="">41분</option>
+													<option value="">42분</option>
+													<option value="">43분</option>
+													<option value="">44분</option>
+													<option value="">45분</option>
+													<option value="">46분</option>
+													<option value="">47분</option>
+													<option value="">48분</option>
+													<option value="">49분</option>
+													<option value="">50분</option>
+													<option value="">51분</option>
+													<option value="">52분</option>
+													<option value="">53분</option>
+													<option value="">54분</option>
+													<option value="">55분</option>
+													<option value="">56분</option>
+													<option value="">57분</option>
+													<option value="">58분</option>
+													<option value="">59분</option>
+												</select>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>반복</th>
+								<td>
+									<div>
+										<select>
+											<option value="반복안함">반복안함</option>
+											<option value="매일">매일</option>
+											<option value="매주">매주</option>
+											<option value="매월">매월</option>
+											<option value="매년">매년</option>
+											<option value="사용자지정">사용자지정</option>
+										</select>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>종료</th>
+								<td>
+									<div>
+										<select>
+											<option value="지정한 날짜에">지정한 날짜에</option>
+											<option value="지정한 횟수 반복 후">지정한 횟수 반복 후</option>
+											<option value="계속반복">계속반복</option>
+												<div>
+													<input type="text" class="w-D ta-c" placeholder="2018-02-03">
+														<i class="xi-calendar">
+														</i>
+															<select>
+																<option value="">시간</option>
+																<option value="">1시</option>
+																<option value="">2시</option>
+																<option value="">3시</option>
+																<option value="">4시</option>
+																<option value="">5시</option>
+																<option value="">6시</option>
+																<option value="">7시</option>
+																<option value="">8시</option>
+																<option value="">9시</option>
+																<option value="">10시</option>
+																<option value="">11시</option>
+																<option value="">12시</option>
+															</select>
+															<select>
+																<option value="">분</option>
+																<option value="">0분</option>
+																<option value="">1분</option>
+																<option value="">2분</option>
+																<option value="">3분</option>
+																<option value="">4분</option>
+																<option value="">5분</option>
+																<option value="">6분</option>
+																<option value="">7분</option>
+																<option value="">8분</option>
+																<option value="">9분</option>
+																<option value="">10분</option>
+																<option value="">11분</option>
+																<option value="">12분</option>
+																<option value="">13분</option>
+																<option value="">14분</option>
+																<option value="">15분</option>
+																<option value="">16분</option>
+																<option value="">17분</option>
+																<option value="">18분</option>
+																<option value="">19분</option>
+																<option value="">20분</option>
+																<option value="">21분</option>
+																<option value="">22분</option>
+																<option value="">23분</option>
+																<option value="">24분</option>
+																<option value="">25분</option>
+																<option value="">26분</option>
+																<option value="">27분</option>
+																<option value="">28분</option>
+																<option value="">29분</option>
+																<option value="">30분</option>
+																<option value="">31분</option>
+																<option value="">32분</option>
+																<option value="">33분</option>
+																<option value="">34분</option>
+																<option value="">35분</option>
+																<option value="">36분</option>
+																<option value="">37분</option>
+																<option value="">38분</option>
+																<option value="">39분</option>
+																<option value="">40분</option>
+																<option value="">41분</option>
+																<option value="">42분</option>
+																<option value="">43분</option>
+																<option value="">44분</option>
+																<option value="">45분</option>
+																<option value="">46분</option>
+																<option value="">47분</option>
+																<option value="">48분</option>
+																<option value="">49분</option>
+																<option value="">50분</option>
+																<option value="">51분</option>
+																<option value="">52분</option>
+																<option value="">53분</option>
+																<option value="">54분</option>
+																<option value="">55분</option>
+																<option value="">56분</option>
+																<option value="">57분</option>
+																<option value="">58분</option>
+																<option value="">59분</option>
+															</select>
+													<input type="text" class="w-E" placeholder="지정한 횟수 반복 후">
+												</div>
+										</select>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>사용자지정</th>
+								<td>
+									<div>
+										<input type="text" class="w-D" placeholder="1">
+										<select>
+											<option value="일">일</option>
+											<option value="주">주</option>
+											<option value="개월">개월</option>
+											<option value="년">년</option>
+										</select>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+								<tr>
+									<th>최초주문여부</th>
+									<td class="td_day">
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="begin" id="begin0" checked><label for="begin0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="begin" id="begin1"><label for="begin1"><span></span>최초</label></p>
+											<p><input type="checkbox" name="begin" id="begin2"><label for="begin2"><span></span>최초주문아님</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>결제수단</th>
+									<td class="td_day">
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="Payment" id="Payment0" checked><label for="Payment0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment1"><label for="Payment1"><span></span>무통장</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment2"><label for="Payment2"><span></span>신용카드</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment3"><label for="Payment3"><span></span>휴대폰</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment4"><label for="Payment4"><span></span>계좌이체</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment5"><label for="Payment5"><span></span>선불금</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment6"><label for="Payment6"><span></span>예치금</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment7"><label for="Payment7"><span></span>적립금</label></p>
+											<p><input type="checkbox" name="Payment" id="Payment8"><label for="Payment8"><span></span>통합포인트</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>주문</th>
+									<td class="td_day">
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="order" id="order0" checked><label for="order0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="order" id="order1"><label for="order1"><span></span>1일</label></p>
+											<p><input type="checkbox" name="order" id="order2"><label for="order2"><span></span>3일</label></p>
+											<p><input type="checkbox" name="order" id="order3"><label for="order3"><span></span>5일</label></p>
+											<p><input type="checkbox" name="order" id="order4"><label for="order4"><span></span>10일</label></p>
+											<p><input type="checkbox" name="order" id="order5"><label for="order5"><span></span>15일</label></p>
+											<p><input type="checkbox" name="order" id="order6"><label for="order6"><span></span>20일</label></p>
+											<p><input type="checkbox" name="order" id="order7"><label for="order7"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>배송</th>
+									<td class="td_day">
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="delivery" id="delivery0" checked><label for="delivery0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="delivery" id="delivery1"><label for="delivery1"><span></span>1일</label></p>
+											<p><input type="checkbox" name="delivery" id="delivery2"><label for="delivery2"><span></span>3일</label></p>
+											<p><input type="checkbox" name="delivery" id="delivery3"><label for="delivery3"><span></span>5일</label></p>
+											<p><input type="checkbox" name="delivery" id="delivery4"><label for="delivery4"><span></span>10일</label></p>
+											<p><input type="checkbox" name="delivery" id="delivery5"><label for="delivery5"><span></span>15일</label></p>
+											<p><input type="checkbox" name="delivery" id="delivery6"><label for="delivery6"><span></span>20일</label></p>
+											<p><input type="checkbox" name="delivery" id="delivery7"><label for="delivery7"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>취소</th>
+									<td class="td_day">
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="cancel" id="cancel0" checked><label for="cancel0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="cancel" id="cancel1"><label for="cancel1"><span></span>1일</label></p>
+											<p><input type="checkbox" name="cancel" id="cancel2"><label for="cancel2"><span></span>3일</label></p>
+											<p><input type="checkbox" name="cancel" id="cancel3"><label for="cancel3"><span></span>5일</label></p>
+											<p><input type="checkbox" name="cancel" id="cancel4"><label for="cancel4"><span></span>10일</label></p>
+											<p><input type="checkbox" name="cancel" id="cancel5"><label for="cancel5"><span></span>15일</label></p>
+											<p><input type="checkbox" name="cancel" id="cancel6"><label for="cancel6"><span></span>20일</label></p>
+											<p><input type="checkbox" name="cancel" id="cancel7"><label for="cancel7"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>교환</th>
+									<td class="td_day">
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="exchange" id="exchange0" checked><label for="exchange0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="exchange" id="exchange1"><label for="exchange1"><span></span>1일</label></p>
+											<p><input type="checkbox" name="exchange" id="exchange2"><label for="exchange2"><span></span>3일</label></p>
+											<p><input type="checkbox" name="exchange" id="exchange3"><label for="exchange3"><span></span>5일</label></p>
+											<p><input type="checkbox" name="exchange" id="exchange4"><label for="exchange4"><span></span>10일</label></p>
+											<p><input type="checkbox" name="exchange" id="exchange5"><label for="exchange5"><span></span>15일</label></p>
+											<p><input type="checkbox" name="exchange" id="exchange6"><label for="exchange6"><span></span>20일</label></p>
+											<p><input type="checkbox" name="exchange" id="exchange7"><label for="exchange7"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>반품</th>
+									<td class="td_day">
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="return" id="return0" checked><label for="return0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="return" id="return1"><label for="return1"><span></span>1일</label></p>
+											<p><input type="checkbox" name="return" id="return2"><label for="return2"><span></span>3일</label></p>
+											<p><input type="checkbox" name="return" id="return3"><label for="return3"><span></span>5일</label></p>
+											<p><input type="checkbox" name="return" id="return4"><label for="return4"><span></span>10일</label></p>
+											<p><input type="checkbox" name="return" id="return5"><label for="return5"><span></span>15일</label></p>
+											<p><input type="checkbox" name="return" id="return6"><label for="return6"><span></span>20일</label></p>
+											<p><input type="checkbox" name="return" id="return7"><label for="return7"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>리뷰</th>
+									<td class="td_day">
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="review" id="review0" checked><label for="review0"><span></span>전체</label></p>
+											<p><input type="checkbox" name="review" id="review1"><label for="review1"><span></span>3일</label></p>
+											<p><input type="checkbox" name="review" id="review2"><label for="review2"><span></span>5일</label></p>
+											<p><input type="checkbox" name="review" id="review3"><label for="review3"><span></span>7일</label></p>
+											<p><input type="checkbox" name="review" id="review4"><label for="review4"><span></span>14일</label></p>
+											<p><input type="checkbox" name="review" id="review5"><label for="review5"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>입고예정일, 재입고</th>
+									<td class="td_day">
+										<div class="c_box m-A">
+											<p><input type="checkbox" name="stock" id="stock0" checked><label for="stock0"><span></span>입고예정일</label></p>
+											<p><input type="checkbox" name="stock" id="stock1"><label for="stock1"><span></span>재입고안내</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">검색</button></p>
+		</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회 회원수 : <span class="color-A">000명</span></p>
+			</div>
+				<!-- 리스트 -->
+				<div class="list">
+					<table>
+						<thead>
+							<tr>
+								<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+								<th>기간설정</th>
+								<th>반복</th>
+								<th>종료</th>
+								<th>최초주문여부</th>
+								<th>결제수단</th>
+								<th>주문</th>
+								<th>배송</th>
+								<th>취소</th>
+								<th>교환</th>
+								<th>반품</th>
+								<th>리뷰</th>
+								<th>입고,재입고</th>
+								<th>템플릿</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_tit"><p class="part">2021-10-19 ~ </p>2022-12-31</td>
+								<td>사용자지정</td>
+								<td class="td_tit"><p class="part">지정한 횟수 반복 후</p>2022-12-31</td>
+								<td>최초주문아님</td>
+								<td>통합포인트</td>
+								<td>30일</td>
+								<td>30일</td>
+								<td>30일</td>
+								<td>30일</td>
+								<td>30일</td>
+								<td>30일</td>
+								<td>재입고안내</td>
+								<td><button type="button" class="button-B" onclick="myPopup2()">템플릿 선택</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">삭제</button></p>
+		</div>
+	</div>
+</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

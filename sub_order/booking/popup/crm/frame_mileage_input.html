@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div id="iframe">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 리프레시 포인트 지급/차감</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>사용설정 </th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="aa" id="pc_1" checked /><label for="pc_1"><span></span> 지급(+)</label></p>
+									<p><input type="radio" name="aa" id="pc_2" /><label for="pc_2"><span></span> 차감(-)</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>금액설정</th>
+							<td><input type="number" class="w-E ta-r" required /> 원</td>
+						</tr>
+						<tr>
+							<th>지급/차감사유 <span class="color-A">*</span></th>
+							<td>
+								<select>
+									<option value="선택">선택</option>
+									<option value="상품구매 시 리프레시 포인트 사용 ">상품구매 시 리프레시 포인트 사용</option>
+									<option value="상품구매 시 망일리지 지급">상품구매 시 망일리지 지급</option>
+									<option value="환불 시 사용 리프레시 포인트 환원">환불 시 사용 리프레시 포인트 환원</option>
+									<option value="환불 시 적립 리프레시 포인트 차감">환불 시 적립 리프레시 포인트 차감</option>
+									<option value="신규회원 가입">신규회원 가입</option>
+									<option value="환불 시 기타환불 처리">환불 시 기타환불 처리</option>
+									<option value="게시글등록 시 리프레시 포인트 지급">게시글등록 시 리프레시 포인트 지급</option>
+									<option value="게시글삭제 시 리프레시 포인트 차감">게시글삭제 시 리프레시 포인트 차감</option>
+									<option value="기타">기타</option>
+									<option value="취소 시 사용 리프레시 포인트 환원">취소 시 사용 리프레시 포인트 환원</option>
+									<option value="회원정보 수정 이벤트 참여">회원정보 수정 이벤트 참여</option>
+									<option value="쿠폰 리프레시 포인트 적립">쿠폰 리프레시 포인트 적립</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="location.href='frame_mileage.html'">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+<script type="text/javascript">
+
+	function init(){
+		var doc = document.getElementById("iframe"); //분리된 iframe 이 파일의 가장상위 태그 id
+		if(doc.offsetHeight == 0){
+		
+		} else {
+			pageheight = doc.offsetHeight ; // +100;
+			parent.document.getElementById("T_frame").height = pageheight + 0 + "px"; //iframe꽂힌 본 파일의 iframe태그 id
+		}
+	}
+
+	window.onload = function(){
+		init();
+	}
+	
+</script> 
+</body>
+</html>

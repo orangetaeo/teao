@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="iframe">
+			<div class="tab_area">
+				<button type="button" class="button-B" onclick="location.href='frame_review_board.html'">상품후기</button>
+				<button type="button" class="button-B" onclick="location.href='frame_product_inquiry_board.html'">상품문의</button>
+				<button type="button" class="button-B" onclick="location.href='frame_inquiry_board.html'">1:1문의</button>
+				<button type="button" class="button-B on" onclick="location.href='frame_notice_board.html'">공지사항</button>
+				<button type="button" class="button-B" onclick="location.href='frame_partner_board.html'">광고·제휴게시판</button>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span></p> <!-- 공지사항 -->
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th>No.</th>
+							<th>제목</th>
+							<th>작성일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></th>
+							<th>조회</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td_num">2</td>
+							<td><a href="#">[공지]시스템 점검</a></td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td><a href="#">00</a></td>
+						</tr>
+						<tr>
+							<td class="td_num">1</td>
+							<td><a href="#">[이벤트]연말 이벤트</a></td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td><a href="#">00</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+<script type="text/javascript">
+
+	function init(){
+		var doc = document.getElementById("iframe"); //분리된 iframe 이 파일의 가장상위 태그 id
+		if(doc.offsetHeight == 0){
+		
+		} else {
+			pageheight = doc.offsetHeight ; // +100;
+			parent.document.getElementById("frame_notice_board").height = pageheight + 10 + "px"; //iframe꽂힌 본 파일의 iframe태그 id
+		}
+	}
+
+	window.onload = function(){
+		init();
+	}
+	
+</body>
+</html>

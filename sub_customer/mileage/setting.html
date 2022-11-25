@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_customer.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">회원관리</a> &gt; <a href="#">리프레시 포인트관리</a> &gt; <a href="#">리프레시 포인트 설정</a></p>
+			<?
+			include "../../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 리프레시 포인트 기본 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>사용설정 </th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="use_setting" id="use_setting1" /><label for="use_setting1"><span></span> 사용함</label></p>
+									<p><input type="radio" name="use_setting" id="use_setting2" checked/><label for="use_setting2"><span></span> 사용안함</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>홈페이지 노출 이름</th>
+							<td><input type="text" class="w-G" value="리프레시 포인트" required /></td>
+						</tr>
+						<tr>
+							<th>홈페이지 노출 단위 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-G" value="원" required /></td>
+						</tr>
+						<tr>
+							<th>리프레시 포인트 유효기간 </th>
+							<td colspan="3">
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="expired" id="expired1" /><label for="expired1"><span></span></label></p>
+										<div class="txt">유효기간 없음</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="expired" id="expired2" checked/><label for="expired2"><span></span></label></p>
+										<div class="txt">유효기간 있음 : 리프레시 포인트 적립일로부터 <input type="text" class="w-A ta-r" value="365" required />일 까지 <input type="text" class="w-A ta-r" value="30" required />일 전 리프레시 포인트 소멸 자동안내</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>할인/적립 시 <br />구매금액 기준</th>
+							<td>
+								<div class="c_box">
+									<p>판매가 + ( <input type="checkbox" name="standard" id="standard1" required /><label for="standard1"><span></span>옵션가격</label></p>
+									<p><input type="checkbox" name="standard" id="standard2" required /><label for="standard2"><span></span>추가상품가격</label> )</p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 리프레시 포인트 사용 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>최소 <br />보유리프레시 포인트 제한 </th>
+							<td><input type="text" class="w-C ta-r" value="10,000" required />원 이상 보유한 경우 결제 시 사용 가능</td>
+						</tr>
+						<tr>
+							<th>최소 <br />상품구매금액 제한 </th>
+							<td colspan="3">
+								<div class="fl mr20">구매금액 합계가 <input type="text" class="w-E ta-r" value="1,000,000" required />원 이상 보유한 경우 결제 시 사용 가능</div>
+								<div class="r_circle fl">
+									<p><input type="radio" name="limit" id="limit1" checked /><label for="limit1"><span></span> 할인금액 미포함 가격기준</label></p>
+									<p><input type="radio" name="limit" id="limit2" /><label for="limit2"><span></span> 할인금액 포함 가격기준</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>최소 <br />사용리프레시 포인트 제한 </th>
+							<td>1회 결제 시 최소 <input type="text" class="w-E ta-r" value="0" required />원 이상 사용 가능</td>
+						</tr>
+						<tr>
+							<th>최대 <br />사용금액 제한 </th>
+							<td>1회 결제 시 최대 <input type="text" class="w-E ta-r" value="0" required />
+								<select class="w-C">
+									<option value="원">원</option>
+									<option value="%">%</option>
+								</select>까지 사용 가능
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 리프레시 포인트 지급 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>상품 구매시 <br />기본 지급 리프레시 포인트 </th>
+							<td colspan="3">
+								<ul class="raul block">
+									<li>
+										<p class="r_circle"><input type="radio" name="default" id="default1" checked><label for="default1"><span></span></label></p>
+										<div class="txt">구매금액의 <input type="text" class="w-B ta-r" required />% 를 리프레시 포인트로 지급</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="default" id="default2" checked><label for="default2"><span></span></label></p>
+										<div class="txt">구매금액으로 <input type="text" class="w-B ta-r" required />원 단위로 <input type="text" class="w-B ta-r" required /> 리프레시 포인트 지급</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="default" id="default3" checked><label for="default3"><span></span></label></p>
+										<div class="txt">구매금액과 상관없이 구매상품 1개 단위로 <input type="text" class="w-D ta-r" required />원 단위로 <input type="text" class="w-D ta-r" required /> 리프레시 포인트 지급</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>리프레시 포인트 사용시 <br />지급 예외 설정 </th>
+							<td colspan="3">
+								<div class="r_circle block">
+									<p><input type="radio" name="exception" id="exception1" value="N" checked /><label for="exception1"><span></span> 구매 리프레시 포인트 지급함</label></p>
+									<p><input type="radio" name="exception" id="exception2" value="N" /><label for="exception2"><span></span> 구매 리프레시 포인트 지급안함 </label></p>
+									<p><input type="radio" name="exception" id="exception3" value="N" /><label for="exception3"><span></span> 지급률 재계산 (상품구매 금액 - 사용 리프레시 포인트 금액으로 해당 상품의 리프레시 포인트 지급금액 재계산)</label></p>
+									<p><input type="radio" name="exception" id="exception4" value="N" /><label for="exception4"><span></span> 지급금액 차감 (지급예정 리프레시 포인트를 미리 계산하여 사용 리프레시 포인트를 차감하고 지급)</label></p>
+									<p><input type="radio" name="exception" id="exception5" value="N" /><label for="exception5"><span></span> 지급률 차감 (구매금액 대비 사용 리프레시 포인트 비율을 구한 후, 해당 비율로 지급 예정 마일리도 동일 비율로 차감)</label></p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">등급 수정</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

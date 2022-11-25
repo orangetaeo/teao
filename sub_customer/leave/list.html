@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_customer.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">회원관리</a> &gt; <a href="#">탈퇴회원 삭제관리</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 회원탈퇴/삭제 관리</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>탈퇴일</th>
+								<td class="td_day">
+									<div>
+										<select class="w-F">
+											<option value="휴면회원 전환일">탈퇴일</option>
+											<option value="가입일">가입일</option>
+											<option value="최종로그인">최종로그인</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">오늘</button>
+										<button type="button">어제</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>아이디</th>
+								<td class="search_area">
+									<div>
+										<input type="search" class="input_search" placeholder="아이디">
+									</div>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>탈퇴유형</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="aa" id="aa0" checked><label for="aa0"><span></span> 전체</label></p>
+										<p><input type="radio" name="aa" id="aa1"><label for="aa1"><span></span> 관리자삭제</label></p>
+										<p><input type="radio" name="aa" id="aa2"><label for="aa2"><span></span> 본인탈퇴</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>재가입 여부</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ab" id="ab0" checked><label for="ab0"><span></span>전체</label></p>
+										<p><input type="radio" name="ab" id="ab1"><label for="ab1"><span></span>가능</label></p>
+										<p><input type="radio" name="ab" id="ab2"><label for="ab2"><span></span>불가능</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span></p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>이메일(ID)</th>
+							<th>탈퇴유형</th>
+							<th>탈퇴일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>탈퇴처리IP</th>
+							<th>재가입여부</th>
+							<th>처리자</th>
+							<th>탈퇴사유</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td>biz@orangetour.io</td>
+							<td>일반탈퇴</td>
+							<td>0000-00-00</td>
+							<td>222.222.222.22</td>
+							<td>재가입</td>
+							<td>회원</td>
+							<td>다른아이디 제가입을 위해</td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td>biz@orangetour.io</td>
+							<td>강제탈퇴</td>
+							<td>0000-00-00</td>
+							<td>111.111.111.111</td>
+							<td>-</td>
+							<td>관리자(master)</td>
+							<td>블랙리스트 고객이라 탈퇴</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove">
+					<button type="button">선택 완전삭제</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 주석마크 -->
+			<div class="mark"><i class="xi-error-o"></i> 탈퇴처리 시 개인정보와 관련된 정보를 볼 수 없으며, 판매데이터는 개인정보 이외의 것들만 확인 가능 합니다.</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

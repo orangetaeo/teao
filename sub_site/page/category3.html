@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+<? include "../../head_editor.html"; ?>
+</head>
+
+<!-- [새창팝업] -->
+<script>
+
+//숙소불러오기
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/accommodations/popup/bring.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1205, height=970");
+}
+
+//단독상품 선택
+function myPopup2() {
+	window.open("/design/travel/manager/sub_item/schedule/popup/flight.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1550, height=970");
+}
+
+//선택관광 선택
+function myPopup3() {
+	window.open("/design/travel/manager/sub_item/schedule/popup/tourist.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1205, height=970");
+}
+//상품 불러오기
+function myPopup4() {
+	window.open("/design/travel/manager/sub_item/item/popup/bring.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1745, height=970");
+}
+</script>
+
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_site.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">서브사이트관리</a> &gt; <a href="#">서브사이트 리스트</a> &gt; <a href="#">서브사이트 카테고리3 입력</a></p>
+			<?
+			include "../../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 카테고리 노출 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>									
+						<tr>
+							<th>카테고리 노출 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="pc_exposure" id="pc_1" checked /><label for="pc_1"><span></span>노출함</label></p>
+									<p><input type="radio" name="pc_exposure" id="pc_2" /><label for="pc_2"><span></span>노출안함</label></p>
+								</div>
+							</td>
+						<tr>
+							<th>카테고리3 이름</th>
+							<td colspan="3"><input type="text" class="w-G" value="레스토랑" placeholder="카테고리3 이름"/></td>
+						</tr>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 검색엔진 최적화 SEO설정 <span class="dragdrop">(개별상품 설정)</span></h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>개별설정 여부 </th>
+							<td>
+								<div class="r_circle m-A">
+									<p><input type="radio" name="seo_ok" id="seo_y" value="Y" /><label for="seo_y"><span></span>사용함</label></p>
+									<p><input type="radio" name="seo_ok" id="seo_n" value="N" checked /><label for="seo_n"><span></span>사용안함</label></p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> '사용함' 선택 시 기본설정> 회사정보> 검색엔진 최적화 SEO설정 (홈페이지 메인) 설정보다 개별 설정이 우선적으로 적용됩니다.<br />
+								설정 결과는 검색 엔진에 따라 평균 2주 ~ 3주 후에 반영될 수 있습니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>타이틀 (Title)</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/><span class="txt_nmb">00/40</span>
+							</td>
+						</tr>
+						<tr>
+							<th>메타태그 작성자 (Author)</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/><span class="txt_nmb">00/40</span>
+							</td>
+						</tr>
+						<tr>
+							<th>메타태그 설명 (Desription)</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/><span class="txt_nmb">00/80</span>
+							</td>
+						</tr>
+						<tr>
+							<th>메타태그 키워드 (Keywords)</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/><span class="txt_nmb">00/40</span>
+								<span class="comment"><i class="xi-error-o"></i> 컴마기준으로 입력하세요.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>SNS 제목 (og:title)</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/><span class="txt_nmb">00/40</span>
+								<span class="comment"><i class="xi-error-o"></i> 홈페이지 URL을 카카오톡등의 SNS로 전송시 홈페이지 타이틀이 출력됩니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>SNS 설명 (og:desription)</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/><span class="txt_nmb">00/40</span>
+								<span class="comment"><i class="xi-error-o"></i> 홈페이지 URL을 카카오톡등의 SNS로 전송시 홈페이지 소개 내용이 출력됩니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

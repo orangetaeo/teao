@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? include "../../head_common.html"; ?>
+<? include "../../head_editor.html"; ?>
+</head>
+
+<!-- [새창팝업] -->
+<script>
+
+//랜드사 관광 선택
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/tourist/popup/land_bring.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=937");
+}
+
+//시즌 기간설정
+function myPopup2() {
+	window.open("/design/travel/manager/sub_item/tourist/popup/peak_season.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=500");
+}
+
+//관광 가격 설정
+function myPopup3() {
+	window.open("/design/travel/manager/sub_item/tourist/popup/price.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1230, height=1200");
+}
+
+//관광 이미지 등록
+function myPopup4() {
+	window.open("/design/travel/manager/sub_item/tourist/popup/tourist_images.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=879");
+}
+</script>
+
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_item.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">상품관리</a> &gt; <a href="#">관광 설정</a> &gt; <a href="#">관광 등록</a></p>
+			<?
+			include "../../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 관광 카테고리</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 카테고리 -->
+			<div class="category">
+				<div class="group">
+					<h3>대륙 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on">
+							<li><a href="#">AC 아시아</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>국가 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on2">
+							<li><a href="#">VN 베트남</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>지역 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on3">
+							<li><a href="#">다낭</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>관광 유형 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div id="step4" class="class_on4">
+							<li><a href="#">관광</a></li>
+							<li><a href="#">쇼핑</a></li>
+							<li><a href="#">마사지</a></li>
+							<li><a href="#">스키장</a></li>
+							<li><a href="#">트레킹</a></li>
+							<li><a href="#">엑티비티</a></li>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 관광 기본 정보</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>랜드사 관광 불러오기</th>
+							<td colspan="3">
+							<button type="button" class="button-A" onclick="myPopup1()">랜드사 관광선택</button>
+							</td>
+						</tr>
+						<tr>
+							<th>관광 로고</th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 * x * 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>랜드사명 <span class="color-A">*</span></th>
+							<td>
+								<div class="sel">
+									<select class="w-G">
+										<option value="랜드사 선택">랜드사 선택</option>
+										<option value="A랜드사">A랜드사</option>
+										<option value="B랜드사">B랜드사</option>
+									</select>
+								</div>
+							</td>
+							<th>랜드사 연락처</th>
+							<td>02-0000-0000</td>
+						</tr>
+						<tr>
+							<th>관광 상품명 <span class="color-A">*</span></th>
+							<td colspan="3"><input type="text" class="w-H" placeholder="썬 월드 바나힐 골든 브릿지"></td>
+						</tr>
+						<tr>
+							<th>관광 영문명</th>
+							<td colspan="3"><input type="text" class="w-H" placeholder="Golden bridge on Ba Na Hills, Da Nang, Vietnam"/></td>
+						</tr>
+						<tr>
+							<th>관광 주소 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<input type="text" class="w-C" placeholder="560000"/><button type="button" class="button-A">주소검색</button><br />
+								<input type="text" class="w-H" placeholder="XXWW+2GH, Hoà Phú, Hòa Vang, Đà Nẵng, 베트남"/>
+								<input type="text" class="w-H" placeholder=""/>
+							</td>
+						</tr>
+						<tr>
+							<th>위도 <span class="color-A">*</span></th>
+							<td>
+								<input type="text" class="w-G" placeholder="15.794854233954853" required/>
+							</td>
+							<th>경도 <span class="color-A">*</span></th>
+							<td>
+								<input type="text" class="w-G" placeholder="108.42019459644911" required/>
+							</td>
+						</tr>
+						<tr>
+							<th>웹사이트 </th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder="https://www.ihg.com/intercontinental" required/>
+							</td>
+						</tr>
+						<tr>
+							<th>연락처 </th>
+							<td>
+								<input type="text" class="w-G" placeholder="+84 235 367 6888" required/>
+							</td>
+							<th>구글추천 별점 </th>
+							<td>
+								<input type="text" class="w-G" placeholder="4.6" required/>
+							</td>
+						</tr>
+						<tr>
+							<th>영업시작 <span class="color-A">*</span></th>
+							<td>
+								<div class="sel">
+									<select class="w-D">
+										<option value="시간 선택">시간 선택</option>
+										<option value="00시">00시</option>
+										<option value="01시">01시</option>
+										<option value="02시">02시</option>
+										<option value="03시">03시</option>
+										<option value="04시">04시</option>
+										<option value="05시">05시</option>
+										<option value="06시">06시</option>
+										<option value="07시">07시</option>
+										<option value="08시">08시</option>
+										<option value="09시">09시</option>
+										<option value="10시">10시</option>
+										<option value="11시">11시</option>
+										<option value="12시">12시</option>
+										<option value="13시">13시</option>
+										<option value="14시">14시</option>
+										<option value="15시">15시</option>
+										<option value="16시">16시</option>
+										<option value="17시">17시</option>
+										<option value="18시">18시</option>
+										<option value="19시">19시</option>
+										<option value="20시">20시</option>
+										<option value="21시">21시</option>
+										<option value="22시">22시</option>
+										<option value="23시">23시</option>
+									</select>
+									<select class="w-D">
+										<option value="분 선택">분 선택</option>
+										<option value="00분">00분</option>
+										<option value="01분">01분</option>
+										<option value="02분">02분</option>
+										<option value="03분">03분</option>
+										<option value="04분">04분</option>
+										<option value="05분">05분</option>
+										<option value="06분">06분</option>
+										<option value="07분">07분</option>
+										<option value="08분">08분</option>
+										<option value="09분">09분</option>
+										<option value="10분">10분</option>
+										<option value="11분">11분</option>
+										<option value="12분">12분</option>
+										<option value="13분">13분</option>
+										<option value="14분">14분</option>
+										<option value="15분">15분</option>
+										<option value="16분">16분</option>
+										<option value="17분">17분</option>
+										<option value="18분">18분</option>
+										<option value="19분">19분</option>
+										<option value="20분">20분</option>
+										<option value="21분">21분</option>
+										<option value="22분">22분</option>
+										<option value="23분">23분</option>
+										<option value="24분">24분</option>
+										<option value="25분">25분</option>
+										<option value="26분">26분</option>
+										<option value="27분">27분</option>
+										<option value="28분">28분</option>
+										<option value="29분">29분</option>
+										<option value="30분">30분</option>
+										<option value="31분">31분</option>
+										<option value="32분">32분</option>
+										<option value="33분">33분</option>
+										<option value="34분">34분</option>
+										<option value="35분">35분</option>
+										<option value="36분">36분</option>
+										<option value="37분">37분</option>
+										<option value="38분">38분</option>
+										<option value="39분">39분</option>
+										<option value="40분">40분</option>
+										<option value="41분">41분</option>
+										<option value="42분">42분</option>
+										<option value="43분">43분</option>
+										<option value="44분">44분</option>
+										<option value="45분">45분</option>
+										<option value="46분">46분</option>
+										<option value="47분">47분</option>
+										<option value="48분">48분</option>
+										<option value="49분">49분</option>
+										<option value="50분">50분</option>
+										<option value="51분">51분</option>
+										<option value="52분">52분</option>
+										<option value="53분">53분</option>
+										<option value="54분">54분</option>
+										<option value="55분">55분</option>
+										<option value="56분">56분</option>
+										<option value="57분">57분</option>
+										<option value="58분">58분</option>
+										<option value="59분">59분</option>
+									</select>
+								</div>
+							</td>
+							<th>영업마감 <span class="color-A">*</span></th>
+							<td>
+								<div class="sel">
+									<select class="w-D">
+										<option value="시간 선택">시간 선택</option>
+										<option value="00시">00시</option>
+										<option value="01시">01시</option>
+										<option value="02시">02시</option>
+										<option value="03시">03시</option>
+										<option value="04시">04시</option>
+										<option value="05시">05시</option>
+										<option value="06시">06시</option>
+										<option value="07시">07시</option>
+										<option value="08시">08시</option>
+										<option value="09시">09시</option>
+										<option value="10시">10시</option>
+										<option value="11시">11시</option>
+										<option value="12시">12시</option>
+										<option value="13시">13시</option>
+										<option value="14시">14시</option>
+										<option value="15시">15시</option>
+										<option value="16시">16시</option>
+										<option value="17시">17시</option>
+										<option value="18시">18시</option>
+										<option value="19시">19시</option>
+										<option value="20시">20시</option>
+										<option value="21시">21시</option>
+										<option value="22시">22시</option>
+										<option value="23시">23시</option>
+									</select>
+									<select class="w-D">
+										<option value="분 선택">분 선택</option>
+										<option value="00분">00분</option>
+										<option value="01분">01분</option>
+										<option value="02분">02분</option>
+										<option value="03분">03분</option>
+										<option value="04분">04분</option>
+										<option value="05분">05분</option>
+										<option value="06분">06분</option>
+										<option value="07분">07분</option>
+										<option value="08분">08분</option>
+										<option value="09분">09분</option>
+										<option value="10분">10분</option>
+										<option value="11분">11분</option>
+										<option value="12분">12분</option>
+										<option value="13분">13분</option>
+										<option value="14분">14분</option>
+										<option value="15분">15분</option>
+										<option value="16분">16분</option>
+										<option value="17분">17분</option>
+										<option value="18분">18분</option>
+										<option value="19분">19분</option>
+										<option value="20분">20분</option>
+										<option value="21분">21분</option>
+										<option value="22분">22분</option>
+										<option value="23분">23분</option>
+										<option value="24분">24분</option>
+										<option value="25분">25분</option>
+										<option value="26분">26분</option>
+										<option value="27분">27분</option>
+										<option value="28분">28분</option>
+										<option value="29분">29분</option>
+										<option value="30분">30분</option>
+										<option value="31분">31분</option>
+										<option value="32분">32분</option>
+										<option value="33분">33분</option>
+										<option value="34분">34분</option>
+										<option value="35분">35분</option>
+										<option value="36분">36분</option>
+										<option value="37분">37분</option>
+										<option value="38분">38분</option>
+										<option value="39분">39분</option>
+										<option value="40분">40분</option>
+										<option value="41분">41분</option>
+										<option value="42분">42분</option>
+										<option value="43분">43분</option>
+										<option value="44분">44분</option>
+										<option value="45분">45분</option>
+										<option value="46분">46분</option>
+										<option value="47분">47분</option>
+										<option value="48분">48분</option>
+										<option value="49분">49분</option>
+										<option value="50분">50분</option>
+										<option value="51분">51분</option>
+										<option value="52분">52분</option>
+										<option value="53분">53분</option>
+										<option value="54분">54분</option>
+										<option value="55분">55분</option>
+										<option value="56분">56분</option>
+										<option value="57분">57분</option>
+										<option value="58분">58분</option>
+										<option value="59분">59분</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>휴무일 설정 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<div class="c_box">
+									<input type="checkbox" name="week" id="week0" checked required /><label for="week0"><span></span>전체</label>
+									<input type="checkbox" name="week" id="week1" checked required /><label for="week1"><span></span>월요일</label>
+									<input type="checkbox" name="week" id="week2" checked required /><label for="week2"><span></span>화요일</label>
+									<input type="checkbox" name="week" id="week3" checked required /><label for="week3"><span></span>수요일</label>
+									<input type="checkbox" name="week" id="week4" checked required /><label for="week4"><span></span>목요일</label>
+									<input type="checkbox" name="week" id="week5" checked required /><label for="week5"><span></span>금요일</label>
+									<input type="checkbox" name="week" id="week5" checked required /><label for="week5"><span></span>토요일</label>
+									<input type="checkbox" name="week" id="week5" checked required /><label for="week5"><span></span>일요일</label>
+								</div>
+								<div class="day">
+									<input type="text" class="w-D ta-c" placeholder="2022-09-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-12-31"><i class="xi-calendar"></i>
+									<button type="button" class="button-A">등록</button><button type="button" class="button-A">삭제</button>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 요일을 선택 후 날짜를 선택 등록하면 예) 2022년 12월 31일까지 매주 화요일 휴무로 지정 가능</span>
+							</td>
+						</tr>
+						<tr>
+							<th>시네에서 거리 </th>
+							<td>
+								<input type="text" class="w-G" placeholder="하노이 시내에서 30km" required/>
+							</td>
+							<th>공항에서 거리 </th>
+							<td>
+								<input type="text" class="w-G" placeholder="베트남 노이바이 공항에서 58㎞, 1시간10분" required/>
+							</td>
+						</tr>
+						<tr>
+							<th>한줄관광평</th>
+							<td colspan="3"><input type="text" class="w-H" /></td>
+						</tr>
+						<tr>
+							<th>관광코드 <span class="color-A">*</span></th>
+							<td class="td_w">
+								<div class="c_box">
+									<p><input type="checkbox" id="chch" checked /><label for="chch"><span></span>관광 등록시 자동 생성됩니다.</label></p>
+								</div>
+							</td>
+							<th>자체 관광코드 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-G" /><button type="button" class="button-A" onclick="location.href='#'">중복확인</button></td>
+						</tr>
+						<tr>
+						<th>바코드</th>
+							<td colspan="3"><input type="text" class="w-G" /></td>
+						</tr>					
+						<tr>
+							<th>QR코드 </th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 300 x 300 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 관광 가격 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>노출 환율 <span class="color-A">*</span></th>
+							<td class="td_w">
+								<div class="sel">
+									<select class="w-G">
+										<option value="대한민국 KRM">대한민국 KRM</option>
+										<option value="남아프리카 공화국 ZAR">남아프리카 공화국 ZAR</option>
+										<option value="네발 NPR">네발 NPR</option>
+										<option value="노르웨이 NOK">노르웨이 NOK</option>
+										<option value="뉴질랜드 NZD">뉴질랜드 NZD</option>
+										<option value="대만 TWD">대만 TWD</option>
+										<option value="덴마크 DKK">덴마크 DKK</option>
+										<option value="러시아 RUB">러시아 RUB</option>
+										<option value="마카오 MOP">마카오 MOP#</option>
+										<option value="말레이시아 MYR">말레이시아 MYR</option>
+										<option value="멕시코 MXN">멕시코 MXN</option>
+										<option value="몽골 MNT">몽골 MNT</option>
+										<option value="미국 USD">미국 USD</option>
+										<option value="바레인 BHD">바레인 BHD</option>
+										<option value="방글라데시 BDT">방글라데시 BDT</option>
+										<option value="베트남 VND">베트남 VND</option>
+										<option value="브라질 BRL">브라질 BRL</option>
+										<option value="브루나이 BND">브루나이 BND</option>
+										<option value="사우디아라비아 SAR">사우디아라비아 SAR</option>
+										<option value="스웨덴 SEK">스웨덴 SEK</option>
+										<option value="스위스 CHF">스위스 CHF</option>
+										<option value="싱가포르 SGD">싱가포르 SGD</option>
+										<option value="아랍에미리트 AED">아랍에미리트 AED</option>
+										<option value="영국 GBP">영국 GBP</option>
+										<option value="오만 OMG">오만 OMG</option>
+										<option value="요르단 JOD">요르단 JOD</option>
+										<option value="유럽연합 EUR">유럽연합 EUR</option>
+										<option value="이스라엘 ILS">이스라엘 ILS</option>
+										<option value="이집트 EGP">이집트 EGP</option>
+										<option value="인도 INR">인도 INR</option>
+										<option value="인도네시아 IDR">인도네시아 IDR</option>
+										<option value="일본 JPY">일본 JPY</option>
+										<option value="중국 CNY">중국 CNY</option>
+										<option value="체코 CZK">체코 CZK</option>
+										<option value="칠레 CLP">칠레 CLP</option>
+										<option value="카자흐스탄 KZT">카자흐스탄 KZT</option>
+										<option value="카타르 QAR">카타르 QAR</option>
+										<option value="캐나다 CAD">캐나다 CAD</option>
+										<option value="쿠웨이트 KWD">쿠웨이트 KWD</option>
+										<option value="태국 THB">태국 THB</option>
+										<option value="터키 TRY">터키 TRY</option>
+										<option value="파키스탄 PKR">파키스탄 PKR</option>
+										<option value="폴란드 PLN">폴란드 PLN</option>
+										<option value="필리핀 html">필리핀 html</option>
+										<option value="헝가리 HUF">헝가리 HUF</option>
+										<option value="호주 AUD">호주 AUD</option>
+										<option value="홍콩 HKD">홍콩 HKDN</option>
+									</select>
+								</div>
+							</td>
+							<th>연령기준 <span class="color-A">*</span></th>
+							<td>
+								<div>
+									*성인 만 <input type="text" class="w-A ta-r" placeholder="12"/> 세 이상,
+									*아동 만 <input type="text" class="w-A ta-r" placeholder="2"/> 세 ~ <input type="text" class="w-A ta-r" placeholder="12"/> 세 미만,
+									*유아 만 <input type="text" class="w-A ta-r" placeholder="2"/> 세 미만
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>시즌 기간설정 <span class="color-A">*</span></th>
+							<td class="td_w">
+							<button type="button" class="button-A" onclick="myPopup2()">기간설정</button>
+							</td>
+							<th>관광 가격설정 <span class="color-A">*</span></th>
+							<td>
+							<button type="button" class="button-A" onclick="myPopup3()">가격설정</button>
+							</td>
+						</tr>
+						<tr>
+							<th>관광 가격 리스트</th>
+							<td colspan="3">
+								<div class="dein_table mt15 mb10">
+									<table>
+										<thead>
+											<tr>
+												<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+												<th>번호</th>
+												<th>시즌</th>
+												<th>요일</th>
+												<th>아이동반</th>
+												<th>옵션속성</th>
+												<th>옵션코드</th>
+												<th>노출상태</th>
+												<th>메모</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>5</td>
+												<td>성수기</td>
+												<td>전체요일</td>
+												<td>가능</td>
+												<td>오전 이용권</td>
+												<td>000000000</td>
+												<td>
+													<select>
+														<option value="노출함">노출함</option>
+														<option value="노출안함">노출안함</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>4</td>
+												<td>성수기</td>
+												<td>목,금,토,일</td>
+												<td>가능</td>
+												<td>오전 이용권</td>
+												<td>000000000</td>
+												<td>
+													<select>
+														<option value="노출함">노출함</option>
+														<option value="노출안함">노출안함</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>3</td>
+												<td>성수기</td>
+												<td>전체요일</td>
+												<td>가능</td>
+												<td>오전 이용권</td>
+												<td>000000000</td>
+												<td>
+													<select>
+														<option value="노출함">노출함</option>
+														<option value="노출안함">노출안함</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>1</td>
+												<td>비수기</td>
+												<td>목,금,토,일</td>
+												<td>가능</td>
+												<td>1인 오전 이용권</td>
+												<td>000000000</td>
+												<td>
+													<select>
+														<option value="노출함">노출함</option>
+														<option value="노출안함">노출안함</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>1</td>
+												<td>비수기</td>
+												<td>목,금,토,일</td>
+												<td>가능</td>
+												<td>2인 종일 이용권</td>
+												<td>000000000</td>
+												<td>
+													<select>
+														<option value="노출함">노출함</option>
+														<option value="노출안함">노출안함</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="mt10">
+										<button type="button" class="button-A" onclick="location.href='#'">선택 삭제</button>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 관광 이미지 등록</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>썸네일 이미지 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<div class="stit"><span></span>메인 썸네일</div>
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 520 x 520 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+								<div class="stit"><span></span>상세 썸네일</div>
+								<!-- 상세 썸네일 드래그&드롭 -->
+								<div class="client_list">
+									<ul id="sortable">
+										<li>
+											<img src="/design/travel/manager/images/client_01.png" alt="">
+											<div class="mod">
+												<button type="button" class="btn_imgup">수정</button>
+												<button type="button">삭제</button>
+											</div>
+										</li>
+									<ul>
+									<ul id="sortable">
+										<li>
+											<img src="/design/travel/manager/images/client_02.png" alt="">
+											<div class="mod">
+												<button type="button" class="btn_imgup">수정</button>
+												<button type="button">삭제</button>
+											</div>
+										</li>
+									<ul>
+										<li class="bin">
+											<img src="/design/travel/manager/images/client_00.png" alt="">
+											<div class="btn">
+												<button type="button" class="btn_imgup">추가등록</button>
+											</div>
+										</li>
+									</ul>
+									<!-- 이미지등록 -->
+									<div class="imgup">
+										<div class="imgup_inn">
+											<p class="tit"><i class="xi-lightbulb-o"></i> 이미지파일 등록</p>
+											<div class="input_file">
+												<p class="hidden_file">
+													<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+												</p>
+												<p class="show_file">
+													<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+												</p>
+											</div>
+											<span class="comment"><i class="xi-error-o"></i> 권장사이즈 520 x 520 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+											<div class="img_view">
+												<img src="" alt="">
+												<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+											</div>
+											<p class="btn"><button type="button">등록</button></p>
+											<p class="close"><i class="xi-close"></i></p>
+										</div>
+									</div>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 드래그 & 드롭 방식으로 노출순서 지정 가능</span>
+								<div class="stit"><span></span>리스트 썸네일</div>
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 260 x 260 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>상품 상세설명 <span class="color-A">*</span><br /> 이미지</th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 980 x n 픽셀이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>상세이미지<br />
+							HTML편집기</th>
+							<td colspan="3">
+								<textarea class="summernote"></textarea>
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 메모</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write gro">
+				<table>
+					<tbody>				
+						<tr>
+							<th>메모</th>
+							<td>
+								<textarea class="w-100 h-C"/></textarea>
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

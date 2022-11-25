@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+
+<!-- [새창팝업] -->
+<script>
+
+
+//관광가능일 설정
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/accommodations/popup/room_type.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1540, height=1200");
+}
+
+</script>
+
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 관광가능 시간 및 요일 확인</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>카테고리</th>
+							<td class="td_category">
+								<select>
+									<option value="대륙 선택">대륙 선택</option>
+									<option value="AC 아시아">AC 아시아</option>
+								</select>
+								<select>
+									<option value="국가 선택">국가 선택</option>
+									<option value="KOR 코리아">KO 코리아</option>
+								</select>
+								<select>
+									<option value="지역 선택">지역 선택</option>
+									<option value="다낭">다낭</option>
+								</select>
+								<select>
+									<option value="관광유형 선택">관광유형 선택</option>
+									<option value="관광">관광</option>
+									<option value="쇼핑">쇼핑</option>
+								</select>
+							</td>
+						<tr>
+						<tr>
+							<th>관광이름</th>
+							<td colspan="3">
+								<div class="sel">
+									<select>
+										<option value="이름">이름</option>
+										<option value="코드">코드</option>
+									</select>
+									<input type="search" class="w-P" placeholder="관광, 쇼핑의 이름 또는 코드 입력 후 검색 하세요.">	
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 숙박가능일 달력</h2>
+		</div>
+		<div class="conbox">
+			<!-- 달력 -->
+			<div class="calendar_tit">
+				<div class="tit">
+					<p><i class="xi-angle-left" onclick="p_month()"></i></p>
+					<p class="this_month">
+						<select name="year_select" id="year_select">
+							<option value='2022'selected>2022</option>
+							<option value='2023'>2023</option>
+							<option value='2024'>2024</option>
+							<option value='2025'>2025</option>
+							<option value='2026'>2026</option>
+							<option value='2027'>2027</option>
+							<option value='2028'>2028</option>
+							<option value='2029'>2029</option>
+							<option value='2030'>2030</option>
+							<option value='2031'>2031</option>
+							<option value='2032'>2032</option>
+							<option value='2033'>2033</option>
+							<option value='2034'>2034</option>
+							<option value='2035'>2035</option>
+							<option value='2036'>2036</option>
+							<option value='2037'>2037</option>
+							<option value='2038'>2038</option>
+						</select>
+						.
+						<select name="month_select" id="month_select">
+							<option value='01'>01</option>
+							<option value='02'>02</option>
+							<option value='03'>03</option>
+							<option value='04'>04</option>
+							<option value='05'>05</option>
+							<option value='06'>06</option>
+							<option value='07'>07</option>
+							<option value='08'>08</option>
+							<option value='09' selected>09</option>
+							<option value='10'>10</option>
+							<option value='11'>11</option>
+							<option value='12'>12</option>
+						</select>
+					</p>
+					<p><i class="xi-angle-right" onclick="n_month()"></i></p>
+				</div>
+				<div class="btn"><button type="button" onclick="now_month('2022-09-01','2022-09-30')">이번달</button></div>
+			</div>
+			<div class="calendar">
+				<table>
+					<thead>
+						<tr>
+							<th class="th_sun">SUN</th>
+							<th>MON</th>
+							<th>TUE</th>
+							<th>WED</th>
+							<th>THU</th>
+							<th>FRI</th>
+							<th class="th_sat">SAT</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td_sun">
+								<div></div>
+							</td>
+							<td>
+								<div></div>
+							</td>
+							<td>
+								<div></div>
+							</td>
+							<td>
+								<div></div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">1</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">2</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_sat">
+								<div>
+									<p class="day"><span class="day_num co_sat">3</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_sun">
+								<div>
+									<p class="day"><span class="day_num co_sun">4</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">5</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="day_off">휴무</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="day_off">휴무</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="day_off">휴무</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="day_off">휴무</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">6</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">7</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">8</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_off">
+								<div>
+									<p class="day"><span class="day_num co_spe">9</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_off">
+								<div>
+									<p class="day"><span class="day_num co_spe">10</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_off">
+								<div>
+									<p class="day"><span class="day_num co_spe">11</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_off">
+								<div>
+									<p class="day"><span class="day_num co_spe">12</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="day_off">휴무</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="day_off">휴무</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="day_off">휴무</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="day_off">휴무</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">13</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">14</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">15</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">16</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_sat">
+								<div>
+									<p class="day"><span class="day_num co_sat">17</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_sun">
+								<div>
+									<p class="day"><span class="day_num co_sun">18</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">19</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="day_off">휴무</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="day_off">휴무</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="day_off">휴무</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="day_off">휴무</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">20</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">21</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">22</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">23</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_sat">
+								<div>
+									<p class="day"><span class="day_num co_sat">24</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_sun">
+								<div>
+									<p class="day"><span class="day_num co_sun">25</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">26</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="day_off">휴무</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="day_off">휴무</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="day_off">휴무</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="day_off">휴무</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">27</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">28</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">29</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">30</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">썬 월드 바나힐 골든 브릿지: <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">한시장 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">호이안 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">참조각 박물관 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">린응사 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">까오다이교 사원 : <span class="co_che">10:00 ~ 16:00</span></p>
+										<p class="info_ok" onclick="myPopup1()">다낭 대성당 : <span class="co_che">10:00 ~ 16:00</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_sat">
+								<div></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

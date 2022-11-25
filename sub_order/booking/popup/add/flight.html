@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+
+<script>
+//항공 리스트
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/flight/popup/bring.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1750, height=750");
+}
+</script>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 1일차</h2>
+		</div>
+		<div class="conbox">
+			<div class="tab_area">
+				<button type="button" class="button-B on" onclick="location.href='flight.html'">항공</button>
+				<button type="button" class="button-B" onclick="location.href='accommodations.html'">숙소</button>
+				<button type="button" class="button-B" onclick="location.href='golf.html'">골프</button>
+				<button type="button" class="button-B" onclick="location.href='meal.html'">음식점</button>
+				<button type="button" class="button-B" onclick="location.href='tourist.html'">관광</button>
+				<button type="button" class="button-B" onclick="location.href='transportation.html'">교통수단</button>
+			</div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr><th>항공편 가져오기</th>
+							<td colspan="3">
+								<button type="button" class="button-A" onclick="myPopup1()">가져오기</button>
+								<span class="comment"><i class="xi-error-o"></i> 등록된 항공편 데이터를 가져오면 하단에서 내용을 확인 할 수 있습니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th colspan="4" class="ta-c">출발편</th>
+						</tr>
+						<tr>
+							<th>항공사</th>
+							<td class="td_w">VJ 비엣젯</td>
+							<th>패턴</th>
+							<td>3박4일</td>
+						</tr>
+						<tr>
+							<th>구분</th>
+							<td class="td_w">왕복</td>
+							<th>편명</th>
+							<td>KE3333</td>
+						</tr>
+						<tr>
+							<th>출발지</th>
+							<td class="td_w">ICN 인천공항</td>
+							<th>도착지</th>
+							<td>HAN 노이바이 공항</td>
+						</tr>
+						<tr>
+							<th>출발일</th>
+							<td>2022-09-02</td>
+							<th>도착일</th>
+							<td>2022-09-02</td>
+						</tr>
+						<tr>
+							<th>출발시간</th>
+							<td>10시 05분</td>
+							<th>도착시간</th>
+							<td>15시 15분</td>
+						</tr>
+						<tr>
+							<th>좌석등급</th>
+							<td class="td_w">이코노미</td>
+							<th>기내식 </th>
+							<td>
+								<div class="c_box m-A">
+									<p>
+										<input type="checkbox" name="in-flight_meals" id="f1" required /><label for="f1"><span></span>조식</label>
+										<input type="checkbox" name="in-flight_meals" id="f2" checked required /><label for="f2"><span></span>중식</label>
+										<input type="checkbox" name="in-flight_meals" id="f3" required /><label for="f3"><span></span>석식</label>
+										<input type="checkbox" name="in-flight_meals" id="f4" required /><label for="f4"><span></span>없음</label>
+									</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th colspan="4" class="ta-c">귀국편</th>
+						</tr>
+						<tr>
+							<th>항공사</th>
+							<td colspan="3">VJ 비엣젯</td>
+						</tr>
+						<tr>
+							<th>구분</th>
+							<td class="td_w">왕복</td>
+							<th>편명</th>
+							<td>KE3333</td>
+						</tr>
+						<tr>
+							<th>출발지</th>
+							<td class="td_w">HAN 노이바이 공항</td>
+							<th>도착지</th>
+							<td>ICN 인천공항</td>
+						</tr>
+						<tr>
+							<th>출발일</th>
+							<td>2022-09-06</td>
+							<th>도착일</th>
+							<td>2022-09-06</td>
+						</tr>
+						<tr>
+							<th>출발시간</th>
+							<td>14시 35분</td>
+							<th>도착시간</th>
+							<td>19시 45분</td>
+						</tr>
+						<tr>
+							<th>좌석등급 </th>
+							<td class="td_w">이코노미</td>
+							<th>기내식 </th>
+							<td>
+								<div class="c_box m-A">
+									<p>
+										<input type="checkbox" name="in-flight_meals" id="f1" required /><label for="f1"><span></span>조식</label>
+										<input type="checkbox" name="in-flight_meals" id="f2" checked required /><label for="f2"><span></span>중식</label>
+										<input type="checkbox" name="in-flight_meals" id="f3" required /><label for="f3"><span></span>석식</label>
+										<input type="checkbox" name="in-flight_meals" id="f4" required /><label for="f4"><span></span>없음</label>
+									</p>
+								</div>
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="mark"><i class="xi-error-o"></i> 각 일정별 탭항목에서 1개만 입력가능합니다.예) 항공, 숙소, 골프, 스키장, 트래킹, 관광지, 선택관광지, 교통수단, 직접입력 중에서 1개탭 선택 저장.</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">취소</button><button type="button" onclick="window.close();">입력완료</button></p>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

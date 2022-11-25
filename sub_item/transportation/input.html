@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? include "../../head_common.html"; ?>
+<? include "../../head_editor.html"; ?>
+</head>
+
+<!-- [새창팝업] -->
+<script>
+
+//랜드사 교통수단 선택
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/transportation/popup/land_bring.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=937");
+}
+
+//교통수단 가격 설정
+function myPopup3() {
+	window.open("/design/travel/manager/sub_item/transportation/popup/price.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1600, height=870");
+}
+
+//교통수단 이미지 등록
+function myPopup4() {
+	window.open("/design/travel/manager/sub_item/transportation/popup/tourist_images.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=879");
+}
+
+//가이드 등록
+function myPopup5() {
+	window.open("/design/travel/manager/sub_item/transportation/popup/guide.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=630");
+}
+</script>
+
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_item.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">상품관리</a> &gt; <a href="#">교통수단 설정</a> &gt; <a href="#">교통수단 등록</a></p>
+			<?
+			include "../../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 교통수단 카테고리</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 카테고리 -->
+			<div class="category">
+				<div class="group">
+					<h3>대륙 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on">
+							<li><a href="#">AC 아시아</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>국가 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on2">
+							<li><a href="#">VN 베트남</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>지역 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on3">
+							<li><a href="#">다낭</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>교통수단 유형 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div id="step4" class="class_on4">
+							<li><a href="#교통수단 가격설정">교통수단 유형은 가격설정에서 선택</a></li>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 교통수단 기본 정보</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>랜드사 교통수단 불러오기</th>
+							<td colspan="3">
+							<button type="button" class="button-A" onclick="myPopup1()">랜드사 교통수단선택</button>
+							</td>
+						</tr>
+						<tr>
+							<th>교통수단 로고</th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 * x * 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>랜드사명 <span class="color-A">*</span></th>
+							<td>
+								<div class="sel">
+									<select class="w-G">
+										<option value="랜드사 선택">랜드사 선택</option>
+										<option value="A랜드사">A랜드사</option>
+										<option value="B랜드사">B랜드사</option>
+									</select>
+								</div>
+							</td>
+							<th>랜드사 연락처</th>
+							<td>02-0000-0000</td>
+						</tr>
+						<tr>
+							<th>상품명 <span class="color-A">*</span></th>
+							<td colspan="3"><input type="text" class="w-H" placeholder="하노이 공항에서 숙소까지"></td>
+						</tr>
+						<tr>
+							<th>교통수단 픽업주소 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<input type="text" class="w-C" placeholder="560000"/><button type="button" class="button-A">주소검색</button><br />
+								<input type="text" class="w-H" placeholder="XXWW+2GH, Hoà Phú, Hòa Vang, Đà Nẵng, 베트남"/>
+								<input type="text" class="w-H" placeholder=""/>
+							</td>
+						</tr>
+						<tr>
+							<th>위도 <span class="color-A">*</span></th>
+							<td>
+								<input type="text" class="w-G" placeholder="15.794854233954853" required/>
+							</td>
+							<th>경도 <span class="color-A">*</span></th>
+							<td>
+								<input type="text" class="w-G" placeholder="108.42019459644911" required/>
+							</td>
+						</tr>
+						<tr>
+							<th>한줄교통수단평 <span class="color-A">*</span></th>
+							<td colspan="3"><input type="text" class="w-H" /></td>
+						</tr>
+						<tr>
+							<th>교통수단코드 <span class="color-A">*</span></th>
+							<td class="td_w">
+								<div class="c_box">
+									<p><input type="checkbox" id="chch" checked /><label for="chch"><span></span>교통수단 등록시 자동 생성됩니다.</label></p>
+								</div>
+							</td>
+							<th>자체 교통수단코드 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-G" /><button type="button" class="button-A" onclick="location.href='#'">중복확인</button></td>
+						</tr>
+						<tr>
+						<th>바코드</th>
+							<td colspan="3"><input type="text" class="w-G" /></td>
+						</tr>					
+						<tr>
+							<th>QR코드 </th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 300 x 300 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 가이드 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>신규 가이드 등록</th>
+							<td colspan="3">
+							<button type="button" class="button-A" onclick="myPopup5()">신규 가이드 등록</button>
+							</td>
+						</tr>
+						<tr>
+							<th>가이드 리스트</th>
+								<td colspan="3"><div class="dein_table mt15 mb10">
+									<table>
+										<thead>
+											<tr>
+												<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+												<th>번호</th>
+												<th>소속</th>
+												<th>이름</th>
+												<th>국적</th>
+												<th>언어</th>
+												<th>보유차량</th>
+												<th>인승</th>
+												<th>현지 연락처</th>
+												<th>카톡 연락처</th>
+												<th>메모</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>3</td>
+												<td>A랜드사</td>
+												<td>홍길동</td>
+												<td>KO 대한민국</td>
+												<td>한국어 가능</td>
+												<td>버스</td>
+												<td>25인승</td>
+												<td>+82 011-2222-2222</td>
+												<td>@idabcd</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>2</td>
+												<td>A랜드사</td>
+												<td>홍길동</td>
+												<td>KO 대한민국</td>
+												<td>한국어 가능</td>
+												<td>승용차</td>
+												<td>5인승</td>
+												<td>+82 011-2222-2222</td>
+												<td>@idabcd</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>1</td>
+												<td>A랜드사</td>
+												<td>홍길동</td>
+												<td>KO 대한민국</td>
+												<td>한국어 가능</td>
+												<td>승합차</td>
+												<td>9인승</td>
+												<td>+82 011-2222-2222</td>
+												<td>@idabcd</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="mt10">
+										<button type="button" class="button-A" onclick="location.href='#'">선택 완료</button>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2 id="교통수단 가격설정"><i class="xi-lightbulb-o"></i> 교통수단 가격 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>노출 환율 <span class="color-A">*</span></th>
+							<td class="td_w">
+								<div class="sel">
+									<select class="w-G">
+										<option value="대한민국 KRM">대한민국 KRM</option>
+										<option value="남아프리카 공화국 ZAR">남아프리카 공화국 ZAR</option>
+										<option value="네발 NPR">네발 NPR</option>
+										<option value="노르웨이 NOK">노르웨이 NOK</option>
+										<option value="뉴질랜드 NZD">뉴질랜드 NZD</option>
+										<option value="대만 TWD">대만 TWD</option>
+										<option value="덴마크 DKK">덴마크 DKK</option>
+										<option value="러시아 RUB">러시아 RUB</option>
+										<option value="마카오 MOP">마카오 MOP#</option>
+										<option value="말레이시아 MYR">말레이시아 MYR</option>
+										<option value="멕시코 MXN">멕시코 MXN</option>
+										<option value="몽골 MNT">몽골 MNT</option>
+										<option value="미국 USD">미국 USD</option>
+										<option value="바레인 BHD">바레인 BHD</option>
+										<option value="방글라데시 BDT">방글라데시 BDT</option>
+										<option value="베트남 VND">베트남 VND</option>
+										<option value="브라질 BRL">브라질 BRL</option>
+										<option value="브루나이 BND">브루나이 BND</option>
+										<option value="사우디아라비아 SAR">사우디아라비아 SAR</option>
+										<option value="스웨덴 SEK">스웨덴 SEK</option>
+										<option value="스위스 CHF">스위스 CHF</option>
+										<option value="싱가포르 SGD">싱가포르 SGD</option>
+										<option value="아랍에미리트 AED">아랍에미리트 AED</option>
+										<option value="영국 GBP">영국 GBP</option>
+										<option value="오만 OMG">오만 OMG</option>
+										<option value="요르단 JOD">요르단 JOD</option>
+										<option value="유럽연합 EUR">유럽연합 EUR</option>
+										<option value="이스라엘 ILS">이스라엘 ILS</option>
+										<option value="이집트 EGP">이집트 EGP</option>
+										<option value="인도 INR">인도 INR</option>
+										<option value="인도네시아 IDR">인도네시아 IDR</option>
+										<option value="일본 JPY">일본 JPY</option>
+										<option value="중국 CNY">중국 CNY</option>
+										<option value="체코 CZK">체코 CZK</option>
+										<option value="칠레 CLP">칠레 CLP</option>
+										<option value="카자흐스탄 KZT">카자흐스탄 KZT</option>
+										<option value="카타르 QAR">카타르 QAR</option>
+										<option value="캐나다 CAD">캐나다 CAD</option>
+										<option value="쿠웨이트 KWD">쿠웨이트 KWD</option>
+										<option value="태국 THB">태국 THB</option>
+										<option value="터키 TRY">터키 TRY</option>
+										<option value="파키스탄 PKR">파키스탄 PKR</option>
+										<option value="폴란드 PLN">폴란드 PLN</option>
+										<option value="필리핀 html">필리핀 html</option>
+										<option value="헝가리 HUF">헝가리 HUF</option>
+										<option value="호주 AUD">호주 AUD</option>
+										<option value="홍콩 HKD">홍콩 HKDN</option>
+									</select>
+								</div>
+							</td>
+							<th>교통수단 가격설정 <span class="color-A">*</span></th>
+							<td>
+							<button type="button" class="button-A" onclick="myPopup3()">가격설정</button>
+							</td>
+						</tr>
+						<tr>
+							<th>교통수단 가격 리스트</th>
+							<td colspan="3">
+								<div class="dein_table mt15 mb10">
+									<table>
+										<thead>
+											<tr>
+												<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+												<th>번호</th>
+												<th>출발지</th>
+												<th>도착지</th>
+												<th>교통수단</th>
+												<th>가이드</th>
+												<th>옵션속성</th>
+												<th>옵션코드</th>
+												<th>노출상태</th>
+												<th>메모</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>3</td>
+												<td>인터네셔날 하노이</td>
+												<td>인터네셔날 하노이</td>
+												<td>승용차</td>
+												<td>포함</td>
+												<td>4인 종일 관광일정 이용권</td>
+												<td>000000000</td>
+												<td>
+													<select>
+														<option value="노출함">노출함</option>
+														<option value="노출안함">노출안함</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>2</td>
+												<td>인터네셔날 하노이</td>
+												<td>인터네셔날 하노이</td>
+												<td>승용차</td>
+												<td>불포함</td>
+												<td>2인 오후일정 이용권</td>
+												<td>000000000</td>
+												<td>
+													<select>
+														<option value="노출안함">노출안함</option>
+														<option value="노출함">노출함</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>1</td>
+												<td>HAN 노이바이 공항</td>
+												<td>인터네셔날 하노이</td>
+												<td>승용차</td>
+												<td>포함</td>
+												<td>4인 픽업 이용권</td>
+												<td>000000000</td>
+												<td>
+													<select>
+														<option value="노출안함">노출안함</option>
+														<option value="노출함">노출함</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="mt10">
+										<button type="button" class="button-A" onclick="location.href='#'">선택 삭제</button>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 교통수단 이미지 등록</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>썸네일 이미지 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<div class="stit"><span></span>메인 썸네일</div>
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 520 x 520 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+								<div class="stit"><span></span>상세 썸네일</div>
+								<!-- 상세 썸네일 드래그&드롭 -->
+								<div class="client_list">
+									<ul id="sortable">
+										<li>
+											<img src="/design/travel/manager/images/client_01.png" alt="">
+											<div class="mod">
+												<button type="button" class="btn_imgup">수정</button>
+												<button type="button">삭제</button>
+											</div>
+										</li>
+									<ul>
+									<ul id="sortable">
+										<li>
+											<img src="/design/travel/manager/images/client_02.png" alt="">
+											<div class="mod">
+												<button type="button" class="btn_imgup">수정</button>
+												<button type="button">삭제</button>
+											</div>
+										</li>
+									<ul>
+										<li class="bin">
+											<img src="/design/travel/manager/images/client_00.png" alt="">
+											<div class="btn">
+												<button type="button" class="btn_imgup">추가등록</button>
+											</div>
+										</li>
+									</ul>
+									<!-- 이미지등록 -->
+									<div class="imgup">
+										<div class="imgup_inn">
+											<p class="tit"><i class="xi-lightbulb-o"></i> 이미지파일 등록</p>
+											<div class="input_file">
+												<p class="hidden_file">
+													<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+												</p>
+												<p class="show_file">
+													<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+												</p>
+											</div>
+											<span class="comment"><i class="xi-error-o"></i> 권장사이즈 520 x 520 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+											<div class="img_view">
+												<img src="" alt="">
+												<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+											</div>
+											<p class="btn"><button type="button">등록</button></p>
+											<p class="close"><i class="xi-close"></i></p>
+										</div>
+									</div>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 드래그 & 드롭 방식으로 노출순서 지정 가능</span>
+								<div class="stit"><span></span>리스트 썸네일</div>
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 260 x 260 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>상품 상세설명 <span class="color-A">*</span><br /> 이미지</th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 980 x n 픽셀이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>상세이미지<br />
+							HTML편집기</th>
+							<td colspan="3">
+								<textarea class="summernote"></textarea>
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 메모</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write gro">
+				<table>
+					<tbody>				
+						<tr>
+							<th>메모</th>
+							<td>
+								<textarea class="w-100 h-C"/></textarea>
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

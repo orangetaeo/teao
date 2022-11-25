@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 좌석 등급별 가격 설정</h2>
+		</div>
+		<div class="conbox">
+			<div class="tab_area">
+				<button type="button" class="button-B on" onclick="location.href='economy.html'">이코노미</button>
+				<button type="button" class="button-B" onclick="location.href='prestige.html'">프레스티지</button>
+				<button type="button" class="button-B" onclick="location.href='business.html'">비즈니스</button>
+				<button type="button" class="button-B" onclick="location.href='first.html'">퍼스트</button>
+				<button type="button" class="button-B" onclick="location.href='directinput.html'">직접입력</button>
+			</div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<div class="dein_table mt15 mb10">
+									<table>
+										<thead>
+											<tr>
+												<th>연령</th>
+												<th>매입가</th>
+												<th>판매가</th>
+												<th>공급가</th>
+												<th>좌석코드</th>
+												<th>노출상태</th>
+												<th>품절상태</th>
+												<th>메모</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>성인</td>
+												<td class="td_won"><input type="text" class="w-C ta-r" placeholder="100,000" required/></td>
+												<td class="td_won"><input type="text" class="w-C ta-r" placeholder="150,000" required/></td>
+												<td class="td_won"><input type="text" class="w-C ta-r" placeholder="130,000" required/></td>
+												<td><input type="text" class="w-F" required/></td>
+												<td>
+													<select>
+														<option value="노출함">노출함</option>
+														<option value="노출안함">노출안함</option>
+													</select>
+												</td>
+												<td>
+													<select>
+														<option value="정상">정상</option>
+														<option value="품절">품절</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-G" required/></td>
+											</tr>
+											<tr>
+												<td>아동</td>
+												<td class="td_won"><input type="text" class="w-C ta-r" placeholder="80,000" required/></td>
+												<td class="td_won"><input type="text" class="w-C ta-r" placeholder="130,000" required/></td>
+												<td class="td_won"><input type="text" class="w-C ta-r" placeholder="100,000" required/></td>
+												<td><input type="text" class="w-F" required/></td>
+												<td>
+													<select>
+														<option value="노출함">노출함</option>
+														<option value="노출안함">노출안함</option>
+													</select>
+												</td>
+												<td>
+													<select>
+														<option value="정상">정상</option>
+														<option value="품절">품절</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-G" required/></td>
+											</tr>
+											<tr>
+												<td>유아</td>
+												<td class="td_won"><input type="text" class="w-C ta-r" placeholder="50,000" required/></td>
+												<td class="td_won"><input type="text" class="w-C ta-r" placeholder="100,000" required/></td>
+												<td class="td_won"><input type="text" class="w-C ta-r" placeholder="70,000" required/></td>
+												<td><input type="text" class="w-F" required/></td>
+												<td>
+													<select>
+														<option value="노출함">노출함</option>
+														<option value="노출안함">노출안함</option>
+													</select>
+												</td>
+												<td>
+													<select>
+														<option value="정상">정상</option>
+														<option value="품절">품절</option>
+													</select>
+												</td>
+												<td><input type="text" class="w-G" required/></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="mark"><i class="xi-error-o"></i> 각 좌석탭을 선택하여 가격을 입력하세요.</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">취소</button><button type="button" onclick="window.close();">입력완료</button></p>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<title> CTI+talk 창 </title>
+<link rel="shortcut icon" href="/design/test001/admin2/images/favicon.ico" />
+<link rel="stylesheet" href="/design/test001/admin2/fontawesome-free-5.0.6/web-fonts-with-css/css/fontawesome-all.min.css" /><!-- fontawesome 새로운버전 -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"><!-- 네이버 XEICON 아이콘 -->
+<link rel="stylesheet" type="text/css" href="/design/test001/admin2/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="/design/test001/admin2/css/cs.css" />
+<script type="text/Javascript" src="/design/test001/admin2/js/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="/design/test001/admin2/js/cs.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<!-- 문자직접입력 (팝업) -->
+	<div class="pop_sms_write">
+		<h3>문자직접입력 발송</h3>
+		<table>
+			<tbody>
+				<tr>
+					<th>문자제목</th>
+					<td class="wtd wid"><input type="text"></td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>상담고객</th>
+					<td class="wtd">홍길동 TEST_ID_001</td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>상담원</th>
+					<td class="wtd">컴호미</td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>수신자 번호</th>
+					<td class="wtd">
+						<div class="p_phone wE"><input type="text" class="input_phone" maxlength="4" /> - <input type="text" class="input_phone" maxlength="4" /> - <input type="text" class="input_phone" maxlength="4" /></div>
+					</td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>발신자 번호</th>
+					<td class="wtd">
+						<select class="wE">
+							<option value="010-2345-6789">010-2345-6789</option>
+							<option value="010-0000-0000">010-0000-0000</option>
+						</select>
+					</td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>이미지첨부</th>
+					<td class="wtd">
+						<div class="input_file">
+							<p class="hidden_file">
+								<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt1').value=this.value;" />
+							</p>
+							<p class="show_file">
+								<input type="text" name="" id="txt1" placeholder="파일을 선택해주세요" readonly="readonly" />
+							</p>
+						</div>
+						<div class="input_file mt3">
+							<p class="hidden_file">
+								<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt1').value=this.value;" />
+							</p>
+							<p class="show_file">
+								<input type="text" name="" id="txt1" placeholder="파일을 선택해주세요" readonly="readonly" />
+							</p>
+						</div>
+						<div class="input_file mt3">
+							<p class="hidden_file">
+								<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt1').value=this.value;" />
+							</p>
+							<p class="show_file">
+								<input type="text" name="" id="txt1" placeholder="파일을 선택해주세요" readonly="readonly" />
+							</p>
+						</div>
+					</td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>이미지미리보기</th>
+					<td class="wtd">
+						<p class="img_box"></p>
+						<p class="img_box"></p>
+						<p class="img_box"></p>
+					</td>
+					<td class="bor"></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="write">
+			<dl>
+				<dt><i class="xi-mail-read-o"></i> 문자내용</dt>
+				<dd><textarea class="b0" placeholder="문자내용을 입력해주세요"></textarea></dd>
+			</dl>
+			<div class="input_checkbox box2">
+				<p><input type="checkbox" id="soo1" name="soo" checked /><label for="soo1"><span></span>080 수신거부넣기</label></p>
+			</div>
+		</div>
+		<div class="complete">
+			<p>
+				<button type="button" onclick="window.close();">발송하기</button><button type="button" onclick="window.close();">발송취소</button>
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

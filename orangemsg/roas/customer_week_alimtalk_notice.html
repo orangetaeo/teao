@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../orange_header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../orange_snb_item.html";
+	?>
+	<div class="content">
+		<!-- navi -->
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="/design/wave/manager/orangemsg/roas/dashboard.html">ROAS</a> &gt; <a href="/design/wave/manager/orangemsg/roas/dashboard.html">데쉬보드</a> &gt; <a href="/design/wave/manager/orangemsg/roas/customer_week_alimtalk_member.html">요일별분석</a></p>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="fas fa-bookmark"></i> 알림톡 요일별분석</h2>
+		</div>
+			<!-- 리스트 탭영역 -->
+			<div class="tab_area">
+				<button type="button" class="button-B on" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_alimtalk_member.html'"><i class="xi-lightbulb"></i> 알림톡</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_friendtalk_member.html'"><i class="xi-lightbulb"></i> 친구톡</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_dm_member.html'"><i class="xi-lightbulb"></i> 문자</button></label>
+			</div>
+			<!-- 리스트 탭영역 -->
+			<div class="tab_area">
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_alimtalk_member.html'"> 회원</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_alimtalk_order.html'"> 제품 및 카테고리별 주문</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_alimtalk_cart.html'"> 장바구니 & 위시리스트</button></label>
+				<button type="button" class="button-B" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_alimtalk_coupon.html'"> 쿠폰 & 적립금</button></label>
+				<button type="button" class="button-B on" onclick="location.href='/design/wave/manager/orangemsg/roas/customer_week_alimtalk_notice.html'"> 공지사항</button></label>
+			</div>
+		<div class="conbox position_w">
+			<!-- 리스트 검색영역 -->
+			<div class="list_top">
+				<div class="search_area">
+					<div class="area_nomal">
+						<table>
+							<tbody>
+								<tr>
+									<th>쇼핑몰명</th>
+									<td>
+										<div class="c_box m-A">
+										<p><input type="checkbox" name="shopname" id="shopname0" checked><label for="shopname0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="shopname" id="shopname1" ><label for="shopname1"><span></span>쇼핑몰명1</label></p>
+										<p><input type="checkbox" name="shopname" id="shopname2" ><label for="shopname2"><span></span>쇼핑몰명2</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>기간검색</th>
+									<td class="td_day">
+										<div>
+											<select>
+												<option value="전체">전체</option>
+												<option value="가입일">가입일</option>
+												<option value="로그인일">로그인일</option>
+											</select>
+											<input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i>
+										</div>
+										<div class="day_day">
+											<button type="button">오늘</button>
+											<button type="button">어제</button>
+											<button type="button" class="on">일주일</button>
+											<button type="button">이번달</button>
+											<button type="button">1개월</button>
+											<button type="button">3개월</button>
+											<button type="button">1년</button>
+										</div>
+									</td>
+									<td class="td_btn">
+										<div class="td_btn_area">
+											<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+											<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="area_detail">
+						<table>
+							<tbody>
+								<tr>
+									<th>카테고리</th>
+									<td class="td_category">
+										<select>
+											<option value="대분류선택">대분류선택</option>
+										</select>
+										<select>
+											<option value="중분류선택">중분류선택</option>
+										</select>
+										<select>
+											<option value="소분류선택">소분류선택</option>
+										</select>
+										<select>
+											<option value="상세분류선택">상세분류선택</option>
+										</select>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>검색어</th>
+									<td>
+										<select>
+											<option value="상품명">상품명</option>
+											<option value="상품코드">상품코드</option>
+											<option value="자체상품코드">자체상품코드</option>
+											<option value="공급사">공급사</option>
+										</select>
+										<input type="search" class="input_search" placeholder="상품명, 상품코드, 자체상품코드, 공급사">	
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>템플릿명</th>
+									<td>
+										<input type="search" class="input_search" placeholder="템플릿명">	
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>공지명(등록일 기준)</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice0" checked><label for="choice0"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+										<p><input type="checkbox" name="registration_date" id="registration_date0" checked><label for="registration_date0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="registration_date" id="registration_date1"><label for="registration_date1"><span></span>1일</label></p>
+										<p><input type="checkbox" name="registration_date" id="registration_date2"><label for="registration_date2"><span></span>3일</label></p>
+										<p><input type="checkbox" name="registration_date" id="registration_date3"><label for="registration_date3"><span></span>5일</label></p>
+										<p><input type="checkbox" name="registration_date" id="registration_date4"><label for="registration_date4"><span></span>10일</label></p>
+										<p><input type="checkbox" name="registration_date" id="registration_date5"><label for="registration_date5"><span></span>15일</label></p>
+										<p><input type="checkbox" name="registration_date" id="registration_date6"><label for="registration_date6"><span></span>20일</label></p>
+										<p><input type="checkbox" name="registration_date" id="registration_date7"><label for="registration_date7"><span></span>25일</label></p>
+										<p><input type="checkbox" name="registration_date" id="registration_date8"><label for="registration_date8"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>배송지연</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice1"><label for="choice1"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+										<p><input type="checkbox" name="delays_delivery" id="delays_delivery0" checked><label for="delays_delivery0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="delays_delivery" id="delays_delivery1"><label for="delays_delivery1"><span></span>1일</label></p>
+										<p><input type="checkbox" name="delays_delivery" id="delays_delivery2"><label for="delays_delivery2"><span></span>3일</label></p>
+										<p><input type="checkbox" name="delays_delivery" id="delays_delivery3"><label for="delays_delivery3"><span></span>5일</label></p>
+										<p><input type="checkbox" name="delays_delivery" id="delays_delivery4"><label for="delays_delivery4"><span></span>10일</label></p>
+										<p><input type="checkbox" name="delays_delivery" id="delays_delivery5"><label for="delays_delivery5"><span></span>15일</label></p>
+										<p><input type="checkbox" name="delays_delivery" id="delays_delivery6"><label for="delays_delivery6"><span></span>20일</label></p>
+										<p><input type="checkbox" name="delays_delivery" id="delays_delivery7"><label for="delays_delivery7"><span></span>25일</label></p>
+										<p><input type="checkbox" name="delays_delivery" id="delays_delivery8"><label for="delays_delivery8"><span></span>30일</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>약관개정</th>
+									<td>
+										<div class="r_circle fl">
+											<p><input type="radio" name="choice" id="choice2"><label for="choice2"><span></span>선택</label></p>
+										</div>
+										<div class="c_box m-A">
+										<p><input type="checkbox" name="revision_agreement" id="revision_agreement0" checked><label for="revision_agreement0"><span></span>회원전체</label></p>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- 타이틀 -->
+				<div class="title">
+					<h2><i class="xi-lightbulb-o"></i> 알림톡 공지사항 요일별 분석내역</h2>
+				</div>
+				<div class="conbox">
+					<!-- 리스트 상단영역 -->
+					<div class="list_top">
+						<p class="p_total">업데이트 : <span class="color-A">0000-00-00 00:00</span></p>
+						<p class="excel">
+							<a href="#"><i class="xi-download"></i> 엑셀 다운로드</a>
+						</p>
+					</div>
+					<!-- 리스트 -->
+					<div class="list">
+						<table>
+							<thead>
+								<tr>
+									<th rowspan="2">발송요일</th>
+									<th colspan="2">발송</th>
+									<th rowspan="2">총발송건수</th>
+									<th rowspan="2">로그인 횟수</th>
+									<th rowspan="2">신규가입자</th>
+									<th rowspan="2">방문율</th>
+									<th rowspan="2">클릭율</th>
+									<th rowspan="2">결제완료 상품수</th>
+									<th rowspan="2">결제상품 판매금액</th>
+									<th rowspan="2">발송비용</th>
+									<th rowspan="2">ROAS</th>
+								</tr>
+								<tr>
+									<th>알림톡</th>
+									<th>문자</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>월요일</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>화요일</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>수요일</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>목요일</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>금요일</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>토요일</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+								<tr>
+									<td>일요일</td>
+									<td>90</td>
+									<td>10</td>
+									<td>100</td>
+									<td>50회</td>
+									<td>15명</td>
+									<td>80%</td>
+									<td>70%</td>
+									<td>120개</td>
+									<td>1,200,000원</td>
+									<td>200,000원</td>
+									<td>600%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

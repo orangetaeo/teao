@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 이용시설 및 어메니티 등록</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>룸타입 선택 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<select class="w-G">
+									<option value="룸타입 선택">룸타입 선택</option>
+									<option value="디럭스룸">디럭스룸</option>
+									<option value="45평형">45평형</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>이용시설 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<table>
+									<tr style="border-top:1px solid #92a9d4;">
+										<th>편의시설 </th>
+										<td colspan="3">
+											<div class="c_box">
+												<p>
+													<input type="checkbox" name="frontdest_facilities" id="frontdest_facilities0" checked required /><label for="frontdest_facilities0"><span></span>전체</label>
+													<input type="checkbox" name="frontdest_facilities" id="frontdest_facilities1" checked required /><label for="frontdest_facilities1"><span></span>짐보관 서비스</label>
+													<input type="checkbox" name="frontdest_facilities" id="frontdest_facilities2" checked required /><label for="frontdest_facilities2"><span></span>셔틀서비스</label>
+													<input type="checkbox" name="frontdest_facilities" id="frontdest_facilities3" checked required /><label for="frontdest_facilities3"><span></span>세탁시설</label>
+													<input type="checkbox" name="frontdest_facilities" id="frontdest_facilities4" checked required /><label for="frontdest_facilities4"><span></span>세탁서비스</label>
+													<input type="checkbox" name="frontdest_facilities" id="frontdest_facilities5" checked required /><label for="frontdest_facilities5"><span></span>안전금고(프론트데스크)</label>
+												</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>운동시설 </th>
+										<td colspan="3">
+											<div class="c_box">
+												<p>
+													<input type="checkbox" name="sports_facilities" id="sports_facilities0" checked required /><label for="sports_facilities0"><span></span>전체</label>
+													<input type="checkbox" name="sports_facilities" id="sports_facilities1" checked required /><label for="sports_facilities1"><span></span>피트니스 센터</label>
+													<input type="checkbox" name="sports_facilities" id="sports_facilities2" checked required /><label for="sports_facilities2"><span></span>탁구장</label>
+													<input type="checkbox" name="sports_facilities" id="sports_facilities3" checked required /><label for="sports_facilities3"><span></span>테니스장</label>
+													<input type="checkbox" name="sports_facilities" id="sports_facilities4" checked required /><label for="sports_facilities4"><span></span>골프장</label>
+													<input type="checkbox" name="sports_facilities" id="sports_facilities5" checked required /><label for="sports_facilities5"><span></span>수영장</label>
+												</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>여가시설 </th>
+										<td colspan="3">
+											<div class="c_box">
+												<p>
+													<input type="checkbox" name="leisure_facilities" id="leisure_facilities0" checked required /><label for="leisure_facilities0"><span></span>전체</label>
+													<input type="checkbox" name="leisure_facilities" id="leisure_facilities1" checked required /><label for="leisure_facilities1"><span></span>사우나</label>
+													<input type="checkbox" name="leisure_facilities" id="leisure_facilities2" checked required /><label for="leisure_facilities2"><span></span>스파</label>
+													<input type="checkbox" name="leisure_facilities" id="leisure_facilities3" checked required /><label for="leisure_facilities3"><span></span>마사지</label>
+													<input type="checkbox" name="leisure_facilities" id="leisure_facilities4" checked required /><label for="leisure_facilities4"><span></span>워터파크</label>
+													<input type="checkbox" name="leisure_facilities" id="leisure_facilities5" checked required /><label for="leisure_facilities5"><span></span>전용해변</label>
+													<input type="checkbox" name="leisure_facilities" id="leisure_facilities6" checked required /><label for="leisure_facilities6"><span></span>키즈클럽</label>
+													<input type="checkbox" name="leisure_facilities" id="leisure_facilities7" checked required /><label for="leisure_facilities7"><span></span>어린이수영장</label>
+													<input type="checkbox" name="leisure_facilities" id="leisure_facilities8" checked required /><label for="leisure_facilities8"><span></span>유아풀</label>
+												</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>식당 및 바 </th>
+										<td colspan="3">
+											<div class="c_box">
+												<p>
+													<input type="checkbox" name="restaurant_facilities" id="restaurant_facilities0" checked required /><label for="restaurant_facilities0"><span></span>전체</label>
+													<input type="checkbox" name="restaurant_facilities" id="restaurant_facilities1" checked required /><label for="restaurant_facilities1"><span></span>레스토랑</label>
+													<input type="checkbox" name="restaurant_facilities" id="restaurant_facilities2" checked required /><label for="restaurant_facilities2"><span></span>스낵바</label>
+													<input type="checkbox" name="restaurant_facilities" id="restaurant_facilities3" checked required /><label for="restaurant_facilities3"><span></span>BAR</label>
+													<input type="checkbox" name="restaurant_facilities" id="restaurant_facilities4" checked required /><label for="restaurant_facilities4"><span></span>커피숍</label>
+													<input type="checkbox" name="restaurant_facilities" id="restaurant_facilities5" checked required /><label for="restaurant_facilities5"><span></span>편의점</label>
+												</p>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<th>어메니티 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<table>
+									<tr style="border-top:1px solid #92a9d4;">
+										<th>전자기기 </th>
+										<td colspan="3">
+											<div class="c_box">
+												<p>
+													<input type="checkbox" name="electronic_amenity" id="electronic_amenity0" checked required /><label for="electronic_amenity0"><span></span>전체</label>
+													<input type="checkbox" name="electronic_amenity" id="electronic_amenity1" checked required /><label for="electronic_amenity1"><span></span>TV</label>
+													<input type="checkbox" name="electronic_amenity" id="electronic_amenity2" checked required /><label for="electronic_amenity2"><span></span>DVD데크</label>
+													<input type="checkbox" name="electronic_amenity" id="electronic_amenity3" checked required /><label for="electronic_amenity3"><span></span>WIFI</label>
+													<input type="checkbox" name="electronic_amenity" id="electronic_amenity4" checked required /><label for="electronic_amenity4"><span></span>가습기</label>
+													<input type="checkbox" name="electronic_amenity" id="electronic_amenity5" checked required /><label for="electronic_amenity5"><span></span>공기청정기</label>
+													<input type="checkbox" name="electronic_amenity" id="electronic_amenity6" checked required /><label for="electronic_amenity6"><span></span>알람시계</label>
+													<input type="checkbox" name="electronic_amenity" id="electronic_amenity7" checked required /><label for="electronic_amenity7"><span></span>냉장고</label>
+													<input type="checkbox" name="electronic_amenity" id="electronic_amenity8" checked required /><label for="electronic_amenity8"><span></span>전기주전자</label>
+													<input type="checkbox" name="electronic_amenity" id="electronic_amenity9" checked required /><label for="electronic_amenity9"><span></span>에어컨</label>
+													<input type="checkbox" name="electronic_amenity" id="electronic_amenity10" checked required /><label for="electronic_amenity10"><span></span>전화기</label>
+													<input type="checkbox" name="electronic_amenity" id="electronic_amenity11" checked required /><label for="electronic_amenity11"><span></span>다리미</label>
+													<input type="checkbox" name="electronic_amenity" id="electronic_amenity12" checked required /><label for="electronic_amenity12"><span></span>헤어드라이어</label>
+												</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>욕실용품 </th>
+										<td colspan="3">
+											<div class="c_box">
+												<p>
+													<input type="checkbox" name="bathroom_amenity" id="bathroom_amenity0" checked required /><label for="bathroom_amenity0"><span></span>전체</label>
+													<input type="checkbox" name="bathroom_amenity" id="bathroom_amenity1" checked required /><label for="bathroom_amenity1"><span></span>샴프&린스</label>
+													<input type="checkbox" name="bathroom_amenity" id="bathroom_amenity2" checked required /><label for="bathroom_amenity2"><span></span>바디샴푸</label>
+													<input type="checkbox" name="bathroom_amenity" id="bathroom_amenity3" checked required /><label for="bathroom_amenity3"><span></span>페이스&면도비누</label>
+													<input type="checkbox" name="bathroom_amenity" id="bathroom_amenity4" checked required /><label for="bathroom_amenity4"><span></span>샤워 캡</label>
+													<input type="checkbox" name="bathroom_amenity" id="bathroom_amenity5" checked required /><label for="bathroom_amenity5"><span></span>면봉</label>
+													<input type="checkbox" name="bathroom_amenity" id="bathroom_amenity6" checked required /><label for="bathroom_amenity6"><span></span>면도기</label>
+													<input type="checkbox" name="bathroom_amenity" id="bathroom_amenity7" checked required /><label for="bathroom_amenity7"><span></span>목욕타월</label>
+													<input type="checkbox" name="bathroom_amenity" id="bathroom_amenity8" checked required /><label for="bathroom_amenity8"><span></span>목욕가운</label>
+													<input type="checkbox" name="bathroom_amenity" id="bathroom_amenity9" checked required /><label for="bathroom_amenity9"><span></span>비대</label>
+												</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>숙소용품 </th>
+										<td colspan="3">
+											<div class="c_box">
+												<p>
+													<input type="checkbox" name="equipment_amenity" id="equipment_amenity0" checked required /><label for="equipment_amenity0"><span></span>전체</label>
+													<input type="checkbox" name="equipment_amenity" id="equipment_amenity1" checked required /><label for="equipment_amenity1"><span></span>드립커피</label>
+													<input type="checkbox" name="equipment_amenity" id="equipment_amenity2" checked required /><label for="equipment_amenity2"><span></span>인스턴트커피</label>
+													<input type="checkbox" name="equipment_amenity" id="equipment_amenity3" checked required /><label for="equipment_amenity3"><span></span>컵</label>
+													<input type="checkbox" name="equipment_amenity" id="equipment_amenity4" checked required /><label for="equipment_amenity4"><span></span>안전금고</label>
+													<input type="checkbox" name="equipment_amenity" id="equipment_amenity5" checked required /><label for="equipment_amenity5"><span></span>슬리퍼</label>
+													<input type="checkbox" name="equipment_amenity" id="equipment_amenity6" checked required /><label for="equipment_amenity6"><span></span>생수</label>
+													<input type="checkbox" name="equipment_amenity" id="equipment_amenity7" checked required /><label for="equipment_amenity7"><span></span>미니바</label>
+												</p>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<th>한줄메모 </th>
+							<td colspan="3" class="td_w">
+									<input type="text" class="w-100" required/>
+								</div>
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">취소</button><button type="button" onclick="window.close();">입력완료</button></p>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

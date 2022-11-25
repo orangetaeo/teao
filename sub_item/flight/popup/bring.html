@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+	<!-- 타이틀 -->
+	<div class="title">
+		<h2><i class="xi-lightbulb-o"></i> 항공편 불러오기</h2>
+	</div>
+		<div class="conbox position_w">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select class="w-E">
+											<option value="출발편">출발편</option>
+											<option value="귀국편">귀국편</option>
+											<option value="등록일">등록일</option>
+											<option value="수정일">수정일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2022-09-01">
+											<select>
+												<option value="시간">시간</option>
+												<option value="00시">00시</option>
+												<option value="01시">01시</option>
+												<option value="02시">02시</option>
+												<option value="03시">03시</option>
+												<option value="04시">04시</option>
+												<option value="05시">05시</option>
+												<option value="06시">06시</option>
+												<option value="07시">07시</option>
+												<option value="08시">08시</option>
+												<option value="09시">09시</option>
+												<option value="10시">10시</option>
+												<option value="11시">11시</option>
+												<option value="12시">12시</option>
+												<option value="13시">13시</option>
+												<option value="14시">14시</option>
+												<option value="15시">15시</option>
+												<option value="16시">16시</option>
+												<option value="17시">17시</option>
+												<option value="18시">18시</option>
+												<option value="19시">19시</option>
+												<option value="20시">20시</option>
+												<option value="21시">21시</option>
+												<option value="22시">22시</option>
+												<option value="23시">23시</option>
+											</select>
+											<select>
+												<option value="분">분</option>
+												<option value="00분">00분</option>
+												<option value="01분">01분</option>
+												<option value="02분">02분</option>
+												<option value="03분">03분</option>
+												<option value="04분">04분</option>
+												<option value="05분">05분</option>
+												<option value="06분">06분</option>
+												<option value="07분">07분</option>
+												<option value="08분">08분</option>
+												<option value="09분">09분</option>
+												<option value="10분">10분</option>
+												<option value="11분">11분</option>
+												<option value="12분">12분</option>
+												<option value="13분">13분</option>
+												<option value="14분">14분</option>
+												<option value="15분">15분</option>
+												<option value="16분">16분</option>
+												<option value="17분">17분</option>
+												<option value="18분">18분</option>
+												<option value="19분">19분</option>
+												<option value="20분">20분</option>
+												<option value="21분">21분</option>
+												<option value="22분">22분</option>
+												<option value="23분">23분</option>
+												<option value="24분">24분</option>
+												<option value="25분">25분</option>
+												<option value="26분">26분</option>
+												<option value="27분">27분</option>
+												<option value="28분">28분</option>
+												<option value="29분">29분</option>
+												<option value="30분">30분</option>
+												<option value="31분">31분</option>
+												<option value="32분">32분</option>
+												<option value="33분">33분</option>
+												<option value="34분">34분</option>
+												<option value="35분">35분</option>
+												<option value="36분">36분</option>
+												<option value="37분">37분</option>
+												<option value="38분">38분</option>
+												<option value="39분">39분</option>
+												<option value="40분">40분</option>
+												<option value="41분">41분</option>
+												<option value="42분">42분</option>
+												<option value="43분">43분</option>
+												<option value="44분">44분</option>
+												<option value="45분">45분</option>
+												<option value="46분">46분</option>
+												<option value="47분">47분</option>
+												<option value="48분">48분</option>
+												<option value="49분">49분</option>
+												<option value="50분">50분</option>
+												<option value="51분">51분</option>
+												<option value="52분">52분</option>
+												<option value="53분">53분</option>
+												<option value="54분">54분</option>
+												<option value="55분">55분</option>
+												<option value="56분">56분</option>
+												<option value="57분">57분</option>
+												<option value="58분">58분</option>
+												<option value="59분">59분</option>
+											</select>
+										<i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-09-31">
+											<select>
+												<option value="시간">시간</option>
+												<option value="00시">00시</option>
+												<option value="01시">01시</option>
+												<option value="02시">02시</option>
+												<option value="03시">03시</option>
+												<option value="04시">04시</option>
+												<option value="05시">05시</option>
+												<option value="06시">06시</option>
+												<option value="07시">07시</option>
+												<option value="08시">08시</option>
+												<option value="09시">09시</option>
+												<option value="10시">10시</option>
+												<option value="11시">11시</option>
+												<option value="12시">12시</option>
+												<option value="13시">13시</option>
+												<option value="14시">14시</option>
+												<option value="15시">15시</option>
+												<option value="16시">16시</option>
+												<option value="17시">17시</option>
+												<option value="18시">18시</option>
+												<option value="19시">19시</option>
+												<option value="20시">20시</option>
+												<option value="21시">21시</option>
+												<option value="22시">22시</option>
+												<option value="23시">23시</option>
+											</select>
+											<select>
+												<option value="분">분</option>
+												<option value="00분">00분</option>
+												<option value="01분">01분</option>
+												<option value="02분">02분</option>
+												<option value="03분">03분</option>
+												<option value="04분">04분</option>
+												<option value="05분">05분</option>
+												<option value="06분">06분</option>
+												<option value="07분">07분</option>
+												<option value="08분">08분</option>
+												<option value="09분">09분</option>
+												<option value="10분">10분</option>
+												<option value="11분">11분</option>
+												<option value="12분">12분</option>
+												<option value="13분">13분</option>
+												<option value="14분">14분</option>
+												<option value="15분">15분</option>
+												<option value="16분">16분</option>
+												<option value="17분">17분</option>
+												<option value="18분">18분</option>
+												<option value="19분">19분</option>
+												<option value="20분">20분</option>
+												<option value="21분">21분</option>
+												<option value="22분">22분</option>
+												<option value="23분">23분</option>
+												<option value="24분">24분</option>
+												<option value="25분">25분</option>
+												<option value="26분">26분</option>
+												<option value="27분">27분</option>
+												<option value="28분">28분</option>
+												<option value="29분">29분</option>
+												<option value="30분">30분</option>
+												<option value="31분">31분</option>
+												<option value="32분">32분</option>
+												<option value="33분">33분</option>
+												<option value="34분">34분</option>
+												<option value="35분">35분</option>
+												<option value="36분">36분</option>
+												<option value="37분">37분</option>
+												<option value="38분">38분</option>
+												<option value="39분">39분</option>
+												<option value="40분">40분</option>
+												<option value="41분">41분</option>
+												<option value="42분">42분</option>
+												<option value="43분">43분</option>
+												<option value="44분">44분</option>
+												<option value="45분">45분</option>
+												<option value="46분">46분</option>
+												<option value="47분">47분</option>
+												<option value="48분">48분</option>
+												<option value="49분">49분</option>
+												<option value="50분">50분</option>
+												<option value="51분">51분</option>
+												<option value="52분">52분</option>
+												<option value="53분">53분</option>
+												<option value="54분">54분</option>
+												<option value="55분">55분</option>
+												<option value="56분">56분</option>
+												<option value="57분">57분</option>
+												<option value="58분">58분</option>
+												<option value="59분">59분</option>
+											</select>
+										<i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">전체</button>
+										<button type="button">오늘</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>카테고리</th>
+								<td class="td_category">
+									<select>
+										<option value="대륙 선택">대륙 선택</option>
+										<option value="AC 아시아">AC 아시아</option>
+									</select>
+									<select>
+										<option value="국가 선택">국가 선택</option>
+										<option value="KO 대한민국">KO 대한민국</option>
+									</select>
+									<select>
+										<option value="항공사 선택">항공사 선택</option>
+										<option value="KE 대한항공">KE 대한항공</option>
+									</select>
+									<select>
+										<option value="공항 선택">공항 선택</option>
+										<option value="ICN 인천공항">ICN 인천공항</option>
+									</select>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>검색어</th>
+								<td>
+									<div class="sel">
+										<select class="w-E">
+											<option value="항공편코드">항공편코드</option>
+											<option value="출발지 선택">출발지 선택</option>
+											<option value="도착지 선택">도착지 선택</option>
+										</select>
+										<input type="search" class="w-S" placeholder="항공편코드, 출발지, 도착지 선택 후 검색.">	
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		<!-- 리스트 상단영역 -->
+		<div class="list_top">
+			<p class="p_total">총 조회수 : <span class="color-A">000건</span> (선택 : <span class="color-B">000건</span>)</p>
+		</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>랜드사명 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>항공코드 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>항공사로고 </span></th>
+							<th>항공사 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>등록자</th>
+							<th>등록/수정일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td class="name"><a href="/design/travel/manager/sub_item/flight/modify.html" target="_blank">A랜드사</td>
+							<td><a href="/design/travel/manager/sub_item/flight/modify.html" target="_blank">0000000000</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_item/flight/modify.html" target="_blank"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_tit"><p class="part">AC 아시아 > VN 베트남</p><a href="/design/travel/manager/sub_item/flight/modify.html" target="_blank">VJ 비엣젯</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/flight/modify.html" target="_blank">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/flight/modify.html" target="_blank">2022-09-02</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td class="name"><a href="/design/travel/manager/sub_item/flight/modify.html" target="_blank">B랜드사</td>
+							<td><a href="/design/travel/manager/sub_item/flight/modify.html" target="_blank">0000000000</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_item/flight/modify.html" target="_blank"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_tit"><p class="part">AC 아시아 > VN 베트남 > 다낭 > 호텔</p><a href="/design/travel/manager/sub_item/flight/modify.html" target="_blank">나만 리트리트</a></td>
+							<td class="name"><a href="/design/travel/manager/sub_item/flight/modify.html" target="_blank">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/flight/modify.html" target="_blank">2022-09-02</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">취소</button><button type="button" onclick="window.close();">선택완료</button></p>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

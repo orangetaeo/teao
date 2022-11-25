@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../../snb_customer.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">회원관리</a> &gt; <a href="#">회원관리 설정</a> &gt; <a href="#">회원등급 관리</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 회원등급 관리</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span></p>
+				<p class="p_up">
+					<button type="button" onclick="location.href='input.html'">등급 추가</button>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>회원등급</th>
+							<th>구매할인</th>
+							<th>구매건수</span></th>
+							<th>구매금액</span></th>
+							<th>리프레시 포인트</th>
+							<th>이용결제수단</th>
+							<th>등록일</span></th>
+							<th>등록자</th>
+							<th>회원수</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">일반회원</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">1.5%</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">7건</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">10,000원 ~ 100,000원</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">0.5%</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">제한없음</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">0000-00-00</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">관리자(master)</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">500</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">VIP</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">2.0%</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">7건</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">100,000원 ~ 300,000원</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">0.7%</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">제한없음</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">0000-00-00</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">관리자(master)</a></td>
+							<td><a href="/design/travel/manager/sub_customer/membership/class/modify.html">300</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove">
+					<button type="button">선택삭제</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "head_common.html"; 
+?>
+</head>
+<body>
+<div class="login_out">
+	<div class="login">
+		<div class="login_inner">
+			<div class="div_left">
+				<div class="div_left_inner">
+					<h1><img src="/design/travel/manager/images/logo_orangewave_o.png" alt="로고" /></h1>
+					<dl>
+						<dt>Welcome!<br />Orangetravel Manager.</dt>
+						<dd>Welcome to the client manager<br />of the orangetravel.</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="div_right">
+				<p class="pBox"><span><i class="fas fa-users"></i></span><input type="text" placeholder="groupname" /></p>
+				<p class="pBox"><span><i class="fas fa-user"></i></span><input type="text" placeholder="username" /></p>
+				<p class="pBox"><span><i class="fas fa-unlock-alt"></i></span><input type="password" placeholder="password" /></p>
+				<p class="savBox">
+					<input type="checkbox" id="sav1"><label for="sav1"><span></span>그룹</label>
+					<input type="checkbox" id="sav2"><label for="sav2"><span></span>아이디</label>
+					<input type="checkbox" id="sav3"><label for="sav3"><span></span>비밀번호 저장</label>
+				</p>
+				<p class="pBtn"><button type="submit" onclick="location.href='/design/travel/manager/main.html'">Login</button></p>
+				<p class="pSearch"><a href="#" class="btn_find_id">아이디찾기</a> / <a href="#" class="btn_find_pw">비밀번호찾기</a></p>
+				<p class="chrome">※ 크롬 브라우저 (Chrome Browser) 최적화</p>
+			</div>
+			<!-- 아이디찾기 -->
+			<div class="find_id">
+				<div class="tit">아이디찾기</div>
+				<ul>
+					<li>
+						<p class="inp"><input type="text" class="w_100" placeholder="이름"></p>
+					</li>
+					<li>
+						<p class="inp"><input type="email" class="w_a" placeholder="이메일"><button type="button">인증요청</button></p>
+					</li>
+					<li>
+						<p class="inp"><input type="text" class="w_a" placeholder="인증번호"><button type="button">인증확인</button></p>
+					</li>
+					<li class="result">
+						<p class="inp"><input type="text" class="w_100" placeholder="나의 아이디"></p>
+					</li>
+				</ul>
+				<div class="btn"><button type="button" class="done_find_id">아이디 확인</button></div>
+				<div class="close"><i class="xi-close"></i></div>
+			</div>
+			<!-- 비밀번호찾기 -->
+			<div class="find_pw">
+				<div class="tit">비밀번호찾기</div>
+				<ul>
+					<li>
+						<p class="inp"><input type="text" class="w_100" placeholder="이름"></p>
+					</li>
+					<li>
+						<p class="inp"><input type="text" class="w_100" placeholder="아이디"></p>
+					</li>
+					<li>
+						<p class="inp"><input type="email" class="w_a" placeholder="이메일"><button type="button">인증요청</button></p>
+					</li>
+					<li>
+						<p class="inp"><input type="text" class="w_a" placeholder="인증번호"><button type="button">인증확인</button></p>
+					</li>
+					<li class="result">
+						<p class="inp"><input type="password" class="w_100" placeholder="새 비밀번호"></p>
+					</li>
+					<li class="result">
+						<p class="inp"><input type="password" class="w_100" placeholder="새 비밀번호 확인"></p>
+					</li>
+				</ul>
+				<div class="btn"><button type="button" class="done_find_pw">비밀번호 변경</button></div>
+				<div class="close"><i class="xi-close"></i></div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

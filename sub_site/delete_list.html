@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../snb_site.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">서브사이트</a> &gt; <a href="#">서브사이트 설정</a> &gt; <a href="#">서브사이트 삭제리스트</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 서브사이트 삭제리스트</h2>
+		</div>
+		<div class="conbox position_w">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select class="w-E">
+											<option value="삭제일">삭제일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2022-08-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-08-31"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">전체</button>
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>카테고리</th>
+								<td class="td_category">
+									<select>
+										<option value="대분류">대분류</option>
+										<option value="해외여행">해외여행</option>
+										<option value="항공">항공</option>
+										<option value="호텔/펜션">호텔/펜션</option>
+										<option value="투어/입장권">투어/입장권</option>
+										<option value="허니문">허니문</option>
+										<option value="골프">골프</option>
+									</select>
+									<select>
+										<option value="중분류">중분류</option>
+										<option value="동남아/대만/서남아">동남아/대만/서남아</option>
+										<option value="괌/사이판/호주/뉴질랜드">괌/사이판/호주/뉴질랜드</option>
+										<option value="유럽/아프리카">유럽/아프리카</option>
+										<option value="미주/중남미/하와이">미주/중남미/하와이</option>
+										<option value="일본">일본</option>
+										<option value="중국/홍콩/몽골/중앙아시아">중국/홍콩/몽골/중앙아시아</option>
+										<option value="지방출발">지방출발</option>
+									</select>
+									<select>
+										<option value="수분류">소분류</option>
+										<option value="태국">태국</option>
+										<option value="필리핀">필리핀</option>
+										<option value="베트남">베트남</option>
+										<option value="캄보디아">캄보디아</option>
+										<option value="말레이시아">말레이시아</option>
+										<option value="인도네시아">인도네시아</option>
+										<option value="라오스">라오스</option>
+										<option value="대만">대만</option>
+										<option value="인도">인도</option>
+										<option value="싱가포르">싱가포르</option>
+									</select>
+									<select>
+										<option value="상세분류">상세분류</option>
+										<option value="다낭">다낭</option>
+										<option value="나트랑">나트랑</option>
+										<option value="푸꾸옥">푸꾸옥</option>
+										<option value="하롱베이">하롱베이</option>
+										<option value="하노이">하노이</option>
+										<option value="사파">사파</option>
+										<option value="호치민">호치민</option>
+									</select>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>검색어</th>
+								<td>
+									<select class="w-E">
+										<option value="사이트명">사이트명</option>
+									</select>
+									<input type="search" class="input_search" placeholder="사이트명">	
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>사이트노출</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="site" id="site0" checked><label for="site0"><span></span>전체</label></p>
+										<p><input type="radio" name="site" id="site1"><label for="site1"><span></span>있음</label></p>
+										<p><input type="radio" name="site" id="site2"><label for="site2"><span></span>없음</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span> (선택 : <span class="color-B">000건</span>)</p>
+				<p class="excel">
+					<a href="#"><i class="xi-download"></i> 엑셀 다운로드</a>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>사이트유형</th>
+							<th>사이트명 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>사이트노출</th>
+							<th>meta 태그</th>
+							<th>삭제일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td class="td_center">호텔</td>
+							<td class="td_tit"><p class="part">호텔/펜션 > 동남아/대만/서남아 > 베트남 > 다낭</p><a href="/design/travel/manager/sub_site/delete_modify.html">인터컨티넨탈 푸꾸옥</a></td>
+							<td class="td_see"><i class="xi-radiobox-blank"></i></td>
+							<td class="btn_meta"><button type="button" class="button-D">태그수정</button></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_site/delete_modify.html">2022-09-15</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove">
+					<button type="button">서브사이트 복구</button>
+					<button type="button">완전삭제</button>
+					<span class="comment"><i class="xi-error-o"></i> 완전삭제된 서브사이트 정보는 복구가 불가능하므로 삭제 시 유의하시기 바랍니다.</span>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+			<!-- 카테고리이동 -->
+			<div class="cate_moveup">
+				<div class="cate_moveup_inn">
+					<p class="tit"><i class="xi-lightbulb-o"></i> 상품 카테고리이동</p>
+					<!-- 카테고리 -->
+					<div class="category">
+						<div class="group">
+							<ul>
+								<div class="class_on">
+									<li><a href="#">대분류</a></li>
+								</div>
+							</ul>
+						</div>
+						<div class="group">
+							<ul>
+								<div class="class_on2">
+									<li><a href="#">중분류</a></li>
+								</div>
+							</ul>
+						</div>
+						<div class="group">
+							<ul>
+								<div class="class_on3">
+									<li><a href="#">소분류</a></li>
+								</div>
+							</ul>
+						</div>
+						<div class="group">
+							<ul>
+								<div id="step4" class="class_on4">
+									<li><a href="#">상세분류</a></li>
+								</div>
+							</ul>
+						</div>
+					</div>
+					<p class="btn"><button type="button" onclick="cate_move()">이동</button></p>
+					<p class="close"><i class="xi-close"></i></p>
+				</div>
+			</div>
+			<!-- 레이어팝업 가격입력 입력 -->
+			<div class="meta">
+				<div class="meta_inn">
+					<p class="tit"><i class="xi-lightbulb-o"></i> meta html 태그</p>
+					<!-- 상품유형 -->
+				<div class="conbox">
+					<!-- 테이블(인풋) -->
+					<div class="write">
+						<table>
+							<tbody>
+						<tr>
+							<th>네이버 메타테그</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/>
+							</td>
+						</tr>
+						<tr>
+							<th>구글 메타테그</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/>
+							</td>
+						</tr>
+						<tr>
+							<th>빙 메타테그</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/>
+							</td>
+						</tr>
+							</tbody>
+						</table>
+					</div>
+						<!-- 레이어팝업 최종 저장 버튼 -->
+						<div class="ly_complete">
+							<p><button type="button">입력완료</button><button type="button">취소</button></p>
+						</div>
+					<p class="close"><i class="xi-close"></i></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

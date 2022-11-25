@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<!-- [새창팝업] -->
+<script>
+//캠패인
+function myPopup0() {
+	window.open("/design/wave/manager/orangemsg/shop/popup/friendtalk/exhibition_auto_setup.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=585");
+}
+
+//리스트 보기
+function myPopup1() {
+	window.open("/design/wave/manager/orangemsg/shop/popup/friendtalk/exhibition_auto_setup_list.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=1200");
+}
+
+</script>
+<body>
+<div id="wrap">
+<?
+include "../orange_header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../orange_snb_item.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">SHOP</a> &gt; <a href="#">친구톡</a> &gt; <a href="/design/wave/manager/orangemsg/shop/friend_exhibition.html">기획전, 이벤트, 할인</a></p>
+			<?
+			include "../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="fas fa-bookmark"></i> 기획전, 이벤트, 할인</h2>
+		</div>
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>쇼핑몰명</th>
+								<td>
+									<div class="c_box m-A">
+									<p><input type="checkbox" name="shopname" id="shopname0" checked><label for="shopname0"><span></span>전체</label></p>
+									<p><input type="checkbox" name="shopname" id="shopname1" ><label for="shopname1"><span></span>쇼핑몰명1</label></p>
+									<p><input type="checkbox" name="shopname" id="shopname2" ><label for="shopname2"><span></span>쇼핑몰명2</label></p>
+									</div>
+								</td>
+								<td></td>
+							<tr>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select>
+											<option value="전체">전체</option>
+											<option value="기획전 시작일">기획전 시작일</option>
+											<option value="기획전 종료일">기획전 종료일</option>
+											<option value="이벤트 시작일">이벤트 시작일</option>
+											<option value="이벤트 종료일">이벤트 종료일</option>
+											<option value="할인 시작일">할인 시작일</option>
+											<option value="할인 종료일">할인 종료일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button" class="on">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+										<button type="button">1년</button>
+									</div>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>타이틀검색</th>
+								<td>
+									<select>
+										<option value="기획전">기획전</option>
+										<option value="이벤트">이벤트</option>
+										<option value="할인명">할인명</option>
+									</select>
+									<input type="search" class="input_search" placeholder="기획전, 이벤트, 할인명">	
+								</td>
+								<td></td>
+								<td class="td_btn">
+									<div class="td_btn_area_one">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>친구검색</th>
+								<td class="td_day">
+									<div class="r_circle fl">
+										<p><input type="radio" name="rd" id="ra0" checked><label for="ra0"><span></span>제한없음</label></p>
+										<p><input type="radio" name="rd" id="ra1"><label for="ra1"><span></span>친구</label></p>
+										<p><input type="radio" name="rd" id="ra2"><label for="ra2"><span></span>친구아님(선택시 대체문자가 발송됨)</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>캠패인 설정</th>
+								<td class="td_day">
+									<div class="fl ml15">
+										<button type="button" class="button-A" onclick="myPopup0()">캠패인 설정</button>
+										<button type="button" class="button-A" onclick="myPopup1()">캠패인 리스트</button>
+										<span class="comment"><i class="xi-error-o"></i> 알림톡 캠패인 설정 및 조건리스트를 보실 수 있습니다.</span>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 기획전<span class="comment"><i class="xi-error-o"></i> 클릭하여 알림톡 수동발송 할 수 있습니다.</span></h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 기획전 -->
+			<div class="services_list">
+				<ul>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="기획전명1" /><span>기획전명1</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>184명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="기획전명2" /><span>기획전명2</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>184명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="기획전명3" /><span>기획전명3</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>150명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon03.png" alt="기획전명4" /><span>기획전명4</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>100명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon04.png" alt="기획전명1" /><span>기획전명5</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>50명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon04.png" alt="기획전명6" /><span>기획전명6</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>50명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 이벤트<span class="comment"><i class="xi-error-o"></i> 클릭하여 알림톡 수동발송 할 수 있습니다.</span></h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 이벤트 -->
+			<div class="services_list">
+				<ul>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="이벤트1" /><span>이벤트1</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>184명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="이벤트2" /><span>이벤트2</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>184명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="이벤트3" /><span>이벤트3</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>150명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon03.png" alt="이벤트4" /><span>이벤트4</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>100명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon04.png" alt="이벤트1" /><span>이벤트5</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>50명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon04.png" alt="이벤트6" /><span>이벤트6</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>50명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 할인<span class="comment"><i class="xi-error-o"></i> 클릭하여 알림톡 수동발송 할 수 있습니다.</span></h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 할인 -->
+			<div class="services_list">
+				<ul>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="할인1" /><span>할인1</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>184명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="할인2" /><span>할인2</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>184명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="할인3" /><span>할인3</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>150명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon03.png" alt="할인4" /><span>할인4</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>100명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon04.png" alt="할인1" /><span>할인5</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>50명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/wave/manager/images_service/services_marketing_icon04.png" alt="할인6" /><span>할인6</span>
+							<div class="inn">
+								<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a>50명</a>
+								<a href="https://orangemsg.com/mypage/friend_send_step1.html" class="ready">보내기</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

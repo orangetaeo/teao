@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_board.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">게시판관리</a> &gt; <a href="#">Q&A 관리</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<div class="title">
+			<!-- 타이틀 -->
+			<div class="title">
+				<h2><i class="xi-lightbulb-o"></i> Q&A 관리</h2>
+			</div>
+			<div class="conbox">
+				<!-- 리스트 검색영역 -->
+				<div class="search_area">
+					<div class="area_nomal">
+						<table>
+							<tbody>
+								<tr>
+									<th>기간검색</th>
+									<td class="td_day">
+										<div>
+											<select class="w-F">
+												<option value="작성일">작성일</option>
+											</select>
+											<input type="text" class="w-D ta-c" placeholder="2022-09-17"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-09-17"><i class="xi-calendar"></i>
+										</div>
+										<div class="day_day">
+											<button type="button" class="on">전체</button>
+											<button type="button">오늘</button>
+											<button type="button">어제</button>
+											<button type="button">일주일</button>
+											<button type="button">이번달</button>
+											<button type="button">1개월</button>
+											<button type="button">3개월</button>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>검색어</th>
+									<td>
+										<select class="w-F">
+											<option value="검색조건">검색조건</option>
+											<option value="작성자">작성자</option>
+											<option value="제목">제목</option>
+											<option value="내용">내용</option>
+											<option value="제목+내용">제목+내용</option>
+										</select>
+										<input type="search" class="input_search" placeholder="작성자, 제목, 내용">	
+									</td>
+									<td class="td_btn">
+										<div class="td_btn_area_one">
+											<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- 리스트 상단영역 -->
+				<div class="list_top">
+					<p class="p_total">총 조회수 : <span class="color-A">000건</span> (선택 : <span class="color-B"><span>0</span>건</span>)</p>
+				</div>
+				<!-- 게시판리스트 -->
+				<div class="board_list">
+					<table>
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>제목</th>
+								<th>작성자</th>
+								<th>작성일</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="td_num">3</td>
+								<td class="td_tit"><a href="view.html">문의합니다. 문의합니다.</a><p class="new"><img src="/design/travel/manager/images/new.png" alt=""></p></td>
+								<td class="td_ilm">컴호미</td>
+								<td class="td_day">2018-05-01</td>
+							</tr>
+							<tr>
+								<td class="td_num">2</td>
+								<td class="td_tit"><a href="view.html">문의합니다. 문의합니다. 문의합니다. 문의합니다. 문의합니다. 문의합니다. 문의합니다. 문의합니다. 문의합니다. 문의합니다. 문의합니다.</a><p class="new"><img src="/design/travel/manager/images/new.png" alt=""></p></td>
+								<td class="td_ilm">컴호미</td>
+								<td class="td_day">2018-05-01</td>
+							</tr>
+							<tr>
+								<td class="td_num">1</td>
+								<td class="td_tit"><p class="reply">&nbsp;&nbsp;<img src="/design/travel/manager/images/reply.png" alt=""></p><a href="view.html">[Re] 문의합니다. 문의합니다. 문의합니다. 문의합니다. 문의합니다. 문의합니다. 문의합니다. 문의합니다. 문의합니다. 문의합니다. 문의합니다.</a></td>
+								<td class="td_ilm">컴호미</td>
+								<td class="td_day">2018-05-01</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- 리스트 하단영역 -->
+				<div class="list_bottom">
+					<p class="p_packview">
+						<select>
+							<option value="10개씩 보기">10개씩 보기</option>
+							<option value="30개씩 보기">30개씩 보기</option>
+							<option value="50개씩 보기">50개씩 보기</option>
+							<option value="100개씩 보기">100개씩 보기</option>
+							<option value="300개씩 보기">300개씩 보기</option>
+							<option value="500개씩 보기">500개씩 보기</option>
+							<option value="1000개씩 보기">1000개씩 보기</option>
+						</select>
+					</p>
+				</div>
+				<!-- 페이지넘버 -->
+				<div class="page_num">
+					<p>
+						<span class="arr"><i class="xi-caret-down"></i></span>
+						<span class="nmb on">1</span>
+						<span class="nmb">2</span>
+						<span class="nmb">3</span>
+						<span class="arr"><i class="xi-caret-up"></i></span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- //board_w (게시판 가로사이즈 지정) -->
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

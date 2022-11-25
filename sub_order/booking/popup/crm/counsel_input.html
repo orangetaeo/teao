@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 상담등록</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>상담수단 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="counsel" id="counsel1"><label for="counsel1"><span></span> 전화</label></p>
+									<p><input type="radio" name="counsel" id="counsel2"><label for="counsel2"><span></span> 상담톡</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>상담구분 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<div>
+									<select class="w-F">
+										<option value="전체">전체</option>
+										<option value="주문">주문</option>
+										<option value="예약문의">예약문의</option>
+										<option value="취소문의">취소문의</option>
+										<option value="환불문의">환불문의</option>
+										<option value="입금문의">입금문의</option>
+										<option value="결제문의">결제문의</option>
+										<option value="리프레시 포인트">리프레시 포인트</option>
+										<option value="기타">기타</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>메모 <span class="color-A">*</span></th>
+							<td colspan="3"><textarea class="w-100 h-C"/></textarea></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">저장</button><button type="button" onclick="window.close();">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

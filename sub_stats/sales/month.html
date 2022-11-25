@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_stats.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">통계</a> &gt; <a href="#">매출분석</a> &gt; <a href="#">주별매출</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 주별 매출 합계</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select class="w-C">
+										<option value="2022">2022</option>
+										<option value="2023">2023</option>
+										<option value="2024">2024</option>
+										<option value="2025">2025</option>
+										</select>
+										년
+									</div>
+									<div>
+										<select class="w-B">									
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										</select>
+										월 ~
+									</div>
+									<div>
+										<select class="w-C">
+										<option value="2022">2022</option>
+										<option value="2023">2023</option>
+										<option value="2024">2024</option>
+										<option value="2025">2025</option>
+										</select>
+										년
+									</div>
+									<div>
+										<select class="w-B">									
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										</select>
+										월
+									</div>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area_one">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>주문경로</th>
+								<td>
+									<div class="c_box m-A">
+										<p><input type="checkbox" name="course" id="course0" checked><label for="course0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="course" id="course1"><label for="course1"><span></span>PC홈페이지</label></p>
+										<p><input type="checkbox" name="course" id="course2"><label for="course2"><span></span>모바일홈페이지</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th>총 매출금액</th>
+							<th>최대 매출금액</th>
+							<th>최소 매출금액</th>
+							<th>pc홈페이지 매출금액</th>
+							<th>모바일홈페이지 매출금액</th>
+							<th>직접예약 매출금액</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>0원</td>
+							<td rowspan="3">0원</td>
+							<td rowspan="3">0원</td>
+							<td>0원</td>
+							<td>0원</td>
+							<td>0원</td>
+						</tr>
+						<tr>
+							<td>판매금액   0</td>
+							<td>판매금액   0</td>
+							<td>판매금액   0</td>
+							<td>판매금액   0</td>
+						</tr>
+						<tr>
+							<td>판매금액   0</td>
+							<td>판매금액   0</td>
+							<td>판매금액   0</td>
+							<td>판매금액   0</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 주별 매출 내역</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">업데이트 : <span class="color-A">0000-00-00 00:00</span></p>
+				<p class="excel">
+					<a href="#"><i class="xi-download"></i> 엑셀 다운로드</a>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th rowspan="2">날짜</th>
+							<th colspan="5">결재완료 금액</th>
+							<th rowspan="2">결제합계</th>
+							<th rowspan="2">환불합계</th>
+							<th rowspan="2">순매출</th>
+						</tr>
+						<tr>
+							<th>주문수</th>
+							<th>품목수</th>
+							<th>상품구매금액</th>
+							<th>할인</th>
+							<th>쿠폰</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>0000-00</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>0000-00</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>0000-00</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>0000-00</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>0000-00</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>0000-00</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>0000-00</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>2</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

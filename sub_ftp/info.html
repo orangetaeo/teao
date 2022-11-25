@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../snb_ftp.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">FTP</a> &gt; <a href="#">FTP 안내</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> FTP 안내</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>설명 <span class="color-A">*</span></th>
+							<td>별도의 FTP 설치 없이 웹에서 바로 파일을 업로드할 수 있는 서비스 입니다.</td>
+						</tr>
+						<tr>
+							<th>사용중인 웹호스팅 <span class="color-A">*</span></th>
+							<td>이용중인 상품은 일반형 입니다.
+								<span class="comment"><i class="xi-error-o"></i> 업그레이드를 원하시면 아래에서 선택하여 구매 후 사용 하시기 바랍니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>현재 총 사용량 <span class="color-A">*</span></th>
+							<td>웹FTP: 9,481 KB(29 MB) + 문서FTP: 9,481 KB(29 MB) = 총 9,481 KB(29 MB) </td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 서비스 구성 (호스팅 가격)<span class="dragdrop">서비스(홈페이지제작 의뢰시 일반형 1년 무상제공)</span></h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th>서비스명</th>
+								<div class="th_rdio">
+									<th class="r_circle"><p><input type="radio" name="hosting" id="hosting1" value="Y" checked/><label for="hosting1"><span></span> 일반형</label></p></th>
+									<th class="r_circle"><p><input type="radio" name="hosting" id="hosting2" value="N" /><label for="hosting2"><span></span> 비즈니스</label></p></th>
+									<th class="r_circle"><p><input type="radio" name="hosting" id="hosting3" value="N" /><label for="hosting3"><span></span> 퍼스트</label></p></th>
+									<th class="r_circle"><p><input type="radio" name="hosting" id="hosting4" value="N" /><label for="hosting4"><span></span> 자이언트</label></p></th>
+								</div>
+							<th>비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>하드용량</td>
+							<td>500MB</td>
+							<td>2GB</td>
+							<td>4GB</td>
+							<td>6GB</td>
+							<td>자동/수동 백업</td>
+						</tr>
+						<tr>
+							<td>트래픽</td>
+							<td>800MB</td>
+							<td>2.5GB</td>
+							<td>5.5GB</td>
+							<td>10GB</td>
+							<td>1일 기준</td>
+						</tr>
+						<tr>
+							<td>DB용량</td>
+							<td colspan="4">무제한</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>도메인추가연결</td>
+							<td>2개</td>
+							<td>5개</td>
+							<td>8개</td>
+							<td>10개</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>서버환경</td>
+							<td colspan="4">UTF-8 (Apache:2.4.16, html7.0, Mariadb-10.0.x)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>초기세팅비</td>
+							<td colspan="4">2만원(VAT별도)</td>
+							<td>연납 시 무료</td>
+						</tr>
+						<tr>
+							<td>월사용료</td>
+							<td>1만원</td>
+							<td>2만원</td>
+							<td>3만원</td>
+							<td>5만원</td>
+							<td>VAT별도</td>
+						</tr>
+						<tr>
+							<td>연사용료</td>
+							<td>12만원</td>
+							<td>24만원</td>
+							<td>36만원</td>
+							<td>60만원</td>
+							<td>VAT별도</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 주석마크 -->
+			<div class="mark"><i class="xi-error-o"></i> 서버호스팅 관련은 별도 문의 부탁드립니다.</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">구매하기</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

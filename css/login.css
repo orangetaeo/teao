@@ -1,0 +1,70 @@
+/* login.css */
+
+.login_out {position:relative; width:100%; min-width:1200px; height:100%;background:url(/design/travel/manager/images/bg_login_travel.jpg) no-repeat 50% 50%; background-size:cover;}
+.login {width:100%; height:100%; background:rgba(255,255,255,0.7);}
+.login_inner {position:absolute; left:50%; top:50%; transform:translateX(-50%) translateY(-50%); width:700px; height:340px; background:#fff; box-shadow:3px 3px 15px rgba(0,0,0,0.1);}
+.login_inner:after {content:""; display:block; clear:both;}
+
+.div_left {float:left; width:280px; height:100%; background:url(/design/travel/manager/images/bg_login_wave.jpg) no-repeat 50% 50%; background-size:cover;}
+.div_left .div_left_inner {width:100%; height:100%; padding-top:85px; text-align:center; background:rgba(240,245,251,0.5); box-sizing:border-box;}
+.div_left .div_left_inner h1 {margin-bottom:40px;}
+.div_left .div_left_inner dl dt {margin-bottom:10px; font-size:22px; color:#283c7d;}
+.div_left .div_left_inner dl dd {font-size:15px; color:#283c7d;}
+
+.div_right {float:left; width:420px; height:200px; padding:65px 70px; box-sizing:border-box;}
+.div_right .pBox {overflow:hidden; width:280px; height:36px; margin-bottom:5px; line-height:36px; border:1px solid #92a9d4; border-radius:3px; box-sizing:border-box;}
+.div_right .pBox span {display:inline-block; width:35px; margin-right:3px; text-align:center; color:#fff; background:#92a9d4;}
+.div_right .pBox span i {font-size:15px; line-height:34px;}
+.div_right .pBox input {width:237px; height:28px; margin-bottom:3px; padding:0 5px; color:#92a9d4; border:0; box-sizing:border-box;}
+.div_right .pBtn button {width:280px; height:36px; margin:20px 0 7px; font-size:15px; color:#fff; border:0; background:#92a9d4;}
+.div_right .pBtn button:hover {background:#283c7d;}
+.div_right .pSearch {text-align:center;}
+.div_right .pSearch a{font-size:12px;}
+.div_right .pSearch a:hover {text-decoration:underline;}
+.div_right .chrome {position:absolute; right:3px; bottom:-23px; font-size:12px; color:#92a9d4;}
+
+.savBox {width:200px; margin:0 auto; font-size:12px;}
+.savBox input {display:none;}
+.savBox label {position:relative; padding-left:20px; font-size:12px; cursor:pointer;}
+.savBox label span {position:absolute; left:0; top:-1px; display:inline-block; width:20px; height:20px; background:url(/design/travel/manager/images/input_box.png) no-repeat 0 0; cursor:pointer;}
+.savBox input:checked + label span {background:url(/design/travel/manager/images/input_box.png) no-repeat 100% 0;}
+
+/* 아이디찾기 */
+.find_id {display:none; position:absolute; right:0; top:0; width:420px; height:340px; padding:43px 60px 0; background:rgba(255,255,255,1); box-sizing:border-box;}
+.find_id.on {display:block;}
+.find_id .tit {margin-bottom:15px; font-size:16px; font-weight:bold; text-align:center; color:#92a9d4;}
+.find_id ul li {margin-bottom:5px;}
+.find_id ul li:after {content:""; display:block; clear:both;}
+.find_id ul li p {float:left;}
+.find_id ul li .inp {width:300px; height:36px; padding:0 5px; line-height:36px; border:1px solid #92a9d4; border-radius:3px; box-sizing:border-box;}
+.find_id ul li .inp .w_100 {width:100%;}
+.find_id ul li .inp .w_a {width:215px;}
+.find_id ul li .inp input {border:0;}
+.find_id ul li .inp button {width:73px; height:26px; margin-bottom:5px; background:#92a9d4;}
+.find_id ul li .inp button:hover {background:#456ab1;}
+.find_id ul .result .inp {border:1px solid #283c7d;}
+.find_id .btn {margin-top:15px; text-align:center;}
+.find_id .btn button {width:150px; height:36px; color:#fff; border:0; background:#92a9d4;}
+.find_id .btn button:hover {background:#283c7d;}
+.find_id .close {position:absolute; right:5px; top:5px; cursor:pointer;}
+.find_id .close i {font-size:15px; color:#92a9d4;}
+
+/* 비밀번호찾기 */
+.find_pw {display:none; position:absolute; right:0; top:0; width:420px; height:340px; padding:15px 60px 0; background:rgba(255,255,255,1); box-sizing:border-box;}
+.find_pw.on {display:block;}
+.find_pw .tit {margin-bottom:7px; font-size:16px; font-weight:bold; text-align:center; color:#92a9d4;}
+.find_pw ul li {margin-bottom:5px;}
+.find_pw ul li:after {content:""; display:block; clear:both;}
+.find_pw ul li p {float:left;}
+.find_pw ul li .inp {width:300px; height:36px; padding:0 5px; line-height:36px; border:1px solid #92a9d4; border-radius:3px; box-sizing:border-box;}
+.find_pw ul li .inp .w_100 {width:100%;}
+.find_pw ul li .inp .w_a {width:215px;}
+.find_pw ul li .inp input {border:0;}
+.find_pw ul li .inp button {width:73px; height:26px; margin-bottom:5px; background:#92a9d4;}
+.find_pw ul li .inp button:hover {background:#456ab1;}
+.find_pw ul .result .inp {border:1px solid #283c7d;}
+.find_pw .btn {text-align:center;}
+.find_pw .btn button {width:150px; height:36px; color:#fff; border:0; background:#92a9d4;}
+.find_pw .btn button:hover {background:#283c7d;}
+.find_pw .close {position:absolute; right:5px; top:5px; cursor:pointer;}
+.find_pw .close i {font-size:15px; color:#92a9d4;}

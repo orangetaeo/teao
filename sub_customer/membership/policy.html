@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_customer.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">회원관리</a> &gt; <a href="#">회원관리 설정</a> &gt; <a href="#">회원가입정책 관리</a></p>
+			<?
+			include "../../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 회원가입시 회원등급 기본설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>회원등급 기본설정</th>
+							<td colspan="3">
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="default" id="default1" checked><label for="default1"><span></span></label></p>
+										<div class="txt">
+											회원가입 시 회원등급을
+											<select class="w-F">
+												<option value="일반회원">일반회원</option>
+												<option value="VIP">VIP</option>
+											</select>
+											(으)로 설정합니다.
+										</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>신규회원 <br />리프레시 포인트 지급 설정</th>
+							<td colspan="3">
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="mileage" id="mileage1" checked><label for="mileage1"><span></span></label></p>
+										<div class="txt">사용안함</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="mileage" id="mileage2" checked><label for="mileage2"><span></span></label></p>
+										<div class="txt">신규회원 가입리프레시 포인트 <input type="text" class="w-C ta-r" />원 지급</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 가입설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>가입승인 사용설정</th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle">
+									<p><input type="radio" name="approval" id="approval1" checked /><label for="approval1"><span></span> 승인 절차 없이 가입</label></p>
+									<p><input type="radio" name="approval" id="approval2" /><label for="approval2"><span></span> 승인 후 가입</label></p>
+									<p><input type="radio" name="approval" id="approval3" /><label for="approval3"><span></span> 사업회원만 승인 후 가입</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th> 제한 안함</th>
+							<td colspan="3" class="td_w">
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="restrict" id="restrict1" checked><label for="restrict1"><span></span></label></p>
+										<div class="txt">제한없음</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="restrict" id="restrict2" ><label for="restrict2"><span></span></label></p>
+										<div class="txt">
+											만
+											<select class="w-B">
+												<option value="14">14</option>
+												<option value="19">19</option>
+											</select>
+											미만인경우 
+										</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="restrict" id="restrict3" ><label for="restrict3"><span></span></label></p>
+										<div class="txt">운영자 승인 후 가입</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="restrict" id="restrict4" ><label for="restrict4"><span></span></label></p>
+										<div class="txt">가입불가</div>
+									</li>
+									<li><button type="button" class="button-A" onclick="location.href='#'">법정대리인 동의서 셈플 다운로드</button></li>
+								</ul>
+							</td>
+						<tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 주석마크 -->
+			<div class="mark"><i class="xi-error-o"></i> 정보통신방법에 따라 만14세 미만의 아동은 법정대리인의 동의를 확인 후 회원가입 할 수 있습니다.<br />
+			'운영자 승인 후 가입' 및 '가입불가'로 설정 시 본인확인인증서비스가 적용되어 있어여 하며,<br />
+			본인확인인증서비스 미 사용 시에는 '생년월일'을 필수로 입력 받으셔야 합니다.<br />
+			본인확인인증서비스 또는 생년월일 필수 설정이 없는 경우 만14세 미만 회원을 판단할 수 없으므로'미승인'상태로 가입되거나(인증 후 가입 선택시),<br />
+			가입할 수 없으니(가입불가 선택 시) 주의해주시기 바랍니다.
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 탈퇴/재가입 설정/가입불가 회원아이디</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>재가입 기간제한</th>
+							<td colspan="3">
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="rejoin" id="rejoin1" checked><label for="rejoin1"><span></span></label></p>
+										<div class="txt">사용안함</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="rejoin" id="rejoin2" checked><label for="rejoin2"><span></span></label></p>
+										<div class="txt">회원탈퇴/삭제 후 <input type="text" class="w-C ta-r" />일 동안 재가입 불가</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>가입불가 회원아이디</th>
+							<td colspan="3">
+								<textarea class="w-100 h-A" />admin,administration,administrator,master,webmaster,manage,manager,orangewave,orangemall,orangewavemall,orangetravel,travel,tour,orangetour</textarea>
+								<span class="comment"><i class="xi-error-o"></i> 회원가입을 제한알 아이디를 쉼표(,)로 구분하여 입력하세요</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

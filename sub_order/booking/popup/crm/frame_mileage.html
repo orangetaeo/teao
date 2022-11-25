@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div id="iframe">
+		<!-- 리스트 상단영역 -->
+		<div class="list_top">
+			<p class="p_total">총 조회수 : <span class="color-A">000건</span></p>
+			<p class="p_up">
+				<button type="button" onclick="location.href='frame_mileage_input.html'">리프레시 포인트 지급/차감</button>
+			</p>
+		</div>
+		<!-- 리스트 -->
+		<div class="list">
+			<table>
+				<thead>
+					<tr>
+						<th>No.</th>
+						<th>지급액</th>
+						<th>지급일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+						<th>차감액</th>
+						<th>차감일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+						<th>잔액</th>
+						<th>소멸예정일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+						<th>처리자</th>
+						<th>사유</th>
+						<th>수정</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="td_num">2</td>
+						<td><a href="#">1,000원</a></td>
+						<td><a href="#">2022-09-27</a></td>
+						<td><a href="#">-</a></td>
+						<td><a href="#">-</a></td>
+						<td><a href="#">3,150원</a></td>
+						<td><a href="#">2022-09-27 20:28</a></td>
+						<td><a href="#">홍길동</a></td>
+						<td><a href="#">상품구매 시 리프레시 포인트 지급<br />(주문번호: 000000000)</a></td>
+						<td><a href="#"><button type="button" class="button-B" onclick="location.href='frame_mileage_input.html'">수정</button></a></td>
+					</tr>
+					<tr>
+						<td class="td_num">1</td>
+						<td><a href="#">-</a></td>
+						<td><a href="#">-</a></td>
+						<td><a href="#">2,000원</a></td>
+						<td><a href="#">2022-09-27</a></td>
+						<td><a href="#">2,150원</a></td>
+						<td><a href="#">2022-09-27 20:29</a></td>
+						<td><a href="#">관리자(master)</a></td>
+						<td><a href="#">상품구매 시 리프레시 포인트 차감<br />(주문번호: 000000000)</a></td>
+						<td><a href="#"><button type="button" class="button-B" onclick="location.href='frame_mileage_input.html'">수정</button></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- 리스트 하단영역 -->
+		<div class="list_bottom">
+			<p class="p_packview">
+				<select>
+					<option value="10개씩 보기">10개씩 보기</option>
+					<option value="30개씩 보기">30개씩 보기</option>
+					<option value="50개씩 보기">50개씩 보기</option>
+					<option value="100개씩 보기">100개씩 보기</option>
+					<option value="300개씩 보기">300개씩 보기</option>
+					<option value="500개씩 보기">500개씩 보기</option>
+					<option value="1000개씩 보기">1000개씩 보기</option>
+				</select>
+			</p>
+		</div>
+		<!-- 페이지넘버 -->
+		<div class="page_num">
+			<p>
+				<span class="arr"><i class="xi-caret-down"></i></span>
+				<span class="nmb on">1</span>
+				<span class="nmb">2</span>
+				<span class="nmb">3</span>
+				<span class="arr"><i class="xi-caret-up"></i></span>
+			</p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+<script type="text/javascript">
+
+	function init(){
+		var doc = document.getElementById("iframe"); //분리된 iframe 이 파일의 가장상위 태그 id
+		if(doc.offsetHeight == 0){
+		
+		} else {
+			pageheight = doc.offsetHeight ; // +100;
+			parent.document.getElementById("frame_mileage").height = pageheight + 10 + "px"; //iframe꽂힌 본 파일의 iframe태그 id
+		}
+	}
+
+	window.onload = function(){
+		init();
+	}
+	
+</script> 
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_board.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">게시판관리</a> &gt; <a href="#">제휴문의 관리</a> &gt; <a href="#">제휴문의 글보기</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<div class="title">
+			<!-- 타이틀 -->
+			<div class="title">
+				<h2><i class="xi-lightbulb-o"></i> 제휴문의 글보기</h2>
+			</div>
+			<div class="conbox">
+				<!-- 테이블(인풋) -->
+				<div class="write">
+					<table>
+						<tbody>
+							<tr>
+								<th>제휴분야</th>
+								<td class="td_w">제휴분야</td>
+								<th>처리현황</th>
+								<td>
+									<select class="w-F">
+										<option value="접수">접수</option>
+										<option value="처리중">처리중</option>
+										<option value="처리완료">처리완료</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>작성자</th>
+								<td class="td_w">컴호미</td>
+								<th>접수일</th>
+								<td>2022-09-18</td>
+							</tr>
+							<tr>
+								<th>연락처</th>
+								<td class="td_w">010-0000-0000</td>
+								<th>이메일</th>
+								<td>aaaaaa@naver.com</td>
+							</tr>
+							<tr>
+								<th>제목</th>
+								<td colspan="3">제휴문의합니다.</td>
+							</tr>
+							<tr>
+								<th>내용</th>
+								<td colspan="3">제휴문의합니다. 제휴문의합니다. 제휴문의합니다. 제휴문의합니다. 제휴문의합니다. 제휴문의합니다. 제휴문의합니다. 제휴문의합니다. 제휴문의합니다. 제휴문의합니다. 제휴문의합니다. 제휴문의합니다. 제휴문의합니다. 제휴문의합니다. 제휴문의합니다. 제휴문의합니다. 제휴문의합니다.</td>
+							</tr>
+							<tr>
+								<th>첨부파일</th>
+								<td colspan="3">
+									<div class="don"><img src="/design/travel/manager/images/file.png" alt="">첨부파일 다운로드</div>
+								</td>
+							</tr>
+							<tr>
+								<th>관리자메모</th>
+								<td colspan="3"><textarea class="w-H h-B"></textarea></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 최종버튼 -->
+			<div class="complete mt30">
+				<p><button type="button" onclick="location.href='list.html'">확인</button><button type="button">답메일 발송</button></p>
+			</div>
+		</div>
+		<!-- //board_w (게시판 가로사이즈 지정) -->
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

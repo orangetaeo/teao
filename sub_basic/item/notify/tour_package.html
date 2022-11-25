@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../../snb_basic.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">기본정보관리</a> &gt; <a href="#">상품 정책</a> &gt; <a href="#">상품상세 정보고시 관리</a> &gt; <a href="#">여행패키지</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 여행패키지</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>1. 여행사 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-100" required /></td>
+						</tr>
+						<tr>
+							<th>2. 이용항공편 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-100" required /></td>
+						</tr>
+						<tr>
+							<th>3. 여행기간 및 일정 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-100" required /></td>
+						</tr>
+						<tr>
+							<th>4. 총 예정 인원, 출발 가능 인원 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-100" required /></td>
+						</tr>
+						<tr>
+							<th>5. 숙박정보 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-100" required /></td>
+						</tr>
+						<tr>
+							<th>6. 여행상품 가격 <span class="color-A">*</span></th>
+							<td>
+							<textarea class="w-100 h-A" placeholder="유류할증료, 공항이용료, 전쟁보험료, 관광진흥개발기금, 운송요금, 숙박요금, 식사요금, 가이드경비, 여행자보험료, 현지관광입장료 등 소비자가 특정 여행상품을 선택할 경우 부담해야 하는 모든 경비가 포함되어야 함, 다만, 가이드 경비를 현지에서 지불하여야 하는 경우 별도의 그 금액을 표시할 수 있으며, 현지에서 별도로 지불해야 한다는 점을 표시하여야 함." /></textarea></td>
+						</tr>
+						<tr>
+							<th>7. 선택경비 유무 및 세부 내용 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-100" required /></td>						
+						</tr>
+						<tr>
+							<th>7-1. 선택경비 유무 등 <span class="color-A">*</span></th>
+							<td>
+							<textarea class="w-100" placeholder="선택관광 경비 등 현지에서 개별 구매자의 필요나 선택에 의하여 지출하게 되는 경비가 있는지 여부 및 소비자의 선택에 따라 자유롭게 지불할 수 있다는 점을 함께 표시하여야 함." /></textarea></td>
+						</tr>
+						<tr>
+							<th>7-2. 선택관광 및 대체일정 <span class="color-A">*</span></th>
+							<td>
+							<textarea class="w-100" placeholder="선택관광 경비의 금액 및 선택관광을 선택하지 않을 경우의 대체 일정을 표시하여야 함." /></textarea></td>
+						</tr>
+						<tr>
+							<th>7-3. 가이드 팁 <span class="color-A">*</span></th>
+							<td>
+							<textarea class="w-100" placeholder="가이드 팁에 대하여 기재할 경우에는 가이드 경비와 구별하여 자류옵게 지불여부를 결정할 수 있음을 표시하여야 함. 다만, 정액으로 지불을 권장하는 등 소비자가 필수적으로 지불하여야 하는 경비인 것처럼 오인하지 않도록 표시하여야 함." /></textarea></td>
+						</tr>
+						<tr>
+							<th>8. 취소 규정 <span class="color-A">*</span></th>
+							<td>
+							<textarea class="w-100" placeholder="환불, 위약금 등" /></textarea></td>
+						</tr>
+						<tr>
+							<th>9. 여행경보단계 <span class="color-A">*</span></th>
+							<td>
+							<textarea class="w-100" placeholder="해외여행의 경우 외교부가 지정하는 여행경보단계" /></textarea></td>
+						</tr>
+						<tr>
+							<th>10. 예약담당 연락처 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-100" required /></td>
+						</tr>
+						<tr>
+							<th>첨부파일</th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 주석마크 -->
+			<div class="mark"><i class="xi-error-o"></i> 첨부파일로 대체 할 수 있습니다.</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

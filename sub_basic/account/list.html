@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_basic.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">기본정보</a> &gt; <a href="#">환율/계좌 관리</a> &gt; <a href="#">계좌 관리</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 계좌 리스트 검색</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>계좌 사용여부</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="use" id="use0" checked><label for="use0"><span></span>전체</label></p>
+										<p><input type="radio" name="use" id="use1"><label for="use1"><span></span>사용</label></p>
+										<p><input type="radio" name="use" id="use2"><label for="use2"><span></span>미사용</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>계좌구분</th>
+								<td colspan="3" class="td_w">
+									<div class="c_box m-A">
+										<p>
+											<input type="checkbox" name="classify_account" id="classify_account0" checked required /><label for="classify_account0"><span></span>전체</label>
+											<input type="checkbox" name="classify_account" id="classify_account1" checked required /><label for="classify_account1"><span></span>입금</label>
+											<input type="checkbox" name="classify_account" id="classify_account2" checked required /><label for="classify_account2"><span></span>출금</label>
+											<input type="checkbox" name="classify_account" id="classify_account3" checked required /><label for="classify_account3"><span></span>외환계좌</label>
+										</p>
+									</div>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area_one">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>은행명</th>
+								<td>
+								<div class="sel">
+								<select class="w-F" required>
+									<option value="은행명 선택">은행명 선택</option>
+									<option value="KB국민은행">KB국민은행</option>
+									<option value="기업은행">기업은행</option>
+									<option value="농협은행">농협은행</option>
+									<option value="신한은행">신한은행</option>
+									<option value="산업은행">산업은행</option>
+									<option value="우리은행">우리은행</option>
+									<option value="한국씨티은행">한국씨티은행</option>
+									<option value="하나은행">하나은행</option>
+									<option value="카카오뱅크">카카오뱅크</option>
+									<option value="SC제일은행">SC제일은행</option>
+									<option value="경남은행">경남은행</option>
+									<option value="광주은행">광주은행</option>
+									<option value="대구은행">대구은행</option>
+									<option value="도이치은행">도이치은행</option>
+									<option value="뱅크오프아메리카은행">뱅크오프아메리카은행</option>
+									<option value="부산은행">부산은행</option>
+									<option value="산림조합중앙회">산림조합중앙회</option>
+									<option value="저축은행">저축은행</option>
+									<option value="새마을금고">새마을금고</option>
+									<option value="수협은행">수협은행</option>
+									<option value="신협중앙회">신협중앙회</option>
+									<option value="우체국">우체국</option>
+									<option value="전북은행">전북은행</option>
+									<option value="제주은행">제주은행</option>
+									<option value="중국건설은행">중국건설은행</option>
+									<option value="중국공상은행">중국공상은행</option>
+									<option value="중국은행">중국은행</option>
+									<option value="BNP은행">BNP은행</option>
+									<option value="HSBC은행">HSBC은행</option>
+									<option value="JP코간체이스은행">JP코간체이스은행</option>
+									<option value="케이벵크">케이은행</option>
+									<option value="토스뱅크">토스은행</option>
+									<option value="교보증권">교보증권</option>
+									<option value="대신증권">대신증권</option>
+									<option value="DB금융투자">DB금융투자</option>
+									<option value="메리츠증권">메리츠증권</option>
+									<option value="미래에셋증권">미래에셋증권</option>
+									<option value="부국증권">부국증권</option>
+									<option value="삼성증권">삼성증권</option>
+									<option value="신영증권">신영증권</option>
+									<option value="신한투자증권">신한투자증권</option>
+									<option value="에스케이증권">에스케이증권</option>
+									<option value="현대차증권">현대차증권</option>
+									<option value="유안타증권">유안타증권</option>
+									<option value="유진투자증권">유진투자증권</option>
+									<option value="이베스트투자증권">이베스트투자증권</option>
+									<option value="케이프투자증권">케이프투자증권</option>
+									<option value="키움증권">키움증권</option>
+									<option value="한국포스증권">한국포스증권</option>
+									<option value="하나증권">하나증권</option>
+									<option value="하이투자증권">하이투자증권</option>
+									<option value="한국투자증권">한국투자증권</option>
+									<option value="한화투자증권">한화투자증권</option>
+									<option value="KB증권">KB증권</option>
+									<option value="다올투자증권">다올투자증권</option>
+									<option value="BNK투자증권">BNK투자증권</option>
+									<option value="NH투자증권">NH투자증권</option>
+									<option value="카카오페이증권">카카오페이증권</option>
+									<option value="IBK투자증권">IBK투자증권</option>
+									<option value="토스증권">토스증권</option>
+								</select>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 계좌 리스트</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_up">
+					<button type="button" onclick="location.href='/design/travel/manager/sub_basic/account/input.html'">계좌 등록</button>
+				</p>
+				<p class="excel">
+					<a href="#"><i class="xi-download"></i> 엑셀 다운로드</a>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th><a href="/design/travel/manager/sub_basic/account/modify.html">NO.</th>
+							<th><a href="/design/travel/manager/sub_basic/account/modify.html">계좌구분</th>
+							<th><a href="/design/travel/manager/sub_basic/account/modify.html">계좌사용여부</th>
+							<th><a href="/design/travel/manager/sub_basic/account/modify.html">은행명</th>
+							<th><a href="/design/travel/manager/sub_basic/account/modify.html">예금주</th>
+							<th><a href="/design/travel/manager/sub_basic/account/modify.html">계좌번호</th>
+							<th><a href="/design/travel/manager/sub_basic/account/modify.html">최초잔액</th>
+							<th><a href="/design/travel/manager/sub_basic/account/modify.html">현재잔액</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">4</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">입금</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">미사용</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">하나은행</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">위니드웹</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">222-2222-2222-222</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">120,254,000</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">120,254,000</td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">3</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">입금</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">사용</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">하나은행</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">위니드웹</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">222-2222-2222-222</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">120,254,000</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">120,254,000</td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">2</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">출금</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">사용</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">하나은행</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">위니드웹</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">222-2222-2222-222</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">120,254,000</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">120,254,000</td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">1</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">외환계좌</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">사용</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">하나은행</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">위니드웹</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">222-2222-2222-222</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">120,254,000</td>
+							<td><a href="/design/travel/manager/sub_basic/account/modify.html">120,254,000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove">
+					<button type="button">선택삭제</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

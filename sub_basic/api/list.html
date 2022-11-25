@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_basic.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">기본정보관리</a> &gt; <a href="#">API 설정</a> &gt; <a href="#">외부 API 리스트</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 외부 API 리스트</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select class="w-E">
+											<option value="등록일">등록일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2022-08-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-08-31"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">오늘</button>
+										<button type="button">어제</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+										<button type="button">전체</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>검색어</th>
+								<td>
+									<select class="w-E">
+										<option value="내부 코드">내부 코드</option>
+										<option value="서비스명">서비스명</option>
+									</select>
+									<input  class="w-Q" type="search" class="input_search" placeholder="내부코드, 서비스명 검색">	
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area_one">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span> (선택 : <span class="color-B">000건</span>)</p>
+				<p class="p_up">
+					<button type="button" onclick="location.href='input.html'">API 등록</button>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+					<table>
+						<thead>
+							<tr>
+								<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+								<th>No.</th>
+								<th>내부 코드 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+								<th>업체명 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+								<th>서비스명 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+								<th>홈페이지</th>
+								<th>연락처</th>
+								<th>팩스번호</th>
+								<th>담당자명</th>
+								<th>담당자 연락처</th>
+								<th>담당자 이메일</th>
+								<th>API 등록일</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">16</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">한국수출입은행</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">환율</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://www.koreaexim.go.kr/ir/HPHKIR020M01?apino=2&viewtype=C&searchselect=&searchword=</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-15</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">15</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">카카오선물하기</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">판매</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://giftbiz.kakao.com/open-api/information</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-15</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">14</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">카카오챗봇</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">CS</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://business.kakao.com/info/chatbot/</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-15</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">13</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">쿠팡</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">판매</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://kakaotalk.com</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-15</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">12</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">인터파크</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">판매</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://kakaotalk.com</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-15</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">11</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">카카오쇼핑</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">판매</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://kakaotalk.com</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-15</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">10</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">네이버 스마트스토어</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">판매</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://kakaotalk.com</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-15</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">9</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">카카오톡 알림톡</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">CS</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://kakaotalk.com</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-04</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">8</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">카카오톡 상담톡</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">CS</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://kakaotalk.com</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-04</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">7</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">채널톡</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">CS</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://kakaotalk.com</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-04</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">6</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">카카오톡</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">블로그</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://kakaotalk.com</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-04</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">5</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">인스타그램</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">마케팅</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://kakaotalk.com</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-04</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">4</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">카카오톡</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">지도</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://kakaotalk.com</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-04</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">3</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">구글</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">지도</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://kakaotalk.com</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-04</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">2</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">행정안전부</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">주소</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://business.juso.go.kr/addrlink/openApi/apiReqst.do</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-04</a></td>
+							</tr>
+							<tr>
+								<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+								<td class="td_num">1</td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">0000000000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">구글</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">리뷰</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">https://kakaotalk.com</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">02-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">홍길동</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">010-0000-0000</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">land@land.co.kr</a></td>
+								<td><a href="/design/travel/manager/sub_basic/api/modify.html">2022-09-04</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove">
+					<button type="button">선택삭제</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_item.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">샘플관리</a> &gt; <a href="#">골프장 엑셀관리</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 골프장 엑셀관리</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>골프장, 코스, 이용시설, 가격설정 등록 <br />엑셀 샘플 다운로드</th>
+							<td colspan="3">
+							<div class="excel">
+									<select>
+										<option value="골프장 등록">골프장 등록</option>
+										<option value="코스 및 가격설정">코스 및 가격설정</option>
+										<option value="이용시설 및 가결설정">이용시설 및 가결설정</option>
+									</select>
+								<a href="#"><i class="xi-download"></i> 엑셀 샘플 다운로드</a></div>
+								<span class="comment"><i class="xi-error-o"></i> 골프장, 코스, 이용시설, 가격설정 선택 후 엑셀 샘플을 다운로드 하여 사용 하시기 바랍니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>업로드 안내</th>
+							<td>
+<textarea class="w-H h-B" readonly>
+1. 신규골프장 등록시에는 '골프장명, 판매가, 공급가' 항목을 필수로 입력해야 하고, 골프장수정시에는 '코드'항목을 필수로 입력해야 합니다.
+2. 엑셀 등록시 .xls, .xlsx, .csv 파일형식으로만 등록되니 등록전에 꼭 확인 바랍니다.
+3. 최대 업로드 가능한 골프장의 수는 "1,000"개 입니다.
+4. 골프장의 옵션품목 갯수가 1,000개 이상 등록된 경우, 화면 접속 시 정상적으로 로딩되지 않을 수 있으니 주의하세요.
+5. 값 입력 시, 필요없는 공백(띄어쓰기)을 추가하면 정상적으로 동작하지 않을 수 있으니 주의하세요.
+6. 일부 엑셀 항목을 삭제하여 업로드 할 경우, 해당 항목의 정보는 업데이트 되지 않습니다. 등등등
+</textarea>
+							</td>
+						</tr>
+						<tr>
+							<th>엑셀파일 다운로드</th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

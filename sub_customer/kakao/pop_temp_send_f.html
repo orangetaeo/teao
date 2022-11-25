@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+	<!-- 친구톡발송 (팝업) -->
+	<div class="pop_kakao_f_send">
+		<h3>친구톡 발송</h3>
+		<table>
+			<tbody>
+				<tr>
+					<th>템플릿</th>
+					<td colspan="3">선택된 템플릿명</td>
+				</tr>
+				<tr>
+					<th>상담고객</th>
+					<td class="wtd">홍길동 TEST_ID_001</td>
+					<th>수신자 번호</th>
+					<td>
+						<div class="p_phone wE"><input type="text" class="input_phone" maxlength="4" /> - <input type="text" class="input_phone" maxlength="4" /> - <input type="text" class="input_phone" maxlength="4" /></div>
+					</td>
+				</tr>
+				<tr>
+					<th>상담원</th>
+					<td class="wtd">컴호미</td>
+					<th>발신자 번호</th>
+					<td>
+						<select class="wE">
+							<option value="010-2345-6789">010-2345-6789</option>
+							<option value="010-0000-0000">010-0000-0000</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>추가정보1</th>
+					<td colspan="2" class="wid"><input type="text"></td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>추가정보2</th>
+					<td colspan="2" class="wid"><input type="text"></td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>추가정보3</th>
+					<td colspan="2" class="wid"><input type="text"></td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>추가정보4</th>
+					<td colspan="2" class="wid"><input type="text"></td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>추가정보5</th>
+					<td colspan="2" class="wid"><input type="text"></td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>추가정보6</th>
+					<td colspan="2" class="wid"><input type="text"></td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>추가정보7</th>
+					<td colspan="2" class="wid"><input type="text"></td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>추가정보8</th>
+					<td colspan="2" class="wid"><input type="text"></td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>추가정보9</th>
+					<td colspan="2" class="wid"><input type="text"></td>
+					<td class="bor"></td>
+				</tr>
+				<tr>
+					<th>추가정보10</th>
+					<td colspan="2" class="wid"><input type="text"></td>
+					<td class="bor"></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="preview">
+			<dl>
+				<dt><i class="xi-mail-read-o"></i> 템플릿 미리보기</dt>
+				<dd class="img_view"><img src="/design/travel/manager/images/300x150.jpg"></dd>
+				<dd class="txt_view">[고객명]님 안녕하세요?<br />[추가정보1]입니다.<br />고객님께서 주문하신 제품의 배송이 시작되었습니다.<br />영업일 기준 [추가정보2]일 내에 배송될 예정입니다.<br /> - 제품명 : [추가정보3]<br /> - 택배사 : [추가정보4]<br /> - 송장번호 : [추가정보5]<br />이용해 주셔서 대단히 감사합니다.</dd>
+			</dl>
+			<div class="input_radio box1">
+				<p><input type="radio" id="bal1" name="bal" checked /><label for="bal1"><span></span>대체문자 발송함</label></p>
+				<p><input type="radio" id="bal2" name="bal" /><label for="bal2"><span></span>발송안함</label></p>
+			</div>
+			<div class="input_checkbox box2">
+				<p><input type="checkbox" id="soo1" name="soo" checked /><label for="soo1"><span></span>080 수신거부넣기</label></p>
+			</div>
+		</div>
+		<div class="complete">
+			<p>
+				<button type="button" onclick="window.close();">발송하기</button><button type="button" onclick="window.close();">발송취소</button>
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../head_common.html"; 
+?>
+<? include "../head_editor.html"; ?>
+</head>
+
+<!-- [새창팝업] -->
+<script>
+
+//상품 불러오기
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/schedule/popup/flight.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1550, height=970");
+}
+</script>
+
+<body>
+<div id="wrap">
+<?
+include "../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../snb_site.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">서브사이트관리</a> &gt; <a href="#">서브사이트 설정</a> &gt; <a href="#">서브사이트 등록</a></p>
+			<?
+			include "../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 서브사이트 카테고리</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 카테고리 -->
+			<div class="category">
+				<div class="group">
+					<h3>대분류 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on">
+							<li><a href="#">해외여행</a></li>
+							<li><a href="#">항공</a></li>
+							<li><a href="#">호텔/펜션</a></li>
+							<li><a href="#">투어/입장권</a></li>
+							<li><a href="#">허니문</a></li>
+							<li><a href="#">골프</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>중분류 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on2">
+							<li><a href="#">동남아/대만/서남아</a></li>
+							<li><a href="#">괌/사이판/호주/뉴질랜드</a></li>
+							<li><a href="#">유럽/아프리카</a></li>
+							<li><a href="#">미주/중남미/하와이</a></li>
+							<li><a href="#">일본</a></li>
+							<li><a href="#">중국/홍콩/몽골/중앙아시아</a></li>
+							<li><a href="#">지방출발</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>소분류 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on3">
+							<li><a href="#">태국</a></li>
+							<li><a href="#">필리핀</a></li>
+							<li><a href="#">베트남</a></li>
+							<li><a href="#">캄보디아</a></li>
+							<li><a href="#">말레이시아</a></li>
+							<li><a href="#">인도네시아</a></li>
+							<li><a href="#">라오스</a></li>
+							<li><a href="#">대만</a></li>
+							<li><a href="#">인도</a></li>
+							<li><a href="#">싱가포르</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>상세분류 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div id="step4" class="class_on4">
+							<li><a href="#">다낭</a></li>
+							<li><a href="#">나트랑</a></li>
+							<li><a href="#">푸꾸옥</a></li>
+							<li><a href="#">하롱베이</a></li>
+							<li><a href="#">하노이</a></li>
+							<li><a href="#">사파</a></li>
+							<li><a href="#">호치민</a></li>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 노출 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>									
+						<tr>
+							<th>사이트 노출 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="pc_exposure" id="pc_1" checked /><label for="pc_1"><span></span>노출함</label></p>
+									<p><input type="radio" name="pc_exposure" id="pc_2" /><label for="pc_2"><span></span>노출안함</label></p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 사이트 기본 정보</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>상품 불러오기</th>
+							<td class="td_a">
+							<button type="button" class="button-A" onclick="myPopup1()">상품 불러오기</button>
+							<span class="comment"><i class="xi-error-o"></i> 기존에 등록된 상품을 불러옵니다.</span>
+							</td>
+							<th>불러온 상품명</th>
+							<td>인터컨티넨탈 푸꾸옥 롱비치 리조트</td>
+						</tr>
+						<tr>
+							<th>사이트명</th>
+							<td class="td_a"><input type="text" class="w-P" placeholder="인터컨티넨탈 푸꾸옥 롱비치 리조트 예약센터"/></td>
+							<th>전화번호</th>
+							<td><input type="tel" class="w-P" placeholder="070-0000-0000"/></td>
+						</tr>
+						<tr>
+							<th>도메인</th>
+							<td colspan="3"><input type="text" class="w-H" placeholder="http:// or https://"/></td>
+						</tr>
+						<tr>
+							<th>리얼도메인</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder="http://xn--vv0b70a53n99a8ylz7mzhc4uc0ux8kb57ju9a5zkewa07p.kr"/>
+								<span class="comment"><i class="xi-error-o"></i> 한글 홈페이지 도메인을 등록하면 자동으로 퓨니코드로 보여집니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 서브사이트 카테고리</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>카테고리1</th>
+							<td class="td_a">
+								<input type="text" class="w-P"/>
+								<span class="comment"><i class="xi-error-o"></i> ex)호텔개요, 리조트개요, 골프장개요 등의 카테고리를 입력.</span>
+							</td>
+							<th>카테고리6</th>
+							<td>
+								<input type="text" class="w-P" placeholder=""/>
+								<span class="comment"><i class="xi-error-o"></i> ex)고객센터등의 카테고리를 입력.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>카테고리2</th>
+							<td>
+								<input type="text" class="w-P" placeholder=""/>
+								<span class="comment"><i class="xi-error-o"></i> ex)객실정보, 코스소개 등의 카테고리를 입력.</span>
+							</td>
+							<th>카테고리7</th>
+							<td><input type="text" class="w-P" placeholder=""/></td>
+						</tr>
+						<tr>
+							<th>카테고리3</th>
+							<td>
+								<input type="text" class="w-P" placeholder=""/>
+								<span class="comment"><i class="xi-error-o"></i> ex)레스토랑, BAR 등의 카테고리를 입력.</span>
+							</td>
+							<th>카테고리8</th>
+							<td><input type="text" class="w-P" placeholder=""/></td>
+						</tr>
+						<tr>
+							<th>카테고리4</th>
+							<td>
+								<input type="text" class="w-P" placeholder=""/>
+								<span class="comment"><i class="xi-error-o"></i> ex)부대시설등의 카테고리를 입력.</span>
+							</td>
+							<th>카테고리9</th>
+							<td><input type="text" class="w-P" placeholder=""/></td>
+						</tr>
+						<tr>
+							<th>카테고리5</th>
+							<td>
+								<input type="text" class="w-P" placeholder=""/>
+								<span class="comment"><i class="xi-error-o"></i> ex)객실예약, 골프장 예약 등의 카테고리를 입력.</span>
+							</td>
+							<th>카테고리10</th>
+							<td><input type="text" class="w-P" placeholder=""/></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 검색엔진 최적화 SEO설정 (개별상품 설정)</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>개별설정 여부 </th>
+							<td>
+								<div class="r_circle m-A">
+									<p><input type="radio" name="seo_ok" id="seo_y" value="Y" /><label for="seo_y"><span></span>사용함</label></p>
+									<p><input type="radio" name="seo_ok" id="seo_n" value="N" checked /><label for="seo_n"><span></span>사용안함</label></p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> '사용함' 선택 시 기본설정> 회사정보> 검색엔진 최적화 SEO설정 (홈페이지 메인) 설정보다 개별 설정이 우선적으로 적용됩니다.<br />
+								설정 결과는 검색 엔진에 따라 평균 2주 ~ 3주 후에 반영될 수 있습니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>타이틀 (Title)</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/><span class="txt_nmb">00/40</span>
+							</td>
+						</tr>
+						<tr>
+							<th>메타태그 작성자 (Author)</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/><span class="txt_nmb">00/40</span>
+							</td>
+						</tr>
+						<tr>
+							<th>메타태그 설명 (Desription)</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/><span class="txt_nmb">00/80</span>
+							</td>
+						</tr>
+						<tr>
+							<th>메타태그 키워드 (Keywords)</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/><span class="txt_nmb">00/40</span>
+								<span class="comment"><i class="xi-error-o"></i> 컴마기준으로 입력하세요.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>SNS 제목 (og:title)</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/><span class="txt_nmb">00/40</span>
+								<span class="comment"><i class="xi-error-o"></i> 쇼핑몰 URL을 카카오톡등의 SNS로 전송시 쇼핑몰 타이틀이 출력됩니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>SNS 설명 (og:desription)</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/><span class="txt_nmb">00/40</span>
+								<span class="comment"><i class="xi-error-o"></i> 쇼핑몰 URL을 카카오톡등의 SNS로 전송시 쇼핑몰 소개 내용이 출력됩니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> meta 키값 입력<span class="dragdrop">(html 태그)</span></h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>네이버 메타태그</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/>
+							</td>
+						</tr>
+						<tr>
+							<th>구글 메타태그</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/>
+							</td>
+						</tr>
+						<tr>
+							<th>빙 메타태그</th>
+							<td colspan="3">
+								<input type="text" class="w-H" placeholder=""/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

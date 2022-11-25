@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_design.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">디자인관리</a> &gt; <a href="#">아이콘 디자인</a> &gt; <a href="#">상품 아이콘</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 상품 아이콘</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select class="w-E">
+											<option value="등록일">등록일</option>
+											<option value="수정일">수정일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2022-08-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-08-31"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">전체</button>
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>아이콘 이름</th>
+								<td>
+									<input class="w-Q" type="search" class="input_search" placeholder="아이콘 이름">	
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area_one">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>사용상태</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ra" id="ra0" checked><label for="ra0"><span></span>전체</label></p>
+										<p><input type="radio" name="ra" id="ra1"><label for="ra1"><span></span>사용</label></p>
+										<p><input type="radio" name="ra" id="ra2"><label for="ra2"><span></span>사용안함</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span></p>
+				<p class="p_up">
+					<button type="button" onclick="location.href='input.html'">상품 아이콘 등록</button>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>아이콘 이름</th>
+							<th>아이콘 이미지 </span></th>
+							<th>사용상태</th>
+							<th>등록일</th>
+							<th>수정일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">5</td>
+							<td class="td_tit"><a href="/design/travel/manager/sub_design/icon/modify.html">베스트상품_아이콘</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_design/icon/modify.html"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_term"><a href="/design/travel/manager/sub_design/icon/modify.html">사용</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_design/icon/modify.html">2019-01-09</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_design/icon/modify.html">2019-01-09</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">4</td>
+							<td class="td_tit"><a href="/design/travel/manager/sub_design/icon/modify.html">추천상품_아이콘</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_design/icon/modify.html"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_term"><a href="/design/travel/manager/sub_design/icon/modify.html">사용</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_design/icon/modify.html">2019-01-09</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_design/icon/modify.html">2019-01-09</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">3</td>
+							<td class="td_tit"><a href="/design/travel/manager/sub_design/icon/modify.html">신상품_아이콘</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_design/icon/modify.html"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_term"><a href="/design/travel/manager/sub_design/icon/modify.html">사용안함</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_design/icon/modify.html">2019-01-09</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_design/icon/modify.html">2019-01-09</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td class="td_tit"><a href="/design/travel/manager/sub_design/icon/modify.html">인기상품_아이콘</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_design/icon/modify.html"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_term"><a href="/design/travel/manager/sub_design/icon/modify.html">사용</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_design/icon/modify.html">2019-01-09</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_design/icon/modify.html">2019-01-09</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td class="td_tit"><a href="/design/travel/manager/sub_design/icon/modify.html">이벤트상품</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_design/icon/modify.html"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_term"><a href="/design/travel/manager/sub_design/icon/modify.html">사용안함</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_design/icon/modify.html">2019-01-09</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_design/icon/modify.html">2019-01-09</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove">
+					<button type="button">선택 삭제</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

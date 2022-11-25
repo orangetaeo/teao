@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_basic.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">기본정보관리</a> &gt; <a href="#">주문 정책</a> &gt; <a href="#">장바구니 / 관심상품설정</a></p>
+			<?
+			include "../../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 장바구니 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>상품보관기간</th>
+								<td>
+									<ul class="raul">
+										<li>
+											<p class="r_circle"><input type="radio" name="ra1" id="ra1" checked><label for="ra1"><span></span></label></p>
+											<div class="txt"><input type="text" class="w-E" value="30" required />일동안 보관</div>
+										</li>
+										<li>
+											<p class="r_circle"><input type="radio" name="ra1" id="ra2" checked><label for="ra2"><span></span></label></p>
+											<div class="txt">고객이 삭제할 때까지 보관</div>
+										</li>
+									</ul>							
+								</td>
+							</th>
+						</tr>
+						<tr>
+							<th>보관상품 개수제한</th>
+								<td>
+									<ul class="raul">
+										<li>
+											<p class="r_circle"><input type="radio" name="ra2" id="ra3"><label for="ra3"><span></span></label></p>
+											<div class="txt"><input type="text" class="w-E" value="15" required />개까지 보관</div>
+										</li>
+										<li>
+											<p class="r_circle"><input type="radio" name="ra2" id="ra4" checked><label for="ra4"><span></span></label></p>
+											<div class="txt">보관상품 개수제한 없음</div>
+										</li>
+									</ul>
+								</td>
+							</th>
+						</tr>
+						<tr>
+							<th>보관중인상품과 같은<br />상품을 담을 경우</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ra3" id="ra5" checked><label for="ra5"><span></span>상품 수량 증가</label></p>
+										<p><input type="radio" name="ra3" id="ra6"><label for="ra6"><span></span>상품 수량 변화 없음</label></p>
+									</div>
+									<span class="comment"><i class="xi-error-o"></i> 텍스트 옵션이 선택된 경우에는 수량이 증가되지 않고 분리되어 담깁니다.</span>
+								</td>
+							</th>
+						</tr>
+						<tr>
+							<th>가격이 0원인 상품을 담을경우</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ra4" id="ra7" checked><label for="ra7"><span></span>장바구니에 담음</label></p>
+										<p><input type="radio" name="ra4" id="ra8"><label for="ra8"><span></span>장바구니에 담지 않음</label></p>
+									</div>
+								</td>
+							</th>
+						</tr>
+						<tr>
+							<th>품절상품 보관설정</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ra5" id="ra9" checked><label for="ra9"><span></span>보관상품 품절시에도 보관유지</label></p>
+										<p><input type="radio" name="ra5" id="ra10"><label for="ra10"><span></span>보관상품 품절시 자동 삭제</label></p>
+									</div>
+								</td>
+							</th>
+						</tr>
+						<tr>
+							<th>상품 장바구니 보관시<br />페이지 이동방법</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ra6" id="ra11"><label for="ra11"><span></span>장바구니 페이지로 바로 이동</label></p>
+										<p><input type="radio" name="ra6" id="ra12" checked><label for="ra12"><span></span>장바구니 페이지 이동여부 확인 팝업 노출</label></p>
+										<select>
+											<option value="PC+모바일">PC+모바일</option>
+											<option value="PC">PC</option>
+											<option value="모바일">모바일</option>
+										</select>
+									</div>
+								</td>
+							</th>
+						</tr>
+						<tr>
+							<th>바로구매 설정</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ra7" id="ra13" checked><label for="ra13"><span></span>해당 상품만 구매</label></p>
+										<p><input type="radio" name="ra7" id="ra14"><label for="ra14"><span></span>기존 장바구니 상품과 같이 구매</label></p>
+									</div>
+								</td>
+							</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 관심상품 설정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>상품개수 제한</th>
+								<td>
+									<ul class="raul">
+										<li>
+											<p class="r_circle"><input type="radio" name="ra8" id="ra15" checked><label for="ra15"><span></span></label></p>
+											<div class="txt"><input type="text" class="w-E" value="15" required />개까지 보관</div>
+										</li>
+										<li>
+											<p class="r_circle"><input type="radio" name="ra8" id="ra16"><label for="ra16"><span></span></label></p>
+											<div class="txt">보관상품 개수제한 없음</div>
+										</li>
+									</ul>
+								</td>
+							</th>
+						</tr>
+						<tr>
+							<th>장바구니로 상품이동시</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ra9" id="ra17"><label for="ra17"><span></span>상품 남김</label></p>
+										<p><input type="radio" name="ra9" id="ra18" checked><label for="ra18"><span></span>상품 삭제</label></p>
+									</div>
+								</td>
+							</th>
+						</tr>
+						<tr>
+							<th>품절상품 보관설정</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ra10" id="ra19" checked><label for="ra19"><span></span>보관상품 품절 시에도 보관유지</label></p>
+										<p><input type="radio" name="ra10" id="ra20"><label for="ra20"><span></span>보관상품 품절 시 자동삭제</label></p>
+									</div>
+								</td>
+							</th>
+						</tr>
+						<tr>
+							<th>상품 관심상품 보관시<br />
+							페이지 이동방법</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="ra11" id="ra21"><label for="ra21"><span></span>관심상품 페이지로 바로 이동</label></p>
+										<p><input type="radio" name="ra11" id="ra22" checked><label for="ra22"><span></span>관심상품 페이지 이동여부 확인 팝업 노출</label></p>
+										<select>
+											<option value="PC+모바일">PC+모바일</option>
+											<option value="PC">PC</option>
+											<option value="모바일">모바일</option>
+										</select>
+									</div>
+								</td>
+							</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_basic.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">기본정보관리</a> &gt; <a href="#">주문 정책</a> &gt; <a href="#">주문 기본설정</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 주문 기본설정</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<div class="stit"><span></span>주문상태 설정</div>
+				<table>
+					<tbody>
+						<tr>
+							<th>입금대기 </th>
+							<td colspan="3">
+								<input type="text" class="w-E" value="입금대기" required />
+								<span class="comment"><i class="xi-error-o"></i> 주문 초기상태, 무통장과 가상계좌가 해당됩니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="stit"><span></span>입금상태 상태 설정</div>
+				<table>
+					<tbody>
+						<tr>
+							<th>예약금완료 </th>
+							<td class="td_w">
+								<input type="text" class="w-E" value="예약금완료" required />
+								<span class="comment"><i class="xi-error-o"></i> 예약금 확인된 상태입니다..</span>
+							</td>
+							<th>잔금대기 </th>
+							<td>
+								<input type="text" class="w-E" value="잔금대기" required />
+								<span class="comment"><i class="xi-error-o"></i> 예약금 완료 상태에서, 잔금입금 대기상태입니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>결제완료 </th>
+							<td colspan="3">
+								<input type="text" class="w-E" value="결제완료" required />
+								<span class="comment"><i class="xi-error-o"></i> 입금확인된 상태, 또는 결제완료된 상태입니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="stit"><span></span>확정/미확정 예약관리</div>
+				<table>
+					<tbody>
+						<tr>
+							<th>여행상품 미확정 </th>
+							<td class="td_w">
+								<input type="text" class="w-E" value="미확정" required />
+								<span class="comment"><i class="xi-error-o"></i> 랜드사에 여행상품을 확인 하는 단계입니다.</span>
+							</td>
+							<th>여행상품 확정 </th>
+							<td>
+								<input type="text" class="w-E" value="확정" required />
+								<span class="comment"><i class="xi-error-o"></i> 여행상품이 확정 된 단계입니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>예약접수 </th>
+							<td class="td_w">
+								<input type="text" class="w-E" value="예약접수" required />
+								<span class="comment"><i class="xi-error-o"></i> 소비자가 여행상품을 예약접수한 상태입니다.</span>
+							</td>
+							<th>예약가능 </th>
+							<td>
+								<input type="text" class="w-E" value="예약가능" required />
+								<span class="comment"><i class="xi-error-o"></i> 관리자가 자동으로 예약가능 상태로 만듭니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>예약확정 </th>
+							<td>
+								<input type="text" class="w-E" value="예약확정" required />
+								<span class="comment"><i class="xi-error-o"></i> 관리자가 예약확정하는 단계입니다.</span>
+							</td>
+							<th>예약완료 </th>
+							<td colspan="3">
+								<input type="text" class="w-E" value="예약완료" required />
+								<span class="comment"><i class="xi-error-o"></i> 관리자가 예약완료하는 단계입니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="stit"><span></span>구매 상태 설정</div>
+				<table>
+					<tbody>
+						<tr>
+							<th>구매확정 </th>
+							<td colspan="3">
+								<input type="text" class="w-E" value="구매확정" required />
+								<span class="comment"><i class="xi-error-o"></i> 구매확정된 상태입니다.(고객이 구매확정하거나, 관리자가 상태변경)</span>
+							</td>
+						</tr>
+						<tr>
+							<th>취소 상태 설정 </th>
+							<td colspan="3">
+								<input type="text" class="w-E" value="0" required /> 일 동안 미입금시 주문자동취소
+								<span class="comment"><i class="xi-error-o"></i> 자동취소를 원하지 않는 경우 0으로 설정</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="stit"><span></span>취소 설정</div>
+				<table>
+					<tbody>
+						<tr>
+							<th>자동취소 </th>
+							<td class="td_w">
+								<input type="text" class="w-E" value="자동취소" required />
+								<span class="comment"><i class="xi-error-o"></i> 주문접수 후 오랜동안 미입금 되거나, 가상계좌 만료된 상태입니다.</span>
+							</td>
+							<th>자동취소완료</th>
+							<td colspan="3">
+								<ul class="raul">
+									<li>
+										<p class="r_circle"><input type="radio" name="ra" id="ra1" checked><label for="ra1"><span></span></label></p>
+										<div class="txt">'결재대기'상태에서 주문접수 후 <input type="text" class="w-E" value="2" required />일 후 '자동취소'로 자동 주문상태 변경</div>
+									</li>
+									<li>
+										<p class="r_circle"><input type="radio" name="ra" id="ra2" checked><label for="ra2"><span></span></label></p>
+										<div class="txt">사용안함</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>품절취소 </th>
+							<td colspan="3">
+								<input type="text" class="w-E" value="품절취소" required />
+								<span class="comment"><i class="xi-error-o"></i> 주문접수 후 여행상품 재고가 없어 취소된 상태입니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>관리자취소 </th>
+							<td class="td_w">
+								<input type="text" class="w-E" value="관리자취소" required />
+								<span class="comment"><i class="xi-error-o"></i> 주문접수 후 관리자가 여러 원인에의해 임의 취소한 상태입니다.</span>
+							</td>
+							<th>고객취소요청 </th>
+							<td>
+								<input type="text" class="w-E" value="고객취소요청" required />
+								<span class="comment"><i class="xi-error-o"></i> 주문접수 단계에서 고객이 취소요청을 한 상태입니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="stit"><span></span>실패 상태 설정</div>
+				<table>
+					<tbody>
+						<tr>
+							<th>고객결제중단 </th>
+							<td class="td_w">
+								<input type="text" class="w-E" value="고객결제중단" required />
+								<span class="comment"><i class="xi-error-o"></i> 고객이 결제완료 전 PG사 결제창을 닫거나 다른페이지로 이동한 상태입니다.</span>
+							</td>
+							<th>결제실패 </th>
+							<td>
+								<input type="text" class="w-E" value="결제실패" required />
+								<span class="comment"><i class="xi-error-o"></i> 고객결제 후 PG사에서 결제실패 결과값을 받은 상태입니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>PG확인요망 </th>
+							<td colspan="3">
+								<input type="text" class="w-E" value="PG확인요망" required />
+								<span class="comment"><i class="xi-error-o"></i> 고객결제 후 PG사에서 결과값을 받지 못하여 PG사에서 확인이 필요한 상태입니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="stit"><span></span>환불상태 설정</div>
+				<table>
+					<tbody>
+						<tr>
+							<th>환불접수 </th>
+							<td class="td_w">
+								<input type="text" class="w-E" value="환불접수" required />
+								<span class="comment"><i class="xi-error-o"></i> 입금확인 또는 반품요청 이후 관리자가 환불 처리하는 단계입니다.</span>
+							</td>
+							<th>환불보류 </th>
+							<td>
+								<input type="text" class="w-E" value="환불보류" required />
+								<span class="comment"><i class="xi-error-o"></i> 고객이 접수한 환불요청을 보류처리한 상태입니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>환불완료 </th>
+							<td colspan="3">
+								<input type="text" class="w-E" value="환불완료" required />
+								<span class="comment"><i class="xi-error-o"></i> 환불이 완료된 상태로, 해당주문상품이 취소완료된 상태입니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

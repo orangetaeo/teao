@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 가이드 등록</h2>
+			<div class="popup_top">
+			</div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>소속 랜드사 <span class="color-A">*</span></th>
+							<td>
+								<select class="w-G">
+									<option value="소속 랜드사 선택">소속 랜드사 선택</option>
+									<option value="A랜드사">A랜드사</option>
+									<option value="B랜드사">B랜드사</option>
+								</select>
+							</td>
+							<th>국적 <span class="color-A">*</span></th>
+							<td>
+								<select class="w-G">
+									<option value="국적 선택">국적 선택</option>
+									<option value="미국 USD">미국 USD</option>
+									<option value="대한민국 KRM">대한민국 KRM</option>
+									<option value="남아프리카 공화국 ZAR">남아프리카 공화국 ZAR</option>
+									<option value="네발 NPR">네발 NPR</option>
+									<option value="노르웨이 NOK">노르웨이 NOK</option>
+									<option value="뉴질랜드 NZD">뉴질랜드 NZD</option>
+									<option value="대만 TWD">대만 TWD</option>
+									<option value="덴마크 DKK">덴마크 DKK</option>
+									<option value="러시아 RUB">러시아 RUB</option>
+									<option value="마카오 MOP">마카오 MOP#</option>
+									<option value="말레이시아 MYR">말레이시아 MYR</option>
+									<option value="멕시코 MXN">멕시코 MXN</option>
+									<option value="몽골 MNT">몽골 MNT</option>
+									<option value="바레인 BHD">바레인 BHD</option>
+									<option value="방글라데시 BDT">방글라데시 BDT</option>
+									<option value="베트남 VND">베트남 VND</option>
+									<option value="브라질 BRL">브라질 BRL</option>
+									<option value="브루나이 BND">브루나이 BND</option>
+									<option value="사우디아라비아 SAR">사우디아라비아 SAR</option>
+									<option value="스웨덴 SEK">스웨덴 SEK</option>
+									<option value="스위스 CHF">스위스 CHF</option>
+									<option value="싱가포르 SGD">싱가포르 SGD</option>
+									<option value="아랍에미리트 AED">아랍에미리트 AED</option>
+									<option value="영국 GBP">영국 GBP</option>
+									<option value="오만 OMG">오만 OMG</option>
+									<option value="요르단 JOD">요르단 JOD</option>
+									<option value="유럽연합 EUR">유럽연합 EUR</option>
+									<option value="이스라엘 ILS">이스라엘 ILS</option>
+									<option value="이집트 EGP">이집트 EGP</option>
+									<option value="인도 INR">인도 INR</option>
+									<option value="인도네시아 IDR">인도네시아 IDR</option>
+									<option value="일본 JPY">일본 JPY</option>
+									<option value="중국 CNY">중국 CNY</option>
+									<option value="체코 CZK">체코 CZK</option>
+									<option value="칠레 CLP">칠레 CLP</option>
+									<option value="카자흐스탄 KZT">카자흐스탄 KZT</option>
+									<option value="카타르 QAR">카타르 QAR</option>
+									<option value="캐나다 CAD">캐나다 CAD</option>
+									<option value="쿠웨이트 KWD">쿠웨이트 KWD</option>
+									<option value="태국 THB">태국 THB</option>
+									<option value="터키 TRY">터키 TRY</option>
+									<option value="파키스탄 PKR">파키스탄 PKR</option>
+									<option value="폴란드 PLN">폴란드 PLN</option>
+									<option value="필리핀 html">필리핀 html</option>
+									<option value="헝가리 HUF">헝가리 HUF</option>
+									<option value="호주 AUD">호주 AUD</option>
+									<option value="홍콩 HKD">홍콩 HKDN</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>가이드 이름 <span class="color-A">*</span></th>
+							<td>
+								<input type="text" class="w-G" placeholder="홍길동" required/>
+							</td>
+							<th>언어 <span class="color-A">*</span></th>
+							<td>
+								<select class="w-G">
+									<option value="언어 선택">언어 선택</option>
+									<option value="한국어 가능">한국어 가능</option>
+									<option value="한국어 불가능">한국어 불가능</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>보유차량 <span class="color-A">*</span></th>
+							<td>
+								<select class="w-G">
+									<option value="보유차량 선택">보유차량 선택</option>
+									<option value="버스">버스</option>
+									<option value="승합차">승합차</option>
+									<option value="승용차">승용차</option>
+									<option value="택시">택시</option>
+									<option value="오토바이">오토바이</option>
+									<option value="뚝뚝이">뚝뚝이</option>
+								</select>
+							</td>
+							<th>인승입력 <span class="color-A">*</span></th>
+							<td>
+								<input type="text" class="w-G" placeholder="4인승" required/>
+							</td>
+						</tr>
+						<tr>
+							<th>현지 연락처 <span class="color-A">*</span></th>
+							<td>
+								<input type="text" class="w-G" placeholder="+82 010-0000-0000"/>
+							</td>
+							<th>카톡 연락처 <span class="color-A">*</span></th>
+							<td>
+								<input type="text" class="w-G" placeholder="@1Q2W3E4R"/>
+							</td>
+						</tr>
+						<tr>
+							<th>가이드 코드 <span class="color-A">*</span></th>
+							<td class="td_w">
+								<div class="c_box">
+									<p><input type="checkbox" id="chch" checked /><label for="chch"><span></span>가이드 등록시 자동 생성됩니다.</label></p>
+								</div>
+							</td>
+							<th>자체 가이드 코드 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-G" /><button type="button" class="button-A" onclick="location.href='#'">중복확인</button></td>
+						</tr>
+						<tr>
+							<th>가이드 사진 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 520 x 520 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+								<div class="img_view">
+									<img src="" alt="">
+									<div class="del"><i class="xi-eraser" title="삭제"></i></div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="mark"><i class="xi-error-o"></i> 1명씩 개별 등록.</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">취소</button><button type="button" onclick="window.close();">입력완료</button></p>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

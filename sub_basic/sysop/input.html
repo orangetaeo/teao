@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_basic.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">기본정보관리</a> &gt; <a href="#">운영자 관리</a> &gt; <a href="#">운영자 등록</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 운영자 등록</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>아이디 <span class="color-A">*</span></th>
+							<td colspan="3"><input type="text" class="w-G" required /><button type="button" class="button-A">중복확인</button></td>
+						</tr>
+						<tr>
+							<th>비밀번호 <span class="color-A">*</span></th>
+							<td class="td_w">
+								<input type="password" class="w-G" required minlength="6" maxlength="16"/>
+								<span class="comment"><i class="xi-error-o"></i> 영문/숫자/특수문자 조합하여 8~16자 이하로 설정</span>
+							</td>
+							<th>비밀번호확인 <span class="color-A">*</span></th>
+							<td>
+								<input type="password" class="w-G" required minlength="6" maxlength="16" /><br />
+								<span class="comment"><i class="xi-error-o"></i> 영문/숫자/특수문자 조합하여 8~16자 이하로 설정</span>
+							</td>
+						</tr>
+						<tr>
+							<th>이름 <span class="color-A">*</span></th>
+							<td class="td_w"><input type="text" class="w-G" required /></td>
+							<th>닉네임 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-G" required /></td>
+						</tr>
+						<tr>
+							<th>이메일 <span class="color-A">*</span></th>
+							<td class="td_w"><input type="email" class="w-G" required /></td>
+							<th>운영자지정 <span class="color-A">*</span></th>
+							<td>
+								<div class="r_circle m-A">
+									<p><input type="radio" name="log" id="log1" required /><label for="log1"><span></span>지정함</label></p>
+									<p><input type="radio" name="log" id="log2" checked required /><label for="log2"><span></span>지정안함</label><br /></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>직원여부 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="worker" id="w1" checked required /><label for="w1"><span></span>정규직</label></p>
+									<p><input type="radio" name="worker" id="w2" required /><label for="w2"><span></span>계약직</label></p>
+									<p><input type="radio" name="worker" id="w3" required /><label for="w3"><span></span>아르바이트</label></p>
+									<p><input type="radio" name="worker" id="w4" required /><label for="w4"><span></span>파견직</label></p>
+									<p><input type="radio" name="worker" id="w5" required /><label for="w5"><span></span>퇴사자</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>조직도 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<select class="w-F" required>
+									<option value="1 STEP">1 STEP</option>
+								</select>
+								<select class="w-F" required>
+									<option value="2 STEP">2 STEP</option>
+								</select>
+								<select class="w-F" required>
+									<option value="3 STEP">3 STEP</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>전화번호</th>
+							<td class="td_w"><input type="text" class="w-G" /></td>
+							<th>내선번호</th>
+							<td><input type="text" class="w-D" /></td>
+						</tr>
+						<tr>
+							<th>핸드폰번호</th>
+							<td class="td_w"><input type="tel" class="w-G" name="MOBILE_NO" id="MOBILE_NO" maxlength="13" placeholder="010-0000-0000"/></td>
+							<th>퇴사일</th>
+							<td>
+								<div class="day">
+									<span><input type="text" class="w-D ta-c" placeholder="2022-10-04"><i class="xi-calendar"></i></span>
+									<div class="c_box ml10 dpib">
+										<p><input type="checkbox" name="out" id="out1" /><label for="out1"><span></span>퇴직</label></p>
+									</div>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 퇴직 체크박스를 체크할 경우 날짜를 필수로 선택</span>
+							</td>
+						</tr>
+						<tr>
+							<th>메모</th>
+							<td colspan="3"><textarea class="w-H h-A"></textarea></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+
+<script>
+//골프장 선택
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/golf/popup/bring.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=930");
+}
+</script>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 1일차</h2>
+		</div>
+		<div class="conbox">
+			<div class="tab_area">
+				<button type="button" class="button-B" onclick="location.href='flight.html'">항공</button>
+				<button type="button" class="button-B" onclick="location.href='accommodations.html'">숙소</button>
+				<button type="button" class="button-B" onclick="location.href='accommodations_option.html'">숙소부가시설</button>
+				<button type="button" class="button-B on" onclick="location.href='golf.html'">골프</button>
+				<button type="button" class="button-B" onclick="location.href='golf_option.html'">골프부가시설</button>
+				<button type="button" class="button-B" onclick="location.href='meal.html'">음식점</button>
+				<button type="button" class="button-B" onclick="location.href='tourist.html'">관광</button>
+				<button type="button" class="button-B" onclick="location.href='transportation.html'">교통수단</button>
+			</div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>골프장명</th>
+							<td colspan="3">남호이안CC</td>
+						</tr>
+						<tr>
+							<th>골프장 리스트</th>
+							<td class="td_w">
+								<button type="button" class="button-A" onclick="myPopup1()">가져오기</button>
+							</td>
+							<th>랜드사</th>
+							<td>A랜드사</td>
+						</tr>
+						<tr>
+							<th>카테고리</th>
+							<td class="td_w">AC 아시아 > VN 베트남 > 다낭 > CC</td>
+							<th>웹사이트</th>
+							<td><a href="https://vinpearl.com/vi/hotels/vinpearl-resort-golf-nam-hoi-an" target="_blank">https://vinpearl.com/vi/hotels/vinpearl-resort-golf-nam-hoi-an</td>
+						</tr>
+						<tr>
+							<th>연락처</th>
+							<td><a href="tel:+84 235 367 6888">+84 235 367 6888</a></td>
+							<th>총홀수</th>
+							<td>36H</td>
+						</tr>
+						<tr>
+							<th>썸네일이미지 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<!-- 골프장 썸네일 이미지 호출 -->
+								<div class="img_view"><img src="" alt=""></div>
+								<span class="comment"><i class="xi-error-o"></i> 표기된 이미지를 변경하고 싶을 경우 해당 골프장리스트에서만 수정 가능</span>
+							</td>
+						</tr>
+						<tr>
+							<th>골프장 가격 리스트</th>
+							<td colspan="3" class="td_w">
+								<div class="dein_table mt15 mb10">
+									<table>
+										<thead>
+											<tr>
+												<th>판매기준</th>
+												<th>번호</th>
+												<th>이용코스</th>
+												<th>홀수</th>
+												<th>그린피</th>
+												<th>캐디피</th>
+												<th>카트비</th>
+												<th>캐디팁</th>
+												<th>옵션코드</th>
+												<th>메모</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="r_circle m-A">
+														<input type="radio" name="sales_basis" id="sales_basis1" checked/><label for="sales_basis1"><span></span>
+													</div>
+												</td>
+												<td>4</td>
+												<td>레이크코스</td>
+												<td>18H</td>
+												<td>1인</td>
+												<td>노케디 가능</td>
+												<td>2인1카트</td>
+												<td>없음</td>
+												<td>000000000</td>
+												<td>가나다...</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="r_circle m-A">
+														<input type="radio" name="sales_basis" id="sales_basis2"><label for="sales_basis2"><span></span>
+													</div>
+												</td>
+												<td>3</td>
+												<td>레이크코스</td>
+												<td>18H</td>
+												<td>1인</td>
+												<td>노케디 가능</td>
+												<td>2인1카트</td>
+												<td>없음</td>
+												<td>000000000</td>
+												<td>가나다...</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="r_circle m-A">
+														<input type="radio" name="sales_basis" id="sales_basis3"><label for="sales_basis3"><span></span>
+													</div>
+												</td>
+												<td>2</td>
+												<td>레이크코스</td>
+												<td>18H</td>
+												<td>1인</td>
+												<td>2인1캐디</td>
+												<td>2인1카트</td>
+												<td>1인</td>
+												<td>000000000</td>
+												<td>가나다...</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="r_circle m-A">
+														<input type="radio" name="sales_basis" id="sales_basis4"><label for="sales_basis4"><span></span>
+													</div>
+												</td>
+												<td>1</td>
+												<td>레이크코스</td>
+												<td>18H</td>
+												<td>1인</td>
+												<td>2인1캐디</td>
+												<td>2인1카트</td>
+												<td>1인</td>
+												<td>000000000</td>
+												<td>가나다...</td>
+											</tr>
+										</tbody>
+									</table>
+									<span class="comment"><i class="xi-error-o"></i> 판매기준을 선택 하세요.(판매 시 각 시즌과 요일에 맞춰 소비자가격이 표기 됩니다.) 다른 가격리스트는 소비자페이지에서 별도의 옵션판매로 노출 됩니다.</span>
+								</div>
+							</td>
+						</tr>			
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="mark"><i class="xi-error-o"></i> 각 일정별 탭항목에서 1개만 입력가능합니다.예) 항공, 숙소, 골프, 스키장, 트래킹, 관광지, 선택관광지, 교통수단, 직접입력 중에서 1개탭 선택 저장.</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">취소</button><button type="button" onclick="window.close();">입력완료</button></p>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../../snb_basic.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">기본정보관리</a> &gt; <a href="#">상품 정책</a> &gt; <a href="#">상품상세 정보고시 관리</a> &gt; <a href="#">호텔/ 펜션 예약</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 호텔/ 펜션 예약</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>1. 국가 또는 지역명 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-100" required /></td>
+						</tr>
+						<tr>
+							<th>2. 숙소형태 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-100" required /></td>
+						</tr>
+						<tr>
+							<th>3. 등급, 객실타입 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-100" required /></td>
+						</tr>
+						<tr>
+							<th>4. 사용가능 <span class="color-A">*</span></th>
+							<td>
+							<textarea class="w-100" placeholder="인원, 인원추가 시 비용" /></textarea></td>
+						</tr>
+						<tr>
+							<th>5. 부대시설 <span class="color-A">*</span></th>
+							<td>
+							<textarea class="w-100" placeholder="제공 서비스 (조식 등)" /></textarea></td>
+						</tr>
+						<tr>
+							<th>6. 취소 규정 <span class="color-A">*</span></th>
+							<td>
+							<textarea class="w-100" placeholder="환불, 위약금 등" /></textarea></td>
+						</tr>
+						<tr>
+							<th>7. 예약담당 연락처 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-100" required /></td>
+						</tr>
+						<tr>
+							<th>첨부파일</th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 주석마크 -->
+			<div class="mark"><i class="xi-error-o"></i> 첨부파일로 대체 할 수 있습니다.</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

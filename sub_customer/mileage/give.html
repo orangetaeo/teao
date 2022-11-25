@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_customer.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">회원관리</a> &gt; <a href="#">리프레시 포인트관리</a> &gt; <a href="#">리프레시 포인트 지급/차감리스트</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 리프레시 포인트 지급/차감리스트</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>탈퇴일</th>
+								<td class="td_day">
+									<div>
+										<select class="w-F">
+											<option value="지급일">지급일</option>
+											<option value="차단일">차단일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">오늘</button>
+										<button type="button">어제</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+									</div>
+								</td>
+								<td></td>
+							<tr>
+								<th>아이디</th>
+								<td class="search_area">
+									<div>
+										<select class="w-F">
+											<option value="아이디">아이디</option>
+											<option value="이름">이름</option>
+											<option value="닉네임">닉네임</option>
+											<option value="이메일">이메일</option>
+											<option value="휴대폰번호">휴대폰번호</option>
+											<option value="전화번호">전화번호</option>
+											<option value="회사명">회사명</option>
+											<option value="사업자등록번호">사업자등록번호</option>
+											<option value="대표자명">대표자명</option>
+											<option value="추천인아이디">추천인아이디</option>
+											<option value="팩스번호">팩스번호</option>
+										</select>
+										<input type="search" class="input_search" placeholder="검색어">
+									</div>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>회원등급</th>
+								<td class="td_day">
+									<div>
+										<select class="w-F">
+											<option value="일반회원">일반회원</option>
+											<option value="VIP">VIP</option>
+										</select>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>지급/차감사유</th>
+								<td class="td_day">
+									<div>
+										<select  class="w-F">
+										<option value="선택">선택</option>
+										<option value="상품구매 시 리프레시 포인트 사용 ">상품구매 시 리프레시 포인트 사용</option>
+										<option value="상품구매 시 망일리지 지급">상품구매 시 망일리지 지급</option>
+										<option value="환불 시 사용 리프레시 포인트 환원">환불 시 사용 리프레시 포인트 환원</option>
+										<option value="환불 시 적립 리프레시 포인트 차감">환불 시 적립 리프레시 포인트 차감</option>
+										<option value="신규회원 가입">신규회원 가입</option>
+										<option value="환불 시 기타환불 처리">환불 시 기타환불 처리</option>
+										<option value="게시글등록 시 리프레시 포인트 지급">게시글등록 시 리프레시 포인트 지급</option>
+										<option value="게시글삭제 시 리프레시 포인트 차감">게시글삭제 시 리프레시 포인트 차감</option>
+										<option value="기타">기타</option>
+										<option value="취소 시 사용 리프레시 포인트 환원">취소 시 사용 리프레시 포인트 환원</option>
+										<option value="회원정보 수정 이벤트 참여">회원정보 수정 이벤트 참여</option>
+										<option value="쿠폰 리프레시 포인트 적립">쿠폰 리프레시 포인트 적립</option>
+									</select>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>지급/차감 구분</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="aa" id="aa0" checked><label for="aa0"><span></span> 전체</label></p>
+										<p><input type="radio" name="aa" id="aa1"><label for="aa1"><span></span> 지급</label></p>
+										<p><input type="radio" name="aa" id="aa2"><label for="aa2"><span></span> 차감</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>금액 범위</th>
+								<td>
+									<input type="text" class="w-E ta-r" /> ~ <input type="text" class="w-E ta-r" />
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span></p>
+				<p class="p_up">
+					<button type="button" onclick="location.href='input.html'">리프레시 포인트 지급/차감 등록</button>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th>No.</th>
+							<th>이메일(ID)</th>
+							<th>이름</th>
+							<th>등급</th>
+							<th>지급액</th>
+							<th>지급일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>차감액</th>
+							<th>차감일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>소명예정일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>처리자</th>
+							<th>사유</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td_num">2</td>
+							<td><a href="#">biz@orangetour.io</a></td>
+							<td><a href="#">홍길동</a></td>
+							<td><a href="#">일반등급</a></td>
+							<td><a href="#">1,000원</a></td>
+							<td><a href="#">0000-00-00</a></td>
+							<td><a href="#">-</a></td>
+							<td><a href="#">-</a></td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td><a href="#">홍길동</a></td>
+							<td><a href="#">상품구매 시 리프레시 포인트 지급<br />(주문번호: 0000000000000000)</a></td>
+						</tr>
+						<tr>
+							<td class="td_num">1</td>
+							<td><a href="#">biz@orangetour.io</a></td>
+							<td><a href="#">홍길순</a></td>
+							<td><a href="#">VIP</a></td>
+							<td><a href="#">-</a></td>
+							<td><a href="#">-</a></td>
+							<td><a href="#">2,000원</a></td>
+							<td><a href="#">0000-00-00</a></td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td><a href="#">관리자(master)</a></td>
+							<td><a href="#">상품구매 시 리프레시 포인트 차감<br />(주문번호: 0000000000000000)</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

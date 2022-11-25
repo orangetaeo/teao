@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 회원관리</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>회원명</th>
+							<td colspan="3">홍길동</td>
+						</tr>
+						<tr>
+							<th>리프레시 포인트</th>
+							<td class="td_w">2,150원</td>
+							<th>쿠폰</th>
+							<td>0개</td>
+						</tr>
+						<tr>
+							<th>총 구매금액</th>
+							<td colspan="3">268,000원 | 총 구매건수 7 | 총 상담건수 0 | 1:1 문의건수 0/0</td>
+						</tr>
+						<tr>
+							<th>회원구분</th>
+							<td>개인회원</td>
+							<th>최종로그인일</th>
+							<td>0000-00-00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tab_area">
+				<button type="button" class="button-B" onclick="location.href='crm.html'">요약보기</button>
+				<button type="button" class="button-B" onclick="location.href='detail.html'">회원정보</button>
+				<button type="button" class="button-B" onclick="location.href='order.html'">주문내역</button>
+				<button type="button" class="button-B on" onclick="location.href='mileage.html'">리프레시 포인트내역</button>
+				<button type="button" class="button-B" onclick="location.href='coupon.html'">쿠폰내역</button>
+				<button type="button" class="button-B" onclick="location.href='atalk.html'">문자/알림톡 발송내역</button>
+				<button type="button" class="button-B" onclick="location.href='counsel.html'">상담내역</button>
+				<button type="button" class="button-B" onclick="location.href='qa.html'">문의내역</button>
+				<button type="button" class="button-B" onclick="location.href='board.html'">게시글내역</button>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 리프레시 포인트내역</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>지급/차감일</th>
+								<td class="td_day">
+									<div>
+										<select class="w-F">
+											<option value="지급일">지급일</option>
+											<option value="차단일">차감일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2022-09-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-09-30"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">오늘</button>
+										<button type="button">어제</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>처리자</th>
+								<td>
+									<div>
+										<input type="search" class="w-Q" placeholder="검색어">
+									</div>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area_one">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>지급/차감사유</th>
+								<td>
+									<div>
+										<select class="w-F">
+										<option value="선택">선택</option>
+										<option value="신규회원 가입">신규회원 가입</option>
+										<option value="상품구매 시 리프레시 포인트 사용 ">상품구매 시 리프레시 포인트 사용</option>
+										<option value="상품구매 시 망일리지 지급">상품구매 시 리프레시 포인트 지급</option>
+										<option value="환불 시 사용 리프레시 포인트 환원">환불 시 사용 리프레시 포인트 환원</option>
+										<option value="환불 시 적립 리프레시 포인트 차감">환불 시 적립 리프레시 포인트 차감</option>
+										<option value="환불 시 기타환불 처리">환불 시 기타환불 처리</option>
+										<option value="게시글등록 시 리프레시 포인트 지급">게시글등록 시 리프레시 포인트 지급</option>
+										<option value="게시글삭제 시 리프레시 포인트 차감">게시글삭제 시 리프레시 포인트 차감</option>
+										<option value="취소 시 사용 리프레시 포인트 환원">취소 시 사용 리프레시 포인트 환원</option>
+										<option value="회원정보 수정 이벤트 참여">회원정보 수정 이벤트 참여</option>
+										<option value="쿠폰 리프레시 포인트 적립">쿠폰 리프레시 포인트 적립</option>
+										<option value="기타">기타</option>
+									</select>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>지급/차감 구분</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="give" id="give0" checked><label for="give0"><span></span> 전체</label></p>
+										<p><input type="radio" name="give" id="give1"><label for="give1"><span></span> 지급</label></p>
+										<p><input type="radio" name="give" id="give2"><label for="give2"><span></span> 차감</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>금액 범위</th>
+								<td>
+									<input type="number" class="w-E ta-r" /> ~ <input type="number" class="w-E ta-r" />
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>			
+		</div>
+		<iframe src="frame_mileage.html" id="frame_mileage" name="frame_mileage" width="100%" scrolling="no" frameborder="0" ></iframe>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+
+<!-- [새창팝업] -->
+<script>
+
+
+//룸타입 가격설정
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/accommodations/popup/room_type.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1540, height=1200");
+}
+
+</script>
+
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 숙박가능일 설정</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>카테고리</th>
+							<td class="td_category">
+								<select class="w-F">
+									<option value="대륙 선택">대륙 선택</option>
+									<option value="AC 아시아">AC 아시아</option>
+								</select>
+								<select class="w-F">
+									<option value="국가 선택">국가 선택</option>
+									<option value="KO 대한민국">KO 대한민국</option>
+								</select>
+								<select class="w-F">
+									<option value="지역 선택">지역 선택</option>
+									<option value="다낭">다낭</option>
+								</select>
+								<select class="w-F">
+									<option value="숙소유형 선택">숙소유형 선택</option>
+									<option value="호텔">호텔</option>
+									<option value="리조트">리조트</option>
+									<option value="풀빌라">풀빌라</option>
+									<option value="게스트하우스">게스트하우스</option>
+								</select>
+							</td>
+						<tr>
+							<th>숙소명</th>
+							<td colspan="3">
+								<div class="sel">
+									<select class="w-F">
+										<option value="숙소명">숙소명</option>
+										<option value="숙소코드">숙소코드</option>
+									</select>
+									<input type="search" class="w-P" placeholder="숙소명, 숙소코드 선택 후 검색 하세요.">	
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>예약가능일 설정</th>
+							<td colspan="3">
+								<div class="sel day">
+									<select class="w-F">
+										<option value="전체">전체</option>
+										<option value="디럭스룸">디럭스룸</option>
+										<option value="스텐다드룸">스텐다드룸</option>
+										<option value="더블룸">더블룸</option>
+										<option value="스위트룸">스위트룸</option>
+										<option value="프레지던트">프레지던트</option>
+									</select>
+									<input type="text" class="w-D ta-c" placeholder="2022-09-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-09-30"><i class="xi-calendar"></i>
+									<button type="button" class="button-A">등록</button><button type="button" class="button-A">삭제</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 숙박가능일 달력</h2>
+		</div>
+		<div class="conbox">
+			<!-- 달력 -->
+			<div class="calendar_tit">
+				<div class="tit">
+					<p><i class="xi-angle-left" onclick="p_month()"></i></p>
+					<p class="this_month">
+						<select name="year_select" id="year_select">
+							<option value='2022'selected>2022</option>
+							<option value='2023'>2023</option>
+							<option value='2024'>2024</option>
+							<option value='2025'>2025</option>
+							<option value='2026'>2026</option>
+							<option value='2027'>2027</option>
+							<option value='2028'>2028</option>
+							<option value='2029'>2029</option>
+							<option value='2030'>2030</option>
+							<option value='2031'>2031</option>
+							<option value='2032'>2032</option>
+							<option value='2033'>2033</option>
+							<option value='2034'>2034</option>
+							<option value='2035'>2035</option>
+							<option value='2036'>2036</option>
+							<option value='2037'>2037</option>
+							<option value='2038'>2038</option>
+						</select>
+						.
+						<select name="month_select" id="month_select">
+							<option value='01'>01</option>
+							<option value='02'>02</option>
+							<option value='03'>03</option>
+							<option value='04'>04</option>
+							<option value='05'>05</option>
+							<option value='06'>06</option>
+							<option value='07'>07</option>
+							<option value='08'>08</option>
+							<option value='09' selected>09</option>
+							<option value='10'>10</option>
+							<option value='11'>11</option>
+							<option value='12'>12</option>
+						</select>
+					</p>
+					<p><i class="xi-angle-right" onclick="n_month()"></i></p>
+				</div>
+				<div class="btn"><button type="button" onclick="now_month('2022-09-01','2022-09-30')">이번달</button></div>
+			</div>
+			<div class="calendar">
+				<table>
+					<thead>
+						<tr>
+							<th class="th_sun">SUN</th>
+							<th>MON</th>
+							<th>TUE</th>
+							<th>WED</th>
+							<th>THU</th>
+							<th>FRI</th>
+							<th class="th_sat">SAT</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td_sun">
+								<div></div>
+							</td>
+							<td>
+								<div></div>
+							</td>
+							<td>
+								<div></div>
+							</td>
+							<td>
+								<div></div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">1</span><span class="day_peak">성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">90,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">160,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">70,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">360,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">950,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">2</span><span class="day_peak">성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">90,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">160,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">70,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">360,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">950,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_sat">
+								<div>
+									<p class="day"><span class="day_num co_sat">3</span><span class="day_peak">성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">90,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">160,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">70,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">360,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">950,000</span></p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_sun">
+								<div>
+									<p class="day"><span class="day_num co_sun">4</span><span class="day_peak">성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">150,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">60,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">350,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">900,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">5</span><span class="day_peak">성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">150,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">60,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">350,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">900,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">6</span><span class="day_peak">성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">150,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">60,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">350,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">900,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">7</span><span class="day_peak">성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">150,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">60,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">350,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">900,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">8</span><span class="day_toppeak">극성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">110,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">180,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">450,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,200,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_off">
+								<div>
+									<p class="day"><span class="day_num co_spe">9</span><span class="day_toppeak">극성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">110,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">180,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">450,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,200,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_off">
+								<div>
+									<p class="day"><span class="day_num co_spe">10</span><span class="day_toppeak">극성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">110,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">180,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">450,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,200,000</span></p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_off">
+								<div>
+									<p class="day"><span class="day_num co_spe">11</span><span class="day_toppeak">극성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">110,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">180,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">450,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,200,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_off">
+								<div>
+									<p class="day"><span class="day_num co_spe">12</span><span class="day_toppeak">극성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">110,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">180,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">450,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,200,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">13</span><span class="day_shoulder">준성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">100,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">170,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">70,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">400,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,000,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">14</span><span class="day_shoulder">준성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">100,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">170,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">70,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">400,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,000,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">15</span><span class="day_shoulder">준성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">110,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">180,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">410,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,100,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">16</span><span class="day_shoulder">준성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">110,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">180,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">410,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,100,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_sat">
+								<div>
+									<p class="day"><span class="day_num co_sat">17</span><span class="day_shoulder">준성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">110,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">180,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">410,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,100,000</span></p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_sun">
+								<div>
+									<p class="day"><span class="day_num co_sun">18</span><span class="day_shoulder">준성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">100,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">170,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">70,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">400,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,000,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">19</span><span class="day_shoulder">준성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">100,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">170,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">70,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">400,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,000,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">20</span><span class="day_shoulder">준성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">100,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">170,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">70,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">400,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,000,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">21</span><span class="day_shoulder">준성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">100,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">170,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">70,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">400,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,000,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">22</span><span class="day_shoulder">준성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">110,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">180,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">410,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,100,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">23</span><span class="day_shoulder">준성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">110,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">180,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">410,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,100,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_sat">
+								<div>
+									<p class="day"><span class="day_num co_sat">24</span><span class="day_shoulder">준성수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">110,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">180,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">410,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">1,100,000</span></p>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_sun">
+								<div>
+									<p class="day"><span class="day_num co_sun">25</span><span class="day_offseason">비수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">70,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">120,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">50,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">300,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">750,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">26</span><span class="day_offseason">비수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">70,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">120,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">50,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">300,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">750,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">27</span><span class="day_offseason">비수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">70,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">120,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">50,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">300,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">750,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">28</span><span class="day_offseason">비수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">70,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">120,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">50,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">300,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">750,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">29</span><span class="day_offseason">비수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">130,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">60,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">320,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">800,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div>
+									<p class="day"><span class="day_num">30</span><span class="day_offseason">비수기</span></p>
+									<div class="info">
+										<p class="info_ok" onclick="myPopup1()">디럭스룸 : <span class="co_che">80,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스텐다드룸 : <span class="co_che">130,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">더블룸 : <span class="co_che">60,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">스위트룸 : <span class="co_che">320,000</span></p>
+										<p class="info_ok" onclick="myPopup1()">프레지던트 : <span class="co_che">800,000</span></p>
+									</div>
+								</div>
+							</td>
+							<td class="td_sat">
+								<div></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

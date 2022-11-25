@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 회원관리</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>회원명</th>
+							<td colspan="3">홍길동</td>
+						</tr>
+						<tr>
+							<th>리프레시 포인트</th>
+							<td class="td_w">2,150원</td>
+							<th>쿠폰</th>
+							<td>0개</td>
+						</tr>
+						<tr>
+							<th>총 구매금액</th>
+							<td colspan="3">268,000원 | 총 구매건수 7 | 총 상담건수 0 | 1:1 문의건수 0/0</td>
+						</tr>
+						<tr>
+							<th>회원구분</th>
+							<td>개인회원</td>
+							<th>최종로그인일</th>
+							<td>0000-00-00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tab_area">
+				<button type="button" class="button-B" onclick="location.href='crm.html'">요약보기</button>
+				<button type="button" class="button-B on" onclick="location.href='detail.html'">회원정보</button>
+				<button type="button" class="button-B" onclick="location.href='order.html'">주문내역</button>
+				<button type="button" class="button-B" onclick="location.href='mileage.html'">리프레시 포인트내역</button>
+				<button type="button" class="button-B" onclick="location.href='coupon.html'">쿠폰내역</button>
+				<button type="button" class="button-B" onclick="location.href='atalk.html'">문자/알림톡 발송내역</button>
+				<button type="button" class="button-B" onclick="location.href='counsel.html'">상담내역</button>
+				<button type="button" class="button-B" onclick="location.href='qa.html'">문의내역</button>
+				<button type="button" class="button-B" onclick="location.href='board.html'">게시글내역</button>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 회원정보</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>회원 구분</th>
+							<td class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="aa" id="pc_1" checked /><label for="pc_1"><span></span> 개인회원</label></p>
+									<p><input type="radio" name="aa" id="pc_2" /><label for="pc_2"><span></span> 사업자회원</label></p>
+								</div>
+							</td>
+							<th>승인</th>
+							<td>
+								<div class="r_circle m-A">
+									<p><input type="radio" name="ab" id="pc_1" checked /><label for="pc_1"><span></span> 승인</label></p>
+									<p><input type="radio" name="ab" id="pc_2" /><label for="pc_2"><span></span> 승인대기</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>회원등급</th>
+							<td>
+								<div>
+									<select class="w-G">
+										<option value="일반">일반</option>
+										<option value="1등급">1등급</option>
+										<option value="2등급">2등급</option>
+										<option value="3등급">3등급</option>
+										<option value="4등급">4등급</option>
+										<option value="5등급">5등급</option>
+									</select>
+								</div>
+								<!-- 주석마크 -->
+								<span class="comment"><i class="xi-error-o"></i> 수정일: 0000-00-00 00:00:00</span>
+							</td>
+							<th>닉네임 </th>
+							<td><input type="text" class="w-G" /><button type="button" class="button-A" onclick="location.href='#'">중복확인</button></td>
+						</tr>
+						<tr>
+							<th>아이디 <span class="color-A">*</span></th>
+							<td> orangemsg@com-home.co.kr
+							</td>
+							<th>비밀번호  <span class="color-A">*</span></th>
+							<td><button type="button" class="button-A" onclick="location.href='#'">비밀번호 초기화</button>
+							<span class="comment"><i class="xi-error-o"></i> 가입된 '연락처' 정보로 고객에게 초기화된 비밀번호를 전송합니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>이름 <span class="color-A">*</span></th>
+							<td><input type="text" class="w-G" /></td>
+							<th>구매 총액 </th>
+							<td>222,2222원</td>
+						</tr>
+						<tr>
+							<th>리프레시 포인트 </th>
+							<td colspan="3">222,2222원</td>
+						</tr>
+						<tr>
+							<th>회원가입일 </th>
+							<td>0000-00-00 00:00:00</td>
+							<th>최종로그인일 </th>
+							<td>0000-00-00 00:00:00</td>
+						</tr>
+						<tr>
+							<th>가입경로 </th>
+							<td>PC</td>
+							<th>방문횟수 </th>
+							<td>6</td>
+						</tr>
+						<tr>
+							<th>이메일</th>
+							<td><input type="text" class="w-F" /><button type="button" class="button-A" onclick="location.href='#'">중복확인</button></td>
+							<th>이메일</br>
+							수신동의/거부일</th>
+							<td>동의: 0000-00-00 00:00:00
+								<div class="c_box">
+									<p><input type="checkbox" id="chch" checked /><label for="chch"><span></span>정보/이벤트 mail 수신에 동의합니다.</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>휴대폰번호</th>
+							<td><input type="text" class="w-G" /></td>
+							<th>SMS/알림톡</br>
+							수신동의/거부일</th>
+							<td>동의: 0000-00-00 00:00:00
+								<div class="c_box">
+									<p><input type="checkbox" id="chch" checked /><label for="chch"><span></span>정보/이벤트 mail 수신에 동의합니다.</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>전화번호</th>
+							<td colspan="3"><input type="text" class="w-G" /></td>
+						</tr>
+						<tr>
+							<th>사업장주소</th>
+							<td colspan="3">
+								<input type="text" class="w-C" placeholder="05550"/><button type="button" class="button-A">주소검색</button><br />
+								<input type="text" class="w-H" placeholder="서울 송파구 오금로17길4"/>
+								<input type="text" class="w-H" placeholder="서울 송파구 방이동 108-6"/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 부가정보</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>팩스번호 </th>
+							<td colspan="3" class="td_w" ><input type="text" class="w-G" />
+						</tr>
+						<tr>
+							<th>성별</th>
+							<td class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="ba" id="pc_1" checked /><label for="pc_1"><span></span> 여자</label></p>
+									<p><input type="radio" name="ba" id="pc_2" /><label for="pc_2"><span></span> 남자</label></p>
+								</div>
+							</td>
+							<th>생일 </th>
+							<td>
+								<div>
+									<select>
+										<option value="선택">선택</option>
+										<option value="양력">양력</option>
+										<option value="음력">음력</option>
+									</select>
+									<input type="date" class="w-F" value="1990-01-01"/>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>결혼여부</th>
+							<td class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="bb" id="pc_1" checked /><label for="pc_1"><span></span> 미혼</label></p>
+									<p><input type="radio" name="bb" id="pc_2" /><label for="pc_2"><span></span> 기혼</label></p>
+								</div>
+							</td>
+							<th>결혼기념일 </th>
+							<td><input type="date" class="w-F" value="2020-01-01"/>
+							</td>
+						</tr>
+						<tr>
+							<th>추천인아이디</th>
+							<td>aaaaa@aaaa.aa.aa</td>
+							<th>추천받은횟수 </th>
+							<td>00회</td>
+						</tr>
+						<tr>
+							<th>개인정보유효기간 </th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="bc" id="pc_1" checked /><label for="pc_1"><span></span> 1년</label></p>
+									<p><input type="radio" name="bc" id="pc_2" /><label for="pc_2"><span></span> 3년</label></p>
+									<p><input type="radio" name="bc" id="pc_3" /><label for="pc_3"><span></span> 5년</label></p>
+									<p><input type="radio" name="bc" id="pc_4" /><label for="pc_4"><span></span> 탈퇴시</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>남기는 말씀 </th>
+							<td colspan="3" class="td_w">
+								<textarea class="w-100 h-A"/></textarea>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 개인정보 수집·이용 선택동의 내역</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>이용약관</th>
+							<td class="td_w">동의함</td>
+							<th>개인정보<br />
+							처리방침</th>
+							<td>동의함</td>
+						<tr>
+						<tr>
+							<th>개인정보<br />
+							제3자 제공동의</th>
+							<td colspan="3">동의함</td>
+						<tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

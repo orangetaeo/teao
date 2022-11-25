@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../../snb_basic.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">기본정보관리</a> &gt; <a href="#">결제 정책</a> &gt; <a href="#">무통장입금 은행관리</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 무통장입금 은행관리</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>검색어</th>
+								<td class="td_w">
+									<div>
+										<select>
+											<option value="선택">선택</option>
+											<option value="은행명">은행명</option>
+											<option value="계좌번호">계좌번호</option>
+											<option value="예금주">예금주</option>
+										</select>
+										<input type="search" class="input_search" placeholder="검색어">	
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_w">
+									<div class="r_circle m-A">
+										<p><input type="radio" name="rb" id="rb0" checked><label for="rb0"><span></span>전체</label></p>
+										<p><input type="radio" name="rb" id="rb1"><label for="rb1"><span></span>사용함</label></p>
+										<p><input type="radio" name="rb" id="rb2"><label for="rb2"><span></span>사용안함</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<td class="td_btn">
+									<div class="td_btn_area_one">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+									</div>
+								</td>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span></p>
+				<p class="p_up">
+					<button type="button" onclick="location.href='input.html'">무통장 입금 은행 등록</button>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>은행명</th>
+							<th>계좌번호</th>
+							<th>예금주</th>
+							<th>등록일</th>
+							<th>사용설정</th>
+							<th>자동입금확인</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num"><a href="basic_pay_bank_modify.html">2</td>
+							<td><a href="modify.html">국민은행</a></td>
+							<td><a href="modify.html">000000-00-00000</td>
+							<td><a href="modify.html">오렌지투어</td>
+							<td><a href="modify.html">0000-00-00</td>
+							<td class="td_rdio"><p class="r_circle"><input type="radio" name="ra1" id="ra1" checked/><label for="ra1"><span></span>사용함</label></p><p class="r_circle"><input type="radio" name="ra1" id="ra2"/><label for="ra2"><span></span>사용안함</label></p></td>
+							<td><button type="button" class="button-B" onclick="location.href='/design/travel/manager/sub_service/service.html'">사용중</button></a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num"><a href="basic_pay_bank_modify.html">1</td>
+							<td><a href="modify.html">하나은행</a></td>
+							<td><a href="modify.html">000000-00-00000</td>
+							<td><a href="modify.html">(주)오렌지웨이브</td>
+							<td><a href="modify.html">0000-00-00</td>
+							<td class="td_rdio"><p class="r_circle"><input type="radio" name="ra2" id="ra3" /><label for="ra3"><span></span>사용함</label></p><p class="r_circle"><input type="radio" name="ra2" id="ra4" checked/><label for="ra4"><span></span>사용안함</label></p></td>
+							<td><button type="button" class="button-B" onclick="location.href='/design/travel/manager/sub_service/service.html'">신청</button></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove">
+					<button type="button">선택 삭제</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

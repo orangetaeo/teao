@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_item.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">상품관리</a> &gt; <a href="#">골프장 설정</a> &gt; <a href="#">골프장 리스트</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 골프장 리스트</h2>
+		</div>
+		<div class="conbox position_w">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select class="w-E">
+											<option value="등록일">등록일</option>
+											<option value="수정일">수정일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2022-08-01"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-08-31"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button" class="on">전체</button>
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>카테고리</th>
+								<td class="td_category">
+									<select>
+										<option value="대륙 선택">대륙 선택</option>
+										<option value="AC 아시아">AC 아시아</option>
+									</select>
+									<select>
+										<option value="국가 선택">국가 선택</option>
+										<option value="VN 베트남">VN 베트남</option>
+									</select>
+									<select>
+										<option value="지역 선택">지역 선택</option>
+										<option value="다낭">다낭</option>
+									</select>
+									<select>
+										<option value="구분">구분</option>
+										<option value="CC">CC</option>
+										<option value="리조트&골프장">리조트&골프장</option>
+										<option value="호텔&골프장">호텔&골프장</option>
+									</select>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>검색어</th>
+								<td colspan="3">
+									<div class="sel">
+										<select class="w-E">
+											<option value="골프장명">골프장명</option>
+											<option value="골프장코드">골프장코드</option>
+										</select>
+										<input type="search" class="input_search" placeholder="골프장명, 골프장코드 선택 후 검색 하세요.">	
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>랜드사명</th>
+								<td colspan="3">
+									<div class="sel">
+										<select class="w-E">
+											<option value="랜드사">랜드사 선택</option>
+											<option value="A랜드사">A랜드사</option>
+											<option value="B랜드사">B랜드사</option>
+										</select>	
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>총홀수</th>
+								<td colspan="3">
+									<div class="sel">
+										<select class="w-E">
+											<option value="총홀수 선택">총홀수 선택</option>
+											<option value="9H">9H</option>
+											<option value="18H">18H</option>
+											<option value="27H">27H</option>
+											<option value="36H">36H</option>
+											<option value="45H">45H</option>
+											<option value="54H">54H</option>
+											<option value="63H">63H</option>
+											<option value="72H">72H</option>
+											<option value="81H">81H</option>
+											<option value="90H">90H</option>
+											<option value="99H">99H</option>
+											<option value="108H">108H</option>
+											<option value="117H">117H</option>
+											<option value="126H">126H</option>
+											<option value="135H">135H</option>
+										</select>	
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>카트운영</th>
+								<td colspan="3">
+									<div class="r_circle m-A">
+										<p><input type="radio" name="cart" id="cart0" checked><label for="cart0"><span></span>전체</label></p>
+										<p><input type="radio" name="cart" id="cart1"><label for="cart1"><span></span>페어웨이 진입가능</label></p>
+										<p><input type="radio" name="cart" id="cart2"><label for="cart2"><span></span>페어웨이 진입불가</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>캐디운영</th>
+								<td colspan="3">
+									<div class="r_circle m-A">
+										<p><input type="radio" name="caddie" id="caddie0" checked><label for="caddie0"><span></span>전체</label></p>
+										<p><input type="radio" name="caddie" id="caddie1"><label for="caddie1"><span></span>필수</label></p>
+										<p><input type="radio" name="caddie" id="caddie2"><label for="caddie2"><span></span>노캐디 가능</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span> (선택 : <span class="color-B">000건</span>)</p>
+				<p class="p_up">
+					<button type="button" onclick="location.href='input.html'">골프장 등록</button>
+				</p>
+				<p class="sample">
+					<a href="/design/travel/manager/sub_item/golf/excel.html"><i class="xi-upload"></i> 골프장 엑셀등록</a>
+				</p>
+				<p class="excel">
+					<a href="#"><i class="xi-download"></i> 엑셀 다운로드</a>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>랜드사명 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>골프장코드 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>골프장로고 </th>
+							<th>골프장명 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>총 홀수 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+							<th>캐디유무 </th>
+							<th>등록자</th>
+							<th>등록/수정일 <span class="array1"><img src="/design/travel/manager/images/array_o.png" title="정렬"></span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td class="name"><a href="/design/travel/manager/sub_item/golf/modify.html">A랜드사</td>
+							<td><a href="/design/travel/manager/sub_item/golf/modify.html">0000000000</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_item/golf/modify.html"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_tit"><p class="part">AC 동남아 > VN 베트남 > 다낭 > 리조트&골프장</p><a href="/design/travel/manager/sub_item/golf/modify.html">빈펄 리조트 & 골프 남호이안</a></td>
+							<td class="td_center">36H</td>
+							<td class="td_center">노캐디 가능</td>
+							<td class="name"><a href="/design/travel/manager/sub_item/golf/modify.html">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/golf/modify.html">2022-09-02</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td class="name"><a href="/design/travel/manager/sub_item/golf/modify.html">B랜드사</td>
+							<td><a href="/design/travel/manager/sub_item/golf/modify.html">0000000000</a></td>
+							<td class="td_img"><a href="/design/travel/manager/sub_item/golf/modify.html"><img src="/design/travel/manager/images/100x100.png" alt=""></a></td>
+							<td class="td_tit"><p class="part">AC 동남아 > VN 베트남 > 다낭 > CC</p><a href="/design/travel/manager/sub_item/golf/modify.html">남호이안cc</a></td>
+							<td class="td_center">108H</td>
+							<td class="td_center">캐디 필수</td>
+							<td class="name"><a href="/design/travel/manager/sub_item/golf/modify.html">홍길동</a></td>
+							<td class="td_day"><a href="/design/travel/manager/sub_item/golf/modify.html">2022-09-02</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove">
+					<button type="button" class="btn_moveup">카테고리이동</button>
+					<button type="button">선택삭제</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+			<!-- 카테고리이동 -->
+			<div class="cate_moveup">
+				<div class="cate_moveup_inn">
+					<p class="tit"><i class="xi-lightbulb-o"></i> 골프장 카테고리이동</p>
+					<!-- 카테고리 -->
+					<div class="category">
+						<div class="group">
+							<ul>
+								<div class="class_on">
+									<li><a href="#">동남아</a></li>
+								</div>
+							</ul>
+						</div>
+						<div class="group">
+							<ul>
+								<div class="class_on2">
+									<li><a href="#">베트남</a></li>
+								</div>
+							</ul>
+						</div>
+						<div class="group">
+							<ul>
+								<div class="class_on3">
+									<li><a href="#">다낭</a></li>
+								</div>
+							</ul>
+						</div>
+						<div class="group">
+							<ul>
+								<div class="class_on4">
+									<li><a href="#">CC</a></li>
+								</div>
+							</ul>
+						</div>
+					</div>
+					<p class="btn"><button type="button" onclick="cate_move()">이동</button></p>
+					<p class="close"><i class="xi-close"></i></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

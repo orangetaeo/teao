@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<!-- [새창팝업] -->
+<script>
+//캠패인
+function myPopup0() {
+	window.open("/design/wave/manager/orangemsg/shop/popup/alimtalk/order_auto_setup.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=820");
+}
+
+//리스트 보기
+function myPopup1() {
+	window.open("/design/wave/manager/orangemsg/shop/popup/alimtalk/order_auto_setup_list.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=1200");
+}
+
+</script>
+<body>
+<div id="wrap">
+<?
+include "../orange_header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../orange_snb_item.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">SHOP</a> &gt; <a href="#">알림톡</a> &gt; <a href="/design/wave/manager/orangemsg/shop/order.html">제품 및 카테고리별 주문</a></p>
+			<?
+			include "../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="fas fa-bookmark"></i> 제품 및 카테고리별 주문</h2>
+		</div>
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>쇼핑몰명</th>
+								<td>
+									<div class="c_box m-A">
+									<p><input type="checkbox" name="shopname" id="shopname0" checked><label for="shopname0"><span></span>전체</label></p>
+									<p><input type="checkbox" name="shopname" id="shopname1" ><label for="shopname1"><span></span>쇼핑몰명1</label></p>
+									<p><input type="checkbox" name="shopname" id="shopname2" ><label for="shopname2"><span></span>쇼핑몰명2</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select>
+											<option value="검색">검색</option>
+											<option value="주문일">주문일</option>
+											<option value="배송일">배송일</option>
+											<option value="취소일">취소일</option>
+											<option value="교환일">교환일</option>
+											<option value="반품일">반품일</option>
+											<option value="구매완료일">구매완료일</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button" class="on">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+										<button type="button">1년</button>
+									</div>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>카테고리</th>
+								<td class="td_category">
+									<select>
+										<option value="대분류선택">대분류선택</option>
+									</select>
+									<select>
+										<option value="중분류선택">중분류선택</option>
+									</select>
+									<select>
+										<option value="소분류선택">소분류선택</option>
+									</select>
+									<select>
+										<option value="상세분류선택">상세분류선택</option>
+									</select>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area_one">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>검색어</th>
+								<td>
+									<select>
+										<option value="상품명">상품명</option>
+										<option value="상품코드">상품코드</option>
+										<option value="자체상품코드">자체상품코드</option>
+										<option value="공급사">공급사</option>
+									</select>
+									<input type="search" class="input_search" placeholder="상품명, 상품코드, 자체상품코드, 공급사">	
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>시간검색</th>
+								<td class="td_day">
+									<div class="r_circle fl">
+										<p><input type="radio" name="rd" id="ra0" checked><label for="ra0"><span></span>제한없음</label></p>
+										<p><input type="radio" name="rd" id="ra1"><label for="ra1"><span></span>시간지정</label></p>
+									</div>
+									<div>
+										<select>
+											<option value="전체">전체</option>
+											<option value="00시">00시</option>
+											<option value="01시">01시</option>
+											<option value="02시">02시</option>
+											<option value="03시">03시</option>
+											<option value="04시">04시</option>
+											<option value="05시">05시</option>
+											<option value="05시">06시</option>
+											<option value="05시">07시</option>
+											<option value="05시">08시</option>
+											<option value="05시">09시</option>
+											<option value="05시">10시</option>
+											<option value="05시">11시</option>
+											<option value="05시">12시</option>
+											<option value="05시">13시</option>
+											<option value="05시">14시</option>
+											<option value="05시">15시</option>
+											<option value="05시">16시</option>
+											<option value="05시">17시</option>
+											<option value="05시">18시</option>
+											<option value="05시">19시</option>
+											<option value="05시">20시</option>
+											<option value="05시">21시</option>
+											<option value="05시">22시</option>
+											<option value="05시">23시</option>
+										</select>
+										 ~ 
+										<select>
+											<option value="전체">전체</option>
+											<option value="00시">00시</option>
+											<option value="01시">01시</option>
+											<option value="02시">02시</option>
+											<option value="03시">03시</option>
+											<option value="04시">04시</option>
+											<option value="05시">05시</option>
+											<option value="05시">06시</option>
+											<option value="05시">07시</option>
+											<option value="05시">08시</option>
+											<option value="05시">09시</option>
+											<option value="05시">10시</option>
+											<option value="05시">11시</option>
+											<option value="05시">12시</option>
+											<option value="05시">13시</option>
+											<option value="05시">14시</option>
+											<option value="05시">15시</option>
+											<option value="05시">16시</option>
+											<option value="05시">17시</option>
+											<option value="05시">18시</option>
+											<option value="05시">19시</option>
+											<option value="05시">20시</option>
+											<option value="05시">21시</option>
+											<option value="05시">22시</option>
+											<option value="05시">23시</option>
+										</select>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>캠패인 설정</th>
+								<td class="td_day">
+									<div class="fl ml15">
+										<button type="button" class="button-A" onclick="myPopup0()">캠패인 설정</button>
+										<button type="button" class="button-A" onclick="myPopup1()">캠패인 리스트</button>
+										<span class="comment"><i class="xi-error-o"></i> 알림톡 캠패인 설정 및 조건리스트를 보실 수 있습니다.</span>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 타이틀 -->
+			<div class="title">
+				<h2><i class="xi-lightbulb-o"></i> 최초주문여부<span class="comment"><i class="xi-error-o"></i> 클릭하여 알림톡 수동발송 할 수 있습니다.</span></h2>
+				<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+			</div>
+			<div class="conbox">
+				<!-- 최초주문여부 -->
+				<div class="services_list">
+					<ul>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="전체" /><span>전체</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="최초" /><span>최초</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>150명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon03.png" alt="최초주문아님" /><span>최초주문아님</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>100명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 타이틀 -->
+			<div class="title">
+				<h2><i class="xi-lightbulb-o"></i> 결제수단<span class="comment"><i class="xi-error-o"></i> 클릭하여 알림톡 수동발송 할 수 있습니다.</span></h2>
+				<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+			</div>
+			<div class="conbox">
+				<!-- 결제수단 -->
+				<div class="services_list">
+					<ul>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_pgpay_icon01.png" alt="전체" /><span>전체</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_pgpay_icon01.png" alt="무통장" /><span>무통장</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_pgpay_icon01.png" alt="신용카드" /><span>신용카드</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_pgpay_icon01.png" alt="휴대폰" /><span>휴대폰</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_pgpay_icon01.png" alt="계좌이체" /><span>계좌이체</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_pgpay_icon01.png" alt="선불금" /><span>선불금</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_pgpay_icon01.png" alt="예치금" /><span>예치금</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_pgpay_icon01.png" alt="적립금" /><span>적립금</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_pgpay_icon01.png" alt="통합포인트" /><span>통합포인트</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 타이틀 -->
+			<div class="title">
+				<h2><i class="xi-lightbulb-o"></i> 주문<span class="comment"><i class="xi-error-o"></i> 클릭하여 알림톡 수동발송 할 수 있습니다.</span></h2>
+				<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+			</div>
+			<div class="conbox">
+				<!-- 주문 -->
+				<div class="services_list">
+					<ul>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="전체" /><span>전체</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="1일" /><span>1일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="3일" /><span>3일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>150명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon03.png" alt="5일" /><span>5일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>100명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon04.png" alt="10일" /><span>10일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>50명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="15일" /><span>15일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="20일" /><span>20일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="30일" /><span>30일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 타이틀 -->
+			<div class="title">
+				<h2><i class="xi-lightbulb-o"></i> 배송<span class="comment"><i class="xi-error-o"></i> 클릭하여 알림톡 수동발송 할 수 있습니다.</span></h2>
+				<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+			</div>
+			<div class="conbox">
+				<!-- 배송 -->
+				<div class="services_list">
+					<ul>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="1일" /><span>전체</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="1일" /><span>1일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="3일" /><span>3일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>150명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon03.png" alt="5일" /><span>5일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>100명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon04.png" alt="10일" /><span>10일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>50명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="15일" /><span>15일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="20일" /><span>20일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="30일" /><span>30일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 타이틀 -->
+			<div class="title">
+				<h2><i class="xi-lightbulb-o"></i> 취소<span class="comment"><i class="xi-error-o"></i> 클릭하여 알림톡 수동발송 할 수 있습니다.</span></h2>
+				<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+			</div>
+			<div class="conbox">
+				<!-- 취소 -->
+				<div class="services_list">
+					<ul>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="전체" /><span>전체</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="1일" /><span>1일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="3일" /><span>3일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>150명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon03.png" alt="5일" /><span>5일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>100명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon04.png" alt="10일" /><span>10일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>50명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="15일" /><span>15일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="20일" /><span>20일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="30일" /><span>30일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 타이틀 -->
+			<div class="title">
+				<h2><i class="xi-lightbulb-o"></i> 교환<span class="comment"><i class="xi-error-o"></i> 클릭하여 알림톡 수동발송 할 수 있습니다.</span></h2>
+				<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+			</div>
+			<div class="conbox">
+				<!-- 교환 -->
+				<div class="services_list">
+					<ul>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="전체" /><span>전체</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="1일" /><span>1일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="3일" /><span>3일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>150명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon03.png" alt="5일" /><span>5일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>100명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon04.png" alt="10일" /><span>10일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>50명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="15일" /><span>15일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="20일" /><span>20일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="30일" /><span>30일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 타이틀 -->
+			<div class="title">
+				<h2><i class="xi-lightbulb-o"></i> 반품<span class="comment"><i class="xi-error-o"></i> 클릭하여 알림톡 수동발송 할 수 있습니다.</span></h2>
+				<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+			</div>
+			<div class="conbox">
+				<!-- 반품 -->
+				<div class="services_list">
+					<ul>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="전체" /><span>전체</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="1일" /><span>1일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="3일" /><span>3일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>150명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon03.png" alt="5일" /><span>5일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>100명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon04.png" alt="10일" /><span>10일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>50명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="15일" /><span>15일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="20일" /><span>20일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="30일" /><span>30일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 타이틀 -->
+			<div class="title">
+				<h2><i class="xi-lightbulb-o"></i> 리뷰(리뷰작성하지 않은것) *구매일기준<span class="comment"><i class="xi-error-o"></i> 클릭하여 알림톡 수동발송 할 수 있습니다.</span></h2>
+				<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+			</div>
+			<div class="conbox">
+				<!-- 리뷰 -->
+				<div class="services_list">
+					<ul>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="전체" /><span>전체</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="3일" /><span>3일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="5일" /><span>5일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>150명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon03.png" alt="7일" /><span>7일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>100명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon04.png" alt="14일" /><span>14일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>50명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon07.png" alt="30일" /><span>30일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>30명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 타이틀 -->
+			<div class="title">
+				<h2><i class="xi-lightbulb-o"></i> 입고예정일, 재입고안내<span class="comment"><i class="xi-error-o"></i> 클릭하여 알림톡 수동발송 할 수 있습니다.</span></h2>
+				<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+			</div>
+			<div class="conbox">
+				<!-- 입고예정일, 재입고안내-->
+				<div class="services_list">
+					<ul>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="입고예정일" /><span>입고예정일</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>184명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="div_box">
+								<img src="/design/wave/manager/images_service/services_marketing_icon02.png" alt="재입고" /><span>재입고</span>
+								<div class="inn">
+									<img src="/design/wave/manager/images_service/arrow_box.png" alt="내용화살표" />
+									<a>150명</a>
+									<a href="https://orangemsg.com/mypage/kakao_send_step1.html" class="ready">보내기</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

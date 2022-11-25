@@ -1,0 +1,1803 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+
+<!-- [새창팝업] -->
+<script>
+//일정추가
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/schedule/popup/flight.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1540, height=970");
+}
+
+//일정 가져오기
+function myPopup2() {
+	window.open("/design/travel/manager/sub_item/schedule/popup/bring.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1205, height=970");
+}
+</script>
+
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_item.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">상품관리</a> &gt; <a href="#">일정 설정</a> &gt; <a href="#">일정 등록</a></p>
+			<?
+			include "../../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 일정 지역 카테고리 선택</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 카테고리 -->
+			<div class="category">
+				<div class="group">
+					<h3>대륙 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on">
+							<li><a href="#">AC 아시아</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>국가 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on2">
+							<li><a href="#">VN 베트남</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>지역 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on3">
+							<li><a href="#">다낭</a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="group">
+					<h3>상품유형 &nbsp; <i class="xi-angle-right"></i></h3>
+					<ul>
+						<div class="class_on4">
+							<li><a href="#">패키지</a></li>
+							<li><a href="#">항공</a></li>
+							<li><a href="#">숙소</a></li>
+							<li><a href="#">음식점</a></li>
+							<li><a href="#">골프</a></li>
+							<li><a href="#">관광</a></li>
+							<li><a href="#">교통</a></li>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 일정기본 정보</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>일정 가져오기</th>
+							<td  colspan="3">
+								<button type="button" class="button-A" onclick="myPopup2()">일정 가져오기</button>
+								<span class="comment"><i class="xi-error-o"></i> 일정 데이터를 가져 옵니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>일정 <span class="color-A">*</span></th>
+							<td colspan="3"><input type="text" class="w-A" placeholder="3">박 <input type="text" class="w-A" placeholder="4">일</td>
+						</tr>
+						<tr>
+							<th>일정명 <span class="color-A">*</span></th>
+							<td colspan="3"><input type="text" class="w-H" placeholder="관리하기 위한 일정명을 입력 해주세요."></td>
+						</tr>
+						<tr>
+							<th>일정코드 <span class="color-A">*</span></th>
+							<td class="td_w">
+								<div class="c_box">
+									<p><input type="checkbox" id="chch" checked /><label for="chch"><span></span>일정 등록시 자동 생성됩니다.</label></p>
+								</div>
+							</td>
+							<th>자체 일정코드 </th>
+							<td><input type="text" class="w-G" placeholder="사용하면 중복확인을 필수로 해야 합니다."/><button type="button" class="button-A" onclick="location.href='#'">중복확인</button></td>
+						</tr>					
+						<tr>
+							<th>QR코드 </th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 권장사이즈 300 x 300 픽셀의 500KB이하 jpg, png, gif, webp 파일만 등록 가능합니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 일정생성 버튼 -->
+			<div class="complete">
+				<p><button type="button">일정생성</button></p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 일정표 관리</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<div class="ma_inner">
+							<div class="ma_step">
+								<h3>일정표</h3>
+								<ul class="ma_step_1">
+									<li>
+										<div class="tit t_pl_1">
+											<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+											<a href="#" class="btn_txt">1일차</a>
+											<div class="txt t_pl_1">
+											</div>
+											<div class="icon">
+												<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+												<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+												<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+												<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+												<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+												<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+												<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+											</div>
+										</div>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">항공<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="테스트xi-layout-snb-o"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">대한항공</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">인천공항 출발<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="인천공항 출발" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">노이바이공항 도착<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="노이바이공항 도착" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">교통수단<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">승용차 가이드포함</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">노이바이공항 미팅<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="노이바이공항 미팅" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">인터콘티넨탈 호이안으로 이동<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="인터콘티넨탈 호이안으로 이동" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">숙소<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">인터콘티넨탈 호이안</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">자유시간 1시간<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="자유시간 1시간" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">호텔 디너 식사<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="호텔 디너 식사" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">자유시간<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="자유시간" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<div class="tit t_pl_1">
+											<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+											<a href="#" class="btn_txt">2일차</a>
+											<div class="txt t_pl_1">
+											</div>
+											<div class="icon">
+												<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+												<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+												<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+												<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+												<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+												<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+												<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+											</div>
+										</div>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">숙소<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">인터콘티넨탈 호이안</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">조식 9시까지<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="조식 9시까지" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">남호이안CC 라운지 이동<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="남호이안CC 라운지 이동" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">골프장<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">남호이안CC 18H</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">18H 라운딩<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="18H 라운딩" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">클럽 하우스 식사<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="클럽 하우스 식사" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">숙소<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">인터콘티넨탈 호이안</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">자유시간 1시간<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="자유시간 1시간" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">교통수단<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">승용차 가이드 포함</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">관광지로 이동<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="관광지로 이동" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">관광<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">썬 월드 바나힐 골든 브릿지</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">관광 2시간<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="관광 2시간" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">가이드와 식당으로 이동<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="가이드와 식당으로 이동" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">음식점<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">라 메종 델리</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">식사 2시간<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="식사 2시간" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">숙소로 이동<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="숙소로 이동" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">숙소<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">인터콘테넨탈 하이난</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">자유시간<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="자유시간" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<div class="tit t_pl_1">
+											<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+											<a href="#" class="btn_txt">3일차</a>
+											<div class="txt t_pl_1">
+											</div>
+											<div class="icon">
+												<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+												<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+												<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+												<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+												<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+												<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+												<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+											</div>
+										</div>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt">숙소</a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">인터콘티넨탈 호이안</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">조식 9시까지<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="조식 9시까지" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">교통수단<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">승용차 가이드 포함</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">한시장 2시간 관광<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="한시장 2시간 관광" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">음식점<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">수원 한식당</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">식사 1시간<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="식사 1시간" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">아쿠아리움 이동<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="아쿠아리움 이동" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">투어<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">XX 아쿠아리움</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">관광 2시간<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="관광 2시간" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">마사지샵으로 이동<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="마사지샵으로 이동" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">마사지<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">XXX 마사지샵</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">마사지 2시간<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="마사지 2시간" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">숙소로 이동<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="숙소로 이동" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">숙소<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">인터콘테넨탈 하이난</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">자유시간<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="자유시간" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<div class="tit t_pl_1">
+											<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+											<a href="#" class="btn_txt">4일차</a>
+											<div class="txt t_pl_1">
+											</div>
+											<div class="icon">
+												<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+												<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+												<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+												<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+												<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+												<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+												<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+											</div>
+										</div>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt">숙소</a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">인터콘티넨탈 호이안</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">조식 9시까지<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="조식 9시까지" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">11시 체크아웃<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="11시 체크아웃" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">교통수단<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">승용차 가이드 포함</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">카누 타로 이동<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="카누 타로 이동" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">엑티비티<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">카누</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">카누 2시간<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="카누 2시간" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">음식점<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">수원 한식당</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">식사 1시간<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="식사 1시간" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">교통수단<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">승용차 가이드 포함</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">공항으로 이동<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="공항으로 이동" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="ma_step_2">
+											<li>
+												<div class="tit t_pl_2">
+													<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+													<a href="#" class="btn_txt" onclick="myPopup1()">항공<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+													<div class="txt t_pl_2">
+													</div>
+													<div class="icon">
+														<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+														<p><span class="ic ic_2"></span><span class="ic_over ic_over_2"></span></p>
+														<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+														<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+														<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+														<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+														<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+													</div>
+												</div>
+												<ul class="ma_step_3">
+													<li>
+														<div class="tit t_pl_3">
+															<span class="arr btn_arr"><i class="xi-minus-square"></i><i class="xi-plus-square"></i></span>
+															<a href="#" class="btn_txt">KE 대한항공</a>
+															<div class="icon">
+																<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+															</div>
+														</div>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">노이바이공항 출발<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="노이바이공항 출발" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<ul class="ma_step_4">
+															<li>
+																<div class="tit t_pl_4">
+																	<span class="arr btn_arr"><i class="xi-minus-min"></i></span>
+																	<a href="#" class="btn_txt">인천공항 도착<img src="/design/travel/manager/images/icon_schedule_popup.png" alt="텍스트수정"></a>
+																	<div class="txt t_pl_4">
+																		<p class="txt_in">
+																			<span class="txt_in_box"><input type="text" value="인천공항 도착" maxlength="15"></span>
+																			<span class="txt_in_num">00/15</span>
+																		</p>
+																	</div>
+																	<div class="icon">
+																		<p><span class="ic ic_1"></span><span class="ic_over ic_over_1"></span></p>
+																		<p><span class="ic ic_3"></span><span class="ic_over ic_over_3"></span></p>
+																		<p><span class="ic ic_4"></span><span class="ic_over ic_over_4"></span></p>
+																		<p><span class="ic ic_5"></span><span class="ic_over ic_over_5"></span></p>
+																		<p><span class="ic ic_6"></span><span class="ic_over ic_over_6"></span></p>
+																		<p><span class="ic ic_7"></span><span class="ic_over ic_over_7"></span></p>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 메모</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write gro">
+				<table>
+					<tbody>				
+						<tr>
+							<th>메모</th>
+							<td>
+								<textarea class="w-100 h-C"/></textarea>
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

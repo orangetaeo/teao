@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../../snb_basic.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">기본정보관리</a> &gt; <a href="#">상품 정책</a> &gt; <a href="#">상품상세 상단등록</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 상품상세 상단등록<span class="dragdrop">(등록되어 있는 모든 상품의 상세페이지 상단에 일괄적으로 노출됩니다.)</span></h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>제목 <span class="color-A">*</span></th>
+							<td colspan="3"><input type="text" class="w-H" required /></td>
+						</tr>
+						<tr>
+							<th>내용 <span class="color-A">*</span></th>
+							<td colspan="3"><textarea class="w-H h-B" /></textarea></td>
+						</tr>
+						<tr>
+							<th>첨부파일</th>
+							<td colspan="3">
+								<div class="input_file">
+									<p class="hidden_file">
+										<span class="btn_file"></span><input type="file" name="file" id="file" onchange="document.getElementById('txt').value=this.value;" />
+									</p>
+									<p class="show_file">
+										<input type="text" name="" id="txt" value="파일을 선택해주세요" readonly="readonly" />
+									</p>
+								</div>
+							</td>
+						</tr>						
+						<tr>
+							<th>상품 등록시 기본</th>
+							<td colspan="3">
+								<div class="c_box m-A">
+									<p><input type="checkbox" name="gog" id="g1" checked required /><label for="g1"><span></span>상품 등록 시 기본으로 노출되도록 설정합니다.</label></p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="location.href='basic_item_info_top.html'">저장</button><button type="button" onclick="location.href='basic_item_info_top.html'">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

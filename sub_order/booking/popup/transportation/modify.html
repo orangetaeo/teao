@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../../head_common.html"; 
+?>
+</head>
+
+<script>
+//교통수단 수정
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/transportation/popup/bring.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=930");
+}
+</script>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 교통수단 수정하기</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>교통수단</th>
+							<td class="td_w"><a href="/design/travel/manager/sub_item/transportation/modify.html" target="_blank">하노이공항에서 숙소까지</a></td>
+							<th>교통수단 리스트</th>
+							<td>
+								<button type="button" class="button-A" onclick="myPopup1()">가져오기</button>
+								<span class="comment"><i class="xi-error-o"></i> 교통수단 변경 시 다른 일정을 수정 해야 될 수 있습니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>이용일</th>
+							<td colspan="3"><input type="date" class="w-E ta-c" value="2022-09-23" required/></td>
+						</tr>
+						<tr>
+							<th>교통수단 가격 리스트</th>
+							<td colspan="3">
+								<div class="dein_table mt15 mb10">
+									<table>
+										<thead>
+											<tr>
+												<th></th>
+												<th>번호</th>
+												<th>출발지</th>
+												<th>도착지</th>
+												<th>교통수단</th>
+												<th>가이드</th>
+												<th>옵션속성</th>
+												<th>옵션코드</th>
+												<th>메모</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="r_circle"><input type="radio" name="transportation" id="transportation1" checked/><label for="transportation1"><span></span></label></td>
+												<td>3</td>
+												<td>인터네셔날 하노이</td>
+												<td>인터네셔날 하노이</td>
+												<td>승용차</td>
+												<td>포함</td>
+												<td>4인 종일 관광일정 이용권</td>
+												<td>000000000</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+											<tr>
+												<td class="r_circle"><input type="radio" name="transportation" id="transportation2"/><label for="transportation2"><span></span></label></td>
+												<td>2</td>
+												<td>인터네셔날 하노이</td>
+												<td>인터네셔날 하노이</td>
+												<td>승용차</td>
+												<td>불포함</td>
+												<td>2인 오후일정 이용권</td>
+												<td>000000000</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+											<tr>
+												<td class="r_circle"><input type="radio" name="transportation" id="transportation3"/><label for="transportation3"><span></span></label></td>
+												<td>1</td>
+												<td>HAN 노이바이 공항</td>
+												<td>인터네셔날 하노이</td>
+												<td>승용차</td>
+												<td>포함</td>
+												<td>4인 픽업 이용권</td>
+												<td>000000000</td>
+												<td><input type="text" class="w-D ta-r" required/></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>이용인원 선택</th>
+							<td colspan="3">
+								<div class="dein_table mt15 mb10">
+									<table>
+										<thead>
+											<tr>
+												<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+												<th>번호</th>
+												<th>한글이름</th>
+												<th>영문성</th>
+												<th>영문이름</th>
+												<th>주민번호</th>
+												<th>여권번호</th>
+												<th>여권만료일</th>
+												<th>휴대폰번호</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>4</td>
+												<td><input type="name" class="w-E ta-c" value="박혜경" required placeholder="한글이름"/></td>
+												<td><input type="text" name="firstname" class="w-E ta-c" pattern="[A-Za-z]+" value="PARK" required placeholder="영문성"/></td>
+												<td><input type="text" name="lastname" class="w-E ta-c" pattern="[A-Za-z]+" value="HYEKYUNG" required placeholder="영문이름"/></td>
+												<td><input type="number" class="w-E ta-c" pattern="[0-9]{6}-[1-2]{1}" maxlength="8" value="910901-2" required placeholder="910922-2"/></td>
+												<td><input type="text" class="w-E ta-c" pattern="[A-Z]{1}[0-9]{8}" maxlength="9" value="M99999999" required placeholder="여권번호"/></td>
+												<td><input type="date" class="w-E ta-c" value="2030-09-22" required placeholder="여권만료일"/></td>
+												<td><input type="tel" class="w-E ta-c" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" maxlength="13" value="" required placeholder="휴대폰번호"/><br /></td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>3</td>
+												<td><input type="name" class="w-E ta-c" value="박혜경" required placeholder="한글이름"/></td>
+												<td><input type="text" name="firstname" class="w-E ta-c" pattern="[A-Za-z]+" value="PARK" required placeholder="영문성"/></td>
+												<td><input type="text" name="lastname" class="w-E ta-c" pattern="[A-Za-z]+" value="HYEKYUNG" required placeholder="영문이름"/></td>
+												<td><input type="number" class="w-E ta-c" pattern="[0-9]{6}-[1-2]{1}" maxlength="8" value="910901-2" required placeholder="910922-2"/></td>
+												<td><input type="text" class="w-E ta-c" pattern="[A-Z]{1}[0-9]{8}" maxlength="9" value="M99999999" required placeholder="여권번호"/></td>
+												<td><input type="date" class="w-E ta-c" value="2030-09-22" required placeholder="여권만료일"/></td>
+												<td><input type="tel" class="w-E ta-c" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" maxlength="13" value="" required placeholder="휴대폰번호"/><br /></td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>2</td>
+												<td><input type="name" class="w-E ta-c" value="박혜경" required placeholder="한글이름"/></td>
+												<td><input type="text" name="firstname" class="w-E ta-c" pattern="[A-Za-z]+" value="PARK" required placeholder="영문성"/></td>
+												<td><input type="text" name="lastname" class="w-E ta-c" pattern="[A-Za-z]+" value="HYEKYUNG" required placeholder="영문이름"/></td>
+												<td><input type="number" class="w-E ta-c" pattern="[0-9]{6}-[1-2]{1}" maxlength="8" value="910901-2" required placeholder="910922-2"/></td>
+												<td><input type="text" class="w-E ta-c" pattern="[A-Z]{1}[0-9]{8}" maxlength="9" value="M99999999" required placeholder="여권번호"/></td>
+												<td><input type="date" class="w-E ta-c" value="2030-09-22" required placeholder="여권만료일"/></td>
+												<td><input type="tel" class="w-E ta-c" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" maxlength="13" value="" required placeholder="휴대폰번호"/><br /></td>
+											</tr>
+											<tr>
+												<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+												<td>1</td>
+												<td><input type="name" class="w-E ta-c" value="박혜경" required placeholder="한글이름"/></td>
+												<td><input type="text" name="firstname" class="w-E ta-c" pattern="[A-Za-z]+" value="PARK" required placeholder="영문성"/></td>
+												<td><input type="text" name="lastname" class="w-E ta-c" pattern="[A-Za-z]+" value="HYEKYUNG" required placeholder="영문이름"/></td>
+												<td><input type="number" class="w-E ta-c" pattern="[0-9]{6}-[1-2]{1}" maxlength="8" value="910901-2" required placeholder="910922-2"/></td>
+												<td><input type="text" class="w-E ta-c" pattern="[A-Z]{1}[0-9]{8}" maxlength="9" value="M99999999" required placeholder="여권번호"/></td>
+												<td><input type="date" class="w-E ta-c" value="2030-09-22" required placeholder="여권만료일"/></td>
+												<td><input type="tel" class="w-E ta-c" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" maxlength="13" value="" required placeholder="휴대폰번호"/><br /></td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="mt10">
+										<button type="button" class="button-A" onclick="location.href='#'">추가</button><button type="button" class="button-A" onclick="location.href='#'">선택 삭제</button>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">선택완료</button><button type="button" onclick="window.close();">취소</button></p>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

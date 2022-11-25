@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../../head_common.html"; 
+?>
+</head>
+
+<!-- [새창팝업] -->
+<script>
+//쿠폰 추가
+function myPopup1() {
+	window.open("/design/travel/manager/sub_order/booking/popup/crm/coupon_add.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1215, height=750");
+}
+</script>
+
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 회원관리</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>회원명</th>
+							<td colspan="3">홍길동</td>
+						</tr>
+						<tr>
+							<th>리프레시 포인트</th>
+							<td class="td_w">2,150원</td>
+							<th>쿠폰</th>
+							<td>0개</td>
+						</tr>
+						<tr>
+							<th>총 구매금액</th>
+							<td colspan="3">268,000원 | 총 구매건수 7 | 총 상담건수 0 | 1:1 문의건수 0/0</td>
+						</tr>
+						<tr>
+							<th>회원구분</th>
+							<td>개인회원</td>
+							<th>최종로그인일</th>
+							<td>0000-00-00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tab_area">
+				<button type="button" class="button-B" onclick="location.href='crm.html'">요약보기</button>
+				<button type="button" class="button-B" onclick="location.href='detail.html'">회원정보</button>
+				<button type="button" class="button-B" onclick="location.href='order.html'">주문내역</button>
+				<button type="button" class="button-B" onclick="location.href='mileage.html'">리프레시 포인트내역</button>
+				<button type="button" class="button-B on" onclick="location.href='coupon.html'">쿠폰내역</button>
+				<button type="button" class="button-B" onclick="location.href='atalk.html'">문자/알림톡 발송내역</button>
+				<button type="button" class="button-B" onclick="location.href='counsel.html'">상담내역</button>
+				<button type="button" class="button-B" onclick="location.href='qa.html'">문의내역</button>
+				<button type="button" class="button-B" onclick="location.href='board.html'">게시글내역</button>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 쿠폰내역</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>발급일</th>
+								<td class="td_day">
+									<div>
+										<input type="text" class="w-D ta-c" placeholder="2022-09-27"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2022-09-27"><i class="xi-calendar"></i>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>사용 구분</th>
+								<td>
+									<div>
+										<select class="w-F">
+											<option value="사용가능">사용가능</option>
+											<option value="사용불가">사용불가</option>
+										</select>
+									</div>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area_one">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">총 조회수 : <span class="color-A">000건</span></p>
+				<p class="p_up">
+					<button type="button" onclick="myPopup1()">쿠폰추가</button>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>쿠폰명</th>
+							<th>발급일</th>
+							<th>사용기간 <span class="array1"><img src="/design/wave/manager/images/array_o.png" title="정렬"></span></th>
+							<th>쿠폰유형</th>
+							<th>사용범위</th>
+							<th>혜택구분</th>
+							<th>제한조건</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td>추석 쿠폰</td>
+							<td>2022-09-27</td>
+							<td>2022-09-27 ~ 2022-12-31</td>
+							<td>상품적용쿠폰</td>
+							<td>PC+모바일</td>
+							<td>상품할인</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td>크리스마스 쿠폰</td>
+							<td>2022-09-27</td>
+							<td>2022-09-27 ~ 2022-12-31</td>
+							<td>상품적용쿠폰</td>
+							<td>PC+모바일</td>
+							<td>상품할인</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove">
+					<button type="button">선택삭제</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

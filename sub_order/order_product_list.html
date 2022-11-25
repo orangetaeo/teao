@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../head_common.html"; 
+?>
+</head>
+
+<!-- [새창팝업] -->
+<script>
+//관리자메모 보기
+function myPopup() {
+	window.open("/design/wave/manager/sub_order/popup_order_list_admin_memo.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1215, height=850");
+}
+</script>
+
+<body>
+<div id="wrap">
+<?
+include "../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../snb_order.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">주문/배송</a> &gt; <a href="#">주문 관리</a> &gt; <a href="#">주문통합 리스트</a></p>
+			<?
+			include "../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 주문통합 리스트</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 검색영역 -->
+			<div class="search_area">
+				<div class="area_nomal">
+					<table>
+						<tbody>
+							<tr>
+								<th>기간검색</th>
+								<td class="td_day">
+									<div>
+										<select>
+											<option value="주문일">주문일</option>
+											<option value="결제확인일">결제확인일</option>
+											<option value="송장입력일">송장입력일</option>
+											<option value="배송일">배송일</option>
+											<option value="배송완료일">배송완료일</option>
+											<option value="구매확정일">구매확정일</option>
+											<option value="취소완료일">취소완료일</option>
+											<option value="반품접수일">반품접수일</option>
+											<option value="반품완료일">반품완료일</option>
+											<option value="교환접수일">교환접수일</option>
+											<option value="교환완료일">교환완료일</option>
+											<option value="환불접수일">환불접수일</option>
+											<option value="환불완료일">환불완료일</option>
+											<option value="묶음배송">묶음배송</option>
+										</select>
+										<input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i> ~ <input type="text" class="w-D ta-c" placeholder="2018-02-03"><i class="xi-calendar"></i>
+									</div>
+									<div class="day_day">
+										<button type="button">오늘</button>
+										<button type="button">어제</button>
+										<button type="button" class="on">일주일</button>
+										<button type="button">이번달</button>
+										<button type="button">1개월</button>
+										<button type="button">3개월</button>
+										<button type="button">1년</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>개인정보</th>
+								<td class="td_day">
+									<div>
+										<select>
+											<option value="주문번호">주문번호</option>
+											<option value="송장번호">송장번호</option>
+											<option value="상품명">상품명</option>
+											<option value="상품코드">상품코드</option>
+											<option value="자체 상품코드">자체 상품코드</option>
+											<option value="상품모델명">상품모델명</option>
+											<option value="제조사">제조사</option>
+											<option value="========">========</option>
+											<option value="주문자명">주문자명</option>
+											<option value="주문자 전화번호">주문자 전화번호</option>
+											<option value="주문자 이메일">주문자 이메일</option>
+											<option value="수령자명">수령자명</option>
+											<option value="수령자 전화번호">수령자 전화번호</option>
+											<option value="수령자 휴대폰번호">수령자 휴대폰번호</option>
+											<option value="입금자명">입금자명</option>
+											<option value="========">========</option>
+											<option value="아이디">아이디</option>
+											<option value="닉네임">닉네임</option>
+											<option value="========">========</option>
+											<option value="공급사명">공급사명</option>
+										</select>
+										<input type="search" class="input_search" placeholder="검색어">
+									</div>
+								</td>
+								<td class="td_btn">
+									<div class="td_btn_area">
+										<button type="button" class="search_btn"><i class="xi-search" title="검색"></i></button>
+										<button type="button" class="return_btn"><i class="xi-bars" title="상세검색 열기"></i><i class="xi-close" title="상세검색 닫기"></i></span></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="area_detail">
+					<table>
+						<tbody>
+							<tr>
+								<th>직원여부</th>
+								<td>
+									<div class="c_box m-A">
+										<p><input type="checkbox" name="ch" id="ch0" checked><label for="ch0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="ch" id="ch1"><label for="ch1"><span></span>PC쇼핑몰</label></p>
+										<p><input type="checkbox" name="ch" id="ch2"><label for="ch2"><span></span>모바일쇼핑몰</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>결제수단</th>
+								<td>
+									<div class="c_box m-A">
+										<p><input type="checkbox" name="ch" id="ch0" checked><label for="ch0"><span></span>전체</label></p>
+										<p><input type="checkbox" name="ch" id="ch1"><label for="ch1"><span></span>무통장 입금</label></p>
+										<p><input type="checkbox" name="ch" id="ch2"><label for="ch2"><span></span>카드결제</label></p>
+										<p><input type="checkbox" name="ch" id="ch2"><label for="ch2"><span></span>가상계좌 입금</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>송장번호</th>
+								<td>
+									<div class="fl mr15">
+										<select>
+											<option value="배송업체">배송업체</option>
+											<option value="우체국택배">우체국택배</option>
+											<option value="기타 택배">기타 택배</option>
+											<option value="등기, 소포">등기, 소포</option>
+											<option value="화물배송">화물배송</option>
+											<option value="방문수령">방문수령</option>
+											<option value="퀵배송">퀵배송</option>
+											<option value="기타">기타</option>
+										</select>
+									</div>
+									<div class="r_circle fl">
+										<p><input type="radio" name="rd" id="ra0" checked><label for="ra0"><span></span>전체</label></p>
+										<p><input type="radio" name="rd" id="ra1"><label for="ra1"><span></span>송장번호 등록</label></p>
+										<p><input type="radio" name="rd" id="ra2"><label for="ra2"><span></span>송장번호 미등록</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>회원정보</th>
+								<td>
+									<div class="c_box m-A">
+										<p><input type="checkbox" name="ch" id="ch0" /><label for="ch0"><span></span>첫주문</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>배송정보</th>
+								<td>
+									<div class="fl mr15">
+										<select>
+											<option value="배송업체">배송업체</option>
+											<option value="우체국택배">우체국택배</option>
+											<option value="기타 택배">기타 택배</option>
+											<option value="등기, 소포">등기, 소포</option>
+											<option value="화물배송">화물배송</option>
+											<option value="방문수령">방문수령</option>
+											<option value="퀵배송">퀵배송</option>
+											<option value="기타">기타</option>
+										</select>
+									</div>
+									<div class="r_circle fl">
+										<p><input type="radio" name="rd" id="ra0" checked><label for="ra0"><span></span>전체</label></p>
+										<p><input type="radio" name="rd" id="ra1"><label for="ra1"><span></span>송장번호 등록</label></p>
+										<p><input type="radio" name="rd" id="ra2"><label for="ra2"><span></span>송장번호 미등록</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>회원검색</th>
+								<td>
+									<div class="r_circle fl">
+										<p><input type="radio" name="rc" id="ra0" checked><label for="ra0"><span></span>전체</label></p>
+										<p><input type="radio" name="rc" id="ra1"><label for="ra1"><span></span>비회원</label></p>
+										<p><input type="radio" name="rc" id="ra2"><label for="ra2"><span></span>회원</label></p>
+									</div>
+									<div class="fl ml15">
+										<button type="button" class="button-B" onclick="location.href='#'">회원등급 선택</button>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>결제금액</th>
+								<td>
+									<div>
+										<input type="search" class="w-D ta-c" /> 원 ~ <input type="search" class="w-D ta-c" /> 원
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>영수증 신청</th>
+								<td>
+									<div class="r_circle m-A">
+										<p><input type="radio" name="rc" id="ra0" checked><label for="ra0"><span></span>전체</label></p>
+										<p><input type="radio" name="rc" id="ra1"><label for="ra1"><span></span>현금영수증</label></p>
+										<p><input type="radio" name="rc" id="ra2"><label for="ra2"><span></span>세금계산서</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>프로모션 정보</th>
+								<td>
+									<div class="fl mr15">
+										<button type="button" class="button-B" onclick="location.href='#'">쿠폰선택</button>
+									</div>
+									<div class="c_box fl">
+										<p><input type="checkbox" name="ch" id="ch0" /><label for="ch0"><span></span> 쿠폰사용 주문 전체 검색</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>브랜드</th>
+								<td>
+									<div class="fl mr15">
+										<button type="button" class="button-B" onclick="location.href='#'">브랜드선택</button>
+									</div>
+									<div class="c_box fl">
+										<p><input type="checkbox" name="ch" id="ch0" /><label for="ch0"><span></span> 브랜드 미지정 상품</label></p>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- 리스트 탭영역 -->
+			<div class="tab_area">
+				<button type="button" class="button-B" onclick="location.href='order_list.html'"><i class="xi-lightbulb"></i> 주문번호별</button></label>
+				<button type="button" class="button-B on" onclick="location.href='order_product_list.html'"><i class="xi-lightbulb"></i> 상품주문번호별</button></label>
+			</div>
+			<!-- 리스트 상단영역 -->
+			<div class="list_top">
+				<p class="p_total">주문번호별 총 조회수 : <span class="color-A">000건</span> ( 검색된 주문 총 결제금액 : <span class="color-A">633,600원 )</span></p>
+				<p class="excel">
+					<a href="#"><i class="xi-download"></i> 엑셀 다운로드</a>
+					<a href="#"><i class="xi-download"></i> 카카오톡/문자</a>
+				</p>
+			</div>
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></th>
+							<th>No.</th>
+							<th>주문일시 <span class="array1"><img src="/design/wave/manager/images/array_o.png" title="정렬"></th>
+							<th>주문자</th>
+							<th>상품주문번호</th>
+							<th>이미지</th>
+							<th>주문상품</th>
+							<th>수량</th>
+							<th>상품금액</th>
+							<th>총 상품금액</th>
+							<th>배송비</th>
+							<th>총 배송비</th>
+							<th>총 주문금액</span></th>
+							<th>결제방법</th>
+							<th>처리상태</th>
+							<th>관리자메모</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">5</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td rowspan="3"><a href="#">홍길동</a></td>
+							<td><a href="#">3</a></td>
+							<td class="td_img"><a href="#"><img src="/design/wave/manager/images/100x100.png" alt=""></a></td>
+							<td><a href="/design/wave/manager/sub_item/item_modify.html">모던 블라우스 외 2건</a></td>
+							<td><a href="#">1</a></td>
+							<td><a href="#">128,000원</a></td>
+							<td rowspan="3"><a href="#">384,000원</a></td>
+							<td rowspan="3"><a href="#">0원</a></td>
+							<td rowspan="3"><a href="#">0원</a></td>
+							<td rowspan="3"><a href="#">384,000원</a></td>
+							<td rowspan="3"><a href="#">카드결제</a></td>
+							<td><a href="#">구매확정</a></td>
+							<td rowspan="3"><a href="#"><button type="button" class="button-B" onclick="myPopup()">보기</button></label></a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">4</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td><a href="#">4</a></td>
+							<td class="td_img"><a href="#"><img src="/design/wave/manager/images/100x100.png" alt=""></a></td>
+							<td><a href="/design/wave/manager/sub_item/item_modify.html">모던 블라우스 외 2건</a></td>
+							<td><a href="#">1</a></td>
+							<td><a href="#">128,000원</a></td>
+							<td><a href="#">구매확정</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">3</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td><a href="#">5</a></td>
+							<td class="td_img"><a href="#"><img src="/design/wave/manager/images/100x100.png" alt=""></a></td>
+							<td><a href="/design/wave/manager/sub_item/item_modify.html">모던 블라우스 외 2건</a></td>
+							<td><a href="#">1</a></td>
+							<td><a href="#">128,000원</a></td>
+							<td><a href="#">구매확정</a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">2</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td><a href="#">홍길동</a></td>
+							<td><a href="#">2</a></td>
+							<td class="td_img"><a href="#"><img src="/design/wave/manager/images/100x100.png" alt=""></a></td>
+							<td><a href="/design/wave/manager/sub_item/item_modify.html">모던 블라우스 외 2건</a></td>
+							<td><a href="#">1</a></td>
+							<td><a href="#">128,000원</a></td>
+							<td><a href="#">128,000원</a></td>
+							<td><a href="#">0원</a></td>
+							<td><a href="#">0원</a></td>
+							<td><a href="#">121,600원</a></td>
+							<td><a href="#">카드결제</a></td>
+							<td><a href="#">결제완료</a></td>
+							<td><a href="#"><button type="button" class="button-B" onclick="myPopup()">보기</button></label></a></td>
+						</tr>
+						<tr>
+							<td class="t_cbx"><p class="cbox"><label><input type="checkbox" /><span></span></label></p></td>
+							<td class="td_num">1</td>
+							<td><a href="#">0000-00-00 00:00</a></td>
+							<td><a href="#">홍길동</a></td>
+							<td><a href="#">1</a></td>
+							<td class="td_img"><a href="#"><img src="/design/wave/manager/images/100x100.png" alt=""></a></td>
+							<td><a href="/design/wave/manager/sub_item/item_modify.html">모던 블라우스 외 2건</a></td>
+							<td><a href="#">1</a></td>
+							<td><a href="#">128,000원</a></td>
+							<td><a href="#">128,000원</a></td>
+							<td><a href="#">0원</a></td>
+							<td><a href="#">0원</a></td>
+							<td><a href="#">128,000원</a></td>
+							<td><a href="#">카드결제</a></td>
+							<td><a href="#">입금대기</a></td>
+							<td><a href="#"><button type="button" class="button-B" onclick="myPopup()">보기</button></label></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove"> 선택한 주문을
+					<select>
+						<option value="선택">선택</option>
+						<option value="결제완료">결제완료</option>
+						<option value="상품준비중">상품준비중</option>
+						<option value="배송중">배송중</option>
+						<option value="배송완료">배송완료</option>
+						<option value="구매확정">구매확정</option>
+					</select>
+					<button type="button">일괄처리</button>
+				</p>
+				<p class="p_packview">
+					<select>
+						<option value="10개씩 보기">10개씩 보기</option>
+						<option value="30개씩 보기">30개씩 보기</option>
+						<option value="50개씩 보기">50개씩 보기</option>
+						<option value="100개씩 보기">100개씩 보기</option>
+						<option value="300개씩 보기">300개씩 보기</option>
+						<option value="500개씩 보기">500개씩 보기</option>
+						<option value="1000개씩 보기">1000개씩 보기</option>
+					</select>
+				</p>
+			</div>
+			<!-- 페이지넘버 -->
+			<div class="page_num">
+				<p>
+					<span class="arr"><i class="xi-caret-down"></i></span>
+					<span class="nmb on">1</span>
+					<span class="nmb">2</span>
+					<span class="nmb">3</span>
+					<span class="arr"><i class="xi-caret-up"></i></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../../head_common.html"; 
+?>
+</head>
+
+<script>
+//항공 리스트
+function myPopup1() {
+	window.open("/design/travel/manager/sub_item/flight/popup/bring.html", "_blank", "toolbar=no, scrollbars=yes, resizable=yes, top=0, left=0, width=1200, height=750");
+}
+</script>
+<body>
+<div id="wrap">
+<!-- container -->
+<div id="container">
+	<div class="popup_pop">
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 1일차</h2>
+		</div>
+		<div class="conbox">
+			<div class="tab_area">
+				<button type="button" class="button-B on" onclick="location.href='flight.html'">항공</button>
+				<button type="button" class="button-B" onclick="location.href='accommodations.html'">숙소</button>
+				<button type="button" class="button-B" onclick="location.href='accommodations_option.html'">숙소부가시설</button>
+				<button type="button" class="button-B" onclick="location.href='golf.html'">골프</button>
+				<button type="button" class="button-B" onclick="location.href='golf_option.html'">골프부가시설</button>
+				<button type="button" class="button-B" onclick="location.href='meal.html'">음식점</button>
+				<button type="button" class="button-B" onclick="location.href='tourist.html'">관광</button>
+				<button type="button" class="button-B" onclick="location.href='transportation.html'">교통수단</button>
+			</div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>항공사</th>
+							<td class="td_w">VJ 비엣젯</td>
+							<th>구분</th>
+							<td>3박4일</td>
+						</tr>
+						<tr>
+							<th>항공편 가져오기</th>
+							<td class="td_w">
+								<button type="button" class="button-A" onclick="myPopup1()">가져오기</button>
+								<span class="comment"><i class="xi-error-o"></i> 등록된 항공편 데이터를 가져오면 하단에서 내용을 확인 할 수 있습니다.</span>
+							</td>
+							<th>랜드사</th>
+							<td>A랜드사</td>
+						</tr>
+						<tr>
+							<th>썸네일이미지 <span class="color-A">*</span></th>
+							<td colspan="3">
+								<!-- 숙소 썸네일 이미지 호출 -->
+								<div class="img_view"><img src="" alt=""></div>
+								<span class="comment"><i class="xi-error-o"></i> 표기된 이미지를 변경하고 싶을 경우 해당 항공리스트에서만 수정 가능</span>
+							</td>
+						</tr>
+						<tr>
+							<th>항공 가격 리스트 <span class="color-A">*</span></th>
+							<td colspan="3" class="td_w">
+								<div class="dein_table mt15 mb10">
+									<table>
+										<tr>
+											<table>
+												<thead>
+													<tr>
+														<th rowspan="2">판매기준</th>
+														<th rowspan="2">번호</th>
+														<th rowspan="2">구분</th>
+														<th rowspan="2">패턴</th>
+														<th colspan="5" style="border-right:1px solid #fff;">출발편</th>
+														<th colspan="5">귀국편</th>
+														<th rowspan="2">항공편코드</th>
+														<th rowspan="2">메모</th>
+													</tr>
+													<tr>
+														<th>공항</th>
+														<th>편명</th>
+														<th>시간</th>
+														<th>기내식</th>
+														<th style="border-right:1px solid #fff;">좌석등급</th>
+														<th>공항</th>
+														<th>편명</th>
+														<th>시간</th>
+														<th>기내식</th>
+														<th>좌석등급</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="r_circle m-A"><input type="radio" name="sales_fight" id="sales_fight1" checked/><label for="sales_fight1"><span></span></td>
+														<td>4</td>
+														<td>왕복</td>
+														<td>3박 4일</td>
+														<td>ICN 인천공항</td>
+														<td>VJ3333</td>
+														<td>09:35</td>
+														<td>중식</td>
+														<td>이코노미</td>
+														<td>PQC 푸꾸옥</td>
+														<td>VJ3333</td>
+														<td>09:35</td>
+														<td>중식</td>
+														<td>이코노미</td>
+														<td>000000000</td>
+														<td>가나다...</td>
+													</tr>
+													<tr>
+														<td class="r_circle m-A"><input type="radio" name="sales_fight" id="sales_fight2"><label for="sales_fight2"><span></span></td>
+														<td>3</td>
+														<td>편도</td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td>PQC 푸꾸옥</td>
+														<td>VJ3333</td>
+														<td>09:35</td>
+														<td>중식</td>
+														<td>이코노미</td>
+														<td>000000000</td>
+														<td>가나다...</td>
+													</tr>
+													<tr>
+														<td class="r_circle m-A"><input type="radio" name="sales_fight" id="sales_fight3"><label for="sales_fight3"><span></span></td>
+														<td>2</td>
+														<td>왕복</td>
+														<td>3박 4일</td>
+														<td>ICN 인천공항</td>
+														<td>VJ3333</td>
+														<td>09:35</td>
+														<td>중식</td>
+														<td>이코노미</td>
+														<td>PQC 푸꾸옥</td>
+														<td>VJ3333</td>
+														<td>09:35</td>
+														<td>중식</td>
+														<td>이코노미</td>
+														<td>000000000</td>
+														<td>가나다...</td>
+													</tr>
+													<tr>
+														<td class="r_circle m-A"><input type="radio" name="sales_fight" id="sales_fight4"><label for="sales_fight4"><span></span></td>
+														<td>1</td>
+														<td>편도</td>
+														<td></td>
+														<td>ICN 인천공항</td>
+														<td>VJ3333</td>
+														<td>09:35</td>
+														<td>중식</td>
+														<td>이코노미</td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td>000000000</td>
+														<td>가나다...</td>
+													</tr>
+												</tbody>
+											</table>
+											<span class="comment"><i class="xi-error-o"></i> 판매기준을 선택 하세요.(판매 시 각 시즌과 요일에 맞춰 소비자가격이 표기 됩니다.) 다른 가격리스트는 소비자페이지에서 별도의 옵션판매로 노출 됩니다.</span>
+										</tr>
+									</table>
+								</div>
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		<div class="mark"><i class="xi-error-o"></i> 각 일정별 탭항목에서 1개만 입력가능합니다.예) 항공, 숙소, 골프, 스키장, 트래킹, 관광지, 선택관광지, 교통수단, 직접입력 중에서 1개탭 선택 저장.</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button" onclick="window.close();">취소</button><button type="button" onclick="window.close();">입력완료</button></p>
+		</div>
+	</div>	
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

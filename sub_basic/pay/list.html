@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_basic.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">기본정보관리</a> &gt; <a href="#">결제 정책</a> &gt; <a href="#">결제 수단설정</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 결제 수단설정</h2>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th>결제기준</th>
+							<th>결제 수단 명칭</th>
+							<th>노출이름</th>
+							<th>사용 설정</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan='5'>일반결제</td>
+							<td>무통장 입금</td>
+							<td><input type="text" class="w-E" value="무통장 입금" required /></td>
+							<td class="td_rdio"><p class="r_circle"><input type="radio" name="ra1" id="ra1" /><label for="ra1"><span></span>사용함</label></p><p class="r_circle"><input type="radio" name="ra1" id="ra2" checked/><label for="ra2"><span></span>사용안함</label></p></td>
+						</tr>
+						<tr>
+							<td>신용카드</td>
+							<td><input type="text" class="w-E" value="신용카드" required /></td>
+							<td class="td_rdio"><p class="r_circle"><input type="radio" name="ra2" id="ra3" /><label for="ra3"><span></span>사용함</label></p><p class="r_circle"><input type="radio" name="ra2" id="ra4" checked/><label for="ra4"><span></span>사용안함</label></p></td>
+						</tr>
+						<tr>
+							<td>계좌이체</td>
+							<td><input type="text" class="w-E" value="계좌이체" required /></td>
+							<td class="td_rdio"><p class="r_circle"><input type="radio" name="ra3" id="ra5" /><label for="ra5"><span></span>사용함</label></p><p class="r_circle"><input type="radio" name="ra3" id="ra6" checked/><label for="ra6"><span></span>사용안함</label></p></td>
+						</tr>
+						<tr>
+							<td>가상계좌</td>
+							<td><input type="text" class="w-E" value="가상계좌" required /></td>
+							<td class="td_rdio"><p class="r_circle"><input type="radio" name="ra4" id="ra7" /><label for="ra7"><span></span>사용함</label></p><p class="r_circle"><input type="radio" name="ra4" id="ra8" checked/><label for="ra8"><span></span>사용안함</label></p></td>
+						</tr>
+						<tr>
+							<td>휴대폰</td>
+							<td><input type="text" class="w-E" value="휴대폰" required /></td>
+							<td class="td_rdio"><p class="r_circle"><input type="radio" name="ra5" id="ra9" /><label for="ra9"><span></span>사용함</label></p><p class="r_circle"><input type="radio" name="ra5" id="ra10" checked/><label for="ra10"><span></span>사용안함</label></p></td>
+						</tr>
+						<tr>
+							<td rowspan='3'>에스크로 결제</td>
+							<td>신용카드</td>
+							<td><input type="text" class="w-E" value="신용카드" required /></td>
+							<td class="td_rdio"><p class="r_circle"><input type="radio" name="ra6" id="ra11" /><label for="ra11"><span></span>사용함</label></p><p class="r_circle"><input type="radio" name="ra6" id="ra12" checked/><label for="ra12"><span></span>사용안함</label></p></td>
+						</tr>
+						<tr>
+							<td>계좌이체</td>
+							<td><input type="text" class="w-E" value="계좌이체" required /></td>
+							<td class="td_rdio"><p class="r_circle"><input type="radio" name="ra7" id="ra13" /><label for="ra13"><span></span>사용함</label></p><p class="r_circle"><input type="radio" name="ra7" id="ra14" checked/><label for="ra14"><span></span>사용안함</label></p></td>
+						</tr>
+						<tr>
+							<td>가상계좌</td>
+							<td><input type="text" class="w-E" value="가상계좌" required /></td>
+							<td class="td_rdio"><p class="r_circle"><input type="radio" name="ra8" id="ra15" /><label for="ra15"><span></span>사용함</label></p><p class="r_circle"><input type="radio" name="ra8" id="ra16" checked/><label for="ra16"><span></span>사용안함</label></p></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 주석마크 -->
+			<span class="mark"><i class="xi-error-o"></i> 전자결제서시브(PG) 신청 전인 경우 먼저 서비스를 신청하세요</span>	
+			<!-- 리스트 하단영역 -->
+			<div class="list_bottom">
+				<p class="p_remove">
+					<button type="button" onclick="location.href='electronic_payment.html'">전자결제서비스(PG)신청</button>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_design.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">디자인관리</a> &gt; <a href="#">이메일 디자인</a> &gt; <a href="#">이메일 수정</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 이메일 수정</h2>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>발신자 이름 <span class="color-A">*</span></th>
+							<td class="td_w"><input type="text" class="w-G" required /></td>
+							<th>발신자 이메일 <span class="color-A">*</span></th>
+							<td><input type="email" class="w-G" required /></td>
+						</tr>
+						<tr>
+							<th>수신자 <span class="color-A">*</span></th>
+							<td class="td_w">
+								<div class="c_box m-A">
+									<p><input type="checkbox" name="noch" id="v1" checked /><label for="v1"><span></span>소비자</label></p>
+									<p><input type="checkbox" name="noch" id="v2" /><label for="v2"><span></span>관리자</label></p>
+								</div>
+							</td>
+							<th>관리자 이메일 <span class="color-A">*</span></th>
+							<td><input type="email" class="w-G" required /></td>
+						</tr>
+						<tr>
+							<th>제목</th>
+							<td colspan="3"><input type="text" class="w-H" /></td>
+						</tr>
+						<tr>
+							<th>내용</th>
+							<td colspan="3"><textarea class="w-H h-B"></textarea></td>
+						</tr>
+						<tr>
+							<th>치환정보</th>
+							<td colspan="3">
+								<div class="chi_table">
+									<table>
+										<tbody>
+											<tr>
+												<th>고객명</th>
+												<td><span title="복사하기" class="copy">[고객명]</span></td>
+												<th>해당일</th>
+												<td><span title="복사하기" class="copy">[년월일]</span></td>
+												<th>제휴분야</th>
+												<td><span title="복사하기" class="copy">[제휴분야]</span></td>
+											</tr>
+											<tr>
+												<th>고객연락처</th>
+												<td><span title="복사하기" class="copy">[고객연락처]</span></td>
+												<th>고객이메일</th>
+												<td><span title="복사하기" class="copy">[고객이메일]</span></td>
+												<th>제목</th>
+												<td><span title="복사하기" class="copy">[제목]</span></td>
+											</tr>
+											<tr>
+												<th>내용</th>
+												<td><span title="복사하기" class="copy">[내용]</span></td>
+												<th>회사명</th>
+												<td><span title="복사하기" class="copy">[회사명]</span></td>
+												<th>대표자명</th>
+												<td><span title="복사하기" class="copy">[대표자명]</span></td>
+											</tr>
+											<tr>
+												<th>사업자등록번호</th>
+												<td><span title="복사하기" class="copy">[사업자등록번호]</span></td>
+												<th>주소</th>
+												<td><span title="복사하기" class="copy">[주소]</span></td>
+												<th>회사전화번호</th>
+												<td><span title="복사하기" class="copy">[회사전화번호]</span></td>
+											</tr>
+											<tr>
+												<th>올해년도</th>
+												<td><span title="복사하기" class="copy">[올해년도]</span></td>
+												<th>인증코드</th>
+												<td><span title="복사하기" class="copy">[인증코드]</span></td>
+												<th>아이디</th>
+												<td><span title="복사하기" class="copy">[아이디]</span></td>
+											</tr>
+											<tr>
+												<th>비밀번호</th>
+												<td><span title="복사하기" class="copy">[비밀번호]</span></td>
+												<th></th>
+												<td><span title="복사하기" class="copy"></span></td>
+												<th></th>
+												<td><span title="복사하기" class="copy"></span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 마우스를 올려 원하시는 치환코드를 클릭해 복사하세요.</span>
+							</td>
+						</tr>
+						<tr>
+							<th>원본</th>
+							<td colspan="3"><textarea class="w-H h-B"></textarea></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->    
+		<div class="complete">
+			<p><button type="button">수정</button><button type="button">목록</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

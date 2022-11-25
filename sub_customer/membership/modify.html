@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_customer.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="#"><i class="xi-home"></i></a> &gt; <a href="#">회원관리</a> &gt; <a href="#">회원관리 설정</a> &gt; <a href="#">회원정보 수정</a></p>
+			<?
+			include "../../include_manager.html";
+			?>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 회원정보 수정</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>회원 구분</th>
+							<td class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="class" id="class1" checked /><label for="class1"><span></span> 개인회원</label></p>
+									<p><input type="radio" name="class" id="class2" /><label for="class2"><span></span> 사업자회원</label></p>
+								</div>
+							</td>
+							<th>승인</th>
+							<td>
+								<div class="r_circle m-A">
+									<p><input type="radio" name="approval" id="approval1" checked /><label for="approval1"><span></span> 승인</label></p>
+									<p><input type="radio" name="approval" id="approval2" /><label for="approval2"><span></span> 승인대기</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>회원등급</th>
+							<td class="td_day">
+								<div>
+									<select class="w-G">
+										<option value="일반">일반</option>
+										<option value="VIP">VIP</option>
+										<option value="SILVER">SILVER</option>
+										<option value="GOLD">GOLD</option>
+										<option value="ROYAL">ROYAL</option>
+									</select>
+								</div>
+								<span class="comment"><i class="xi-error-o"></i> 수정일: 0000-00-00 00:00:00</span>
+							</td>
+							<th>리프레시 포인트 </th>
+							<td colspan="3">222,2222원</td>
+						</tr>
+						<tr>
+							<th>이름 <span class="color-A">*</span></th>
+							<td>홍길동</td>
+							<th>구매 총액 </th>
+							<td>222,2222원</td>
+						</tr>
+						<tr>
+							<th>이메일 아이디 <span class="color-A">*</span></th>
+							<td>biz@orangetour.io</td>
+							<th>이메일</br>
+							수신동의/거부일</th>
+							<td>동의: 0000-00-00 00:00:00
+								<div class="c_box">
+									<p><input type="checkbox" id="chch" checked /><label for="chch"><span></span>정보/이벤트 mail 수신에 동의합니다.</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>휴대폰번호</th>
+							<td><input type="tel" class="w-G ta-c" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" maxlength="13" value="" required placeholder="010-0000-0000"/><br /></td>
+							<th>SMS/알림톡</br>
+							수신동의/거부일</th>
+							<td>동의: 0000-00-00 00:00:00
+								<div class="c_box">
+									<p><input type="checkbox" id="chch" checked /><label for="chch"><span></span>정보/이벤트 SMS/알림톡 수신에 동의합니다.</label></p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>회원가입일 </th>
+							<td>0000-00-00 00:00:00</td>
+							<th>최종로그인일 </th>
+							<td>0000-00-00 00:00:00</td>
+						</tr>
+						<tr>
+							<th>가입경로 </th>
+							<td>PC</td>
+							<th>방문횟수 </th>
+							<td>6</td>
+						</tr>
+						<tr>
+							<th>비밀번호 초기화 </th>
+							<td colspan="3"><button type="button" class="button-A" onclick="location.href='#'">비밀번호 초기화</button></p>
+							<span class="comment"><i class="xi-error-o"></i> 가입된 '연락처' 정보로 고객에게 초기화된 비밀번호를 전송합니다.</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 부가정보</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>성별</th>
+							<td class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="sex" id="sex1" checked /><label for="sex1"><span></span> 여자</label></p>
+									<p><input type="radio" name="sex" id="sex2" /><label for="sex2"><span></span> 남자</label></p>
+								</div>
+							</td>
+							<th>생일 </th>
+							<td class="td_day">
+								<div>
+									<select class="w-F">
+										<option value="선택">선택</option>
+										<option value="양력">양력</option>
+										<option value="음력">음력</option>
+									</select>
+									<input type="text" class="w-F" placeholder="0000-00-00"/>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>개인정보유효기간 </th>
+							<td colspan="3" class="td_w">
+								<div class="r_circle m-A">
+									<p><input type="radio" name="expiry_date" id="expiry_date1" checked /><label for="expiry_date1"><span></span> 1년</label></p>
+									<p><input type="radio" name="expiry_date" id="expiry_date2" /><label for="expiry_date2"><span></span> 3년</label></p>
+									<p><input type="radio" name="expiry_date" id="expiry_date3" /><label for="expiry_date3"><span></span> 5년</label></p>
+									<p><input type="radio" name="expiry_date" id="expiry_date4" /><label for="expiry_date4"><span></span> 탈퇴시</label></p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 개인정보 수집·이용 선택동의 내역</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>이용약관</th>
+							<td class="td_w">동의함</td>
+							<th>개인정보<br />
+							처리방침</th>
+							<td>동의함</td>
+						<tr>
+						<tr>
+							<th>개인정보<br />
+							제3자 제공동의</th>
+							<td colspan="3">동의함</td>
+						<tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 회원정보 수정이력</h2>
+			<div class="arr"><i class="xi-caret-up-circle-o"></i><i class="xi-caret-down-circle"></i></div>
+		</div>
+		<div class="conbox">
+			<!-- 리스트 -->
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>변경일자</th>
+							<th>처리자</th>
+							<th>IP주소</th>
+							<th>변경항목</th>
+							<th>변경내용</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2</td>
+							<td>0000-00-00</td>
+							<td>소비자이름</td>
+							<td>111.111.111.111</td>
+							<td>성별</td>
+							<td>블라블라</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>0000-00-00</td>
+							<td>운영자이름</td>
+							<td>222.222.222.222</td>
+							<td>직업</td>
+							<td>블라블라</td>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button><button type="button">취소</button></p>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>

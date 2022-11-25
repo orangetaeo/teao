@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<? 
+include "../../head_common.html"; 
+?>
+</head>
+<body>
+<div id="wrap">
+<?
+include "../../header.html";
+?>
+<!-- container -->
+<div id="container">
+	<!-- snb -->
+	<?
+	include "../../snb_basic.html";
+	?>
+	<div class="content">
+		<div class="navi">
+			<p class="pNavi"><a href="/design/travel/manager/main.html"><i class="xi-home"></i></a> &gt; <a href="#">기본정보</a> &gt; <a href="#">환율/계좌 관리</a> &gt; <a href="#">환율 관리</a> &gt; <a href="#">환율 설정</a></p>
+			<div class="btn">
+				<p class="logout">[로그아웃]</p>
+			</div>
+		</div>
+		<!-- 타이틀 -->
+		<div class="title">
+			<h2><i class="xi-lightbulb-o"></i> 환율 설정</h2>
+		</div>
+		<div class="conbox">
+			<!-- 문자발송 -->
+			<div class="services_list">
+				<ul>
+					<li class="on">
+						<div class="div_box">
+							<img src="/design/travel/manager/images/national_flag/Flag of United States.png" alt="미국" /><span>USD</span>
+							<p class="use">선택</p>
+							<div class="inn">
+								<img src="/design/travel/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a href="#">기준환율 설정</a>
+								<a href="/design/travel/manager/sub_basic/exchange_rate_account/list.html" class="ready">환율 히스토리</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/travel/manager/images/national_flag/Flag of Vietnam.png" alt="베트남" /><span>VND</span>
+							<div class="inn">
+								<img src="/design/travel/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a href="#">기준환율 설정</a>
+								<a href="/design/travel/manager/sub_basic/exchange_rate_account/list.html" class="ready">환율 히스토리</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/travel/manager/images/national_flag/Flag of Thailand.png" alt="태국" /><span>THB</span>
+							<div class="inn">
+								<img src="/design/travel/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a href="#">기준환율 설정</a>
+								<a href="/design/travel/manager/sub_basic/exchange_rate_account/list.html" class="ready">환율 히스토리</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="div_box">
+							<img src="/design/travel/manager/images/national_flag/Flag_add.png" alt="#" /><span>추가하기</span>
+							<div class="inn">
+								<img src="/design/travel/manager/images_service/arrow_box.png" alt="내용화살표" />
+								<a href="#" class="btn_nation" >추가하기</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- 테이블(인풋) -->
+			<div class="write">
+				<table>
+					<tbody>
+						<tr>
+							<th>한국수출입은행 제공<br />매매 기준율 </th>
+							<td class="td_w">기준 환율 : 1,324.50 원</td>
+							<th>기준 환율 설정 <span class="color-A">*</span></th>
+							<td>기준 적용할 환율 : <input type="number" class="w-O" pattern="[0-9]{10}.[0-0]{4}" maxlength="12" required /> 원</td>
+						</tr>
+						<tr>
+							<th>현찰 사실 때</th>
+							<td>1 USD = 1,342.08원</td>
+							<th>현찰 파실 때</th>
+							<td>1 USD = 1,295.92원</td>
+						</tr>
+						<tr>
+							<th>송금 보내실 때</th>
+							<td>1 USD = 1,331.90원</td>
+							<th>송금 받으실 때</th>
+							<td>1 USD = 1,306.10원</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 주석마크 -->
+			<div class="mark"><i class="xi-error-o"></i> 기준환율로 소비자페이지에 노출 됩니다.</div>
+		</div>
+		<!-- 최종버튼 -->
+		<div class="complete">
+			<p><button type="button">저장</button></p>
+		</div>
+	</div>
+	<!-- 레이어팝업 국가추가 -->
+	<div class="nation">
+		<div class="nation_inn">
+			<p class="tit"><i class="xi-lightbulb-o"></i> 국가추가</p>
+				<!-- 상품유형 -->
+				<div class="level">
+					<div>
+						<ul>
+							<div class="c_box">
+								<p><input type="checkbox" name="nation" id="nation1" checked /><label for="nation1"><span></span><button type="button" class="button-C">USD</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation2" /><label for="nation2"><span></span><button type="button" class="button-C">EUR</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation3" /><label for="nation3"><span></span><button type="button" class="button-C">JPY</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation4" /><label for="nation4"><span></span><button type="button" class="button-C">CNY</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation5" /><label for="nation5"><span></span><button type="button" class="button-C">HKD</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation6" /><label for="nation6"><span></span><button type="button" class="button-C">TWD</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation7" /><label for="nation7"><span></span><button type="button" class="button-C">GBP</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation8" /><label for="nation8"><span></span><button type="button" class="button-C">OMR</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation9" /><label for="nation9"><span></span><button type="button" class="button-C">CAD</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation10" /><label for="nation10"><span></span><button type="button" class="button-C">CHF</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation11" /><label for="nation11"><span></span><button type="button" class="button-C">SEK</button></label></p>
+								<p><input type="checkbox" name="nation" id="nation12" /><label for="nation12"><span></span><button type="button" class="button-C">AUD</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation13" /><label for="nation13"><span></span><button type="button" class="button-C">NZD</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation14" /><label for="nation14"><span></span><button type="button" class="button-C">CZK</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation15" /><label for="nation15"><span></span><button type="button" class="button-C">CLP</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation16" /><label for="nation16"><span></span><button type="button" class="button-C">TRY</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation17" /><label for="nation17"><span></span><button type="button" class="button-C">MNY</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation18" /><label for="nation18"><span></span><button type="button" class="button-C">ILS</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation19" /><label for="nation19"><span></span><button type="button" class="button-C">DKK</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation20" /><label for="nation20"><span></span><button type="button" class="button-C">NOK</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation21" /><label for="nation21"><span></span><button type="button" class="button-C">SAR</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation22" /><label for="nation22"><span></span><button type="button" class="button-C">KWD</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation23" /><label for="nation23"><span></span><button type="button" class="button-C">BHD</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation24" /><label for="nation24"><span></span><button type="button" class="button-C">AED</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation25" /><label for="nation25"><span></span><button type="button" class="button-C">JOD</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation26" /><label for="nation26"><span></span><button type="button" class="button-C">EGP</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation27" checked /><label for="nation27"><span></span><button type="button" class="button-C">THB</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation28" /><label for="nation28"><span></span><button type="button" class="button-C">SGD</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation29" /><label for="nation29"><span></span><button type="button" class="button-C">MYR</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation30" /><label for="nation30"><span></span><button type="button" class="button-C">UDR(100)</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation31" /><label for="nation31"><span></span><button type="button" class="button-C">QAR</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation32" /><label for="nation32"><span></span><button type="button" class="button-C">KZT</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation33" /><label for="nation33"><span></span><button type="button" class="button-C">BND</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation34" /><label for="nation34"><span></span><button type="button" class="button-C">INR</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation35" /><label for="nation35"><span></span><button type="button" class="button-C">PKR</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation36" /><label for="nation36"><span></span><button type="button" class="button-C">BDT</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation37" /><label for="nation37"><span></span><button type="button" class="button-C">html</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation38" /><label for="nation38"><span></span><button type="button" class="button-C">MXN</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation39" /><label for="nation39"><span></span><button type="button" class="button-C">BRL</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation40" checked /><label for="nation40"><span></span><button type="button" class="button-C">VND(100)</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation41" /><label for="nation41"><span></span><button type="button" class="button-C">ZAR</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation42" /><label for="nation42"><span></span><button type="button" class="button-C">RUB</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation43" /><label for="nation43"><span></span><button type="button" class="button-C">HUF</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation44" /><label for="nation44"><span></span><button type="button" class="button-C">PLN</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation45" /><label for="nation45"><span></span><button type="button" class="button-C">LKR</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation46" /><label for="nation46"><span></span><button type="button" class="button-C">DZD</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation47" /><label for="nation47"><span></span><button type="button" class="button-C">KES</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation48" /><label for="nation48"><span></span><button type="button" class="button-C">COP</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation49" /><label for="nation49"><span></span><button type="button" class="button-C">TZS</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation50" /><label for="nation50"><span></span><button type="button" class="button-C">NPR</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation51" /><label for="nation51"><span></span><button type="button" class="button-C">RON</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation52" /><label for="nation52"><span></span><button type="button" class="button-C">LYD</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation53" /><label for="nation53"><span></span><button type="button" class="button-C">MOP</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation54" /><label for="nation54"><span></span><button type="button" class="button-C">MMK</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation55" /><label for="nation55"><span></span><button type="button" class="button-C">ETB</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation56" /><label for="nation56"><span></span><button type="button" class="button-C">UZS</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation57" /><label for="nation57"><span></span><button type="button" class="button-C">KHR</i></button></label></p>
+								<p><input type="checkbox" name="nation" id="nation58" /><label for="nation58"><span></span><button type="button" class="button-C">FJD</i></button></label></p>
+							</div>
+						</ul>
+					</div>
+				</div>
+				<!-- 레이어팝업 최종 저장 버튼 -->
+				<div class="ly_complete">
+					<p><button type="button">선택완료</button></p>
+				</div>
+				<p class="close"><i class="xi-close"></i></p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+</div>
+</body>
+</html>
